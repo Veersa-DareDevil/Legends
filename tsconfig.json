@@ -13,11 +13,12 @@
     "resolveJsonModule": true,
     "baseUrl": "./",
     "paths": {
-      "@src/*": ["src/*"]
+      "@src/*": ["src/*"],
+      "@pageObjects/*": ["src/pageObjects/*"],
     }
   },
   "include": [
     "specs/**/*.spec.ts",
     "src/**/*.ts"
-, "specs/desktopUI/IntegrationTest/AddProductToPayment.spec.ts", "specs/mobileUI/IntegrationTest/AddProductToPayment.spec.ts"  ]
+  ]
 }

@@ -1,182 +1,599 @@
 # Test info
 
-- Name: Real Madrid Desktop UI Navigation >> should navigate to the storefront portal
-- Location: C:\Users\AbhinavSharma\Realmadrid\specs\RealMadrid\DesktopUI\RegressionTest\navigation.spec.ts:6:7
+- Name: Login to Storefront site of Real Madrid >> Should Login to Storefront
+- Location: C:\Users\AbhinavSharma\Legends\specs\realMadrid\desktopUI\logIn.spec.ts:13:7
 
 # Error details
 
 ```
-TimeoutError: locator.click: Timeout 30000ms exceeded.
-Call log:
-  - waiting for getByRole('button', { name: 'Continue', exact: true })
+Error: expect(received).toBe(expected) // Object.is equality
 
-    at CommonUtils.loginToStorefront (C:\Users\AbhinavSharma\Realmadrid\src\utils\loginUtils\realMadrid\commonUtils.ts:96:48)
-    at C:\Users\AbhinavSharma\Realmadrid\specs\RealMadrid\DesktopUI\RegressionTest\navigation.spec.ts:10:5
+Expected: "KL"
+Received: "KT"
+    at C:\Users\AbhinavSharma\Legends\specs\realMadrid\desktopUI\logIn.spec.ts:32:30
 ```
 
 # Page snapshot
 
 ```yaml
-- banner:
-  - img "Real Madrid C.F.":
-    - img
-    - img
-  - button "ES"
-  - button "EN"
-- banner:
-  - heading "¡Hola!" [level=1]
-  - paragraph: "Inicia sesión o regístrate para acceder:"
-- textbox "Email / Nº Socio / Nº Madridista": abhinav.sharma@veersatech.com
-- text: Email / Nº Socio / Nº Madridista
-- button "Reset" [disabled]
-- button "Continuar"
-- button "¿No puedes acceder?"
-- text: o
-- button "Continuar con Google"
-- button "Continuar con Apple ID"
-- paragraph:
-  - text: Trataremos tu email para comprobar si ya estás registrado o no. Puedes ejercer tus derechos en
-  - link "oposicion@corp.realmadrid.com":
-    - /url: mailto:oposicion@corp.realmadrid.com
-  - text: y obtener más información
-  - link "aquí.":
-    - /url: ""
-- contentinfo:
-  - paragraph: Real Madrid © 2022. Todos los derechos reservados.
-  - button "Aviso legal"
-  - button "Política de cookies"
-  - button "Política de Privacidad"
-  - button "realmadrid.com"
-- region "Cookie banner":
-  - dialog "Uso de cookies":
-    - img "Logotipo de la empresa"
-    - heading "Uso de cookies" [level=2]
-    - paragraph:
-      - text: Real Madrid usa cookies propias y de terceros para garantizar la funcionalidad de la web (cookies necesarias y de funcionalidad), para fines analíticos (cookies de rendimiento o analíticas) y para mostrarle publicidad relacionada con sus preferencias a partir de sus hábitos de navegación y creación de un perfil (cookies dirigidas o de publicidad) tanto por parte del Club como de nuestros
-      - link "partners y patrocinadores":
-        - /url: https://www.realmadrid.com/es-ES/el-club/patrocinadores
-      - text: . Puede aceptar todas las cookies, seleccionar aquellas que desee en “Configurar” o rechazarlas todas.
-    - link "Más sobre las cookies, se abre en una nueva pestaña":
-      - /url: https://www.realmadrid.com/es-ES/legal/politica-de-cookies
-      - text: Más sobre las cookies
-    - button "Configurar"
-    - button "Rechazar"
-    - button "Aceptar todas"
+- main:
+  - tabpanel:
+    - group "1 / 11":
+      - link "Mens Away Bring Back 99/00 Jersey Black-primary":
+        - /url: /en-es/product/rmcfms0174-real-madrid-mens-adidas-training-ttw-tracksuit-jacket-grey
+        - img "Mens Away Bring Back 99/00 Jersey Black-primary"
+      - link "XS":
+        - /url: /en-es/product/rmcfms0174-real-madrid-mens-adidas-training-ttw-tracksuit-jacket-grey?variant.size=xs
+      - link "S":
+        - /url: /en-es/product/rmcfms0174-real-madrid-mens-adidas-training-ttw-tracksuit-jacket-grey?variant.size=s
+      - link "M":
+        - /url: /en-es/product/rmcfms0174-real-madrid-mens-adidas-training-ttw-tracksuit-jacket-grey?variant.size=m
+      - link "L":
+        - /url: /en-es/product/rmcfms0174-real-madrid-mens-adidas-training-ttw-tracksuit-jacket-grey?variant.size=l
+      - link "XL":
+        - /url: /en-es/product/rmcfms0174-real-madrid-mens-adidas-training-ttw-tracksuit-jacket-grey?variant.size=xl
+      - link "2XL":
+        - /url: /en-es/product/rmcfms0174-real-madrid-mens-adidas-training-ttw-tracksuit-jacket-grey?variant.size=2xl
+      - link "3XL":
+        - /url: /en-es/product/rmcfms0174-real-madrid-mens-adidas-training-ttw-tracksuit-jacket-grey?variant.size=3xl
+      - link "Mens Away Bring Back 99/00 Jersey Black Your price €72.25 €85.00":
+        - /url: /en-es/product/rmcfms0174-real-madrid-mens-adidas-training-ttw-tracksuit-jacket-grey
+        - text: Mens Away Bring Back 99/00 Jersey Black
+        - paragraph
+        - text: Your price €72.25 €85.00
+    - group "2 / 11":
+      - link "Mens Bring Back 99/00 Track Top-primary":
+        - /url: /en-es/product/rmcfyp0038-real-madrid-youth-adidas-training-tts-shorts-black
+        - img "Mens Bring Back 99/00 Track Top-primary"
+      - link "116":
+        - /url: /en-es/product/rmcfyp0038-real-madrid-youth-adidas-training-tts-shorts-black?variant.size=116
+      - link "128":
+        - /url: /en-es/product/rmcfyp0038-real-madrid-youth-adidas-training-tts-shorts-black?variant.size=128
+      - link "140":
+        - /url: /en-es/product/rmcfyp0038-real-madrid-youth-adidas-training-tts-shorts-black?variant.size=140
+      - link "152":
+        - /url: /en-es/product/rmcfyp0038-real-madrid-youth-adidas-training-tts-shorts-black?variant.size=152
+      - link "164":
+        - /url: /en-es/product/rmcfyp0038-real-madrid-youth-adidas-training-tts-shorts-black?variant.size=164
+      - link "Mens Bring Back 99/00 Track Top Your price €29.75 €35.00":
+        - /url: /en-es/product/rmcfyp0038-real-madrid-youth-adidas-training-tts-shorts-black
+        - text: Mens Bring Back 99/00 Track Top
+        - paragraph
+        - text: Your price €29.75 €35.00
+    - group "3 / 11":
+      - link "Mens Bring Back 99/00 Track Pants-primary":
+        - /url: /en-es/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black
+        - img "Mens Bring Back 99/00 Track Pants-primary"
+      - link "XS":
+        - /url: /en-es/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black?variant.size=xs
+      - link "S":
+        - /url: /en-es/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black?variant.size=s
+      - link "M":
+        - /url: /en-es/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black?variant.size=m
+      - link "L":
+        - /url: /en-es/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black?variant.size=l
+      - link "XL":
+        - /url: /en-es/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black?variant.size=xl
+      - link "2XL":
+        - /url: /en-es/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black?variant.size=2xl
+      - link "3XL":
+        - /url: /en-es/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black?variant.size=3xl
+      - link "Mens Bring Back 99/00 Track Pants Your price €55.25 €65.00":
+        - /url: /en-es/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black
+        - text: Mens Bring Back 99/00 Track Pants
+        - paragraph
+        - text: Your price €55.25 €65.00
+    - group "4 / 11":
+      - link "adidas Mens Training TTW Shorts Black-primary":
+        - /url: /en-es/product/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black
+        - img "adidas Mens Training TTW Shorts Black-primary"
+      - link "XS":
+        - /url: /en-es/product/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black?variant.size=xs
+      - link "S":
+        - /url: /en-es/product/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black?variant.size=s
+      - link "M":
+        - /url: /en-es/product/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black?variant.size=m
+      - link "L":
+        - /url: /en-es/product/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black?variant.size=l
+      - link "XL":
+        - /url: /en-es/product/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black?variant.size=xl
+      - link "2XL":
+        - /url: /en-es/product/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black?variant.size=2xl
+      - text: 3XL
+      - link "adidas Mens Training TTW Shorts Black Your price €38.25 €45.00":
+        - /url: /en-es/product/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black
+        - text: adidas Mens Training TTW Shorts Black
+        - paragraph
+        - text: Your price €38.25 €45.00
+    - group "5 / 11":
+      - link "adidas Mens Training TTW Track Top Grey-primary":
+        - /url: /en-es/product/rmcfms0175-real-madrid-mens-adidas-training-ttw-track-top-grey
+        - img "adidas Mens Training TTW Track Top Grey-primary"
+      - link "XS":
+        - /url: /en-es/product/rmcfms0175-real-madrid-mens-adidas-training-ttw-track-top-grey?variant.size=xs
+      - link "S":
+        - /url: /en-es/product/rmcfms0175-real-madrid-mens-adidas-training-ttw-track-top-grey?variant.size=s
+      - link "M":
+        - /url: /en-es/product/rmcfms0175-real-madrid-mens-adidas-training-ttw-track-top-grey?variant.size=m
+      - link "L":
+        - /url: /en-es/product/rmcfms0175-real-madrid-mens-adidas-training-ttw-track-top-grey?variant.size=l
+      - link "XL":
+        - /url: /en-es/product/rmcfms0175-real-madrid-mens-adidas-training-ttw-track-top-grey?variant.size=xl
+      - link "2XL":
+        - /url: /en-es/product/rmcfms0175-real-madrid-mens-adidas-training-ttw-track-top-grey?variant.size=2xl
+      - text: 3XL
+      - link "adidas Mens Training TTW Track Top Grey Your price €63.75 €75.00":
+        - /url: /en-es/product/rmcfms0175-real-madrid-mens-adidas-training-ttw-track-top-grey
+        - text: adidas Mens Training TTW Track Top Grey
+        - paragraph
+        - text: Your price €63.75 €75.00
+    - group "6 / 11":
+      - link "adidas Mens Training TTW Top Grey-primary":
+        - /url: /en-es/product/rmcfms0178-real-madrid-mens-adidas-training-ttw-top-grey
+        - img "adidas Mens Training TTW Top Grey-primary"
+      - link "XS":
+        - /url: /en-es/product/rmcfms0178-real-madrid-mens-adidas-training-ttw-top-grey?variant.size=xs
+      - link "S":
+        - /url: /en-es/product/rmcfms0178-real-madrid-mens-adidas-training-ttw-top-grey?variant.size=s
+      - link "M":
+        - /url: /en-es/product/rmcfms0178-real-madrid-mens-adidas-training-ttw-top-grey?variant.size=m
+      - link "L":
+        - /url: /en-es/product/rmcfms0178-real-madrid-mens-adidas-training-ttw-top-grey?variant.size=l
+      - link "XL":
+        - /url: /en-es/product/rmcfms0178-real-madrid-mens-adidas-training-ttw-top-grey?variant.size=xl
+      - link "2XL":
+        - /url: /en-es/product/rmcfms0178-real-madrid-mens-adidas-training-ttw-top-grey?variant.size=2xl
+      - link "3XL":
+        - /url: /en-es/product/rmcfms0178-real-madrid-mens-adidas-training-ttw-top-grey?variant.size=3xl
+      - link "adidas Mens Training TTW Top Grey Your price €63.75 €75.00":
+        - /url: /en-es/product/rmcfms0178-real-madrid-mens-adidas-training-ttw-top-grey
+        - text: adidas Mens Training TTW Top Grey
+        - paragraph
+        - text: Your price €63.75 €75.00
+    - group "7 / 11":
+      - link "adidas Mens Training TTW Polo Grey-primary":
+        - /url: /en-es/product/rmcfmg0068-real-madrid-mens-adidas-training-ttw-polo-grey
+        - img "adidas Mens Training TTW Polo Grey-primary"
+      - link "XS":
+        - /url: /en-es/product/rmcfmg0068-real-madrid-mens-adidas-training-ttw-polo-grey?variant.size=xs
+      - link "S":
+        - /url: /en-es/product/rmcfmg0068-real-madrid-mens-adidas-training-ttw-polo-grey?variant.size=s
+      - link "M":
+        - /url: /en-es/product/rmcfmg0068-real-madrid-mens-adidas-training-ttw-polo-grey?variant.size=m
+      - link "L":
+        - /url: /en-es/product/rmcfmg0068-real-madrid-mens-adidas-training-ttw-polo-grey?variant.size=l
+      - link "XL":
+        - /url: /en-es/product/rmcfmg0068-real-madrid-mens-adidas-training-ttw-polo-grey?variant.size=xl
+      - link "2XL":
+        - /url: /en-es/product/rmcfmg0068-real-madrid-mens-adidas-training-ttw-polo-grey?variant.size=2xl
+      - text: 3XL
+      - link "adidas Mens Training TTW Polo Grey Your price €42.50 €50.00":
+        - /url: /en-es/product/rmcfmg0068-real-madrid-mens-adidas-training-ttw-polo-grey
+        - text: adidas Mens Training TTW Polo Grey
+        - paragraph
+        - text: Your price €42.50 €50.00
+    - group "8 / 11":
+      - link "adidas Mens Training TTW Polo Black-primary":
+        - /url: /en-es/product/rmcfmg0067-real-madrid-mens-adidas-training-ttw-polo-black
+        - img "adidas Mens Training TTW Polo Black-primary"
+      - text: XS S
+      - link "M":
+        - /url: /en-es/product/rmcfmg0067-real-madrid-mens-adidas-training-ttw-polo-black?variant.size=m
+      - link "L":
+        - /url: /en-es/product/rmcfmg0067-real-madrid-mens-adidas-training-ttw-polo-black?variant.size=l
+      - link "XL":
+        - /url: /en-es/product/rmcfmg0067-real-madrid-mens-adidas-training-ttw-polo-black?variant.size=xl
+      - link "2XL":
+        - /url: /en-es/product/rmcfmg0067-real-madrid-mens-adidas-training-ttw-polo-black?variant.size=2xl
+      - text: 3XL
+      - link "adidas Mens Training TTW Polo Black Your price €42.50 €50.00":
+        - /url: /en-es/product/rmcfmg0067-real-madrid-mens-adidas-training-ttw-polo-black
+        - text: adidas Mens Training TTW Polo Black
+        - paragraph
+        - text: Your price €42.50 €50.00
+    - group "9 / 11":
+      - link "adidas Mens Training TTW Hoody Grey-primary":
+        - /url: /en-es/product/rmcfms0177-real-madrid-mens-adidas-training-ttw-hoody-grey
+        - img "adidas Mens Training TTW Hoody Grey-primary"
+      - link "XS":
+        - /url: /en-es/product/rmcfms0177-real-madrid-mens-adidas-training-ttw-hoody-grey?variant.size=xs
+      - link "S":
+        - /url: /en-es/product/rmcfms0177-real-madrid-mens-adidas-training-ttw-hoody-grey?variant.size=s
+      - link "M":
+        - /url: /en-es/product/rmcfms0177-real-madrid-mens-adidas-training-ttw-hoody-grey?variant.size=m
+      - link "L":
+        - /url: /en-es/product/rmcfms0177-real-madrid-mens-adidas-training-ttw-hoody-grey?variant.size=l
+      - text: XL
+      - link "2XL":
+        - /url: /en-es/product/rmcfms0177-real-madrid-mens-adidas-training-ttw-hoody-grey?variant.size=2xl
+      - link "3XL":
+        - /url: /en-es/product/rmcfms0177-real-madrid-mens-adidas-training-ttw-hoody-grey?variant.size=3xl
+      - link "adidas Mens Training TTW Hoody Grey Your price €68.00 €80.00":
+        - /url: /en-es/product/rmcfms0177-real-madrid-mens-adidas-training-ttw-hoody-grey
+        - text: adidas Mens Training TTW Hoody Grey
+        - paragraph
+        - text: Your price €68.00 €80.00
+    - group "10 / 11":
+      - link "adidas Mens Training TTW Parka Black-primary":
+        - /url: /en-es/product/rmcfmj0090-real-madrid-mens-adidas-training-ttw-parka-black
+        - img "adidas Mens Training TTW Parka Black-primary"
+      - link "XS":
+        - /url: /en-es/product/rmcfmj0090-real-madrid-mens-adidas-training-ttw-parka-black?variant.size=xs
+      - link "S":
+        - /url: /en-es/product/rmcfmj0090-real-madrid-mens-adidas-training-ttw-parka-black?variant.size=s
+      - link "M":
+        - /url: /en-es/product/rmcfmj0090-real-madrid-mens-adidas-training-ttw-parka-black?variant.size=m
+      - link "L":
+        - /url: /en-es/product/rmcfmj0090-real-madrid-mens-adidas-training-ttw-parka-black?variant.size=l
+      - link "XL":
+        - /url: /en-es/product/rmcfmj0090-real-madrid-mens-adidas-training-ttw-parka-black?variant.size=xl
+      - link "2XL":
+        - /url: /en-es/product/rmcfmj0090-real-madrid-mens-adidas-training-ttw-parka-black?variant.size=2xl
+      - text: 3XL
+      - link "adidas Mens Training TTW Parka Black Your price €170.00 €200.00":
+        - /url: /en-es/product/rmcfmj0090-real-madrid-mens-adidas-training-ttw-parka-black
+        - text: adidas Mens Training TTW Parka Black
+        - paragraph
+        - text: Your price €170.00 €200.00
+    - group "11 / 11":
+      - link "adidas Mens Training TTW Pro Top Grey-primary":
+        - /url: /en-es/product/rmcfms0176-real-madrid-mens-adidas-training-ttw-pro-top-grey
+        - img "adidas Mens Training TTW Pro Top Grey-primary"
+      - text: XS S M L XL 2XL
+      - link "3XL":
+        - /url: /en-es/product/rmcfms0176-real-madrid-mens-adidas-training-ttw-pro-top-grey?variant.size=3xl
+      - link "adidas Mens Training TTW Pro Top Grey Your price €59.50 €70.00":
+        - /url: /en-es/product/rmcfms0176-real-madrid-mens-adidas-training-ttw-pro-top-grey
+        - text: adidas Mens Training TTW Pro Top Grey
+        - paragraph
+        - text: Your price €59.50 €70.00
+  - tabpanel:
+    - group "1 / 7":
+      - 'link "#9 Mbappé-desktop #9 Mbappé Shop"':
+        - /url: /en-es/players/kroos
+        - img "#9 Mbappé-desktop"
+        - paragraph: "#9 Mbappé"
+        - button "Shop"
+    - group "2 / 7":
+      - 'link "#7 Vini Jr.-desktop #7 Vini Jr. Shop"':
+        - /url: /en-es/players/vini-jr
+        - img "#7 Vini Jr.-desktop"
+        - paragraph: "#7 Vini Jr."
+        - button "Shop"
+    - group "3 / 7":
+      - 'link "#5 Bellingham-desktop #5 Bellingham Shop"':
+        - /url: /en-es/players/bellingham
+        - img "#5 Bellingham-desktop"
+        - paragraph: "#5 Bellingham"
+        - button "Shop"
+    - group "4 / 7":
+      - 'link "#10 Modrić-desktop #10 Modrić Shop"':
+        - /url: /en-es/players/modric
+        - img "#10 Modrić-desktop"
+        - paragraph: "#10 Modrić"
+        - button "Shop"
+    - group "5 / 7":
+      - 'link "#11 Rodrygo-desktop #11 Rodrygo Shop"':
+        - /url: /en-es/players/rodrygo
+        - img "#11 Rodrygo-desktop"
+        - paragraph: "#11 Rodrygo"
+        - button "Shop"
+    - group "6 / 7":
+      - 'link "#15 Valverde-desktop #15 Valverde Shop"':
+        - /url: /en-es/players/valverde
+        - img "#15 Valverde-desktop"
+        - paragraph: "#15 Valverde"
+        - button "Shop"
+    - group "7 / 7":
+      - 'link "#6 Camavinga-desktop #6 Camavinga Shop"':
+        - /url: /en-es/players/camavinga
+        - img "#6 Camavinga-desktop"
+        - paragraph: "#6 Camavinga"
+        - button "Shop"
+  - tabpanel "Mens":
+    - group "1 / 1":
+      - figure:
+        - img "Product image"
+    - group "1 / 1":
+      - img "Product image"
+  - group "1 / 12":
+    - link "Mens T-Shirt Olive-primary":
+      - /url: /en-es/product/rmcfmt0151-real-madrid-mens-t-shirt-olive
+      - img "Mens T-Shirt Olive-primary"
+    - link "S":
+      - /url: /en-es/product/rmcfmt0151-real-madrid-mens-t-shirt-olive?variant.size=s
+    - link "M":
+      - /url: /en-es/product/rmcfmt0151-real-madrid-mens-t-shirt-olive?variant.size=m
+    - link "L":
+      - /url: /en-es/product/rmcfmt0151-real-madrid-mens-t-shirt-olive?variant.size=l
+    - link "XL":
+      - /url: /en-es/product/rmcfmt0151-real-madrid-mens-t-shirt-olive?variant.size=xl
+    - link "2XL":
+      - /url: /en-es/product/rmcfmt0151-real-madrid-mens-t-shirt-olive?variant.size=2xl
+    - link "3XL":
+      - /url: /en-es/product/rmcfmt0151-real-madrid-mens-t-shirt-olive?variant.size=3xl
+    - link "Mens T-Shirt Olive Your price €29.75 €35.00":
+      - /url: /en-es/product/rmcfmt0151-real-madrid-mens-t-shirt-olive
+      - text: Mens T-Shirt Olive
+      - paragraph
+      - text: Your price €29.75 €35.00
+  - group "2 / 12":
+    - link "Mens T-Shirt Khaki-primary":
+      - /url: /en-es/product/rmcfmt0152-real-madrid-mens-t-shirt-khaki
+      - img "Mens T-Shirt Khaki-primary"
+    - link "S":
+      - /url: /en-es/product/rmcfmt0152-real-madrid-mens-t-shirt-khaki?variant.size=s
+    - link "M":
+      - /url: /en-es/product/rmcfmt0152-real-madrid-mens-t-shirt-khaki?variant.size=m
+    - link "L":
+      - /url: /en-es/product/rmcfmt0152-real-madrid-mens-t-shirt-khaki?variant.size=l
+    - link "XL":
+      - /url: /en-es/product/rmcfmt0152-real-madrid-mens-t-shirt-khaki?variant.size=xl
+    - link "2XL":
+      - /url: /en-es/product/rmcfmt0152-real-madrid-mens-t-shirt-khaki?variant.size=2xl
+    - link "3XL":
+      - /url: /en-es/product/rmcfmt0152-real-madrid-mens-t-shirt-khaki?variant.size=3xl
+    - link "Mens T-Shirt Khaki Your price €29.75 €35.00":
+      - /url: /en-es/product/rmcfmt0152-real-madrid-mens-t-shirt-khaki
+      - text: Mens T-Shirt Khaki
+      - paragraph
+      - text: Your price €29.75 €35.00
+  - group "3 / 12":
+    - link "Mens T-Shirt Mustard-primary":
+      - /url: /en-es/product/rmcfmt0256-mens-t-shirt-mustard
+      - img "Mens T-Shirt Mustard-primary"
+    - link "S":
+      - /url: /en-es/product/rmcfmt0256-mens-t-shirt-mustard?variant.size=s
+    - link "M":
+      - /url: /en-es/product/rmcfmt0256-mens-t-shirt-mustard?variant.size=m
+    - link "L":
+      - /url: /en-es/product/rmcfmt0256-mens-t-shirt-mustard?variant.size=l
+    - link "XL":
+      - /url: /en-es/product/rmcfmt0256-mens-t-shirt-mustard?variant.size=xl
+    - link "2XL":
+      - /url: /en-es/product/rmcfmt0256-mens-t-shirt-mustard?variant.size=2xl
+    - link "3XL":
+      - /url: /en-es/product/rmcfmt0256-mens-t-shirt-mustard?variant.size=3xl
+    - link "Mens T-Shirt Mustard Your price €29.75 €35.00":
+      - /url: /en-es/product/rmcfmt0256-mens-t-shirt-mustard
+      - text: Mens T-Shirt Mustard
+      - paragraph
+      - text: Your price €29.75 €35.00
+  - group "4 / 12":
+    - link "Mens Hoodie Khaki-primary":
+      - /url: /en-es/product/rmcfms0246-mens-hoodie-khaki
+      - img "Mens Hoodie Khaki-primary"
+    - link "S":
+      - /url: /en-es/product/rmcfms0246-mens-hoodie-khaki?variant.size=s
+    - link "M":
+      - /url: /en-es/product/rmcfms0246-mens-hoodie-khaki?variant.size=m
+    - link "L":
+      - /url: /en-es/product/rmcfms0246-mens-hoodie-khaki?variant.size=l
+    - link "XL":
+      - /url: /en-es/product/rmcfms0246-mens-hoodie-khaki?variant.size=xl
+    - text: 2XL
+    - link "3XL":
+      - /url: /en-es/product/rmcfms0246-mens-hoodie-khaki?variant.size=3xl
+    - link "Mens Hoodie Khaki Your price €63.75 €75.00":
+      - /url: /en-es/product/rmcfms0246-mens-hoodie-khaki
+      - text: Mens Hoodie Khaki
+      - paragraph
+      - text: Your price €63.75 €75.00
+  - group "5 / 12":
+    - link "Mens Jogger Black-primary":
+      - /url: /en-es/product/rmcfmp0174-mens-jogger-black
+      - img "Mens Jogger Black-primary"
+    - link "S":
+      - /url: /en-es/product/rmcfmp0174-mens-jogger-black?variant.size=s
+    - link "M":
+      - /url: /en-es/product/rmcfmp0174-mens-jogger-black?variant.size=m
+    - link "L":
+      - /url: /en-es/product/rmcfmp0174-mens-jogger-black?variant.size=l
+    - link "XL":
+      - /url: /en-es/product/rmcfmp0174-mens-jogger-black?variant.size=xl
+    - link "2XL":
+      - /url: /en-es/product/rmcfmp0174-mens-jogger-black?variant.size=2xl
+    - text: 3XL
+    - link "Mens Jogger Black Your price €51.00 €60.00":
+      - /url: /en-es/product/rmcfmp0174-mens-jogger-black
+      - text: Mens Jogger Black
+      - paragraph
+      - text: Your price €51.00 €60.00
+  - group "6 / 12":
+    - link "Mens T-Shirt Off White-primary":
+      - /url: /en-es/product/rmcfmt0257-mens-t-shirt-off-white
+      - img "Mens T-Shirt Off White-primary"
+    - link "S":
+      - /url: /en-es/product/rmcfmt0257-mens-t-shirt-off-white?variant.size=s
+    - link "M":
+      - /url: /en-es/product/rmcfmt0257-mens-t-shirt-off-white?variant.size=m
+    - link "L":
+      - /url: /en-es/product/rmcfmt0257-mens-t-shirt-off-white?variant.size=l
+    - link "XL":
+      - /url: /en-es/product/rmcfmt0257-mens-t-shirt-off-white?variant.size=xl
+    - link "2XL":
+      - /url: /en-es/product/rmcfmt0257-mens-t-shirt-off-white?variant.size=2xl
+    - link "3XL":
+      - /url: /en-es/product/rmcfmt0257-mens-t-shirt-off-white?variant.size=3xl
+    - link "Mens T-Shirt Off White Your price €29.75 €35.00":
+      - /url: /en-es/product/rmcfmt0257-mens-t-shirt-off-white
+      - text: Mens T-Shirt Off White
+      - paragraph
+      - text: Your price €29.75 €35.00
+  - group "7 / 12":
+    - link "Mens T-Shirt Navy-primary":
+      - /url: /en-es/product/rmcfmt0259-mens-t-shirt-navy
+      - img "Mens T-Shirt Navy-primary"
+    - link "S":
+      - /url: /en-es/product/rmcfmt0259-mens-t-shirt-navy?variant.size=s
+    - link "M":
+      - /url: /en-es/product/rmcfmt0259-mens-t-shirt-navy?variant.size=m
+    - link "L":
+      - /url: /en-es/product/rmcfmt0259-mens-t-shirt-navy?variant.size=l
+    - link "XL":
+      - /url: /en-es/product/rmcfmt0259-mens-t-shirt-navy?variant.size=xl
+    - link "2XL":
+      - /url: /en-es/product/rmcfmt0259-mens-t-shirt-navy?variant.size=2xl
+    - link "3XL":
+      - /url: /en-es/product/rmcfmt0259-mens-t-shirt-navy?variant.size=3xl
+    - link "Mens T-Shirt Navy Your price €29.75 €35.00":
+      - /url: /en-es/product/rmcfmt0259-mens-t-shirt-navy
+      - text: Mens T-Shirt Navy
+      - paragraph
+      - text: Your price €29.75 €35.00
+  - group "8 / 12":
+    - link "Mens Hoodie Black-primary":
+      - /url: /en-es/product/rmcfms0250-mens-hoodie-black
+      - img "Mens Hoodie Black-primary"
+    - link "S":
+      - /url: /en-es/product/rmcfms0250-mens-hoodie-black?variant.size=s
+    - link "M":
+      - /url: /en-es/product/rmcfms0250-mens-hoodie-black?variant.size=m
+    - link "L":
+      - /url: /en-es/product/rmcfms0250-mens-hoodie-black?variant.size=l
+    - link "XL":
+      - /url: /en-es/product/rmcfms0250-mens-hoodie-black?variant.size=xl
+    - text: 2XL 3XL
+    - link "Mens Hoodie Black Your price €63.75 €75.00":
+      - /url: /en-es/product/rmcfms0250-mens-hoodie-black
+      - text: Mens Hoodie Black
+      - paragraph
+      - text: Your price €63.75 €75.00
+  - group "9 / 12":
+    - link "Mens Hoodie Mustard-primary":
+      - /url: /en-es/product/rmcfms0248-mens-hoodie-mustard
+      - img "Mens Hoodie Mustard-primary"
+    - link "S":
+      - /url: /en-es/product/rmcfms0248-mens-hoodie-mustard?variant.size=s
+    - link "M":
+      - /url: /en-es/product/rmcfms0248-mens-hoodie-mustard?variant.size=m
+    - link "L":
+      - /url: /en-es/product/rmcfms0248-mens-hoodie-mustard?variant.size=l
+    - link "XL":
+      - /url: /en-es/product/rmcfms0248-mens-hoodie-mustard?variant.size=xl
+    - link "2XL":
+      - /url: /en-es/product/rmcfms0248-mens-hoodie-mustard?variant.size=2xl
+    - link "3XL":
+      - /url: /en-es/product/rmcfms0248-mens-hoodie-mustard?variant.size=3xl
+    - link "Mens Hoodie Mustard Your price €63.75 €75.00":
+      - /url: /en-es/product/rmcfms0248-mens-hoodie-mustard
+      - text: Mens Hoodie Mustard
+      - paragraph
+      - text: Your price €63.75 €75.00
+  - group "10 / 12":
+    - link "Mens Jogger Off White-primary":
+      - /url: /en-es/product/rmcfmp0173-mens-jogger-off-white
+      - img "Mens Jogger Off White-primary"
+    - link "S":
+      - /url: /en-es/product/rmcfmp0173-mens-jogger-off-white?variant.size=s
+    - link "M":
+      - /url: /en-es/product/rmcfmp0173-mens-jogger-off-white?variant.size=m
+    - link "L":
+      - /url: /en-es/product/rmcfmp0173-mens-jogger-off-white?variant.size=l
+    - link "XL":
+      - /url: /en-es/product/rmcfmp0173-mens-jogger-off-white?variant.size=xl
+    - link "2XL":
+      - /url: /en-es/product/rmcfmp0173-mens-jogger-off-white?variant.size=2xl
+    - text: 3XL
+    - link "Mens Jogger Off White Your price €51.00 €60.00":
+      - /url: /en-es/product/rmcfmp0173-mens-jogger-off-white
+      - text: Mens Jogger Off White
+      - paragraph
+      - text: Your price €51.00 €60.00
+  - group "11 / 12":
+    - link "Mens Hoodie Olive-primary":
+      - /url: /en-es/product/rmcfms0247-mens-hoodie-olive
+      - img "Mens Hoodie Olive-primary"
+    - link "S":
+      - /url: /en-es/product/rmcfms0247-mens-hoodie-olive?variant.size=s
+    - link "M":
+      - /url: /en-es/product/rmcfms0247-mens-hoodie-olive?variant.size=m
+    - link "L":
+      - /url: /en-es/product/rmcfms0247-mens-hoodie-olive?variant.size=l
+    - link "XL":
+      - /url: /en-es/product/rmcfms0247-mens-hoodie-olive?variant.size=xl
+    - link "2XL":
+      - /url: /en-es/product/rmcfms0247-mens-hoodie-olive?variant.size=2xl
+    - link "3XL":
+      - /url: /en-es/product/rmcfms0247-mens-hoodie-olive?variant.size=3xl
+    - link "Mens Hoodie Olive Your price €63.75 €75.00":
+      - /url: /en-es/product/rmcfms0247-mens-hoodie-olive
+      - text: Mens Hoodie Olive
+      - paragraph
+      - text: Your price €63.75 €75.00
+  - group "12 / 12":
+    - link "Mens Hoodie Navy-primary":
+      - /url: /en-es/product/rmcfms0251-mens-hoodie-navy
+      - img "Mens Hoodie Navy-primary"
+    - link "S":
+      - /url: /en-es/product/rmcfms0251-mens-hoodie-navy?variant.size=s
+    - link "M":
+      - /url: /en-es/product/rmcfms0251-mens-hoodie-navy?variant.size=m
+    - link "L":
+      - /url: /en-es/product/rmcfms0251-mens-hoodie-navy?variant.size=l
+    - link "XL":
+      - /url: /en-es/product/rmcfms0251-mens-hoodie-navy?variant.size=xl
+    - link "2XL":
+      - /url: /en-es/product/rmcfms0251-mens-hoodie-navy?variant.size=2xl
+    - link "3XL":
+      - /url: /en-es/product/rmcfms0251-mens-hoodie-navy?variant.size=3xl
+    - link "Mens Hoodie Navy Your price €63.75 €75.00":
+      - /url: /en-es/product/rmcfms0251-mens-hoodie-navy
+      - text: Mens Hoodie Navy
+      - paragraph
+      - text: Your price €63.75 €75.00
+- alert: The Official Online Store for Real Madrid CF
+- button "Dismiss"
+- menu "KL":
+  - menuitem
+  - menuitem "Keep-Test Legends-Member1-Test legends-member1-test@gmail.com My profile Order History Logout":
+    - paragraph: Keep-Test Legends-Member1-Test
+    - paragraph: legends-member1-test@gmail.com
+    - button "My profile"
+    - button "Order History"
+    - button "Logout":
+      - img
+      - text: Logout
+- button "Dismiss"
 ```
 
 # Test source
 
 ```ts
-   1 | import { Locator, Page } from '@playwright/test';
-   2 |
-   3 | export class CommonUtils {
-   4 |   private page: Page;
-   5 |   private adminUrl: string;
-   6 |   private storefrontUrl: string;
-   7 |   readonly adminUsername: Locator;
-   8 |   readonly adminPassword: Locator;
-   9 |   readonly adminSignIn: Locator;
-   10 |   readonly storefrontLoginIcon: Locator;
-   11 |   readonly storefrontUsername: Locator;
-   12 |   readonly storefrontLoginContinueButton: Locator;
-   13 |   readonly storefrontPassword: Locator;
-   14 |   readonly storefrontSignIn: Locator;
-   15 |
-   16 |   constructor(page: Page) {
-   17 |     this.page = page;
-   18 |     this.adminUrl = process.env.RM_ADMIN_URL!;
-   19 |     this.storefrontUrl = process.env.RM_STOREFRONT_URL!;
-   20 |     this.adminUsername = page.getByRole('textbox', { name: 'Username' });
-   21 |     this.adminPassword = page.getByRole('textbox', { name: 'Password' });
-   22 |     this.adminSignIn = page.getByRole('button', { name: 'Sign In' });
-   23 |     this.storefrontLoginIcon = page.getByTestId('loginbutton');
-   24 |     this.storefrontUsername = page.getByRole('textbox', { name: 'Email' });
-   25 |     this.storefrontPassword = page.getByRole('textbox', { name: 'Password' });
-   26 |     this.storefrontLoginContinueButton = page.getByRole('button', { name: 'Continue', exact: true })
-   27 |   }
-   28 |
-   29 |   /**
-   30 |    * Navigates to the specified portal URL.
-   31 |    * @param portalType - 'admin' or 'storefront'
-   32 |    */
-   33 |   async goToPortal(portalType: 'admin' | 'storefront'): Promise<void> {
-   34 |     let urlToNavigate: string;
-   35 |     if (portalType === 'admin') {
-   36 |       urlToNavigate = this.adminUrl;
-   37 |     } else if (portalType === 'storefront') {
-   38 |       urlToNavigate = this.storefrontUrl;
-   39 |     } else {
-   40 |       throw new Error(`Invalid portal type: ${portalType}`);
-   41 |     }
-   42 |
-   43 |     console.log(`Navigating to ${urlToNavigate}`);
-   44 |     await this.page.goto(urlToNavigate);
-   45 |     await this.page.waitForLoadState('load');
-   46 |     await this.page.waitForSelector('text=Loading', { state: 'hidden' });
-   47 |
-   48 |   }
-   49 |   /**
-   50 |    * Performs login based on the portal type.
-   51 |    * @param portalType - 'admin' or 'storefront'
-   52 |    * @param username - The username for login
-   53 |    * @param password - The password for login
-   54 |    */
-   55 |   async loginToAdmin() {
-   56 |     const username = process.env.RM_ADMIN_USERNAME;
-   57 |     const password = process.env.RM_ADMIN_PASSWORD;
-   58 |     if (!username || !password) {
-   59 |       throw new Error('Username and password must be provided for admin login.');
-   60 |     }
-   61 |
-   62 |     await this.adminUsername.fill(username);
-   63 |     await this.adminPassword.fill(password);
-   64 |     await this.adminSignIn.click();
-   65 |     await this.page.waitForLoadState('load');
-   66 |     await this.page.waitForSelector('text=Loading', { state: 'hidden' });
-   67 |     console.log('Successfully logged in to admin portal.');
-   68 |     }
-   69 |
-   70 |     /**
-   71 |      * Performs login to the storefront portal.
-   72 |      */
-   73 |     async loginToStorefront(): Promise<void> {
-   74 |       const username = process.env.RM_STOREFRONT_USERNAME;
-   75 |       const password = process.env.RM_STOREFRONT_PASSWORD;
-   76 |       if (!username || !password) {
-   77 |         throw new Error('Username and password must be provided for storefront login.');
-   78 |       }
-   79 |       await this.storefrontLoginIcon.click();
-   80 |       await this.page.waitForLoadState('load');
-   81 |       // Function to handle the cookie banner if it appears
-   82 |       const handleCookieBanner = async () => {
-   83 |         const cookieBanner = this.page.locator('role=region[name="Cookie banner"]');
-   84 |         if (await cookieBanner.isVisible()) {
-   85 |           const rejectAllButton = this.page.getByRole('button', { name: 'Reject all' });
-   86 |           await rejectAllButton.click();
-   87 |         }
-   88 |       };
-   89 |
-   90 |       // Check for the cookie banner initially
-   91 |       await handleCookieBanner();
-   92 |
-   93 |       await this.storefrontUsername.fill(username);
-   94 |       // Check for the cookie banner again after filling the username
-   95 |       await handleCookieBanner();
->  96 |       await this.storefrontLoginContinueButton.click();
-      |                                                ^ TimeoutError: locator.click: Timeout 30000ms exceeded.
-   97 |       await this.storefrontPassword.fill(password);
-   98 |       await handleCookieBanner();
-   99 |
-  100 |       await this.storefrontSignIn.click();
-  101 |       // Check for the cookie banner again after clicking sign in
-  102 |       await handleCookieBanner();
-  103 |
-  104 |       await this.page.waitForLoadState('load');
-  105 |       await this.page.waitForSelector('text=Loading', { state: 'hidden' });
-  106 |       console.log('Successfully logged in to storefront portal.');
-  107 |     }
-  108 |
-  109 |   // Add more common utility functions.
-  110 | }
-  111 |
+   1 | import { CommonUtils } from "@src/utils/loginUtils/realMadrid/commonUtils";
+   2 | import { test, expect} from "@playwright/test";
+   3 | import { log } from "console";
+   4 |
+   5 | test.describe("Login to Storefront site of Real Madrid", () => {
+   6 |   let login: CommonUtils;
+   7 |
+   8 |   test.beforeEach("Validate login process", async ({ page }) => {
+   9 |     login = new CommonUtils(page);
+  10 |     await login.goToPortal("storefront");
+  11 |   });
+  12 |
+  13 |   test("Should Login to Storefront", async ({ page }) => {
+  14 |     await login.selectEnglishLanguage();
+  15 |     await page.waitForTimeout(2000);
+  16 |     const homePageTitle = await page.title();
+  17 |     await login.loginToStorefront();
+  18 |
+  19 |     await page.waitForTimeout(2000);
+  20 |     await login.selectEnglishLanguage();
+  21 |     await page.waitForTimeout(2000);
+  22 |
+  23 |     const returnPageTitle = await page.title();
+  24 |     expect(returnPageTitle).toBe(homePageTitle) // Validate that the page title is the same as the homepage title after login to check user is logged in and redirected to the homepage
+  25 |
+  26 |     //Verify that you can login and the profile icon is replaced with a circle containing the user initials
+  27 |     await login.profileIcon.click();
+  28 |     await page.waitForLoadState('load');
+  29 |     const username = await page.locator("div.bg-deep-purple-700 p:first-of-type").textContent();
+  30 |     const usernameInitials = (username ?? '').match(/\b\w/g)?.slice(0, 2).join('').toUpperCase() ?? '';
+  31 |     console.log(usernameInitials); // Output: "KL"
+> 32 |     expect(usernameInitials).toBe(await login.profileIcon.textContent());
+     |                              ^ Error: expect(received).toBe(expected) // Object.is equality
+  33 |   });
+  34 |
+  35 | });
 ```

@@ -31,7 +31,7 @@ test.describe("303887 & 745140 -Login to Storefront site of Real Madrid", () => 
         // Split into words using space as delimiter
         const words = (username ?? '').split(' ');
 
-        // Take the first letter of the first two word groups
+        // Take the first letter of the first two word-groups
         const usernameInitials = words.slice(0, 2).map(word => word[0]).join('').toUpperCase();
         console.log(usernameInitials); // Output: "KL"
         expect(usernameInitials).toBe(await login.profileIcon.textContent());

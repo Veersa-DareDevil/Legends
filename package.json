@@ -6,12 +6,20 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "@playwright/test": "^1.52.0",
     "@types/node": "^22.15.3"
   },
   "dependencies": {
     "dotenv": "^16.5.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Veersa-DareDevil/Legends.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Veersa-DareDevil/Legends/issues"
+  },
+  "homepage": "https://github.com/Veersa-DareDevil/Legends#readme",
+  "description": ""
 }

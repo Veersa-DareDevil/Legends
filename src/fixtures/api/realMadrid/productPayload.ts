@@ -1,4 +1,9 @@
+
+const productNumber = Math.floor(Math.random() * 1000);
+
 export const PAYLOAD = {
+
+    
     createProduct: {
         "reviewsSummary": {
             "numberOfReviews": 0
@@ -334,7 +339,7 @@ export const PAYLOAD = {
             "customerContextId": "01H4RD9NXMKQBQ1WVKM1181VD8"
         },
         "defaultPrice": {
-            "amount": 60
+            "amount": productNumber
         },
         "discountable": true,
         "online": true,
@@ -344,8 +349,8 @@ export const PAYLOAD = {
         "inventoryCheckStrategy": "NEVER",
         "inventoryReservationStrategy": "NEVER",
         "individuallySold": true,
-        "name": "New Jersey A2",
-        "uri": "/new-jersey-a-2",
-        "sku": "A2"
+        "name": `Test Product ${productNumber}`,
+        "uri": `/test-product-${productNumber}`,
+        "sku": `Test Product SKU ${productNumber}`
     }
 }

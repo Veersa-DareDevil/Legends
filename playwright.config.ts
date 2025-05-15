@@ -6,7 +6,7 @@ const baseURL = process.env.BASE_URL || 'https://us.shop.realmadrid.com/';
 
 export default defineConfig({
   timeout: 120000,
-  testDir: 'specs',
+  testDir: './specs',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
@@ -20,6 +20,11 @@ export default defineConfig({
   },
 
   projects: [
+    {
+    name: 'All Tests',
+    use: { ...devices['Desktop Chrome'] },
+    testMatch: '**/*.spec.ts',
+  },
     {
       name: 'Desktop Chrome',
       testMatch: 'desktopUI/**/*.spec.ts',

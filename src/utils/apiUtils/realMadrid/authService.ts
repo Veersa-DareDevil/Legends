@@ -2,59 +2,68 @@ import { Browser, APIRequestContext, expect } from '@playwright/test'
 import { generatePKCECodes } from '@src/utils/apiUtils/realMadrid/pkce'
 import { CommonUtils } from '@src/utils/loginUtils/realMadrid/commonUtils'
 import { ApiHeaders } from '@src/utils/apiUtils/realMadrid/apiHeaders'
+import { ADMIN_ENDPOINTS } from '@src/utils/apiUtils/realMadrid/apiEndpoints'
+
+import authData from '@src/fixtures/api/realMadrid/authData.json'
 
 export class AuthService {
+  private clientId: string
+  private authUrl: string
+  private tokenUrl: string
+  private redirectUri: string
+
   constructor(
     private browser: Browser,
     private apiRequest: APIRequestContext,
-    private opts: {
-      clientId: string
-      authUrl: string
-      tokenUrl: string
-      redirectUri: string
-      scope: string
-    },
-  ) {}
+    private scope: string,
+  ) {
+    this.clientId = authData.clientId
+    this.authUrl = ADMIN_ENDPOINTS.authAuthorize
+    this.tokenUrl = ADMIN_ENDPOINTS.authToken
+    this.redirectUri = ADMIN_ENDPOINTS.silentCallback
+  }
 
   /** drive the browser to log in and grab the code */
   async getAuthorizationCode() {
     const { codeVerifier, codeChallenge } = generatePKCECodes()
     const params = new URLSearchParams({
       response_type: 'code',
-      client_id: this.opts.clientId,
-      redirect_uri: this.opts.redirectUri,
+      client_id: this.clientId,
+      redirect_uri: this.redirectUri,
       code_challenge: codeChallenge,
       code_challenge_method: 'S256',
-      scope: this.opts.scope,
+      scope: this.scope,
     })
-    const authUrl = `${this.opts.authUrl}?${params}`
+    const authUrl = `${this.authUrl}?${params}`
     const ctx = await this.browser.newContext()
     const page = await ctx.newPage()
-    //login to admin
+
     const login = new CommonUtils(page)
     await page.goto(authUrl)
     await login.loginToAdmin()
-    // wait for the redirect to the redirect_uri
-    await page.waitForURL(`**${this.opts.redirectUri}?code=*`, { timeout: 60_000 })
+
+    await page.waitForURL(`**${this.redirectUri}?code=*`, { timeout: 60_000 })
     const code = new URL(page.url()).searchParams.get('code')
     await ctx.close()
+
     if (!code) throw new Error('No authorization code received')
     return { code, codeVerifier }
   }
 
   /** exchange the code + verifier for the token */
   async fetchAccessToken(code: string, codeVerifier: string) {
-    const response = await this.apiRequest.post(this.opts.tokenUrl, {
+    const response = await this.apiRequest.post(this.tokenUrl, {
       form: {
-        client_id: this.opts.clientId,
+        client_id: this.clientId,
         grant_type: 'authorization_code',
         code,
         code_verifier: codeVerifier,
-        redirect_uri: this.opts.redirectUri,
-        scope: this.opts.scope,
+        redirect_uri: this.redirectUri,
+        scope: this.scope,
       },
       headers: ApiHeaders.getFormUrlEncodedHeaders(),
     })
+
     expect(response.status()).toBe(200)
     if (!response.ok()) throw new Error(`Token fetch failed: ${response.status()}`)
     const body = await response.json()

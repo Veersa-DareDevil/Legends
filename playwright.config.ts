@@ -1,8 +1,8 @@
-import { defineConfig, devices } from '@playwright/test';
-import * as dotenv from 'dotenv';
-dotenv.config();
+import { defineConfig, devices } from '@playwright/test'
+import * as dotenv from 'dotenv'
+dotenv.config()
 
-const baseURL = process.env.BASE_URL || 'https://us.shop.realmadrid.com/';
+const baseURL = process.env.BASE_URL || 'https://us.shop.realmadrid.com/'
 
 export default defineConfig({
   timeout: 120000,
@@ -56,4 +56,4 @@ export default defineConfig({
       testMatch: 'apiSpecs/**/*.spec.ts',
     },
   ],
-});
+})

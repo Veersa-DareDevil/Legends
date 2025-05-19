@@ -20,7 +20,20 @@ export const PAYLOAD = {
         orderPrefix: 'RM',
       },
       application: {
-        allowedLocales: ['en-US', 'en', 'en-AU', 'en-GB', 'es', 'fr', 'ja', 'ko', 'pt', 'zh', 'de', 'es-MX'],
+        allowedLocales: [
+          'en-US',
+          'en',
+          'en-AU',
+          'en-GB',
+          'es',
+          'fr',
+          'ja',
+          'ko',
+          'pt',
+          'zh',
+          'de',
+          'es-MX',
+        ],
         allowedCurrencies: ['USD', 'EUR', 'GBP', 'AUD', 'NZD', 'CAD', 'CHF', 'CNY', 'JPY', 'KRW'],
         portraitAsset: {
           tags: [],
@@ -304,4 +317,4 @@ export const PAYLOAD = {
     uri: '/new-jersey-a-2',
     sku: 'A2',
   },
-};
+}

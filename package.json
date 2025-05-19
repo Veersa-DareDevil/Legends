@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "precommit": "eslint . --ext .ts && eslint . --ext .ts --fix && prettier --write \"**/*.ts\"",
+    "prettier:write": "prettier --write \"**/*.ts\"",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "precommit": "npm run prettier:write && npm run lint:fix",
     "test:api:IU": "playwright test specs/apiSpecs/indianaUniversity/",
     "test:api:realMadrid": "playwright test specs/apiSpecs/realMadrid/",
     "test:ui:IU:desktop": "playwright test specs/indianaUniversity/desktopUI/",
@@ -16,7 +18,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.52.0",

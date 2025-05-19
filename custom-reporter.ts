@@ -1,43 +1,43 @@
-import { FullConfig } from '@playwright/test';
-import { Reporter, Suite, TestCase, TestResult } from '@playwright/test/reporter';
-import fs from 'fs';
-import path from 'path';
-import process from 'process';
+import { FullConfig } from '@playwright/test'
+import { Reporter, Suite, TestCase, TestResult } from '@playwright/test/reporter'
+import fs from 'fs'
+import path from 'path'
+import process from 'process'
 
 interface TestResultData {
-  testCaseTitle: string;
-  status: string;
-  duration: number;
-  startTime: string;
-  error?: string;
-  projectName: string;
-  category: string;
-  attachments?: { name: string; contentType: string; path?: string }[]; // Added attachments
+  testCaseTitle: string
+  status: string
+  duration: number
+  startTime: string
+  error?: string
+  projectName: string
+  category: string
+  attachments?: { name: string; contentType: string; path?: string }[] // Added attachments
 }
 
 interface CategoryStats {
-  total: number;
-  passed: number;
-  failed: number;
-  skipped: number;
-  interrupted: number;
-  timedOut: number;
+  total: number
+  passed: number
+  failed: number
+  skipped: number
+  interrupted: number
+  timedOut: number
 }
 
 interface ReportData {
   stats: {
-    total: number;
-    passed: number;
-    failed: number;
-    skipped: number;
-    interrupted: number;
-    timedOut: number;
-  };
-  categoryStats: { [key: string]: CategoryStats };
-  testResults: TestResultData[];
-  executionTime: string;
-  executionStartDate: Date; // Changed to Date object
-  executionEndDate?: Date; // Changed to Date object
+    total: number
+    passed: number
+    failed: number
+    skipped: number
+    interrupted: number
+    timedOut: number
+  }
+  categoryStats: { [key: string]: CategoryStats }
+  testResults: TestResultData[]
+  executionTime: string
+  executionStartDate: Date // Changed to Date object
+  executionEndDate?: Date // Changed to Date object
 }
 
 class CustomReporter implements Reporter {
@@ -52,18 +52,18 @@ class CustomReporter implements Reporter {
     executionTime: '',
     executionStartDate: new Date(), // Initialize with Date object
     executionEndDate: undefined, // Initialize as undefined
-  };
-  private startTime = Date.now();
+  }
+  private startTime = Date.now()
 
   constructor(private config: FullConfig) {}
 
   onBegin(config: FullConfig, suite: Suite): void {
-    this.reportData.executionStartDate = new Date(); // Store Date object
+    this.reportData.executionStartDate = new Date() // Store Date object
   }
 
   onTestEnd(testCase: TestCase, result: TestResult): void {
-    const project = testCase.parent.project()?.name || 'Unknown';
-    let category = ['Desktop', 'Mobile', 'API'].find((c) => project.startsWith(c)) || 'Other';
+    const project = testCase.parent.project()?.name || 'Unknown'
+    let category = ['Desktop', 'Mobile', 'API'].find((c) => project.startsWith(c)) || 'Other'
     if (!this.reportData.categoryStats[category]) {
       this.reportData.categoryStats[category] = {
         total: 0,
@@ -72,14 +72,14 @@ class CustomReporter implements Reporter {
         skipped: 0,
         interrupted: 0,
         timedOut: 0,
-      };
+      }
     }
-    const catStats = this.reportData.categoryStats[category];
-    this.reportData.stats.total++;
-    catStats.total++;
+    const catStats = this.reportData.categoryStats[category]
+    this.reportData.stats.total++
+    catStats.total++
     if (result.status in this.reportData.stats) {
-      (this.reportData.stats as any)[result.status]++;
-      (catStats as any)[result.status]++;
+      ;(this.reportData.stats as any)[result.status]++
+      ;(catStats as any)[result.status]++
     }
 
     this.reportData.testResults.push({
@@ -95,72 +95,84 @@ class CustomReporter implements Reporter {
         contentType: att.contentType,
         path: att.path, // Include the path to the attachment
       })),
-    });
+    })
   }
 
   async onEnd(): Promise<void> {
-    this.reportData.executionTime = this.formatTime(Date.now() - this.startTime);
-    this.reportData.executionEndDate = new Date(); // Store Date object
+    this.reportData.executionTime = this.formatTime(Date.now() - this.startTime)
+    this.reportData.executionEndDate = new Date() // Store Date object
     this.reportData.testResults.sort((a, b) =>
       a.testCaseTitle === b.testCaseTitle
         ? a.projectName.localeCompare(b.projectName)
         : a.testCaseTitle.localeCompare(b.testCaseTitle),
-    );
-    const reportsDir = path.join(process.cwd(), 'reports');
-    const attachmentsDir = path.join(reportsDir, 'attachments');
-    fs.mkdirSync(reportsDir, { recursive: true });
-    fs.mkdirSync(attachmentsDir, { recursive: true });
+    )
+    const reportsDir = path.join(process.cwd(), 'reports')
+    const attachmentsDir = path.join(reportsDir, 'attachments')
+    fs.mkdirSync(reportsDir, { recursive: true })
+    fs.mkdirSync(attachmentsDir, { recursive: true })
 
     // Copy attachments to the reports directory
     for (const result of this.reportData.testResults) {
       if (result.attachments) {
         for (const att of result.attachments) {
           if (att.path) {
-            const sourcePath = att.path;
-            const fileName = path.basename(sourcePath);
-            const destinationPath = path.join(attachmentsDir, fileName);
+            const sourcePath = att.path
+            const fileName = path.basename(sourcePath)
+            const destinationPath = path.join(attachmentsDir, fileName)
             try {
-              fs.copyFileSync(sourcePath, destinationPath);
+              fs.copyFileSync(sourcePath, destinationPath)
               // Update the attachment path in the report data to the new location
-              att.path = path.join('attachments', fileName);
+              att.path = path.join('attachments', fileName)
               console.log(
                 `Copied attachment from ${sourcePath} to ${destinationPath}, updated path in report data to ${att.path}`,
-              );
+              )
             } catch (error) {
-              console.error(`Failed to copy attachment ${sourcePath} to ${destinationPath}: ${error}`);
+              console.error(
+                `Failed to copy attachment ${sourcePath} to ${destinationPath}: ${error}`,
+              )
             }
           }
         }
       }
     }
 
-    const reportFile = path.join(reportsDir, 'custom-report.html');
-    fs.writeFileSync(reportFile, this.renderHtml());
-    console.log(`Report generated at ${reportFile}`);
+    const reportFile = path.join(reportsDir, 'custom-report.html')
+    fs.writeFileSync(reportFile, this.renderHtml())
+    console.log(`Report generated at ${reportFile}`)
   }
 
   private formatTime(ms: number): string {
     const s = Math.floor((ms / 1000) % 60)
       .toString()
-      .padStart(2, '0');
+      .padStart(2, '0')
     const m = Math.floor((ms / 60000) % 60)
       .toString()
-      .padStart(2, '0');
+      .padStart(2, '0')
     const h = Math.floor(ms / 3600000)
       .toString()
-      .padStart(2, '0');
-    return `${h}:${m}:${s}`;
+      .padStart(2, '0')
+    return `${h}:${m}:${s}`
   }
 
   private stripAnsiCodes(str: string): string {
     // eslint-disable-next-line no-control-regex
-    return str.replace(/[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><]/g, '');
+    return str.replace(
+      /[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><]/g,
+      '',
+    )
   }
 
   private renderHtml(): string {
-    const { stats, categoryStats, testResults, executionTime, executionStartDate, executionEndDate } = this.reportData; // Updated variable names
-    const cats = Object.keys(categoryStats);
-    const catData = cats.map((c) => categoryStats[c]);
+    const {
+      stats,
+      categoryStats,
+      testResults,
+      executionTime,
+      executionStartDate,
+      executionEndDate,
+    } = this.reportData // Updated variable names
+    const cats = Object.keys(categoryStats)
+    const catData = cats.map((c) => categoryStats[c])
 
     return `<!DOCTYPE html>
 <html><head>
@@ -253,16 +265,16 @@ class CustomReporter implements Reporter {
             </thead>
             <tbody>
               ${(() => {
-                const groupedResults = new Map<string, TestResultData[]>();
+                const groupedResults = new Map<string, TestResultData[]>()
                 testResults.forEach((result) => {
                   if (!groupedResults.has(result.testCaseTitle)) {
-                    groupedResults.set(result.testCaseTitle, []);
+                    groupedResults.set(result.testCaseTitle, [])
                   }
-                  groupedResults.get(result.testCaseTitle)!.push(result);
-                });
+                  groupedResults.get(result.testCaseTitle)!.push(result)
+                })
 
-                let tableRowsHtml = '';
-                let previousCategory = '';
+                let tableRowsHtml = ''
+                let previousCategory = ''
 
                 groupedResults.forEach((results, testCaseTitle) => {
                   results.forEach((r, index) => {
@@ -273,15 +285,15 @@ class CustomReporter implements Reporter {
                           ? 'bg-danger'
                           : r.status === 'skipped'
                             ? 'bg-warning'
-                            : 'bg-secondary'; // Use badge background colors
-                    const capitalizedStatus = r.status.charAt(0).toUpperCase() + r.status.slice(1); // Capitalize first letter
-                    const durationInSeconds = (r.duration / 1000).toFixed(2); // Convert ms to seconds and format
+                            : 'bg-secondary' // Use badge background colors
+                    const capitalizedStatus = r.status.charAt(0).toUpperCase() + r.status.slice(1) // Capitalize first letter
+                    const durationInSeconds = (r.duration / 1000).toFixed(2) // Convert ms to seconds and format
 
-                    let rowClass = '';
+                    let rowClass = ''
                     if (index === 0 && r.category !== previousCategory && previousCategory !== '') {
-                      rowClass = 'category-separator'; // Use custom class for thinner border
+                      rowClass = 'category-separator' // Use custom class for thinner border
                     }
-                    previousCategory = r.category;
+                    previousCategory = r.category
 
                     tableRowsHtml += `
                     <tr class="${rowClass}">
@@ -301,10 +313,10 @@ class CustomReporter implements Reporter {
                             ${r.attachments
                               .map((att) => {
                                 if (att.path) {
-                                  const fileName = path.basename(att.path);
-                                  return `<a href="${att.path}" target="_blank">${att.name || fileName}</a>`;
+                                  const fileName = path.basename(att.path)
+                                  return `<a href="${att.path}" target="_blank">${att.name || fileName}</a>`
                                 }
-                                return '';
+                                return ''
                               })
                               .join(' | ')}
                           </div>
@@ -313,10 +325,10 @@ class CustomReporter implements Reporter {
                         }
                       </td>
                     </tr>
-                    `;
-                  });
-                });
-                return tableRowsHtml;
+                    `
+                  })
+                })
+                return tableRowsHtml
               })()}
             </tbody>
           </table>
@@ -341,8 +353,8 @@ class CustomReporter implements Reporter {
       )
       .join('')}
   </script>
-</body></html>`;
+</body></html>`
   }
 }
 
-export default CustomReporter;
+export default CustomReporter

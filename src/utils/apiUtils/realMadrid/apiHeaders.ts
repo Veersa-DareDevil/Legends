@@ -9,7 +9,7 @@ export class ApiHeaders {
     return {
       'Content-Type': 'application/json',
       Accept: 'application/json',
-    };
+    }
   }
 
   /**
@@ -22,11 +22,11 @@ export class ApiHeaders {
       authorization: `Bearer ${accessToken}`,
       'content-type': 'application/json',
       accept: 'application/json',
-    };
-    if (contextHeader) {
-      headers['x-context-request'] = contextHeader;
     }
-    return headers;
+    if (contextHeader) {
+      headers['x-context-request'] = contextHeader
+    }
+    return headers
   }
 
   /**
@@ -36,6 +36,6 @@ export class ApiHeaders {
     return {
       'Content-Type': 'application/x-www-form-urlencoded',
       Accept: 'application/json',
-    };
+    }
   }
 }

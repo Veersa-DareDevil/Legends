@@ -1,6 +1,6 @@
-import { APIRequestContext, expect } from '@playwright/test';
-import { ADMIN_ENDPOINTS } from '@src/utils/apiUtils/realMadrid/apiEndpoints';
-import { ApiHeaders } from '@src/utils/apiUtils/realMadrid/apiHeaders';
+import { APIRequestContext, expect } from '@playwright/test'
+import { ADMIN_ENDPOINTS } from '@src/utils/apiUtils/realMadrid/apiEndpoints'
+import { ApiHeaders } from '@src/utils/apiUtils/realMadrid/apiHeaders'
 
 export class ProductService {
   constructor(
@@ -13,12 +13,12 @@ export class ProductService {
     const resp = await this.apiRequest.post(ADMIN_ENDPOINTS.products, {
       headers: ApiHeaders.getAuthJsonHeaders(accessToken, this.contextHeader),
       data: payload,
-    });
-    expect(resp.status()).toBe(200);
+    })
+    expect(resp.status()).toBe(200)
     if (!resp.ok()) {
-      const text = await resp.text();
-      throw new Error(`Products API failed (${resp.status()}): ${text}`);
+      const text = await resp.text()
+      throw new Error(`Products API failed (${resp.status()}): ${text}`)
     }
-    return resp.json();
+    return resp.json()
   }
 }

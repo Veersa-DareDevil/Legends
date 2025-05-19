@@ -11,7 +11,7 @@ export class CategoryService {
 
   // create new category
 
-  async createCategory(accessToken: string, payload: any) {
+  async createCategory(accessToken: string, payload: object) {
     const response = await ApiRequest.postRequest(
       this.apiRequest,
       ADMIN_ENDPOINTS.categories,

@@ -10,7 +10,7 @@ export class ProductService {
   ) {}
 
   /** Create a new product */
-  async createProduct(accessToken: string, payload: any) {
+  async createProduct(accessToken: string, payload: object) {
     const response = await ApiRequest.postRequest(
       this.apiRequest,
       ADMIN_ENDPOINTS.products,

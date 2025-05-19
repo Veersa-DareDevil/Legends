@@ -6,7 +6,7 @@ import { CategoryService } from '@src/pageObject/api/realMadrid/categoryService'
 
 test.describe('Admin Portal || Catalog || Category', () => {
   let accessToken: string;
-  let tokenResponse: any;
+  let tokenResponse: { [key: string]: string };
 
   test.beforeEach(async ({ browser, request }) => {
     // 1) Initialize AuthService

@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
-import { AuthService } from '@src/utils/apiUtils/realMadrid/authService';
-import { ProductService } from '@src/pageObject/api/realMadrid/productService';
-import { PAYLOAD } from '@src/fixtures/api/realMadrid/productPayload';
-import authData from '@src/fixtures/api/authData.json';
+import { AuthService } from '@src/utils/apiUtils/realMadrid/authService.ts';
+import { ProductService } from '@src/pageObject/api/realMadrid/productService.ts';
+import { PAYLOAD } from '@src/fixtures/api/realMadrid/productPayload.ts';
+import authData from '@src/fixtures/api/authData.json' with { type: 'json' };
 
 test.describe('Admin Portal || Catalog || Products', () => {
   let accessToken: string;

@@ -1,7 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { AuthService } from '@src/utils/apiUtils/realMadrid/authService';
-import { ProductService } from '@src/pageObject/api/realMadrid/productService';
-import { PAYLOAD } from '@src/fixtures/api/realMadrid/productPayload';
+import { PAYLOAD } from '@src/fixtures/api/realMadrid/categoryPayload';
 import authData from '@src/fixtures/api/authData.json'
 import { CategoryService } from '@src/pageObject/api/realMadrid/categoryService';
 

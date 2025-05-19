@@ -1,8 +1,10 @@
 import { CommonUtils } from '@src/utils/loginUtils/realMadrid/commonUtils';
 import { test, expect } from '@playwright/test';
+import { Navigation } from '@src/pageObject/realMadrid/mobileUI/navigation';
 
 test.describe('303887 & 745140 -Login to Storefront site of Real Madrid', () => {
   let login: CommonUtils;
+  let navigation: Navigation;
 
   test.beforeEach('Validate login process', async ({ page }) => {
     login = new CommonUtils(page);
@@ -10,6 +12,9 @@ test.describe('303887 & 745140 -Login to Storefront site of Real Madrid', () => 
   });
 
   test('Should Login to Storefront', async ({ page }) => {
+    navigation = new Navigation(page);
+    await navigation.openMenu();
+
     await login.selectEnglishLanguage();
     await page.waitForTimeout(2000);
     const homePageTitle = await page.title();
@@ -29,6 +34,7 @@ test.describe('303887 & 745140 -Login to Storefront site of Real Madrid', () => 
 
     // Split into words using space as delimiter
     const words = (username ?? '').split(' ');
+
     // Take the first letter of the first two word-groups
     const usernameInitials = words
       .slice(0, 2)

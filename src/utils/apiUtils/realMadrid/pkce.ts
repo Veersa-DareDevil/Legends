@@ -4,11 +4,7 @@ import crypto from 'crypto';
  * Base64-url encode a buffer (RFC 4648 §5)
  */
 export function base64URLEncode(buffer: Buffer) {
-  return buffer
-    .toString('base64')
-    .replace(/\+/g, '-')
-    .replace(/\//g, '_')
-    .replace(/=+$/, '');
+  return buffer.toString('base64').replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
 }
 
 /**

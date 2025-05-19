@@ -8,7 +8,7 @@ import { ApiRequest } from '@src/utils/apiUtils/apiRequest';
 export class ProductService {
   constructor(
     private apiRequest: APIRequestContext,
-    private contextHeader: string  // the JSON string for x-context-request
+    private contextHeader: string, // the JSON string for x-context-request
   ) {}
 
   /** Create a new product */

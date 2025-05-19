@@ -38,7 +38,7 @@ export default defineConfig({
     //   use: { ...devices['Desktop WebKit'] ,
     //     actionTimeout: 45000,
     //     navigationTimeout: 60000,},
-    //     timeout: 150000, 
+    //     timeout: 150000,
     // },
     {
       name: 'Mobile Chrome',

@@ -5,18 +5,18 @@ import { PAYLOAD } from '@src/fixtures/api/realMadrid/productPayload';
 import authData from '@src/fixtures/api/authData.json'
 
 test.describe('Admin Portal || Catalog || Products', () => {
-    let accessToken: string;
-    let tokenResponse: any;
+  let accessToken: string;
+  let tokenResponse: { [key: string]: string };
 
     test.beforeEach(async ({ browser, request }) => {
         // 1) Initialize AuthService
         const auth = new AuthService(browser, request, authData.productScope);
 
-        // 2) Fetch a fresh access token
-        tokenResponse = await auth.getAccessTokenResonseBody(); // This method should return the token response body
-        accessToken = tokenResponse.access_token;               // Extract the access token from the response
-        expect(accessToken).toBeTruthy();
-    });
+    // 2) Fetch a fresh access token
+    tokenResponse = await auth.getAccessTokenResonseBody(); // This method should return the token response body
+    accessToken = tokenResponse.access_token; // Extract the access token from the response
+    expect(accessToken).toBeTruthy();
+  });
 
     test('POST API: Create a New Product via API', async ({ request }) => {
         // 3) Build ProductService

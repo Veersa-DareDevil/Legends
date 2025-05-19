@@ -45,8 +45,8 @@ class CustomReporter implements Reporter {
     stats: { total: 0, passed: 0, failed: 0, skipped: 0, interrupted: 0, timedOut: 0 },
     categoryStats: {
       Desktop: { total: 0, passed: 0, failed: 0, skipped: 0, interrupted: 0, timedOut: 0 },
-      Mobile:  { total: 0, passed: 0, failed: 0, skipped: 0, interrupted: 0, timedOut: 0 },
-      API:     { total: 0, passed: 0, failed: 0, skipped: 0, interrupted: 0, timedOut: 0 },
+      Mobile: { total: 0, passed: 0, failed: 0, skipped: 0, interrupted: 0, timedOut: 0 },
+      API: { total: 0, passed: 0, failed: 0, skipped: 0, interrupted: 0, timedOut: 0 },
     },
     testResults: [],
     executionTime: '',
@@ -63,9 +63,16 @@ class CustomReporter implements Reporter {
 
   onTestEnd(testCase: TestCase, result: TestResult): void {
     const project = testCase.parent.project()?.name || 'Unknown';
-    let category = ['Desktop', 'Mobile', 'API'].find(c => project.startsWith(c)) || 'Other';
+    let category = ['Desktop', 'Mobile', 'API'].find((c) => project.startsWith(c)) || 'Other';
     if (!this.reportData.categoryStats[category]) {
-      this.reportData.categoryStats[category] = { total:0, passed:0, failed:0, skipped:0, interrupted:0, timedOut:0 };
+      this.reportData.categoryStats[category] = {
+        total: 0,
+        passed: 0,
+        failed: 0,
+        skipped: 0,
+        interrupted: 0,
+        timedOut: 0,
+      };
     }
     const catStats = this.reportData.categoryStats[category];
     this.reportData.stats.total++;
@@ -77,13 +84,13 @@ class CustomReporter implements Reporter {
 
     this.reportData.testResults.push({
       testCaseTitle: testCase.title,
-      status:        result.status,
-      duration:      result.duration,
-      startTime:     new Date(result.startTime).toLocaleString(), // Keep string for table details
-      error:         result.errors.map(e => e.message).join('\n') || undefined,
-      projectName:   project,
+      status: result.status,
+      duration: result.duration,
+      startTime: new Date(result.startTime).toLocaleString(), // Keep string for table details
+      error: result.errors.map((e) => e.message).join('\n') || undefined,
+      projectName: project,
       category,
-      attachments:   result.attachments.map(att => ({
+      attachments: result.attachments.map((att) => ({
         name: att.name,
         contentType: att.contentType,
         path: att.path, // Include the path to the attachment
@@ -97,7 +104,7 @@ class CustomReporter implements Reporter {
     this.reportData.testResults.sort((a, b) =>
       a.testCaseTitle === b.testCaseTitle
         ? a.projectName.localeCompare(b.projectName)
-        : a.testCaseTitle.localeCompare(b.testCaseTitle)
+        : a.testCaseTitle.localeCompare(b.testCaseTitle),
     );
     const reportsDir = path.join(process.cwd(), 'reports');
     const attachmentsDir = path.join(reportsDir, 'attachments');
@@ -116,7 +123,9 @@ class CustomReporter implements Reporter {
               fs.copyFileSync(sourcePath, destinationPath);
               // Update the attachment path in the report data to the new location
               att.path = path.join('attachments', fileName);
-              console.log(`Copied attachment from ${sourcePath} to ${destinationPath}, updated path in report data to ${att.path}`);
+              console.log(
+                `Copied attachment from ${sourcePath} to ${destinationPath}, updated path in report data to ${att.path}`,
+              );
             } catch (error) {
               console.error(`Failed to copy attachment ${sourcePath} to ${destinationPath}: ${error}`);
             }
@@ -131,9 +140,15 @@ class CustomReporter implements Reporter {
   }
 
   private formatTime(ms: number): string {
-    const s = Math.floor((ms/1000)%60).toString().padStart(2,'0');
-    const m = Math.floor((ms/60000)%60).toString().padStart(2,'0');
-    const h = Math.floor(ms/3600000).toString().padStart(2,'0');
+    const s = Math.floor((ms / 1000) % 60)
+      .toString()
+      .padStart(2, '0');
+    const m = Math.floor((ms / 60000) % 60)
+      .toString()
+      .padStart(2, '0');
+    const h = Math.floor(ms / 3600000)
+      .toString()
+      .padStart(2, '0');
     return `${h}:${m}:${s}`;
   }
 
@@ -145,7 +160,7 @@ class CustomReporter implements Reporter {
   private renderHtml(): string {
     const { stats, categoryStats, testResults, executionTime, executionStartDate, executionEndDate } = this.reportData; // Updated variable names
     const cats = Object.keys(categoryStats);
-    const catData = cats.map(c => categoryStats[c]);
+    const catData = cats.map((c) => categoryStats[c]);
 
     return `<!DOCTYPE html>
 <html><head>
@@ -202,7 +217,9 @@ class CustomReporter implements Reporter {
       </div>
 
       <div class="row row-cols-1 row-cols-md-3 g-4">
-        ${cats.map((c,i) => `
+        ${cats
+          .map(
+            (c, i) => `
         <div class="col">
           <div class="card h-100 shadow"> <!-- Added shadow class -->
             <div class="card-header bg-dark text-white text-center">${c} Results</div> <!-- Styled card header -->
@@ -211,7 +228,9 @@ class CustomReporter implements Reporter {
             </div>
           </div>
         </div>
-        `).join('')}
+        `,
+          )
+          .join('')}
       </div>
     </div>
 
@@ -235,7 +254,7 @@ class CustomReporter implements Reporter {
             <tbody>
               ${(() => {
                 const groupedResults = new Map<string, TestResultData[]>();
-                testResults.forEach(result => {
+                testResults.forEach((result) => {
                   if (!groupedResults.has(result.testCaseTitle)) {
                     groupedResults.set(result.testCaseTitle, []);
                   }
@@ -247,16 +266,22 @@ class CustomReporter implements Reporter {
 
                 groupedResults.forEach((results, testCaseTitle) => {
                   results.forEach((r, index) => {
-                    const statusClass = r.status === 'passed' ? 'bg-success' : r.status === 'failed' ? 'bg-danger' : r.status === 'skipped' ? 'bg-warning' : 'bg-secondary'; // Use badge background colors
+                    const statusClass =
+                      r.status === 'passed'
+                        ? 'bg-success'
+                        : r.status === 'failed'
+                          ? 'bg-danger'
+                          : r.status === 'skipped'
+                            ? 'bg-warning'
+                            : 'bg-secondary'; // Use badge background colors
                     const capitalizedStatus = r.status.charAt(0).toUpperCase() + r.status.slice(1); // Capitalize first letter
                     const durationInSeconds = (r.duration / 1000).toFixed(2); // Convert ms to seconds and format
 
                     let rowClass = '';
                     if (index === 0 && r.category !== previousCategory && previousCategory !== '') {
-                       rowClass = 'category-separator'; // Use custom class for thinner border
+                      rowClass = 'category-separator'; // Use custom class for thinner border
                     }
                     previousCategory = r.category;
-
 
                     tableRowsHtml += `
                     <tr class="${rowClass}">
@@ -268,18 +293,24 @@ class CustomReporter implements Reporter {
                       <td>${r.startTime}</td>
                       <td>
                         ${r.error ? `<pre>${this.stripAnsiCodes(r.error)}</pre>` : '-'}
-                        ${r.attachments && r.attachments.length > 0 ? `
+                        ${
+                          r.attachments && r.attachments.length > 0
+                            ? `
                           <div>
                             <strong>Attachments:</strong>
-                            ${r.attachments.map(att => {
-                              if (att.path) {
-                                const fileName = path.basename(att.path);
-                                return `<a href="${att.path}" target="_blank">${att.name || fileName}</a>`;
-                              }
-                              return '';
-                            }).join(' | ')}
+                            ${r.attachments
+                              .map((att) => {
+                                if (att.path) {
+                                  const fileName = path.basename(att.path);
+                                  return `<a href="${att.path}" target="_blank">${att.name || fileName}</a>`;
+                                }
+                                return '';
+                              })
+                              .join(' | ')}
                           </div>
-                        ` : ''}
+                        `
+                            : ''
+                        }
                       </td>
                     </tr>
                     `;
@@ -302,9 +333,13 @@ class CustomReporter implements Reporter {
       options:{ responsive:true, maintainAspectRatio:false, plugins:{ legend:{position:'top'}, datalabels:{color:'#fff'} }}
     });
     // Category charts
-    ${cats.map((c,i) => `
+    ${cats
+      .map(
+        (c, i) => `
     new Chart(document.getElementById('chart-${c}').getContext('2d'), { type:'pie', data:{ labels:['Passed','Failed','Skipped','Interrupted','Timed Out'], datasets:[{ data:[${catData[i].passed},${catData[i].failed},${catData[i].skipped},${catData[i].interrupted},${catData[i].timedOut}], backgroundColor:['#4CAF50','#F44336','#FF9800','#9E9E9E','#9C27B0'], borderWidth:2 }] }, options:{ responsive:true, maintainAspectRatio:false, plugins:{ legend:{position:'bottom'}, datalabels:{color:'#fff'} }} });
-    `).join('')}
+    `,
+      )
+      .join('')}
   </script>
 </body></html>`;
   }

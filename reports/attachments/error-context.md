@@ -6,12 +6,32 @@
 # Error details
 
 ```
-Error: page.waitForLoadState: Test timeout of 120000ms exceeded.
-=========================== logs ===========================
-  "load" event fired
-============================================================
-    at Product.selectNavTraining (C:\Users\AbhinavSharma\Legends\src\pageObject\realMadrid\desktopUI\product.ts:35:17)
-    at C:\Users\AbhinavSharma\Legends\specs\realMadrid\desktopUI\checkoutValidation.spec.ts:18:19
+TimeoutError: locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('[data-testid="checkoutbutton"]')
+    - locator resolved to <button type="button" preset="primary" data-testid="checkoutbutton" class="align-middle select-none font-sans font-normal text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none justify-center cursor-pointer text-md py-3 px-6 rounded-[16px] shadow-md hover:shadow-lg focus:shadow-lg active:ring-4 active:opacity-[0.85] active:ring-gray-200/40 bg-gradient-to-t from-deep-purple-700 to-purple-700 text-white shadow-deep-purple-500/20 hover:to-deep-purple-700 hover:de…>…</button>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not stable
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <button id="onetrust-accept-btn-handler">Aceptar todas las cookies</button> from <div id="onetrust-consent-sdk">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    53 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <button id="onetrust-accept-btn-handler">Aceptar todas las cookies</button> from <div id="onetrust-consent-sdk">…</div> subtree intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+
+    at Product.addToCart (C:\Users\AbhinavSharma\Legends\src\pageObject\realMadrid\desktopUI\product.ts:45:35)
+    at C:\Users\AbhinavSharma\Legends\specs\realMadrid\desktopUI\checkoutValidation.spec.ts:21:5
 ```
 
 # Page snapshot
@@ -38,9 +58,9 @@ Error: page.waitForLoadState: Test timeout of 120000ms exceeded.
         - listitem "Link to profile":
           - button "KL"
         - listitem:
-          - 'button "Cart items: 2"':
+          - 'button "Cart items: 3"':
             - img
-            - text: "2"
+            - text: "3"
     - button "Kits":
       - paragraph: Kits
       - img
@@ -98,888 +118,124 @@ Error: page.waitForLoadState: Test timeout of 120000ms exceeded.
       - link "Intercontinental Cup":
         - /url: /en-us/content/intercontinental-cup
 - main:
+  - img "Product image"
+  - img "Product image"
+  - img "Product image"
+  - img "Product image"
+  - img "Product image"
+  - button "See more"
   - navigation "breadcrumbs":
     - link "Home":
       - /url: /en-us
-    - text: Training
-  - heading "Training" [level=1]
-  - text: Shop the Official UE Online Shop at Real Madrid. Find the Training Collection of clothing and accessories such as shirts, jackets, gloves, shin guards, balls and much more.
-  - button "Filter":
-    - img
-    - text: Filter
-  - 'button "Sort By: Relevancy"':
-    - text: "Sort By: Relevancy"
-    - img
-  - paragraph: Filter By
-  - button:
-    - img
-  - button "Size":
-    - text: Size
-    - img
-  - checkbox
-  - img
-  - text: XS
-  - checkbox
-  - img
-  - text: S
-  - checkbox
-  - img
-  - text: M
-  - checkbox
-  - img
-  - text: L
-  - checkbox
-  - img
-  - text: XL
-  - checkbox
-  - img
-  - text: 2XL
-  - checkbox
-  - img
-  - text: 3XL
-  - checkbox
-  - img
-  - text: 7 - 8 Years
-  - checkbox
-  - img
-  - text: 9 - 10 Years
-  - checkbox
-  - img
-  - text: "128"
-  - checkbox
-  - img
-  - text: "140"
-  - checkbox
-  - img
-  - text: "152"
-  - checkbox
-  - img
-  - text: "164"
-  - checkbox
-  - img
-  - text: "4"
-  - checkbox
-  - img
-  - text: "5"
-  - checkbox
-  - img
-  - text: NS
-  - checkbox
-  - img
-  - text: XXL
-  - checkbox
-  - img
-  - text: 2XS
-  - checkbox
-  - img
-  - text: 11 / 12
-  - checkbox
-  - img
-  - text: 13 / 14
-  - checkbox
-  - img
-  - text: 3 / 4
-  - checkbox
-  - img
-  - text: 5 / 6
-  - checkbox
-  - img
-  - text: 7 / 8
-  - checkbox
-  - img
-  - text: 9 / 10
-  - checkbox
-  - img
-  - text: "176"
-  - checkbox
-  - img
-  - text: "10"
-  - checkbox
-  - img
-  - text: "12"
-  - checkbox
-  - img
-  - text: "14"
-  - checkbox
-  - img
-  - text: "8"
-  - checkbox
-  - img
-  - text: 11-12
-  - checkbox
-  - img
-  - text: 13-14
-  - checkbox
-  - img
-  - text: 3-4
-  - checkbox
-  - img
-  - text: 5-6
-  - checkbox
-  - img
-  - text: "6"
-  - checkbox
-  - img
-  - text: 7-8
-  - checkbox
-  - img
-  - text: 9-10
-  - checkbox
-  - img
-  - text: "1"
-  - checkbox
-  - img
-  - text: 39 1/3
-  - checkbox
-  - img
-  - text: "40"
-  - checkbox
-  - img
-  - text: 40 2/3
-  - checkbox
-  - img
-  - text: 41 1/3
-  - checkbox
-  - img
-  - text: "42"
-  - checkbox
-  - img
-  - text: 42 2/3
-  - checkbox
-  - img
-  - text: 43 1/3
-  - checkbox
-  - img
-  - text: "44"
-  - checkbox
-  - img
-  - text: "116"
-  - checkbox
-  - img
-  - text: "3"
-  - checkbox
-  - img
-  - text: 12 months
-  - checkbox
-  - img
-  - text: 3 months
-  - checkbox
-  - img
-  - text: 35 1/3
-  - checkbox
-  - img
-  - text: "36"
-  - checkbox
-  - img
-  - text: 36 2/3
-  - checkbox
-  - img
-  - text: 37 1/3
-  - checkbox
-  - img
-  - text: "38"
-  - checkbox
-  - img
-  - text: 38 2/3
-  - checkbox
-  - img
-  - text: 6 months
-  - checkbox
-  - img
-  - text: 9 months
-  - checkbox
-  - img
-  - text: 18 months
-  - checkbox
-  - img
-  - text: "2"
-  - checkbox
-  - img
-  - text: 3 - 4 Years
-  - checkbox
-  - img
-  - text: "92"
-  - checkbox
-  - img
-  - text: "98"
-  - checkbox
-  - img
-  - text: Adulto M/L
-  - checkbox
-  - img
-  - text: Kids XXL
-  - checkbox
-  - img
-  - text: Talla Única
-  - checkbox
-  - img
-  - text: XXL NIÑO
-  - checkbox
-  - img
-  - text: 0 - 3 Months
-  - checkbox
-  - img
-  - text: 1 - 2 Years
-  - checkbox
-  - img
-  - text: "104"
-  - checkbox
-  - img
-  - text: 11 - 12 Years
-  - checkbox
-  - img
-  - text: 11/12
-  - checkbox
-  - img
-  - text: 13 - 14 Years
-  - checkbox
-  - img
-  - text: 13/14
-  - checkbox
-  - img
-  - text: 2 - 3 Years
-  - checkbox
-  - img
-  - text: 3 - 6 Months
-  - checkbox
-  - img
-  - text: 5/6
-  - checkbox
-  - img
-  - text: 6 - 9 Months
-  - checkbox
-  - img
-  - text: "68"
-  - checkbox
-  - img
-  - text: 7/8
-  - checkbox
-  - img
-  - text: "74"
-  - checkbox
-  - img
-  - text: "80"
-  - checkbox
-  - img
-  - text: "86"
-  - checkbox
-  - img
-  - text: 9 - 12 Months
-  - checkbox
-  - img
-  - text: 9/10
-  - checkbox
-  - img
-  - text: Adulto L/XL
-  - checkbox
-  - img
-  - text: Adulto S/M
-  - checkbox
-  - img
-  - text: Joven
-  - checkbox
-  - img
-  - text: Niño
-  - checkbox
-  - img
-  - text: OSFW
-  - checkbox
-  - img
-  - text: OSFY
-  - checkbox
-  - img
-  - text: "110"
-  - checkbox
-  - img
-  - text: 5 - 6 Years
-  - checkbox
-  - img
-  - text: "62"
-  - checkbox
-  - img
-  - text: ADULT
-  - checkbox
-  - img
-  - text: ADULTOS
-  - checkbox
-  - img
-  - text: Hombre
-  - checkbox
-  - img
-  - text: Mujer
-  - checkbox
-  - img
-  - text: NIÑOS
-  - checkbox
-  - img
-  - text: OSFC
-  - checkbox
-  - img
-  - text: OSFL
-  - button "Product Type":
-    - text: Product Type
-    - img
-  - checkbox
-  - img
-  - text: Accessories
-  - checkbox
-  - img
-  - text: Ashtrays
-  - checkbox
-  - img
-  - text: Backpacks
-  - checkbox
-  - img
-  - text: Bags
-  - checkbox
-  - img
-  - text: Beanies
-  - checkbox
-  - img
-  - text: Bottles
-  - checkbox
-  - img
-  - text: Bracelets
-  - checkbox
-  - img
-  - text: Calendars
-  - checkbox
-  - img
-  - text: Caps
-  - checkbox
-  - img
-  - text: Cases
-  - checkbox
-  - img
-  - text: Coats
-  - checkbox
-  - img
-  - text: Computer Accessories
-  - checkbox
-  - img
-  - text: Electronics
-  - checkbox
-  - img
-  - text: Face Masks
-  - checkbox
-  - img
-  - text: Flags
-  - checkbox
-  - img
-  - text: Footballs
-  - checkbox
-  - img
-  - text: Footwear
-  - checkbox
-  - img
-  - text: Glasses
-  - checkbox
-  - img
-  - text: Gloves
-  - checkbox
-  - img
-  - text: Gymsacks
-  - checkbox
-  - img
-  - text: Hats
-  - checkbox
-  - img
-  - text: Headphones
-  - checkbox
-  - img
-  - text: Home Accessories
-  - checkbox
-  - img
-  - text: Hoodies
-  - checkbox
-  - img
-  - text: Jackets
-  - checkbox
-  - img
-  - text: Jerseys
-  - checkbox
-  - img
-  - text: Joggers
-  - checkbox
-  - img
-  - text: Jumpers
-  - checkbox
-  - img
-  - text: Keyrings
-  - checkbox
-  - img
-  - text: Lanyards
-  - checkbox
-  - img
-  - text: License Plates
-  - checkbox
-  - img
-  - text: Mugs
-  - checkbox
-  - img
-  - text: Notebooks
-  - checkbox
-  - img
-  - text: Pacifiers
-  - checkbox
-  - img
-  - text: Pants
-  - checkbox
-  - img
-  - text: Pennants
-  - checkbox
-  - img
-  - text: Pens
-  - checkbox
-  - img
-  - text: Pets Accessories
-  - checkbox
-  - img
-  - text: Plushies
-  - checkbox
-  - img
-  - text: Polos
-  - checkbox
-  - img
-  - text: Puzzles
-  - checkbox
-  - img
-  - text: Pyjamas
-  - checkbox
-  - img
-  - text: Rings
-  - checkbox
-  - img
-  - text: Scarves
-  - checkbox
-  - img
-  - text: School Accessories
-  - checkbox
-  - img
-  - text: Shinguards
-  - checkbox
-  - img
-  - text: Shorts
-  - checkbox
-  - img
-  - text: Snowballs
-  - checkbox
-  - img
-  - text: Socks
-  - checkbox
-  - img
-  - text: Sweatshirts
-  - checkbox
-  - img
-  - text: T-Shirts
-  - checkbox
-  - img
-  - text: Tie Clips
-  - checkbox
-  - img
-  - text: Tights
-  - checkbox
-  - img
-  - text: Tops
-  - checkbox
-  - img
-  - text: Toys
-  - checkbox
-  - img
-  - text: Track Tops
-  - checkbox
-  - img
-  - text: Tracksuits
-  - checkbox
-  - img
-  - text: Training Tops
-  - checkbox
-  - img
-  - text: Vests
-  - checkbox
-  - img
-  - text: Wallets
-  - checkbox
-  - img
-  - text: Washbags
-  - checkbox
-  - img
-  - text: Windbreakers
-  - button "Gender":
-    - text: Gender
-    - img
-  - checkbox
-  - img
-  - text: Baby/Toddlers
-  - checkbox
-  - img
-  - text: Mens
-  - checkbox
-  - img
-  - text: Unisex
-  - checkbox
-  - img
-  - text: Womens
-  - checkbox
-  - img
-  - text: Youth
-  - button "Color":
-    - text: Color
-    - img
-  - checkbox
-  - img
-  - text: White
-  - checkbox
-  - img
-  - text: Black
-  - checkbox
-  - img
-  - text: Navy
-  - checkbox
-  - img
-  - text: Blue
-  - checkbox
-  - img
-  - text: Grey
-  - checkbox
-  - img
-  - text: Pink
-  - checkbox
-  - img
-  - text: Purple
-  - checkbox
-  - img
-  - text: Red
-  - checkbox
-  - img
-  - text: Green
-  - checkbox
-  - img
-  - text: Yellow
-  - checkbox
-  - img
-  - text: Transparent
-  - checkbox
-  - img
-  - text: Silver
-  - checkbox
-  - img
-  - text: Carbon
-  - checkbox
-  - img
-  - text: Burgundy
-  - checkbox
-  - img
-  - text: Orange
-  - checkbox
-  - img
-  - text: Beige
-  - checkbox
-  - img
-  - text: Brown
-  - checkbox
-  - img
-  - text: Gold
-  - checkbox
-  - img
-  - text: BLACK
-  - checkbox
-  - img
-  - text: BLUE
-  - checkbox
-  - img
-  - text: Coral
-  - checkbox
-  - img
-  - text: Khaki
-  - checkbox
-  - img
-  - text: Lime
-  - checkbox
-  - img
-  - text: Olive
-  - button "Kit":
-    - text: Kit
-    - img
-  - checkbox
-  - img
-  - text: Away
-  - checkbox
-  - img
-  - text: Fourth
-  - checkbox
-  - img
-  - text: Home
-  - checkbox
-  - img
-  - text: Third
-  - link "Mens Bring Back 99/00 Track Top-primary":
-    - /url: /en-us/product/rmcfyp0038-real-madrid-youth-adidas-training-tts-shorts-black
-    - img "Mens Bring Back 99/00 Track Top-primary"
-  - link "116":
-    - /url: /en-us/product/rmcfyp0038-real-madrid-youth-adidas-training-tts-shorts-black?variant.size=116
-  - link "128":
-    - /url: /en-us/product/rmcfyp0038-real-madrid-youth-adidas-training-tts-shorts-black?variant.size=128
-  - link "140":
-    - /url: /en-us/product/rmcfyp0038-real-madrid-youth-adidas-training-tts-shorts-black?variant.size=140
-  - link "152":
-    - /url: /en-us/product/rmcfyp0038-real-madrid-youth-adidas-training-tts-shorts-black?variant.size=152
-  - link "164":
-    - /url: /en-us/product/rmcfyp0038-real-madrid-youth-adidas-training-tts-shorts-black?variant.size=164
-  - link "Mens Bring Back 99/00 Track Top Your price $32.13 $37.80":
-    - /url: /en-us/product/rmcfyp0038-real-madrid-youth-adidas-training-tts-shorts-black
     - text: Mens Bring Back 99/00 Track Top
-    - paragraph
-    - text: Your price $32.13 $37.80
-  - link "Mens adidas Training TTS Track Top Black-primary":
-    - /url: /en-us/product/rmcfms0147-real-madrid-mens-adidas-training-tts-track-top-black
-    - img "Mens adidas Training TTS Track Top Black-primary"
-  - link "XS":
-    - /url: /en-us/product/rmcfms0147-real-madrid-mens-adidas-training-tts-track-top-black?variant.size=xs
-  - link "S":
-    - /url: /en-us/product/rmcfms0147-real-madrid-mens-adidas-training-tts-track-top-black?variant.size=s
-  - link "M":
-    - /url: /en-us/product/rmcfms0147-real-madrid-mens-adidas-training-tts-track-top-black?variant.size=m
-  - link "L":
-    - /url: /en-us/product/rmcfms0147-real-madrid-mens-adidas-training-tts-track-top-black?variant.size=l
-  - link "XL":
-    - /url: /en-us/product/rmcfms0147-real-madrid-mens-adidas-training-tts-track-top-black?variant.size=xl
-  - link "2XL":
-    - /url: /en-us/product/rmcfms0147-real-madrid-mens-adidas-training-tts-track-top-black?variant.size=2xl
-  - link "3XL":
-    - /url: /en-us/product/rmcfms0147-real-madrid-mens-adidas-training-tts-track-top-black?variant.size=3xl
-  - link "Mens adidas Training TTS Track Top Black Your price $50.49 $59.40":
-    - /url: /en-us/product/rmcfms0147-real-madrid-mens-adidas-training-tts-track-top-black
-    - text: Mens adidas Training TTS Track Top Black
-    - paragraph
-    - text: Your price $50.49 $59.40
-  - paragraph: Match Pro
-  - link "Mens adidas Originals Shorts-primary":
-    - /url: /en-us/product/rmcfmp0151-mens-adidas-originals-shorts
-    - img "Mens adidas Originals Shorts-primary"
-  - link "XS":
-    - /url: /en-us/product/rmcfmp0151-mens-adidas-originals-shorts?variant.size=xs
-  - link "S":
-    - /url: /en-us/product/rmcfmp0151-mens-adidas-originals-shorts?variant.size=s
-  - link "M":
-    - /url: /en-us/product/rmcfmp0151-mens-adidas-originals-shorts?variant.size=m
-  - link "L":
-    - /url: /en-us/product/rmcfmp0151-mens-adidas-originals-shorts?variant.size=l
-  - link "XL":
-    - /url: /en-us/product/rmcfmp0151-mens-adidas-originals-shorts?variant.size=xl
-  - link "2XL":
-    - /url: /en-us/product/rmcfmp0151-mens-adidas-originals-shorts?variant.size=2xl
-  - link "3XL":
-    - /url: /en-us/product/rmcfmp0151-mens-adidas-originals-shorts?variant.size=3xl
-  - link "Mens adidas Originals Shorts Your price $51.00 $60.00":
-    - /url: /en-us/product/rmcfmp0151-mens-adidas-originals-shorts
-    - text: Mens adidas Originals Shorts
-    - paragraph
-    - text: Your price $51.00 $60.00
-  - link "Mens adidas Training TTS Shorts Black-primary":
-    - /url: /en-us/product/rmcfmp0120-real-madrid-mens-adidas-training-tts-shorts-black
-    - img "Mens adidas Training TTS Shorts Black-primary"
-  - link "XS":
-    - /url: /en-us/product/rmcfmp0120-real-madrid-mens-adidas-training-tts-shorts-black?variant.size=xs
-  - link "S":
-    - /url: /en-us/product/rmcfmp0120-real-madrid-mens-adidas-training-tts-shorts-black?variant.size=s
-  - link "M":
-    - /url: /en-us/product/rmcfmp0120-real-madrid-mens-adidas-training-tts-shorts-black?variant.size=m
-  - link "L":
-    - /url: /en-us/product/rmcfmp0120-real-madrid-mens-adidas-training-tts-shorts-black?variant.size=l
-  - link "XL":
-    - /url: /en-us/product/rmcfmp0120-real-madrid-mens-adidas-training-tts-shorts-black?variant.size=xl
-  - link "2XL":
-    - /url: /en-us/product/rmcfmp0120-real-madrid-mens-adidas-training-tts-shorts-black?variant.size=2xl
-  - link "Mens adidas Training TTS Shorts Black Your price $24.79 $29.16":
-    - /url: /en-us/product/rmcfmp0120-real-madrid-mens-adidas-training-tts-shorts-black
-    - text: Mens adidas Training TTS Shorts Black
-    - paragraph
-    - text: Your price $24.79 $29.16
-  - link "Mens adidas Training TTS T-Shirt White-primary":
-    - /url: /en-us/product/rmcfmt0171-real-madrid-mens-adidas-training-tts-t-shirt-white
-    - img "Mens adidas Training TTS T-Shirt White-primary"
-  - link "XS":
-    - /url: /en-us/product/rmcfmt0171-real-madrid-mens-adidas-training-tts-t-shirt-white?variant.size=xs
-  - link "S":
-    - /url: /en-us/product/rmcfmt0171-real-madrid-mens-adidas-training-tts-t-shirt-white?variant.size=s
-  - link "M":
-    - /url: /en-us/product/rmcfmt0171-real-madrid-mens-adidas-training-tts-t-shirt-white?variant.size=m
-  - link "L":
-    - /url: /en-us/product/rmcfmt0171-real-madrid-mens-adidas-training-tts-t-shirt-white?variant.size=l
-  - link "XL":
-    - /url: /en-us/product/rmcfmt0171-real-madrid-mens-adidas-training-tts-t-shirt-white?variant.size=xl
-  - link "2XL":
-    - /url: /en-us/product/rmcfmt0171-real-madrid-mens-adidas-training-tts-t-shirt-white?variant.size=2xl
-  - link "3XL":
-    - /url: /en-us/product/rmcfmt0171-real-madrid-mens-adidas-training-tts-t-shirt-white?variant.size=3xl
-  - link "Mens adidas Training TTS T-Shirt White Your price $22.95 $27.00":
-    - /url: /en-us/product/rmcfmt0171-real-madrid-mens-adidas-training-tts-t-shirt-white
-    - text: Mens adidas Training TTS T-Shirt White
-    - paragraph
-    - text: Your price $22.95 $27.00
-  - link "Mens adidas Training TTS T-Shirt Black-primary":
-    - /url: /en-us/product/rmcfmt0170-real-madrid-mens-adidas-training-tts-t-shirt-black
-    - img "Mens adidas Training TTS T-Shirt Black-primary"
-  - link "XS":
-    - /url: /en-us/product/rmcfmt0170-real-madrid-mens-adidas-training-tts-t-shirt-black?variant.size=xs
-  - link "S":
-    - /url: /en-us/product/rmcfmt0170-real-madrid-mens-adidas-training-tts-t-shirt-black?variant.size=s
-  - link "M":
-    - /url: /en-us/product/rmcfmt0170-real-madrid-mens-adidas-training-tts-t-shirt-black?variant.size=m
-  - link "L":
-    - /url: /en-us/product/rmcfmt0170-real-madrid-mens-adidas-training-tts-t-shirt-black?variant.size=l
-  - link "XL":
-    - /url: /en-us/product/rmcfmt0170-real-madrid-mens-adidas-training-tts-t-shirt-black?variant.size=xl
-  - link "2XL":
-    - /url: /en-us/product/rmcfmt0170-real-madrid-mens-adidas-training-tts-t-shirt-black?variant.size=2xl
-  - link "3XL":
-    - /url: /en-us/product/rmcfmt0170-real-madrid-mens-adidas-training-tts-t-shirt-black?variant.size=3xl
-  - link "Mens adidas Training TTS T-Shirt Black Your price $22.95 $27.00":
-    - /url: /en-us/product/rmcfmt0170-real-madrid-mens-adidas-training-tts-t-shirt-black
-    - text: Mens adidas Training TTS T-Shirt Black
-    - paragraph
-    - text: Your price $22.95 $27.00
-  - link "Mens adidas Training TTS Pants Black-primary":
-    - /url: /en-us/product/rmcfmp0121-real-madrid-mens-adidas-training-tts-pants-black
-    - img "Mens adidas Training TTS Pants Black-primary"
-  - link "XS":
-    - /url: /en-us/product/rmcfmp0121-real-madrid-mens-adidas-training-tts-pants-black?variant.size=xs
-  - link "S":
-    - /url: /en-us/product/rmcfmp0121-real-madrid-mens-adidas-training-tts-pants-black?variant.size=s
-  - link "M":
-    - /url: /en-us/product/rmcfmp0121-real-madrid-mens-adidas-training-tts-pants-black?variant.size=m
-  - link "L":
-    - /url: /en-us/product/rmcfmp0121-real-madrid-mens-adidas-training-tts-pants-black?variant.size=l
-  - link "XL":
-    - /url: /en-us/product/rmcfmp0121-real-madrid-mens-adidas-training-tts-pants-black?variant.size=xl
-  - link "2XL":
-    - /url: /en-us/product/rmcfmp0121-real-madrid-mens-adidas-training-tts-pants-black?variant.size=2xl
-  - link "3XL":
-    - /url: /en-us/product/rmcfmp0121-real-madrid-mens-adidas-training-tts-pants-black?variant.size=3xl
-  - link "Mens adidas Training TTS Pants Black Your price $41.31 $48.60":
-    - /url: /en-us/product/rmcfmp0121-real-madrid-mens-adidas-training-tts-pants-black
-    - text: Mens adidas Training TTS Pants Black
-    - paragraph
-    - text: Your price $41.31 $48.60
-  - link "Mens adidas Training TTS Polo Black-primary":
-    - /url: /en-us/product/rmcfmg0057-real-madrid-mens-adidas-training-tts-polo-black
-    - img "Mens adidas Training TTS Polo Black-primary"
-  - link "XS":
-    - /url: /en-us/product/rmcfmg0057-real-madrid-mens-adidas-training-tts-polo-black?variant.size=xs
-  - link "S":
-    - /url: /en-us/product/rmcfmg0057-real-madrid-mens-adidas-training-tts-polo-black?variant.size=s
-  - link "M":
-    - /url: /en-us/product/rmcfmg0057-real-madrid-mens-adidas-training-tts-polo-black?variant.size=m
-  - link "L":
-    - /url: /en-us/product/rmcfmg0057-real-madrid-mens-adidas-training-tts-polo-black?variant.size=l
-  - link "XL":
-    - /url: /en-us/product/rmcfmg0057-real-madrid-mens-adidas-training-tts-polo-black?variant.size=xl
-  - link "2XL":
-    - /url: /en-us/product/rmcfmg0057-real-madrid-mens-adidas-training-tts-polo-black?variant.size=2xl
-  - link "3XL":
-    - /url: /en-us/product/rmcfmg0057-real-madrid-mens-adidas-training-tts-polo-black?variant.size=3xl
-  - link "Mens adidas Training TTS Polo Black Your price $27.54 $32.40":
-    - /url: /en-us/product/rmcfmg0057-real-madrid-mens-adidas-training-tts-polo-black
-    - text: Mens adidas Training TTS Polo Black
-    - paragraph
-    - text: Your price $27.54 $32.40
-  - link "Youth adidas Training TTS Jersey Black-primary":
-    - /url: /en-us/product/rmcfyt0063-real-madrid-youth-adidas-training-tts-jersey-black
-    - img "Youth adidas Training TTS Jersey Black-primary"
-  - link "116":
-    - /url: /en-us/product/rmcfyt0063-real-madrid-youth-adidas-training-tts-jersey-black?variant.size=116
-  - link "128":
-    - /url: /en-us/product/rmcfyt0063-real-madrid-youth-adidas-training-tts-jersey-black?variant.size=128
-  - link "140":
-    - /url: /en-us/product/rmcfyt0063-real-madrid-youth-adidas-training-tts-jersey-black?variant.size=140
-  - link "152":
-    - /url: /en-us/product/rmcfyt0063-real-madrid-youth-adidas-training-tts-jersey-black?variant.size=152
-  - link "164":
-    - /url: /en-us/product/rmcfyt0063-real-madrid-youth-adidas-training-tts-jersey-black?variant.size=164
-  - link "Youth adidas Training TTS Jersey Black Your price $13.77 $16.20":
-    - /url: /en-us/product/rmcfyt0063-real-madrid-youth-adidas-training-tts-jersey-black
-    - text: Youth adidas Training TTS Jersey Black
-    - paragraph
-    - text: Your price $13.77 $16.20
-  - link "adidas Mens Training TTW Shorts Black-primary":
-    - /url: /en-us/product/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black
-    - img "adidas Mens Training TTW Shorts Black-primary"
-  - link "XS":
-    - /url: /en-us/product/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black?variant.size=xs
-  - link "S":
-    - /url: /en-us/product/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black?variant.size=s
-  - link "M":
-    - /url: /en-us/product/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black?variant.size=m
-  - link "L":
-    - /url: /en-us/product/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black?variant.size=l
-  - link "XL":
-    - /url: /en-us/product/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black?variant.size=xl
-  - link "2XL":
-    - /url: /en-us/product/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black?variant.size=2xl
-  - text: 3XL
-  - link "adidas Mens Training TTW Shorts Black Your price $51.00 $60.00":
-    - /url: /en-us/product/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black
-    - text: adidas Mens Training TTW Shorts Black
-    - paragraph
-    - text: Your price $51.00 $60.00
-  - link "adidas Mens Training TTW Pro Shirt Grey-primary":
-    - /url: /en-us/product/rmcfmt0206-real-madrid-mens-adidas-training-ttw-pro-shirt-grey
-    - img "adidas Mens Training TTW Pro Shirt Grey-primary"
-  - text: XS S M L
-  - link "XL":
-    - /url: /en-us/product/rmcfmt0206-real-madrid-mens-adidas-training-ttw-pro-shirt-grey?variant.size=xl
-  - link "2XL":
-    - /url: /en-us/product/rmcfmt0206-real-madrid-mens-adidas-training-ttw-pro-shirt-grey?variant.size=2xl
-  - text: 3XL
-  - link "adidas Mens Training TTW Pro Shirt Grey Your price $44.06 $51.84":
-    - /url: /en-us/product/rmcfmt0206-real-madrid-mens-adidas-training-ttw-pro-shirt-grey
-    - text: adidas Mens Training TTW Pro Shirt Grey
-    - paragraph
-    - text: Your price $44.06 $51.84
-  - link "Mens Bring Back 99/00 Track Pants-primary":
-    - /url: /en-us/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black
-    - img "Mens Bring Back 99/00 Track Pants-primary"
-  - link "XS":
-    - /url: /en-us/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black?variant.size=xs
-  - link "S":
-    - /url: /en-us/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black?variant.size=s
-  - link "M":
-    - /url: /en-us/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black?variant.size=m
-  - link "L":
-    - /url: /en-us/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black?variant.size=l
-  - link "XL":
-    - /url: /en-us/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black?variant.size=xl
-  - link "2XL":
-    - /url: /en-us/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black?variant.size=2xl
-  - link "3XL":
-    - /url: /en-us/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black?variant.size=3xl
-  - link "Mens Bring Back 99/00 Track Pants Your price $72.25 $85.00":
-    - /url: /en-us/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black
-    - text: Mens Bring Back 99/00 Track Pants
-    - paragraph
-    - text: Your price $72.25 $85.00
-  - navigation:
-    - list:
-      - listitem:
-        - button "1" [disabled]
-      - listitem:
-        - link "2":
-          - /url: /en-us/training/2
-          - button "2"
-      - listitem:
-        - link "3":
-          - /url: /en-us/training/3
-          - button "3"
-      - text: ...
-      - listitem:
-        - link "72":
-          - /url: /en-us/training/72
-          - button "72"
-      - listitem:
-        - link:
-          - /url: /en-us/training/2
-          - button
+  - heading "Mens Bring Back 99/00 Track Top" [level=1]
+  - text: "Your price $32.13 $37.80 Size:"
+  - listbox:
+    - option "Variant Swatch" [selected]: "116"
+    - option "Variant Swatch": "128"
+    - option "Variant Swatch": "140"
+    - option "Variant Swatch": "152"
+    - option "Variant Swatch": "164"
+  - button "Add to Cart"
+  - button "Product Description":
+    - heading "Product Description" [level=2]
+    - img
+  - paragraph: Feel good. Look good. Train better. Rooted in football heritage, these juniors' Tiro 21 shorts grace the pitch with a focus on performance. Made to move, they feature moisture-absorbing AEROREADY to keep you dry and heat-transfer details. They also contain recycled materials, another small step in adidas' efforts to help end plastic waste.
+  - paragraph: This product is made with Primegreen, a series of high-performance recycled materials.
+  - separator
+  - heading "You might be interested in" [level=2]
+  - group "1 / 4":
+    - link "Mens Bring Back 99/00 Track Pants-primary":
+      - /url: /en-us/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black
+      - img "Mens Bring Back 99/00 Track Pants-primary"
+    - link "XS":
+      - /url: /en-us/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black?variant.size=xs
+    - link "S":
+      - /url: /en-us/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black?variant.size=s
+    - link "M":
+      - /url: /en-us/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black?variant.size=m
+    - link "L":
+      - /url: /en-us/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black?variant.size=l
+    - link "XL":
+      - /url: /en-us/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black?variant.size=xl
+    - link "2XL":
+      - /url: /en-us/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black?variant.size=2xl
+    - link "3XL":
+      - /url: /en-us/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black?variant.size=3xl
+    - link "Mens Bring Back 99/00 Track Pants Your price $72.25 $85.00":
+      - /url: /en-us/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black
+      - text: Mens Bring Back 99/00 Track Pants
+      - paragraph
+      - text: Your price $72.25 $85.00
+  - group "2 / 4":
+    - link "Mens Away Bring Back 99/00 Jersey Black-primary":
+      - /url: /en-us/product/rmcfms0174-real-madrid-mens-adidas-training-ttw-tracksuit-jacket-grey
+      - img "Mens Away Bring Back 99/00 Jersey Black-primary"
+    - link "XS":
+      - /url: /en-us/product/rmcfms0174-real-madrid-mens-adidas-training-ttw-tracksuit-jacket-grey?variant.size=xs
+    - link "S":
+      - /url: /en-us/product/rmcfms0174-real-madrid-mens-adidas-training-ttw-tracksuit-jacket-grey?variant.size=s
+    - link "M":
+      - /url: /en-us/product/rmcfms0174-real-madrid-mens-adidas-training-ttw-tracksuit-jacket-grey?variant.size=m
+    - link "L":
+      - /url: /en-us/product/rmcfms0174-real-madrid-mens-adidas-training-ttw-tracksuit-jacket-grey?variant.size=l
+    - link "XL":
+      - /url: /en-us/product/rmcfms0174-real-madrid-mens-adidas-training-ttw-tracksuit-jacket-grey?variant.size=xl
+    - link "2XL":
+      - /url: /en-us/product/rmcfms0174-real-madrid-mens-adidas-training-ttw-tracksuit-jacket-grey?variant.size=2xl
+    - link "3XL":
+      - /url: /en-us/product/rmcfms0174-real-madrid-mens-adidas-training-ttw-tracksuit-jacket-grey?variant.size=3xl
+    - link "Mens Away Bring Back 99/00 Jersey Black Your price $93.50 $110.00":
+      - /url: /en-us/product/rmcfms0174-real-madrid-mens-adidas-training-ttw-tracksuit-jacket-grey
+      - text: Mens Away Bring Back 99/00 Jersey Black
+      - paragraph
+      - text: Your price $93.50 $110.00
+  - group "3 / 4":
+    - link "Mens adidas Tiro Vis Tech Competition Jacket Black-primary":
+      - /url: /en-us/product/rmcfms0411-mens-adidas-tiro-vis-tech-competition-jacket-black
+      - img "Mens adidas Tiro Vis Tech Competition Jacket Black-primary"
+    - link "XS":
+      - /url: /en-us/product/rmcfms0411-mens-adidas-tiro-vis-tech-competition-jacket-black?variant.size=xs
+    - link "S":
+      - /url: /en-us/product/rmcfms0411-mens-adidas-tiro-vis-tech-competition-jacket-black?variant.size=s
+    - link "M":
+      - /url: /en-us/product/rmcfms0411-mens-adidas-tiro-vis-tech-competition-jacket-black?variant.size=m
+    - link "L":
+      - /url: /en-us/product/rmcfms0411-mens-adidas-tiro-vis-tech-competition-jacket-black?variant.size=l
+    - link "XL":
+      - /url: /en-us/product/rmcfms0411-mens-adidas-tiro-vis-tech-competition-jacket-black?variant.size=xl
+    - link "2XL":
+      - /url: /en-us/product/rmcfms0411-mens-adidas-tiro-vis-tech-competition-jacket-black?variant.size=2xl
+    - link "3XL":
+      - /url: /en-us/product/rmcfms0411-mens-adidas-tiro-vis-tech-competition-jacket-black?variant.size=3xl
+    - link "Mens adidas Tiro Vis Tech Competition Jacket Black Your price $97.75 $115.00":
+      - /url: /en-us/product/rmcfms0411-mens-adidas-tiro-vis-tech-competition-jacket-black
+      - text: Mens adidas Tiro Vis Tech Competition Jacket Black
+      - paragraph
+      - text: Your price $97.75 $115.00
+  - group "4 / 4":
+    - link "adidas Mens DNA Track Top 23/24 White-primary":
+      - /url: /en-us/product/rmcfms0213-adidas-mens-dna-track-top-23-24-white
+      - img "adidas Mens DNA Track Top 23/24 White-primary"
+    - link "XS":
+      - /url: /en-us/product/rmcfms0213-adidas-mens-dna-track-top-23-24-white?variant.size=xs
+    - link "S":
+      - /url: /en-us/product/rmcfms0213-adidas-mens-dna-track-top-23-24-white?variant.size=s
+    - link "M":
+      - /url: /en-us/product/rmcfms0213-adidas-mens-dna-track-top-23-24-white?variant.size=m
+    - link "L":
+      - /url: /en-us/product/rmcfms0213-adidas-mens-dna-track-top-23-24-white?variant.size=l
+    - link "XL":
+      - /url: /en-us/product/rmcfms0213-adidas-mens-dna-track-top-23-24-white?variant.size=xl
+    - link "2XL":
+      - /url: /en-us/product/rmcfms0213-adidas-mens-dna-track-top-23-24-white?variant.size=2xl
+    - link "3XL":
+      - /url: /en-us/product/rmcfms0213-adidas-mens-dna-track-top-23-24-white?variant.size=3xl
+    - link "adidas Mens DNA Track Top 23/24 White Your price $80.75 $95.00":
+      - /url: /en-us/product/rmcfms0213-adidas-mens-dna-track-top-23-24-white
+      - text: adidas Mens DNA Track Top 23/24 White
+      - paragraph
+      - text: Your price $80.75 $95.00
 - contentinfo:
   - heading "Shop" [level=4]
   - list:
@@ -1071,7 +327,7 @@ Error: page.waitForLoadState: Test timeout of 120000ms exceeded.
     - /url: /en-us
   - link "Real Madrid CF Shop © 2024 All Rights Reserved":
     - /url: /en-us
-- heading "Your bag | 2 items" [level=2]
+- heading "Your bag | 3 items" [level=2]
 - button "Close":
   - img
 - link:
@@ -1104,11 +360,273 @@ Error: page.waitForLoadState: Test timeout of 120000ms exceeded.
 - button "Remove Youth Third Kit 23/24 Black":
   - paragraph: Remove
   - img
+- link:
+  - /url: /en-us/product/rmcfyp0038-real-madrid-youth-adidas-training-tts-shorts-black
+- link "Mens Bring Back 99/00 Track Top":
+  - /url: /en-us/product/rmcfyp0038-real-madrid-youth-adidas-training-tts-shorts-black
+- text: "Qty: 1 Size: 116"
+- separator
+- text: Your price $32.13 $37.80
+- button:
+  - img
+- textbox [disabled]: "1"
+- button:
+  - img
+- button "Remove Mens Bring Back 99/00 Track Top":
+  - paragraph: Remove
+  - img
+- paragraph: Best sellers
+- group "1 / 12":
+  - link "Mens T-Shirt Olive-primary":
+    - /url: /en-us/product/rmcfmt0151-real-madrid-mens-t-shirt-olive
+    - img "Mens T-Shirt Olive-primary"
+  - link "S":
+    - /url: /en-us/product/rmcfmt0151-real-madrid-mens-t-shirt-olive?variant.size=s
+  - link "M":
+    - /url: /en-us/product/rmcfmt0151-real-madrid-mens-t-shirt-olive?variant.size=m
+  - link "L":
+    - /url: /en-us/product/rmcfmt0151-real-madrid-mens-t-shirt-olive?variant.size=l
+  - link "XL":
+    - /url: /en-us/product/rmcfmt0151-real-madrid-mens-t-shirt-olive?variant.size=xl
+  - link "2XL":
+    - /url: /en-us/product/rmcfmt0151-real-madrid-mens-t-shirt-olive?variant.size=2xl
+  - link "3XL":
+    - /url: /en-us/product/rmcfmt0151-real-madrid-mens-t-shirt-olive?variant.size=3xl
+  - link "Mens T-Shirt Olive Your price $38.25 $45.00":
+    - /url: /en-us/product/rmcfmt0151-real-madrid-mens-t-shirt-olive
+    - text: Mens T-Shirt Olive
+    - paragraph
+    - text: Your price $38.25 $45.00
+- group "2 / 12":
+  - link "Mens T-Shirt Khaki-primary":
+    - /url: /en-us/product/rmcfmt0152-real-madrid-mens-t-shirt-khaki
+    - img "Mens T-Shirt Khaki-primary"
+  - link "S":
+    - /url: /en-us/product/rmcfmt0152-real-madrid-mens-t-shirt-khaki?variant.size=s
+  - link "M":
+    - /url: /en-us/product/rmcfmt0152-real-madrid-mens-t-shirt-khaki?variant.size=m
+  - link "L":
+    - /url: /en-us/product/rmcfmt0152-real-madrid-mens-t-shirt-khaki?variant.size=l
+  - link "XL":
+    - /url: /en-us/product/rmcfmt0152-real-madrid-mens-t-shirt-khaki?variant.size=xl
+  - link "2XL":
+    - /url: /en-us/product/rmcfmt0152-real-madrid-mens-t-shirt-khaki?variant.size=2xl
+  - link "3XL":
+    - /url: /en-us/product/rmcfmt0152-real-madrid-mens-t-shirt-khaki?variant.size=3xl
+  - link "Mens T-Shirt Khaki Your price $38.25 $45.00":
+    - /url: /en-us/product/rmcfmt0152-real-madrid-mens-t-shirt-khaki
+    - text: Mens T-Shirt Khaki
+    - paragraph
+    - text: Your price $38.25 $45.00
+- group "3 / 12":
+  - link "Mens T-Shirt Mustard-primary":
+    - /url: /en-us/product/rmcfmt0256-mens-t-shirt-mustard
+    - img "Mens T-Shirt Mustard-primary"
+  - link "S":
+    - /url: /en-us/product/rmcfmt0256-mens-t-shirt-mustard?variant.size=s
+  - link "M":
+    - /url: /en-us/product/rmcfmt0256-mens-t-shirt-mustard?variant.size=m
+  - link "L":
+    - /url: /en-us/product/rmcfmt0256-mens-t-shirt-mustard?variant.size=l
+  - link "XL":
+    - /url: /en-us/product/rmcfmt0256-mens-t-shirt-mustard?variant.size=xl
+  - link "2XL":
+    - /url: /en-us/product/rmcfmt0256-mens-t-shirt-mustard?variant.size=2xl
+  - link "3XL":
+    - /url: /en-us/product/rmcfmt0256-mens-t-shirt-mustard?variant.size=3xl
+  - link "Mens T-Shirt Mustard Your price $38.25 $45.00":
+    - /url: /en-us/product/rmcfmt0256-mens-t-shirt-mustard
+    - text: Mens T-Shirt Mustard
+    - paragraph
+    - text: Your price $38.25 $45.00
+- group "4 / 12":
+  - link "Mens Hoodie Khaki-primary":
+    - /url: /en-us/product/rmcfms0246-mens-hoodie-khaki
+    - img "Mens Hoodie Khaki-primary"
+  - link "S":
+    - /url: /en-us/product/rmcfms0246-mens-hoodie-khaki?variant.size=s
+  - link "M":
+    - /url: /en-us/product/rmcfms0246-mens-hoodie-khaki?variant.size=m
+  - link "L":
+    - /url: /en-us/product/rmcfms0246-mens-hoodie-khaki?variant.size=l
+  - link "XL":
+    - /url: /en-us/product/rmcfms0246-mens-hoodie-khaki?variant.size=xl
+  - text: 2XL
+  - link "3XL":
+    - /url: /en-us/product/rmcfms0246-mens-hoodie-khaki?variant.size=3xl
+  - link "Mens Hoodie Khaki Your price $80.75 $95.00":
+    - /url: /en-us/product/rmcfms0246-mens-hoodie-khaki
+    - text: Mens Hoodie Khaki
+    - paragraph
+    - text: Your price $80.75 $95.00
+- group "5 / 12":
+  - link "Mens Jogger Black-primary":
+    - /url: /en-us/product/rmcfmp0174-mens-jogger-black
+    - img "Mens Jogger Black-primary"
+  - link "S":
+    - /url: /en-us/product/rmcfmp0174-mens-jogger-black?variant.size=s
+  - link "M":
+    - /url: /en-us/product/rmcfmp0174-mens-jogger-black?variant.size=m
+  - link "L":
+    - /url: /en-us/product/rmcfmp0174-mens-jogger-black?variant.size=l
+  - link "XL":
+    - /url: /en-us/product/rmcfmp0174-mens-jogger-black?variant.size=xl
+  - link "2XL":
+    - /url: /en-us/product/rmcfmp0174-mens-jogger-black?variant.size=2xl
+  - text: 3XL
+  - link "Mens Jogger Black Your price $63.75 $75.00":
+    - /url: /en-us/product/rmcfmp0174-mens-jogger-black
+    - text: Mens Jogger Black
+    - paragraph
+    - text: Your price $63.75 $75.00
+- group "6 / 12":
+  - link "Mens T-Shirt Off White-primary":
+    - /url: /en-us/product/rmcfmt0257-mens-t-shirt-off-white
+    - img "Mens T-Shirt Off White-primary"
+  - link "S":
+    - /url: /en-us/product/rmcfmt0257-mens-t-shirt-off-white?variant.size=s
+  - link "M":
+    - /url: /en-us/product/rmcfmt0257-mens-t-shirt-off-white?variant.size=m
+  - link "L":
+    - /url: /en-us/product/rmcfmt0257-mens-t-shirt-off-white?variant.size=l
+  - link "XL":
+    - /url: /en-us/product/rmcfmt0257-mens-t-shirt-off-white?variant.size=xl
+  - link "2XL":
+    - /url: /en-us/product/rmcfmt0257-mens-t-shirt-off-white?variant.size=2xl
+  - link "3XL":
+    - /url: /en-us/product/rmcfmt0257-mens-t-shirt-off-white?variant.size=3xl
+  - link "Mens T-Shirt Off White Your price $38.25 $45.00":
+    - /url: /en-us/product/rmcfmt0257-mens-t-shirt-off-white
+    - text: Mens T-Shirt Off White
+    - paragraph
+    - text: Your price $38.25 $45.00
+- group "7 / 12":
+  - link "Mens T-Shirt Navy-primary":
+    - /url: /en-us/product/rmcfmt0259-mens-t-shirt-navy
+    - img "Mens T-Shirt Navy-primary"
+  - link "S":
+    - /url: /en-us/product/rmcfmt0259-mens-t-shirt-navy?variant.size=s
+  - link "M":
+    - /url: /en-us/product/rmcfmt0259-mens-t-shirt-navy?variant.size=m
+  - link "L":
+    - /url: /en-us/product/rmcfmt0259-mens-t-shirt-navy?variant.size=l
+  - link "XL":
+    - /url: /en-us/product/rmcfmt0259-mens-t-shirt-navy?variant.size=xl
+  - link "2XL":
+    - /url: /en-us/product/rmcfmt0259-mens-t-shirt-navy?variant.size=2xl
+  - link "3XL":
+    - /url: /en-us/product/rmcfmt0259-mens-t-shirt-navy?variant.size=3xl
+  - link "Mens T-Shirt Navy Your price $38.25 $45.00":
+    - /url: /en-us/product/rmcfmt0259-mens-t-shirt-navy
+    - text: Mens T-Shirt Navy
+    - paragraph
+    - text: Your price $38.25 $45.00
+- group "8 / 12":
+  - link "Mens Hoodie Black-primary":
+    - /url: /en-us/product/rmcfms0250-mens-hoodie-black
+    - img "Mens Hoodie Black-primary"
+  - link "S":
+    - /url: /en-us/product/rmcfms0250-mens-hoodie-black?variant.size=s
+  - link "M":
+    - /url: /en-us/product/rmcfms0250-mens-hoodie-black?variant.size=m
+  - link "L":
+    - /url: /en-us/product/rmcfms0250-mens-hoodie-black?variant.size=l
+  - link "XL":
+    - /url: /en-us/product/rmcfms0250-mens-hoodie-black?variant.size=xl
+  - text: 2XL 3XL
+  - link "Mens Hoodie Black Your price $80.75 $95.00":
+    - /url: /en-us/product/rmcfms0250-mens-hoodie-black
+    - text: Mens Hoodie Black
+    - paragraph
+    - text: Your price $80.75 $95.00
+- group "9 / 12":
+  - link "Mens Hoodie Mustard-primary":
+    - /url: /en-us/product/rmcfms0248-mens-hoodie-mustard
+    - img "Mens Hoodie Mustard-primary"
+  - link "S":
+    - /url: /en-us/product/rmcfms0248-mens-hoodie-mustard?variant.size=s
+  - link "M":
+    - /url: /en-us/product/rmcfms0248-mens-hoodie-mustard?variant.size=m
+  - link "L":
+    - /url: /en-us/product/rmcfms0248-mens-hoodie-mustard?variant.size=l
+  - link "XL":
+    - /url: /en-us/product/rmcfms0248-mens-hoodie-mustard?variant.size=xl
+  - link "2XL":
+    - /url: /en-us/product/rmcfms0248-mens-hoodie-mustard?variant.size=2xl
+  - link "3XL":
+    - /url: /en-us/product/rmcfms0248-mens-hoodie-mustard?variant.size=3xl
+  - link "Mens Hoodie Mustard Your price $80.75 $95.00":
+    - /url: /en-us/product/rmcfms0248-mens-hoodie-mustard
+    - text: Mens Hoodie Mustard
+    - paragraph
+    - text: Your price $80.75 $95.00
+- group "10 / 12":
+  - link "Mens Jogger Off White-primary":
+    - /url: /en-us/product/rmcfmp0173-mens-jogger-off-white
+    - img "Mens Jogger Off White-primary"
+  - link "S":
+    - /url: /en-us/product/rmcfmp0173-mens-jogger-off-white?variant.size=s
+  - link "M":
+    - /url: /en-us/product/rmcfmp0173-mens-jogger-off-white?variant.size=m
+  - link "L":
+    - /url: /en-us/product/rmcfmp0173-mens-jogger-off-white?variant.size=l
+  - link "XL":
+    - /url: /en-us/product/rmcfmp0173-mens-jogger-off-white?variant.size=xl
+  - link "2XL":
+    - /url: /en-us/product/rmcfmp0173-mens-jogger-off-white?variant.size=2xl
+  - text: 3XL
+  - link "Mens Jogger Off White Your price $63.75 $75.00":
+    - /url: /en-us/product/rmcfmp0173-mens-jogger-off-white
+    - text: Mens Jogger Off White
+    - paragraph
+    - text: Your price $63.75 $75.00
+- group "11 / 12":
+  - link "Mens Hoodie Olive-primary":
+    - /url: /en-us/product/rmcfms0247-mens-hoodie-olive
+    - img "Mens Hoodie Olive-primary"
+  - link "S":
+    - /url: /en-us/product/rmcfms0247-mens-hoodie-olive?variant.size=s
+  - link "M":
+    - /url: /en-us/product/rmcfms0247-mens-hoodie-olive?variant.size=m
+  - link "L":
+    - /url: /en-us/product/rmcfms0247-mens-hoodie-olive?variant.size=l
+  - link "XL":
+    - /url: /en-us/product/rmcfms0247-mens-hoodie-olive?variant.size=xl
+  - link "2XL":
+    - /url: /en-us/product/rmcfms0247-mens-hoodie-olive?variant.size=2xl
+  - link "3XL":
+    - /url: /en-us/product/rmcfms0247-mens-hoodie-olive?variant.size=3xl
+  - link "Mens Hoodie Olive Your price $80.75 $95.00":
+    - /url: /en-us/product/rmcfms0247-mens-hoodie-olive
+    - text: Mens Hoodie Olive
+    - paragraph
+    - text: Your price $80.75 $95.00
+- group "12 / 12":
+  - link "Mens Hoodie Navy-primary":
+    - /url: /en-us/product/rmcfms0251-mens-hoodie-navy
+    - img "Mens Hoodie Navy-primary"
+  - link "S":
+    - /url: /en-us/product/rmcfms0251-mens-hoodie-navy?variant.size=s
+  - link "M":
+    - /url: /en-us/product/rmcfms0251-mens-hoodie-navy?variant.size=m
+  - link "L":
+    - /url: /en-us/product/rmcfms0251-mens-hoodie-navy?variant.size=l
+  - link "XL":
+    - /url: /en-us/product/rmcfms0251-mens-hoodie-navy?variant.size=xl
+  - link "2XL":
+    - /url: /en-us/product/rmcfms0251-mens-hoodie-navy?variant.size=2xl
+  - link "3XL":
+    - /url: /en-us/product/rmcfms0251-mens-hoodie-navy?variant.size=3xl
+  - link "Mens Hoodie Navy Your price $80.75 $95.00":
+    - /url: /en-us/product/rmcfms0251-mens-hoodie-navy
+    - text: Mens Hoodie Navy
+    - paragraph
+    - text: Your price $80.75 $95.00
 - list:
   - listitem:
     - paragraph: Subtotal
-    - text: $225.00
-  - listitem: Madridista Savings -$33.75
+    - text: $262.80
+  - listitem: Madridista Savings -$39.42
   - listitem:
     - paragraph: Taxes
     - paragraph: Calculated at next step
@@ -1116,7 +634,7 @@ Error: page.waitForLoadState: Test timeout of 120000ms exceeded.
     - paragraph: Shipping
     - paragraph: Calculated at next step
 - paragraph: Total
-- text: $191.25
+- text: $223.38
 - button "Continue Shopping"
 - button "Checkout"
 - region "Cookie banner":
@@ -1125,7 +643,7 @@ Error: page.waitForLoadState: Test timeout of 120000ms exceeded.
     - button "Configuración de cookies"
     - button "Rechazarlas todas"
     - button "Aceptar todas las cookies"
-- alert: Real Madrid Training Collection - Official Online Store for Real Madrid CF
+- alert: Mens Bring Back 99/00 Track Top - Official Online Store for Real Madrid CF
 ```
 
 # Test source
@@ -1156,19 +674,29 @@ Error: page.waitForLoadState: Test timeout of 120000ms exceeded.
   23 |     this.shipAddress = page.getByText('Shipping Address');
   24 |   }
   25 |
-  26 |   async selectProduct() {
-  27 |     await this.productCard.first().hover();
-  28 |     await this.productCardLink.first().click();
-  29 |     await this.page.waitForTimeout(2000);
-  30 |   }
-  31 |
-  32 |   async selectNavTraining(){
-  33 |     await Promise.all([
-  34 |       this.navTaining.click(),
-> 35 |       this.page.waitForLoadState('networkidle'),
-     |                 ^ Error: page.waitForLoadState: Test timeout of 120000ms exceeded.
-  36 |     ]);
-  37 |   }
-  38 | }
-  39 |
+  26 |   async selectNavTraining(){
+  27 |     await Promise.all([
+  28 |       this.navTaining.click(),
+  29 |       this.page.waitForSelector('#category-description', { state: 'visible' }),
+  30 |     ]);
+  31 |   }
+  32 |   async selectProduct() {
+  33 |     await this.productCard.first().hover();
+  34 |     const productName = await this.productCard.first().locator('[class="grid content-end"]').textContent();
+  35 |     console.log('Product Name:', productName);
+  36 |     await this.productCardLink.first().click();
+  37 |     await this.page.waitForTimeout(4000);
+  38 |     return productName;
+  39 |   }
+  40 |
+  41 |     async addToCart(productName: string) {
+  42 |         await this.page.waitForSelector(`text=${productName}`, { state: 'visible' });
+  43 |         await this.addToCartButton.click();
+  44 |         await this.page.waitForTimeout(2000);
+> 45 |         await this.checkOutButton.click();
+     |                                   ^ TimeoutError: locator.click: Timeout 30000ms exceeded.
+  46 |         await this.page.waitForTimeout(2000);
+  47 |     }
+  48 | }
+  49 |
 ```

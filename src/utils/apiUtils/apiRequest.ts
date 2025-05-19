@@ -1,6 +1,6 @@
 import { APIRequestContext } from '@playwright/test';
 
-export class APIUtils {
+export class ApiRequest {
   static async postRequest(request: APIRequestContext,url: string,headers: Record<string, string | null | undefined>, body: object) {
     const safeHeaders = sanitizeHeaders(headers);
     const response = await request.post(url, {

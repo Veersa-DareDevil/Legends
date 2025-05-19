@@ -30,10 +30,10 @@
                 <tr><th>Skipped</th><td>0</td></tr>
                 <tr><th>Interrupted</th><td>0</td></tr>
                 <tr><th>Timed Out</th><td>0</td></tr>
-                <tr><th>Date</th><td>5/16/2025</td></tr> <!-- Display only date -->
-                <tr><th>Start Time</th><td>3:11:27 AM</td></tr> <!-- Display only time -->
-                <tr><th>End Time</th><td>3:11:39 AM</td></tr> <!-- Display only time -->
-                <tr><th>Duration</th><td>00:00:14</td></tr>
+                <tr><th>Date</th><td>5/19/2025</td></tr> <!-- Display only date -->
+                <tr><th>Start Time</th><td>3:36:20 PM</td></tr> <!-- Display only time -->
+                <tr><th>End Time</th><td>3:36:31 PM</td></tr> <!-- Display only time -->
+                <tr><th>Duration</th><td>00:00:11</td></tr>
               </tbody>
             </table>
           </div>
@@ -81,15 +81,6 @@
           </div>
         </div>
         
-        <div class="col">
-          <div class="card h-100 shadow"> <!-- Added shadow class -->
-            <div class="card-header bg-dark text-white text-center">Other Results</div> <!-- Styled card header -->
-            <div class="card-body chart-box p-1">
-              <canvas id="chart-Other"></canvas>
-            </div>
-          </div>
-        </div>
-        
       </div>
     </div>
 
@@ -113,12 +104,12 @@
             <tbody>
               
                     <tr class="">
-                      <td rowspan="1" class="align-middle table-secondary"><strong>POST API: Create a New Product via API</strong></td>
-                      <td>Other</td>
-                      <td>All Tests</td>
+                      <td rowspan="1" class="align-middle table-secondary"><strong>POST API: Create Category</strong></td>
+                      <td>API</td>
+                      <td>API</td>
                       <td><span class="badge bg-success">Passed</span></td> <!-- Use Bootstrap badge and capitalized status -->
-                      <td>9.66</td> <!-- Display duration in seconds -->
-                      <td>5/16/2025, 3:11:29 AM</td>
+                      <td>9.21</td> <!-- Display duration in seconds -->
+                      <td>5/19/2025, 3:36:21 PM</td>
                       <td>
                         -
                         
@@ -150,9 +141,7 @@
     
     new Chart(document.getElementById('chart-Mobile').getContext('2d'), { type:'pie', data:{ labels:['Passed','Failed','Skipped','Interrupted','Timed Out'], datasets:[{ data:[0,0,0,0,0], backgroundColor:['#4CAF50','#F44336','#FF9800','#9E9E9E','#9C27B0'], borderWidth:2 }] }, options:{ responsive:true, maintainAspectRatio:false, plugins:{ legend:{position:'bottom'}, datalabels:{color:'#fff'} }} });
     
-    new Chart(document.getElementById('chart-API').getContext('2d'), { type:'pie', data:{ labels:['Passed','Failed','Skipped','Interrupted','Timed Out'], datasets:[{ data:[0,0,0,0,0], backgroundColor:['#4CAF50','#F44336','#FF9800','#9E9E9E','#9C27B0'], borderWidth:2 }] }, options:{ responsive:true, maintainAspectRatio:false, plugins:{ legend:{position:'bottom'}, datalabels:{color:'#fff'} }} });
-    
-    new Chart(document.getElementById('chart-Other').getContext('2d'), { type:'pie', data:{ labels:['Passed','Failed','Skipped','Interrupted','Timed Out'], datasets:[{ data:[1,0,0,0,0], backgroundColor:['#4CAF50','#F44336','#FF9800','#9E9E9E','#9C27B0'], borderWidth:2 }] }, options:{ responsive:true, maintainAspectRatio:false, plugins:{ legend:{position:'bottom'}, datalabels:{color:'#fff'} }} });
+    new Chart(document.getElementById('chart-API').getContext('2d'), { type:'pie', data:{ labels:['Passed','Failed','Skipped','Interrupted','Timed Out'], datasets:[{ data:[1,0,0,0,0], backgroundColor:['#4CAF50','#F44336','#FF9800','#9E9E9E','#9C27B0'], borderWidth:2 }] }, options:{ responsive:true, maintainAspectRatio:false, plugins:{ legend:{position:'bottom'}, datalabels:{color:'#fff'} }} });
     
   </script>
 </body></html>

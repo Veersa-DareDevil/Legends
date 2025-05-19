@@ -5,19 +5,20 @@ import { ApiRequest } from '@src/utils/apiUtils/apiRequest';
 
 
 
-export class ProductService {
+export class CategoryService {
   constructor(
     private apiRequest: APIRequestContext,
     private contextHeader: string  // the JSON string for x-context-request
   ) {}
 
-  /** Create a new product */
-  async createProduct(accessToken: string, payload: any) {
-    const response = await ApiRequest.postRequest(this.apiRequest,ADMIN_ENDPOINTS.products,ApiHeaders.getAuthJsonHeaders(accessToken,this.contextHeader),payload)
+  // create new category
+  
+  async createCategory(accessToken: string, payload: any) {
+    const response = await ApiRequest.postRequest(this.apiRequest,ADMIN_ENDPOINTS.categories,ApiHeaders.getAuthJsonHeaders(accessToken,this.contextHeader),payload)
     expect(response.status()).toBe(200)
     if (!response.ok()) {
       const text = await response.text();
-      throw new Error(`Products API failed (${response.status()}): ${text}`);
+      throw new Error(`Categories API failed (${response.status()}): ${text}`);
     }
     return response.json();
   }

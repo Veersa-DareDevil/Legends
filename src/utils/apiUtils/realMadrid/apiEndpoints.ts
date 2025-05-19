@@ -1,5 +1,6 @@
 // Base URLs for different portals
 export const ADMIN_BASE_URL = 'https://uat-real-madrid-admin.legendscommerce.io';
+
 export const STOREFRONT_BASE_URL = 'https://uat-real-madrid.legendscommerce.io'; // Placeholder - update with actual storefront URL
 
 // Admin Portal Endpoints

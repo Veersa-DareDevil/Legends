@@ -1,5 +1,3 @@
-import { APIRequestContext } from '@playwright/test';
-
 /**
  * Generates common headers for API requests.
  */

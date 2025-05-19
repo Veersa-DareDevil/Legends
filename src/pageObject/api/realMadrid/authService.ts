@@ -13,19 +13,19 @@ export class AuthService {
       tokenUrl: string;
       redirectUri: string;
       scope: string;
-    }
+    },
   ) {}
 
   /** drive the browser to log in and grab the code */
   async getAuthorizationCode() {
     const { codeVerifier, codeChallenge } = generatePKCECodes();
     const params = new URLSearchParams({
-      response_type:         'code',
-      client_id:             this.opts.clientId,
-      redirect_uri:          this.opts.redirectUri,
-      code_challenge:        codeChallenge,
+      response_type: 'code',
+      client_id: this.opts.clientId,
+      redirect_uri: this.opts.redirectUri,
+      code_challenge: codeChallenge,
       code_challenge_method: 'S256',
-      scope:                 this.opts.scope,
+      scope: this.opts.scope,
     });
     const authUrl = `${this.opts.authUrl}?${params}`;
     const ctx = await this.browser.newContext();
@@ -46,12 +46,12 @@ export class AuthService {
   async fetchAccessToken(code: string, codeVerifier: string) {
     const response = await this.apiRequest.post(this.opts.tokenUrl, {
       form: {
-        client_id:     this.opts.clientId,
-        grant_type:    'authorization_code',
+        client_id: this.opts.clientId,
+        grant_type: 'authorization_code',
         code,
         code_verifier: codeVerifier,
-        redirect_uri:  this.opts.redirectUri,
-        scope:         this.opts.scope,
+        redirect_uri: this.opts.redirectUri,
+        scope: this.opts.scope,
       },
       headers: ApiHeaders.getFormUrlEncodedHeaders(),
     });
@@ -67,5 +67,4 @@ export class AuthService {
     const { code, codeVerifier } = await this.getAuthorizationCode();
     return this.fetchAccessToken(code, codeVerifier);
   }
-
 }

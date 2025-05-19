@@ -8,12 +8,12 @@ export class CommonUtils {
   readonly adminPassword: Locator;
   readonly adminSignIn: Locator;
   readonly storefrontLoginIcon: Locator;
-  readonly storefrontUsername: Locator
-  readonly storefrontLoginContinueButton: Locator
-  readonly storefrontPassword: Locator
-  readonly storefrontLoginButton: Locator
-  readonly loader: Locator
-  readonly profileIcon: Locator
+  readonly storefrontUsername: Locator;
+  readonly storefrontLoginContinueButton: Locator;
+  readonly storefrontPassword: Locator;
+  readonly storefrontLoginButton: Locator;
+  readonly loader: Locator;
+  readonly profileIcon: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -49,7 +49,6 @@ export class CommonUtils {
     await this.page.goto(urlToNavigate);
     await this.page.waitForLoadState('load');
     await this.page.waitForSelector('text=Loading', { state: 'hidden' });
-
   }
   /**
    * Performs login based on the portal type.
@@ -76,46 +75,46 @@ export class CommonUtils {
    * Performs login to the storefront portal.
    */
   async loginToStorefront(): Promise<void> {
-    const username = process.env.RM_STOREFRONT_USERNAME
-    const password = process.env.RM_STOREFRONT_PASSWORD
+    const username = process.env.RM_STOREFRONT_USERNAME;
+    const password = process.env.RM_STOREFRONT_PASSWORD;
     if (!username || !password) {
-      throw new Error('Username and password must be provided for storefront login.')
+      throw new Error('Username and password must be provided for storefront login.');
     }
-    await this.storefrontLoginIcon.click()
-    await this.page.waitForLoadState('load')
-    await this.page.getByRole('button', { name: 'EN', exact: true }).click()
-    await this.page.waitForLoadState('load')
-    await this.storefrontUsername.fill(username)
+    await this.storefrontLoginIcon.click();
+    await this.page.waitForLoadState('load');
+    await this.page.getByRole('button', { name: 'EN', exact: true }).click();
+    await this.page.waitForLoadState('load');
+    await this.storefrontUsername.fill(username);
     //reject all cookies
-    const cookieBanner = this.page.locator('role=region[name="Cookie banner"]')
-    await cookieBanner.waitFor({ state: 'visible', timeout: 5000 }).catch(() => { })
+    const cookieBanner = this.page.locator('role=region[name="Cookie banner"]');
+    await cookieBanner.waitFor({ state: 'visible', timeout: 5000 }).catch(() => {});
     if (await cookieBanner.isVisible()) {
-      const rejectAllButton = this.page.locator('[id="onetrust-reject-all-handler"]')
+      const rejectAllButton = this.page.locator('[id="onetrust-reject-all-handler"]');
       await rejectAllButton.click();
     }
 
-    await this.storefrontLoginContinueButton.click()
-    await this.page.waitForLoadState('load')
-    await this.waitForLoaderToDisappear()
+    await this.storefrontLoginContinueButton.click();
+    await this.page.waitForLoadState('load');
+    await this.waitForLoaderToDisappear();
     //fill password
     await this.storefrontPassword.fill(password);
-    await this.storefrontLoginButton.click()
-    await this.page.waitForLoadState('load')
-    await this.waitForLoaderToDisappear()
+    await this.storefrontLoginButton.click();
+    await this.page.waitForLoadState('load');
+    await this.waitForLoaderToDisappear();
   }
 
   async waitForLoaderToDisappear() {
-    await this.loader.waitFor({ state: 'visible' })
-    await this.loader.waitFor({ state: 'hidden' })
+    await this.loader.waitFor({ state: 'visible' });
+    await this.loader.waitFor({ state: 'hidden' });
   }
 
   // Add more common utility functions.
   async selectEnglishLanguage() {
-    const languageButton = this.page.locator('[id=":R1hil26H2:"]')
-    await languageButton.click()
-    await this.page.waitForLoadState('load')
-    const englishLanguageOption = this.page.getByRole('button', { name: 'UK Flag English' })
-    await englishLanguageOption.click()
-    await languageButton.click()
+    const languageButton = this.page.locator('[id=":R1hil26H2:"]');
+    await languageButton.click();
+    await this.page.waitForLoadState('load');
+    const englishLanguageOption = this.page.getByRole('button', { name: 'UK Flag English' });
+    await englishLanguageOption.click();
+    await languageButton.click();
   }
 }

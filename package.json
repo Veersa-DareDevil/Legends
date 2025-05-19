@@ -2,14 +2,32 @@
   "name": "realmadrid",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "precommit": "eslint . --ext .ts && eslint . --ext .ts --fix && prettier --write \"**/*.ts\"",
+    "test:api:IU": "playwright test specs/apiSpecs/indianaUniversity/",
+    "test:api:realMadrid": "playwright test specs/apiSpecs/realMadrid/",
+    "test:ui:IU:desktop": "playwright test specs/indianaUniversity/desktopUI/",
+    "test:ui:IU:mobile": "playwright test specs/indianaUniversity/mobileUI/",
+    "test:ui:realMadrid:desktop": "playwright test specs/realMadrid/desktopUI/",
+    "test:ui:realMadrid:mobile": "playwright test specs/realMadrid/mobileUI/",
+    "test:all:realMadrid": "playwright test specs/apiSpecs/realMadrid/ && playwright test specs/realMadrid/desktopUI/ && playwright test specs/realMadrid/mobileUI/",
+    "test:all:IU": "playwright test specs/apiSpecs/indianaUniversity/ && playwright test specs/indianaUniversity/desktopUI/ && playwright test specs/indianaUniversity/mobileUI/"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "type": "module",
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.52.0",
-    "@types/node": "^22.15.3"
+    "@types/node": "^22.15.3",
+    "@typescript-eslint/eslint-plugin": "^8.32.1",
+    "@typescript-eslint/parser": "^8.32.1",
+    "eslint": "^9.27.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.4.0",
+    "prettier": "^3.5.3",
+    "typescript-eslint": "^8.32.1"
   },
   "dependencies": {
     "dotenv": "^16.5.0"

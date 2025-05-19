@@ -1,145 +1,1174 @@
 # Test info
 
-- Name: Happy path: create a new product via API
-- Location: C:\Users\AbhinavSharma\Legends\specs\apiSpecs\addProduct.spec.ts:6:5
+- Name: 56825-Checkout Validation >> Should Validate Checkout Validations
+- Location: C:\Users\AbhinavSharma\Legends\specs\realMadrid\desktopUI\checkoutValidation.spec.ts:16:3
 
 # Error details
 
 ```
-TimeoutError: page.waitForURL: Timeout 60000ms exceeded.
+Error: page.waitForLoadState: Test timeout of 120000ms exceeded.
 =========================== logs ===========================
-waiting for navigation to "**https://uat-real-madrid-admin.legendscommerce.io/silent-callback.html?code=*" until "load"
+  "load" event fired
 ============================================================
-    at AuthService.getAuthorizationCode (C:\Users\AbhinavSharma\Legends\src\pageObject\api\authService.ts:37:16)
-    at AuthService.getAccessToken (C:\Users\AbhinavSharma\Legends\src\pageObject\api\authService.ts:68:36)
-    at C:\Users\AbhinavSharma\Legends\specs\apiSpecs\addProduct.spec.ts:18:17
+    at Product.selectNavTraining (C:\Users\AbhinavSharma\Legends\src\pageObject\realMadrid\desktopUI\product.ts:35:17)
+    at C:\Users\AbhinavSharma\Legends\specs\realMadrid\desktopUI\checkoutValidation.spec.ts:18:19
 ```
 
 # Page snapshot
 
 ```yaml
-- link "Logo":
-  - /url: /
-  - img "Logo"
-- img "Portrait"
-- text: Real Madrid
-- combobox "Choose an Application"
-- img
-- textbox "Filter ..."
-- img
-- text: Catalog
-- img
-- img
-- text: Pricing
-- img
-- img
-- text: Content Management
-- img
-- img
-- text: Commerce
-- img
-- img
-- text: Search
-- img
-- img
-- text: Processes
-- img
-- img
-- text: Application Updates
-- img
-- img
-- text: Security
-- img
-- img
-- text: Inventory
-- img
-- img
-- text: Fulfillment
-- img
-- img
-- button "cog":
+- banner:
+  - navigation "top-0":
+    - link "Sign up to become a Madridista and get 5% off your first purchase":
+      - /url: /en-us/auth/login
+      - text: Sign up to become a Madridista and get 5% off your first purchase
+      - button
+- banner:
+  - navigation "Top":
+    - link "New Real Madrid Logo":
+      - /url: /en-us
+      - img "New Real Madrid Logo"
+    - combobox "Search"
+    - button "Search button":
+      - img
+    - text: EN | USD
+    - img
+    - navigation:
+      - list:
+        - listitem "Link to profile":
+          - button "KL"
+        - listitem:
+          - 'button "Cart items: 2"':
+            - img
+            - text: "2"
+    - button "Kits":
+      - paragraph: Kits
+      - img
+    - button "Shop By Player":
+      - paragraph: Shop By Player
+      - img
+    - button "Training":
+      - paragraph: Training
+      - img
+    - button "Fashion":
+      - paragraph: Fashion
+      - img
+    - button "Accessories":
+      - paragraph: Accessories
+      - img
+    - link "Rebajas":
+      - /url: /en-us/content/summer-real-madrid
+      - button "Rebajas":
+        - paragraph: Rebajas
+    - link "Regalos":
+      - /url: /en-us/training/champions-league
+      - button "Regalos":
+        - paragraph: Regalos
+    - link "Intercontinental Cup":
+      - /url: /en-us/content/intercontinental-cup
+      - button "Intercontinental Cup":
+        - paragraph: Intercontinental Cup
+    - button "Kits":
+      - link "Kits":
+        - /url: /en-us/content/gifting-area
+      - img
+    - button "Shop By Player":
+      - link "Shop By Player":
+        - /url: /en-us/content/players
+      - img
+    - button "Training":
+      - link "Training":
+        - /url: /en-us/training
+      - img
+    - button "Fashion":
+      - link "Fashion":
+        - /url: /en-us/fashion
+      - img
+    - button "Accessories":
+      - link "Accessories":
+        - /url: /en-us/gifts/accessories
+      - img
+    - button "Rebajas":
+      - link "Rebajas":
+        - /url: /en-us/content/summer-real-madrid
+    - button "Regalos":
+      - link "Regalos":
+        - /url: /en-us/training/champions-league
+    - button "Intercontinental Cup":
+      - link "Intercontinental Cup":
+        - /url: /en-us/content/intercontinental-cup
+- main:
+  - navigation "breadcrumbs":
+    - link "Home":
+      - /url: /en-us
+    - text: Training
+  - heading "Training" [level=1]
+  - text: Shop the Official UE Online Shop at Real Madrid. Find the Training Collection of clothing and accessories such as shirts, jackets, gloves, shin guards, balls and much more.
+  - button "Filter":
+    - img
+    - text: Filter
+  - 'button "Sort By: Relevancy"':
+    - text: "Sort By: Relevancy"
+    - img
+  - paragraph: Filter By
+  - button:
+    - img
+  - button "Size":
+    - text: Size
+    - img
+  - checkbox
   - img
-- button "user":
+  - text: XS
+  - checkbox
   - img
-- heading "Welcome to the Legends Core Commerce Admin" [level=5]
-- paragraph: Use the section to the left to navigate
-- paragraph: Currently running v.1.10.10-lg-rc6.9
+  - text: S
+  - checkbox
+  - img
+  - text: M
+  - checkbox
+  - img
+  - text: L
+  - checkbox
+  - img
+  - text: XL
+  - checkbox
+  - img
+  - text: 2XL
+  - checkbox
+  - img
+  - text: 3XL
+  - checkbox
+  - img
+  - text: 7 - 8 Years
+  - checkbox
+  - img
+  - text: 9 - 10 Years
+  - checkbox
+  - img
+  - text: "128"
+  - checkbox
+  - img
+  - text: "140"
+  - checkbox
+  - img
+  - text: "152"
+  - checkbox
+  - img
+  - text: "164"
+  - checkbox
+  - img
+  - text: "4"
+  - checkbox
+  - img
+  - text: "5"
+  - checkbox
+  - img
+  - text: NS
+  - checkbox
+  - img
+  - text: XXL
+  - checkbox
+  - img
+  - text: 2XS
+  - checkbox
+  - img
+  - text: 11 / 12
+  - checkbox
+  - img
+  - text: 13 / 14
+  - checkbox
+  - img
+  - text: 3 / 4
+  - checkbox
+  - img
+  - text: 5 / 6
+  - checkbox
+  - img
+  - text: 7 / 8
+  - checkbox
+  - img
+  - text: 9 / 10
+  - checkbox
+  - img
+  - text: "176"
+  - checkbox
+  - img
+  - text: "10"
+  - checkbox
+  - img
+  - text: "12"
+  - checkbox
+  - img
+  - text: "14"
+  - checkbox
+  - img
+  - text: "8"
+  - checkbox
+  - img
+  - text: 11-12
+  - checkbox
+  - img
+  - text: 13-14
+  - checkbox
+  - img
+  - text: 3-4
+  - checkbox
+  - img
+  - text: 5-6
+  - checkbox
+  - img
+  - text: "6"
+  - checkbox
+  - img
+  - text: 7-8
+  - checkbox
+  - img
+  - text: 9-10
+  - checkbox
+  - img
+  - text: "1"
+  - checkbox
+  - img
+  - text: 39 1/3
+  - checkbox
+  - img
+  - text: "40"
+  - checkbox
+  - img
+  - text: 40 2/3
+  - checkbox
+  - img
+  - text: 41 1/3
+  - checkbox
+  - img
+  - text: "42"
+  - checkbox
+  - img
+  - text: 42 2/3
+  - checkbox
+  - img
+  - text: 43 1/3
+  - checkbox
+  - img
+  - text: "44"
+  - checkbox
+  - img
+  - text: "116"
+  - checkbox
+  - img
+  - text: "3"
+  - checkbox
+  - img
+  - text: 12 months
+  - checkbox
+  - img
+  - text: 3 months
+  - checkbox
+  - img
+  - text: 35 1/3
+  - checkbox
+  - img
+  - text: "36"
+  - checkbox
+  - img
+  - text: 36 2/3
+  - checkbox
+  - img
+  - text: 37 1/3
+  - checkbox
+  - img
+  - text: "38"
+  - checkbox
+  - img
+  - text: 38 2/3
+  - checkbox
+  - img
+  - text: 6 months
+  - checkbox
+  - img
+  - text: 9 months
+  - checkbox
+  - img
+  - text: 18 months
+  - checkbox
+  - img
+  - text: "2"
+  - checkbox
+  - img
+  - text: 3 - 4 Years
+  - checkbox
+  - img
+  - text: "92"
+  - checkbox
+  - img
+  - text: "98"
+  - checkbox
+  - img
+  - text: Adulto M/L
+  - checkbox
+  - img
+  - text: Kids XXL
+  - checkbox
+  - img
+  - text: Talla Única
+  - checkbox
+  - img
+  - text: XXL NIÑO
+  - checkbox
+  - img
+  - text: 0 - 3 Months
+  - checkbox
+  - img
+  - text: 1 - 2 Years
+  - checkbox
+  - img
+  - text: "104"
+  - checkbox
+  - img
+  - text: 11 - 12 Years
+  - checkbox
+  - img
+  - text: 11/12
+  - checkbox
+  - img
+  - text: 13 - 14 Years
+  - checkbox
+  - img
+  - text: 13/14
+  - checkbox
+  - img
+  - text: 2 - 3 Years
+  - checkbox
+  - img
+  - text: 3 - 6 Months
+  - checkbox
+  - img
+  - text: 5/6
+  - checkbox
+  - img
+  - text: 6 - 9 Months
+  - checkbox
+  - img
+  - text: "68"
+  - checkbox
+  - img
+  - text: 7/8
+  - checkbox
+  - img
+  - text: "74"
+  - checkbox
+  - img
+  - text: "80"
+  - checkbox
+  - img
+  - text: "86"
+  - checkbox
+  - img
+  - text: 9 - 12 Months
+  - checkbox
+  - img
+  - text: 9/10
+  - checkbox
+  - img
+  - text: Adulto L/XL
+  - checkbox
+  - img
+  - text: Adulto S/M
+  - checkbox
+  - img
+  - text: Joven
+  - checkbox
+  - img
+  - text: Niño
+  - checkbox
+  - img
+  - text: OSFW
+  - checkbox
+  - img
+  - text: OSFY
+  - checkbox
+  - img
+  - text: "110"
+  - checkbox
+  - img
+  - text: 5 - 6 Years
+  - checkbox
+  - img
+  - text: "62"
+  - checkbox
+  - img
+  - text: ADULT
+  - checkbox
+  - img
+  - text: ADULTOS
+  - checkbox
+  - img
+  - text: Hombre
+  - checkbox
+  - img
+  - text: Mujer
+  - checkbox
+  - img
+  - text: NIÑOS
+  - checkbox
+  - img
+  - text: OSFC
+  - checkbox
+  - img
+  - text: OSFL
+  - button "Product Type":
+    - text: Product Type
+    - img
+  - checkbox
+  - img
+  - text: Accessories
+  - checkbox
+  - img
+  - text: Ashtrays
+  - checkbox
+  - img
+  - text: Backpacks
+  - checkbox
+  - img
+  - text: Bags
+  - checkbox
+  - img
+  - text: Beanies
+  - checkbox
+  - img
+  - text: Bottles
+  - checkbox
+  - img
+  - text: Bracelets
+  - checkbox
+  - img
+  - text: Calendars
+  - checkbox
+  - img
+  - text: Caps
+  - checkbox
+  - img
+  - text: Cases
+  - checkbox
+  - img
+  - text: Coats
+  - checkbox
+  - img
+  - text: Computer Accessories
+  - checkbox
+  - img
+  - text: Electronics
+  - checkbox
+  - img
+  - text: Face Masks
+  - checkbox
+  - img
+  - text: Flags
+  - checkbox
+  - img
+  - text: Footballs
+  - checkbox
+  - img
+  - text: Footwear
+  - checkbox
+  - img
+  - text: Glasses
+  - checkbox
+  - img
+  - text: Gloves
+  - checkbox
+  - img
+  - text: Gymsacks
+  - checkbox
+  - img
+  - text: Hats
+  - checkbox
+  - img
+  - text: Headphones
+  - checkbox
+  - img
+  - text: Home Accessories
+  - checkbox
+  - img
+  - text: Hoodies
+  - checkbox
+  - img
+  - text: Jackets
+  - checkbox
+  - img
+  - text: Jerseys
+  - checkbox
+  - img
+  - text: Joggers
+  - checkbox
+  - img
+  - text: Jumpers
+  - checkbox
+  - img
+  - text: Keyrings
+  - checkbox
+  - img
+  - text: Lanyards
+  - checkbox
+  - img
+  - text: License Plates
+  - checkbox
+  - img
+  - text: Mugs
+  - checkbox
+  - img
+  - text: Notebooks
+  - checkbox
+  - img
+  - text: Pacifiers
+  - checkbox
+  - img
+  - text: Pants
+  - checkbox
+  - img
+  - text: Pennants
+  - checkbox
+  - img
+  - text: Pens
+  - checkbox
+  - img
+  - text: Pets Accessories
+  - checkbox
+  - img
+  - text: Plushies
+  - checkbox
+  - img
+  - text: Polos
+  - checkbox
+  - img
+  - text: Puzzles
+  - checkbox
+  - img
+  - text: Pyjamas
+  - checkbox
+  - img
+  - text: Rings
+  - checkbox
+  - img
+  - text: Scarves
+  - checkbox
+  - img
+  - text: School Accessories
+  - checkbox
+  - img
+  - text: Shinguards
+  - checkbox
+  - img
+  - text: Shorts
+  - checkbox
+  - img
+  - text: Snowballs
+  - checkbox
+  - img
+  - text: Socks
+  - checkbox
+  - img
+  - text: Sweatshirts
+  - checkbox
+  - img
+  - text: T-Shirts
+  - checkbox
+  - img
+  - text: Tie Clips
+  - checkbox
+  - img
+  - text: Tights
+  - checkbox
+  - img
+  - text: Tops
+  - checkbox
+  - img
+  - text: Toys
+  - checkbox
+  - img
+  - text: Track Tops
+  - checkbox
+  - img
+  - text: Tracksuits
+  - checkbox
+  - img
+  - text: Training Tops
+  - checkbox
+  - img
+  - text: Vests
+  - checkbox
+  - img
+  - text: Wallets
+  - checkbox
+  - img
+  - text: Washbags
+  - checkbox
+  - img
+  - text: Windbreakers
+  - button "Gender":
+    - text: Gender
+    - img
+  - checkbox
+  - img
+  - text: Baby/Toddlers
+  - checkbox
+  - img
+  - text: Mens
+  - checkbox
+  - img
+  - text: Unisex
+  - checkbox
+  - img
+  - text: Womens
+  - checkbox
+  - img
+  - text: Youth
+  - button "Color":
+    - text: Color
+    - img
+  - checkbox
+  - img
+  - text: White
+  - checkbox
+  - img
+  - text: Black
+  - checkbox
+  - img
+  - text: Navy
+  - checkbox
+  - img
+  - text: Blue
+  - checkbox
+  - img
+  - text: Grey
+  - checkbox
+  - img
+  - text: Pink
+  - checkbox
+  - img
+  - text: Purple
+  - checkbox
+  - img
+  - text: Red
+  - checkbox
+  - img
+  - text: Green
+  - checkbox
+  - img
+  - text: Yellow
+  - checkbox
+  - img
+  - text: Transparent
+  - checkbox
+  - img
+  - text: Silver
+  - checkbox
+  - img
+  - text: Carbon
+  - checkbox
+  - img
+  - text: Burgundy
+  - checkbox
+  - img
+  - text: Orange
+  - checkbox
+  - img
+  - text: Beige
+  - checkbox
+  - img
+  - text: Brown
+  - checkbox
+  - img
+  - text: Gold
+  - checkbox
+  - img
+  - text: BLACK
+  - checkbox
+  - img
+  - text: BLUE
+  - checkbox
+  - img
+  - text: Coral
+  - checkbox
+  - img
+  - text: Khaki
+  - checkbox
+  - img
+  - text: Lime
+  - checkbox
+  - img
+  - text: Olive
+  - button "Kit":
+    - text: Kit
+    - img
+  - checkbox
+  - img
+  - text: Away
+  - checkbox
+  - img
+  - text: Fourth
+  - checkbox
+  - img
+  - text: Home
+  - checkbox
+  - img
+  - text: Third
+  - link "Mens Bring Back 99/00 Track Top-primary":
+    - /url: /en-us/product/rmcfyp0038-real-madrid-youth-adidas-training-tts-shorts-black
+    - img "Mens Bring Back 99/00 Track Top-primary"
+  - link "116":
+    - /url: /en-us/product/rmcfyp0038-real-madrid-youth-adidas-training-tts-shorts-black?variant.size=116
+  - link "128":
+    - /url: /en-us/product/rmcfyp0038-real-madrid-youth-adidas-training-tts-shorts-black?variant.size=128
+  - link "140":
+    - /url: /en-us/product/rmcfyp0038-real-madrid-youth-adidas-training-tts-shorts-black?variant.size=140
+  - link "152":
+    - /url: /en-us/product/rmcfyp0038-real-madrid-youth-adidas-training-tts-shorts-black?variant.size=152
+  - link "164":
+    - /url: /en-us/product/rmcfyp0038-real-madrid-youth-adidas-training-tts-shorts-black?variant.size=164
+  - link "Mens Bring Back 99/00 Track Top Your price $32.13 $37.80":
+    - /url: /en-us/product/rmcfyp0038-real-madrid-youth-adidas-training-tts-shorts-black
+    - text: Mens Bring Back 99/00 Track Top
+    - paragraph
+    - text: Your price $32.13 $37.80
+  - link "Mens adidas Training TTS Track Top Black-primary":
+    - /url: /en-us/product/rmcfms0147-real-madrid-mens-adidas-training-tts-track-top-black
+    - img "Mens adidas Training TTS Track Top Black-primary"
+  - link "XS":
+    - /url: /en-us/product/rmcfms0147-real-madrid-mens-adidas-training-tts-track-top-black?variant.size=xs
+  - link "S":
+    - /url: /en-us/product/rmcfms0147-real-madrid-mens-adidas-training-tts-track-top-black?variant.size=s
+  - link "M":
+    - /url: /en-us/product/rmcfms0147-real-madrid-mens-adidas-training-tts-track-top-black?variant.size=m
+  - link "L":
+    - /url: /en-us/product/rmcfms0147-real-madrid-mens-adidas-training-tts-track-top-black?variant.size=l
+  - link "XL":
+    - /url: /en-us/product/rmcfms0147-real-madrid-mens-adidas-training-tts-track-top-black?variant.size=xl
+  - link "2XL":
+    - /url: /en-us/product/rmcfms0147-real-madrid-mens-adidas-training-tts-track-top-black?variant.size=2xl
+  - link "3XL":
+    - /url: /en-us/product/rmcfms0147-real-madrid-mens-adidas-training-tts-track-top-black?variant.size=3xl
+  - link "Mens adidas Training TTS Track Top Black Your price $50.49 $59.40":
+    - /url: /en-us/product/rmcfms0147-real-madrid-mens-adidas-training-tts-track-top-black
+    - text: Mens adidas Training TTS Track Top Black
+    - paragraph
+    - text: Your price $50.49 $59.40
+  - paragraph: Match Pro
+  - link "Mens adidas Originals Shorts-primary":
+    - /url: /en-us/product/rmcfmp0151-mens-adidas-originals-shorts
+    - img "Mens adidas Originals Shorts-primary"
+  - link "XS":
+    - /url: /en-us/product/rmcfmp0151-mens-adidas-originals-shorts?variant.size=xs
+  - link "S":
+    - /url: /en-us/product/rmcfmp0151-mens-adidas-originals-shorts?variant.size=s
+  - link "M":
+    - /url: /en-us/product/rmcfmp0151-mens-adidas-originals-shorts?variant.size=m
+  - link "L":
+    - /url: /en-us/product/rmcfmp0151-mens-adidas-originals-shorts?variant.size=l
+  - link "XL":
+    - /url: /en-us/product/rmcfmp0151-mens-adidas-originals-shorts?variant.size=xl
+  - link "2XL":
+    - /url: /en-us/product/rmcfmp0151-mens-adidas-originals-shorts?variant.size=2xl
+  - link "3XL":
+    - /url: /en-us/product/rmcfmp0151-mens-adidas-originals-shorts?variant.size=3xl
+  - link "Mens adidas Originals Shorts Your price $51.00 $60.00":
+    - /url: /en-us/product/rmcfmp0151-mens-adidas-originals-shorts
+    - text: Mens adidas Originals Shorts
+    - paragraph
+    - text: Your price $51.00 $60.00
+  - link "Mens adidas Training TTS Shorts Black-primary":
+    - /url: /en-us/product/rmcfmp0120-real-madrid-mens-adidas-training-tts-shorts-black
+    - img "Mens adidas Training TTS Shorts Black-primary"
+  - link "XS":
+    - /url: /en-us/product/rmcfmp0120-real-madrid-mens-adidas-training-tts-shorts-black?variant.size=xs
+  - link "S":
+    - /url: /en-us/product/rmcfmp0120-real-madrid-mens-adidas-training-tts-shorts-black?variant.size=s
+  - link "M":
+    - /url: /en-us/product/rmcfmp0120-real-madrid-mens-adidas-training-tts-shorts-black?variant.size=m
+  - link "L":
+    - /url: /en-us/product/rmcfmp0120-real-madrid-mens-adidas-training-tts-shorts-black?variant.size=l
+  - link "XL":
+    - /url: /en-us/product/rmcfmp0120-real-madrid-mens-adidas-training-tts-shorts-black?variant.size=xl
+  - link "2XL":
+    - /url: /en-us/product/rmcfmp0120-real-madrid-mens-adidas-training-tts-shorts-black?variant.size=2xl
+  - link "Mens adidas Training TTS Shorts Black Your price $24.79 $29.16":
+    - /url: /en-us/product/rmcfmp0120-real-madrid-mens-adidas-training-tts-shorts-black
+    - text: Mens adidas Training TTS Shorts Black
+    - paragraph
+    - text: Your price $24.79 $29.16
+  - link "Mens adidas Training TTS T-Shirt White-primary":
+    - /url: /en-us/product/rmcfmt0171-real-madrid-mens-adidas-training-tts-t-shirt-white
+    - img "Mens adidas Training TTS T-Shirt White-primary"
+  - link "XS":
+    - /url: /en-us/product/rmcfmt0171-real-madrid-mens-adidas-training-tts-t-shirt-white?variant.size=xs
+  - link "S":
+    - /url: /en-us/product/rmcfmt0171-real-madrid-mens-adidas-training-tts-t-shirt-white?variant.size=s
+  - link "M":
+    - /url: /en-us/product/rmcfmt0171-real-madrid-mens-adidas-training-tts-t-shirt-white?variant.size=m
+  - link "L":
+    - /url: /en-us/product/rmcfmt0171-real-madrid-mens-adidas-training-tts-t-shirt-white?variant.size=l
+  - link "XL":
+    - /url: /en-us/product/rmcfmt0171-real-madrid-mens-adidas-training-tts-t-shirt-white?variant.size=xl
+  - link "2XL":
+    - /url: /en-us/product/rmcfmt0171-real-madrid-mens-adidas-training-tts-t-shirt-white?variant.size=2xl
+  - link "3XL":
+    - /url: /en-us/product/rmcfmt0171-real-madrid-mens-adidas-training-tts-t-shirt-white?variant.size=3xl
+  - link "Mens adidas Training TTS T-Shirt White Your price $22.95 $27.00":
+    - /url: /en-us/product/rmcfmt0171-real-madrid-mens-adidas-training-tts-t-shirt-white
+    - text: Mens adidas Training TTS T-Shirt White
+    - paragraph
+    - text: Your price $22.95 $27.00
+  - link "Mens adidas Training TTS T-Shirt Black-primary":
+    - /url: /en-us/product/rmcfmt0170-real-madrid-mens-adidas-training-tts-t-shirt-black
+    - img "Mens adidas Training TTS T-Shirt Black-primary"
+  - link "XS":
+    - /url: /en-us/product/rmcfmt0170-real-madrid-mens-adidas-training-tts-t-shirt-black?variant.size=xs
+  - link "S":
+    - /url: /en-us/product/rmcfmt0170-real-madrid-mens-adidas-training-tts-t-shirt-black?variant.size=s
+  - link "M":
+    - /url: /en-us/product/rmcfmt0170-real-madrid-mens-adidas-training-tts-t-shirt-black?variant.size=m
+  - link "L":
+    - /url: /en-us/product/rmcfmt0170-real-madrid-mens-adidas-training-tts-t-shirt-black?variant.size=l
+  - link "XL":
+    - /url: /en-us/product/rmcfmt0170-real-madrid-mens-adidas-training-tts-t-shirt-black?variant.size=xl
+  - link "2XL":
+    - /url: /en-us/product/rmcfmt0170-real-madrid-mens-adidas-training-tts-t-shirt-black?variant.size=2xl
+  - link "3XL":
+    - /url: /en-us/product/rmcfmt0170-real-madrid-mens-adidas-training-tts-t-shirt-black?variant.size=3xl
+  - link "Mens adidas Training TTS T-Shirt Black Your price $22.95 $27.00":
+    - /url: /en-us/product/rmcfmt0170-real-madrid-mens-adidas-training-tts-t-shirt-black
+    - text: Mens adidas Training TTS T-Shirt Black
+    - paragraph
+    - text: Your price $22.95 $27.00
+  - link "Mens adidas Training TTS Pants Black-primary":
+    - /url: /en-us/product/rmcfmp0121-real-madrid-mens-adidas-training-tts-pants-black
+    - img "Mens adidas Training TTS Pants Black-primary"
+  - link "XS":
+    - /url: /en-us/product/rmcfmp0121-real-madrid-mens-adidas-training-tts-pants-black?variant.size=xs
+  - link "S":
+    - /url: /en-us/product/rmcfmp0121-real-madrid-mens-adidas-training-tts-pants-black?variant.size=s
+  - link "M":
+    - /url: /en-us/product/rmcfmp0121-real-madrid-mens-adidas-training-tts-pants-black?variant.size=m
+  - link "L":
+    - /url: /en-us/product/rmcfmp0121-real-madrid-mens-adidas-training-tts-pants-black?variant.size=l
+  - link "XL":
+    - /url: /en-us/product/rmcfmp0121-real-madrid-mens-adidas-training-tts-pants-black?variant.size=xl
+  - link "2XL":
+    - /url: /en-us/product/rmcfmp0121-real-madrid-mens-adidas-training-tts-pants-black?variant.size=2xl
+  - link "3XL":
+    - /url: /en-us/product/rmcfmp0121-real-madrid-mens-adidas-training-tts-pants-black?variant.size=3xl
+  - link "Mens adidas Training TTS Pants Black Your price $41.31 $48.60":
+    - /url: /en-us/product/rmcfmp0121-real-madrid-mens-adidas-training-tts-pants-black
+    - text: Mens adidas Training TTS Pants Black
+    - paragraph
+    - text: Your price $41.31 $48.60
+  - link "Mens adidas Training TTS Polo Black-primary":
+    - /url: /en-us/product/rmcfmg0057-real-madrid-mens-adidas-training-tts-polo-black
+    - img "Mens adidas Training TTS Polo Black-primary"
+  - link "XS":
+    - /url: /en-us/product/rmcfmg0057-real-madrid-mens-adidas-training-tts-polo-black?variant.size=xs
+  - link "S":
+    - /url: /en-us/product/rmcfmg0057-real-madrid-mens-adidas-training-tts-polo-black?variant.size=s
+  - link "M":
+    - /url: /en-us/product/rmcfmg0057-real-madrid-mens-adidas-training-tts-polo-black?variant.size=m
+  - link "L":
+    - /url: /en-us/product/rmcfmg0057-real-madrid-mens-adidas-training-tts-polo-black?variant.size=l
+  - link "XL":
+    - /url: /en-us/product/rmcfmg0057-real-madrid-mens-adidas-training-tts-polo-black?variant.size=xl
+  - link "2XL":
+    - /url: /en-us/product/rmcfmg0057-real-madrid-mens-adidas-training-tts-polo-black?variant.size=2xl
+  - link "3XL":
+    - /url: /en-us/product/rmcfmg0057-real-madrid-mens-adidas-training-tts-polo-black?variant.size=3xl
+  - link "Mens adidas Training TTS Polo Black Your price $27.54 $32.40":
+    - /url: /en-us/product/rmcfmg0057-real-madrid-mens-adidas-training-tts-polo-black
+    - text: Mens adidas Training TTS Polo Black
+    - paragraph
+    - text: Your price $27.54 $32.40
+  - link "Youth adidas Training TTS Jersey Black-primary":
+    - /url: /en-us/product/rmcfyt0063-real-madrid-youth-adidas-training-tts-jersey-black
+    - img "Youth adidas Training TTS Jersey Black-primary"
+  - link "116":
+    - /url: /en-us/product/rmcfyt0063-real-madrid-youth-adidas-training-tts-jersey-black?variant.size=116
+  - link "128":
+    - /url: /en-us/product/rmcfyt0063-real-madrid-youth-adidas-training-tts-jersey-black?variant.size=128
+  - link "140":
+    - /url: /en-us/product/rmcfyt0063-real-madrid-youth-adidas-training-tts-jersey-black?variant.size=140
+  - link "152":
+    - /url: /en-us/product/rmcfyt0063-real-madrid-youth-adidas-training-tts-jersey-black?variant.size=152
+  - link "164":
+    - /url: /en-us/product/rmcfyt0063-real-madrid-youth-adidas-training-tts-jersey-black?variant.size=164
+  - link "Youth adidas Training TTS Jersey Black Your price $13.77 $16.20":
+    - /url: /en-us/product/rmcfyt0063-real-madrid-youth-adidas-training-tts-jersey-black
+    - text: Youth adidas Training TTS Jersey Black
+    - paragraph
+    - text: Your price $13.77 $16.20
+  - link "adidas Mens Training TTW Shorts Black-primary":
+    - /url: /en-us/product/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black
+    - img "adidas Mens Training TTW Shorts Black-primary"
+  - link "XS":
+    - /url: /en-us/product/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black?variant.size=xs
+  - link "S":
+    - /url: /en-us/product/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black?variant.size=s
+  - link "M":
+    - /url: /en-us/product/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black?variant.size=m
+  - link "L":
+    - /url: /en-us/product/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black?variant.size=l
+  - link "XL":
+    - /url: /en-us/product/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black?variant.size=xl
+  - link "2XL":
+    - /url: /en-us/product/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black?variant.size=2xl
+  - text: 3XL
+  - link "adidas Mens Training TTW Shorts Black Your price $51.00 $60.00":
+    - /url: /en-us/product/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black
+    - text: adidas Mens Training TTW Shorts Black
+    - paragraph
+    - text: Your price $51.00 $60.00
+  - link "adidas Mens Training TTW Pro Shirt Grey-primary":
+    - /url: /en-us/product/rmcfmt0206-real-madrid-mens-adidas-training-ttw-pro-shirt-grey
+    - img "adidas Mens Training TTW Pro Shirt Grey-primary"
+  - text: XS S M L
+  - link "XL":
+    - /url: /en-us/product/rmcfmt0206-real-madrid-mens-adidas-training-ttw-pro-shirt-grey?variant.size=xl
+  - link "2XL":
+    - /url: /en-us/product/rmcfmt0206-real-madrid-mens-adidas-training-ttw-pro-shirt-grey?variant.size=2xl
+  - text: 3XL
+  - link "adidas Mens Training TTW Pro Shirt Grey Your price $44.06 $51.84":
+    - /url: /en-us/product/rmcfmt0206-real-madrid-mens-adidas-training-ttw-pro-shirt-grey
+    - text: adidas Mens Training TTW Pro Shirt Grey
+    - paragraph
+    - text: Your price $44.06 $51.84
+  - link "Mens Bring Back 99/00 Track Pants-primary":
+    - /url: /en-us/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black
+    - img "Mens Bring Back 99/00 Track Pants-primary"
+  - link "XS":
+    - /url: /en-us/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black?variant.size=xs
+  - link "S":
+    - /url: /en-us/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black?variant.size=s
+  - link "M":
+    - /url: /en-us/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black?variant.size=m
+  - link "L":
+    - /url: /en-us/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black?variant.size=l
+  - link "XL":
+    - /url: /en-us/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black?variant.size=xl
+  - link "2XL":
+    - /url: /en-us/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black?variant.size=2xl
+  - link "3XL":
+    - /url: /en-us/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black?variant.size=3xl
+  - link "Mens Bring Back 99/00 Track Pants Your price $72.25 $85.00":
+    - /url: /en-us/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black
+    - text: Mens Bring Back 99/00 Track Pants
+    - paragraph
+    - text: Your price $72.25 $85.00
+  - navigation:
+    - list:
+      - listitem:
+        - button "1" [disabled]
+      - listitem:
+        - link "2":
+          - /url: /en-us/training/2
+          - button "2"
+      - listitem:
+        - link "3":
+          - /url: /en-us/training/3
+          - button "3"
+      - text: ...
+      - listitem:
+        - link "72":
+          - /url: /en-us/training/72
+          - button "72"
+      - listitem:
+        - link:
+          - /url: /en-us/training/2
+          - button
+- contentinfo:
+  - heading "Shop" [level=4]
+  - list:
+    - listitem:
+      - link "How To Order":
+        - /url: /en-us/content/how-to-order
+    - listitem:
+      - link "Shipping & Returns":
+        - /url: /en-us/content/returns-and-refunds
+    - listitem:
+      - link "Track My Order":
+        - /url: /en-us/content/track-my-order
+    - listitem:
+      - link "My Account":
+        - /url: https://signin.realmadrid.com/#/sign-in/user?language=es-ES&workflow=register-free&behalfClientId=58b32718-73e1-4278-9756-7a55ce0cec9c&utm_source=web&utm_medium=tienda-online&utm_campaign=all_login-madridistas-tienda_perm_es_global&redirectUrl=https:%2F%2Fclientsso-rmcf.legendsapis.com%2FLogin&bypassData=nonce%3Drmcf-es%26legendsCustomParam2%3D
+    - listitem:
+      - link "Shop Locator":
+        - /url: https://www.realmadrid.com/en-US/the-club/stores
+  - heading "About" [level=4]
+  - list:
+    - listitem:
+      - link "PRIVACY POLICY":
+        - /url: /en-us/content/privacy-policy
+    - listitem:
+      - link "COOKIE POLICY":
+        - /url: /en-us/content/cookie-policy?forcePageRefresh=true
+    - listitem:
+      - link "TERMS & CONDITIONS":
+        - /url: /en-us/content/terms-and-conditions
+    - listitem:
+      - button "COOKIE SETTINGS":
+        - paragraph: COOKIE SETTINGS
+  - heading "Do You Need Help?" [level=4]
+  - list:
+    - listitem:
+      - link "CONTACT US":
+        - /url: https://support.shop.realmadrid.com/en/support/solutions/articles/101000383446-contact-us
+    - listitem:
+      - link "FAQS":
+        - /url: https://support.shop.realmadrid.com/en/support/home
+  - paragraph: Download the app now
+  - link "iOS App Logo iOS App Logo":
+    - /url: https://apps.apple.com/gb/app/real-madrid-official/id1107624540
+    - text: iOS App Logo
+    - img "iOS App Logo"
+  - link "Google Play App Logo Google Play App Logo":
+    - /url: https://play.google.com/store/apps/details?id=com.mcentric.mcclient.MyMadrid&hl=en_US&gl=US
+    - text: Google Play App Logo
+    - img "Google Play App Logo"
+  - link "Huaweii App Logo Huaweii App Logo":
+    - /url: /en-us
+    - text: Huaweii App Logo
+    - img "Huaweii App Logo"
+  - paragraph: Payments Accepted
+  - text: amex
+  - img "amex"
+  - text: applePay
+  - img "applePay"
+  - text: dinersClub
+  - img "dinersClub"
+  - text: discover
+  - img "discover"
+  - text: googlePay
+  - img "googlePay"
+  - text: maestro
+  - img "maestro"
+  - text: mastercard
+  - img "mastercard"
+  - text: unionPay
+  - img "unionPay"
+  - text: visa
+  - img "visa"
+  - img "footer RMLogo"
+  - link "X-Logo":
+    - /url: https://twitter.com/realmadrid
+  - link "facebook_logo":
+    - /url: https://www.facebook.com/RealMadrid
+  - link "instagram_logo":
+    - /url: https://www.instagram.com/realmadrid
+  - link "snapchat_icon":
+    - /url: /en-us
+  - link "tiktok_icon":
+    - /url: /en-us
+  - link "youtube_icon":
+    - /url: /en-us
+  - link "onefootball_icon":
+    - /url: /en-us
+  - link "twitch_icon":
+    - /url: /en-us
+  - link "Real Madrid CF Shop © 2024 All Rights Reserved":
+    - /url: /en-us
+- heading "Your bag | 2 items" [level=2]
+- button "Close":
+  - img
+- link:
+  - /url: /en-us/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black
+- link "Mens Bring Back 99/00 Track Pants":
+  - /url: /en-us/product/rmcfmp0133-real-madrid-mens-adidas-training-ttw-tracksuit-pant-black
+- text: "Qty: 1 Size: XL"
+- separator
+- text: Your price $72.25 $85.00
+- button:
+  - img
+- textbox [disabled]: "1"
+- button:
+  - img
+- button "Remove Mens Bring Back 99/00 Track Pants":
+  - paragraph: Remove
+  - img
+- link:
+  - /url: /en-us/product/rmcfyo0031-youth-third-kit-23-24-black
+- link "Youth Third Kit 23/24 Black":
+  - /url: /en-us/product/rmcfyo0031-youth-third-kit-23-24-black
+- text: "Qty: 1 Size: 128"
+- separator
+- text: Your price $119.00 $140.00
+- button:
+  - img
+- textbox [disabled]: "1"
+- button:
+  - img
+- button "Remove Youth Third Kit 23/24 Black":
+  - paragraph: Remove
+  - img
+- list:
+  - listitem:
+    - paragraph: Subtotal
+    - text: $225.00
+  - listitem: Madridista Savings -$33.75
+  - listitem:
+    - paragraph: Taxes
+    - paragraph: Calculated at next step
+  - listitem:
+    - paragraph: Shipping
+    - paragraph: Calculated at next step
+- paragraph: Total
+- text: $191.25
+- button "Continue Shopping"
+- button "Checkout"
+- region "Cookie banner":
+  - alertdialog "Privacidad":
+    - text: Al hacer clic en “Aceptar todas las cookies”, usted acepta que las cookies se guarden en su dispositivo para mejorar la navegación del sitio, analizar el uso del mismo, y colaborar con nuestros estudios para marketing.
+    - button "Configuración de cookies"
+    - button "Rechazarlas todas"
+    - button "Aceptar todas las cookies"
+- alert: Real Madrid Training Collection - Official Online Store for Real Madrid CF
 ```
 
 # Test source
 
 ```ts
-   1 | import { Browser, APIRequestContext } from '@playwright/test';
-   2 | import { generatePKCECodes } from '@src/utils/apiUtils/pkce';
-   3 | import { CommonUtils } from '@src/utils/loginUtils/realMadrid/commonUtils';
-   4 |
-   5 | export class AuthService {
-   6 |   constructor(
-   7 |     private browser: Browser,
-   8 |     private apiRequest: APIRequestContext,
-   9 |     private opts: {
-  10 |       clientId: string;
-  11 |       authUrl: string;
-  12 |       tokenUrl: string;
-  13 |       redirectUri: string;
-  14 |       scope: string;
-  15 |     }
-  16 |   ) {}
-  17 |
-  18 |   /** drive the browser to log in and grab the code */
-  19 |   async getAuthorizationCode() {
-  20 |     const { codeVerifier, codeChallenge } = generatePKCECodes();
-  21 |     const params = new URLSearchParams({
-  22 |       response_type:         'code',
-  23 |       client_id:             this.opts.clientId,
-  24 |       redirect_uri:          this.opts.redirectUri,
-  25 |       code_challenge:        codeChallenge,
-  26 |       code_challenge_method: 'S256',
-  27 |       scope:                 this.opts.scope,
-  28 |     });
-  29 |     const authUrl = `${this.opts.authUrl}?${params}`;
-  30 |     const ctx = await this.browser.newContext();
-  31 |     const page = await ctx.newPage();
-  32 |     //login to admin
-  33 |     const login = new CommonUtils(page);
-  34 |     await login.goToPortal('admin');
-  35 |     await login.loginToAdmin();
-  36 |     // wait for the redirect to the redirect_uri
-> 37 |     await page.waitForURL(`**${this.opts.redirectUri}?code=*`, { timeout: 60_000 });
-     |                ^ TimeoutError: page.waitForURL: Timeout 60000ms exceeded.
-  38 |     const code = new URL(page.url()).searchParams.get('code');
-  39 |     await ctx.close();
-  40 |     if (!code) throw new Error('No authorization code received');
-  41 |     return { code, codeVerifier };
-  42 |   }
-  43 |
-  44 |   /** exchange the code + verifier for the token */
-  45 |   async fetchAccessToken(code: string, codeVerifier: string) {
-  46 |     const response = await this.apiRequest.post(this.opts.tokenUrl, {
-  47 |       form: {
-  48 |         client_id:     this.opts.clientId,
-  49 |         grant_type:    'authorization_code',
-  50 |         code,
-  51 |         code_verifier: codeVerifier,
-  52 |         redirect_uri:  this.opts.redirectUri,
-  53 |         scope:         this.opts.scope,
-  54 |       },
-  55 |       headers: {
-  56 |         'Content-Type': 'application/x-www-form-urlencoded',
-  57 |         'Accept':         'application/json',
-  58 |       },
-  59 |     });
-  60 |     if (!response.ok()) throw new Error(`Token fetch failed: ${response.status()}`);
-  61 |     const body = await response.json();
-  62 |     if (!body.access_token) throw new Error('No access_token in response');
-  63 |     return body.access_token as string;
-  64 |   }
-  65 |
-  66 |   /** full PKCE flow → returns a valid Bearer token */
-  67 |   async getAccessToken() {
-  68 |     const { code, codeVerifier } = await this.getAuthorizationCode();
-  69 |     return this.fetchAccessToken(code, codeVerifier);
-  70 |   }
-  71 | }
-  72 |
+   1 | import { Page, Locator } from '@playwright/test';
+   2 |
+   3 | export class Product {
+   4 |   readonly page;
+   5 |   readonly productCard: Locator;
+   6 |   readonly navTaining:Locator
+   7 |   readonly productCardLink: Locator;
+   8 |   readonly addToCartButton: Locator;
+   9 |   readonly checkOutButton: Locator;
+  10 |   readonly phoneNumberInput: Locator;
+  11 |   readonly warningMessage: Locator;
+  12 |   readonly shipAddress: Locator;
+  13 |
+  14 |   constructor(page: Page) {
+  15 |     this.page = page;
+  16 |     this.navTaining = page.getByTestId('navigation-bar').getByRole('link', { name: 'Training' })
+  17 |     this.productCard = page.locator('[data-testid="productcard"]');
+  18 |     this.productCardLink = page.locator('[data-testid="productcardlink"]');
+  19 |     this.addToCartButton = page.locator('[data-testid="addtocartbutton"]');
+  20 |     this.checkOutButton = page.locator('[data-testid="checkoutbutton"]');
+  21 |     this.phoneNumberInput = page.locator('[name="phoneNumber"]');
+  22 |     this.warningMessage = page.getByText('Please only use Western characters.');
+  23 |     this.shipAddress = page.getByText('Shipping Address');
+  24 |   }
+  25 |
+  26 |   async selectProduct() {
+  27 |     await this.productCard.first().hover();
+  28 |     await this.productCardLink.first().click();
+  29 |     await this.page.waitForTimeout(2000);
+  30 |   }
+  31 |
+  32 |   async selectNavTraining(){
+  33 |     await Promise.all([
+  34 |       this.navTaining.click(),
+> 35 |       this.page.waitForLoadState('networkidle'),
+     |                 ^ Error: page.waitForLoadState: Test timeout of 120000ms exceeded.
+  36 |     ]);
+  37 |   }
+  38 | }
+  39 |
 ```

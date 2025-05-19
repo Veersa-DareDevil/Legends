@@ -9,6 +9,7 @@ export default [
       'custom-reporter.ts',
       'playwright.config.ts',
       'eslint.config.js',
+      '.prettierrc.js',
     ],
   },
   ...configs.recommended,

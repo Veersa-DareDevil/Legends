@@ -3,8 +3,6 @@ import { ADMIN_ENDPOINTS } from '@src/utils/apiUtils/realMadrid/apiEndpoints';
 import { ApiHeaders } from '@src/utils/apiUtils/realMadrid/apiHeaders';
 import { ApiRequest } from '@src/utils/apiUtils/apiRequest';
 
-
-
 export class ProductService {
   constructor(
     private apiRequest: APIRequestContext,
@@ -13,8 +11,13 @@ export class ProductService {
 
   /** Create a new product */
   async createProduct(accessToken: string, payload: any) {
-    const response = await ApiRequest.postRequest(this.apiRequest,ADMIN_ENDPOINTS.products,ApiHeaders.getAuthJsonHeaders(accessToken,this.contextHeader),payload)
-    expect(response.status()).toBe(200)
+    const response = await ApiRequest.postRequest(
+      this.apiRequest,
+      ADMIN_ENDPOINTS.products,
+      ApiHeaders.getAuthJsonHeaders(accessToken, this.contextHeader),
+      payload,
+    );
+    expect(response.status()).toBe(200);
     if (!response.ok()) {
       const text = await response.text();
       throw new Error(`Products API failed (${response.status()}): ${text}`);

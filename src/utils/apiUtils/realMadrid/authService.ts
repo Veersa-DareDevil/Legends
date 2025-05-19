@@ -15,12 +15,12 @@ export class AuthService {
   constructor(
     private browser: Browser,
     private apiRequest: APIRequestContext,
-    private scope: string
+    private scope: string,
   ) {
-    this.clientId = authData.clientId
-    this.authUrl = ADMIN_ENDPOINTS.authAuthorize
-    this.tokenUrl = ADMIN_ENDPOINTS.authToken
-    this.redirectUri = ADMIN_ENDPOINTS.silentCallback
+    this.clientId = authData.clientId;
+    this.authUrl = ADMIN_ENDPOINTS.authAuthorize;
+    this.tokenUrl = ADMIN_ENDPOINTS.authToken;
+    this.redirectUri = ADMIN_ENDPOINTS.silentCallback;
   }
 
   /** drive the browser to log in and grab the code */

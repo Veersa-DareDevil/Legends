@@ -11,10 +11,11 @@ export class CheckoutPage {
   readonly cityInput: Locator
   readonly postalCodeInput: Locator
   readonly checkOutButton: Locator
+
   readonly warningMessage: Locator
 
   constructor(page: Page) {
-    this.page= page
+    this.page = page
     this.nameInput = page.locator('input[name="fullName"]')
     this.emailInput = page.locator('input[name="email"]')
     this.phoneInput = page.locator('input[name="phoneNumber"]')

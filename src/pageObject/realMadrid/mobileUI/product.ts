@@ -3,29 +3,36 @@ import { CommonUtils } from '@src/utils/loginUtils/realMadrid/commonUtils'
 
 export class Product {
   readonly page
-  private commonFunction: CommonUtils
+  private commonFunction:CommonUtils
   readonly productCard: Locator
   readonly navTaining: Locator
+  readonly optionMensTraining:Locator
   readonly rejectAllCookiesButton: Locator
   readonly productCardLink: Locator
   readonly addToCartButton: Locator
+  readonly phoneNumberInput: Locator
+  readonly warningMessage: Locator
+  readonly shipAddress: Locator
 
   constructor(page: Page) {
     this.page = page
     this.commonFunction = new CommonUtils(page)
-    this.navTaining = page.getByTestId('navigation-bar').getByRole('link', { name: 'Training' })
+    this.navTaining = page.getByTestId('navigation-bar').getByRole('button', { name: 'Training' })
+    this.optionMensTraining = page.getByRole('link', { name: 'Mens', exact: true })
     this.productCard = page.locator('[data-testid="productcard"]')
     this.productCardLink = page.locator('[data-testid="productcardlink"]')
     this.addToCartButton = page.locator('[data-testid="addtocartbutton"]')
     this.rejectAllCookiesButton = page.locator('#onetrust-reject-all-handler') //it is the unique locator
-
+    this.phoneNumberInput = page.locator('[name="phoneNumber"]')
+    this.warningMessage = page.getByText('Please only use Western characters.')
+    this.shipAddress = page.getByText('Shipping Address')
   }
 
   async selectNavTraining() {
-    await Promise.all([
-      this.navTaining.click(),
-      this.page.waitForSelector('#category-description', { state: 'visible' }),
-    ])
+      await this.navTaining.click()
+      await this.commonFunction.rejectAllCookies()
+      await this.optionMensTraining.click({ force: true })
+      await this.page.waitForSelector('#category-description', { state: 'visible' })
   }
   async selectProduct() {
     await this.productCard.first().hover()
@@ -41,9 +48,9 @@ export class Product {
 
   async addToCart(productName: string) {
     await expect(this.page.getByText(productName)).toBeVisible() //validate the product name on product page
-    await this.commonFunction.rejectAllCookies()
     await this.addToCartButton.click()
     await this.page.waitForTimeout(2000)
     await expect(this.page.getByText(productName)).toBeVisible() //validate the product name on cart page
+    
   }
 }

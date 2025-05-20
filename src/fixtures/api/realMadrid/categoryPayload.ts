@@ -8,7 +8,7 @@ export const PAYLOAD = {
     activeStartDate: '2025-05-18T18:30:00.000Z',
     showInSiteMap: true,
     displayType: 'STANDARD',
-    productMembershipType: 'EXPLICIT',
+    productMembershipType: 'RULE_BASED',
     name: `Test Category ${categoryNumber}`,
     url: `/test-category-${categoryNumber}`,
     legendsCategoryId: categoryNumber,

@@ -18,7 +18,6 @@ export class Product {
     this.productCardLink = page.locator('[data-testid="productcardlink"]')
     this.addToCartButton = page.locator('[data-testid="addtocartbutton"]')
     this.rejectAllCookiesButton = page.locator('#onetrust-reject-all-handler') //it is the unique locator
-
   }
 
   async selectNavTraining() {

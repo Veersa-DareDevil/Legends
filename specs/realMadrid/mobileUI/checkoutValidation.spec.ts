@@ -8,7 +8,7 @@ import testData from '@src/fixtures/realMadrid/checkoutValidation.json'
 let login: CommonUtils
 let product: Product
 let checkout: CheckoutPage
-let navigation:MobileNavigation
+let navigation: MobileNavigation
 
 test.describe('56825-Checkout Validation', () => {
   test.beforeEach('should validate checkout process', async ({ page }) => {

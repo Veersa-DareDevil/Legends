@@ -11,7 +11,6 @@ export class MobileNavigation {
       hasText: 'Open Menu',
     })
     this.getUsername = this.page.locator('div.bg-deep-purple-700 p:first-of-type')
-
   }
 
   async selectMenu() {
@@ -24,7 +23,9 @@ export class MobileNavigation {
   }
 
   async selectEnglishLanguage() {
-    const languageButton = await this.page.locator('[data-testid="navigation-bar"]').getByRole('button', { name: 'EN | USD' })
+    const languageButton = await this.page
+      .locator('[data-testid="navigation-bar"]')
+      .getByRole('button', { name: 'EN | USD' })
     await languageButton.click()
     await this.page.waitForLoadState('networkidle')
     await this.page.waitForTimeout(2000)

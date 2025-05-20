@@ -110,15 +110,14 @@ export class CommonUtils {
     await this.rejectAllCookiesButton.click()
     await this.page.waitForSelector('#onetrust-reject-all-handler', { state: 'hidden' })
   }
-  
+
   async getInitials(name: string, count: number = 2): Promise<string> {
     return name
       .split(' ')
       .filter(Boolean)
       .slice(0, count)
-      .map(word => word[0])
+      .map((word) => word[0])
       .join('')
       .toUpperCase()
   }
-
 }

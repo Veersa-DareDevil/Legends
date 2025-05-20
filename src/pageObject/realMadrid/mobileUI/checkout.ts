@@ -49,7 +49,9 @@ export class CheckoutPage {
     const warnMsg = await this.warningMessage.count()
     expect(warnMsg).toBe(7)
     for (let i = 0; i < warnMsg; i++) {
-      expect(await this.warningMessage.nth(i).textContent()).toBe(checkoutData.nonWesternCharacters.warnMsg)
+      expect(await this.warningMessage.nth(i).textContent()).toBe(
+        checkoutData.nonWesternCharacters.warnMsg,
+      )
     }
   }
 

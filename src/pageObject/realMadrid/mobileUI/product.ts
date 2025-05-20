@@ -3,10 +3,10 @@ import { CommonUtils } from '@src/utils/loginUtils/realMadrid/commonUtils'
 
 export class Product {
   readonly page
-  private commonFunction:CommonUtils
+  private commonFunction: CommonUtils
   readonly productCard: Locator
   readonly navTaining: Locator
-  readonly optionMensTraining:Locator
+  readonly optionMensTraining: Locator
   readonly rejectAllCookiesButton: Locator
   readonly productCardLink: Locator
   readonly addToCartButton: Locator
@@ -29,10 +29,10 @@ export class Product {
   }
 
   async selectNavTraining() {
-      await this.navTaining.click()
-      await this.commonFunction.rejectAllCookies()
-      await this.optionMensTraining.click({ force: true })
-      await this.page.waitForSelector('#category-description', { state: 'visible' })
+    await this.navTaining.click()
+    await this.commonFunction.rejectAllCookies()
+    await this.optionMensTraining.click({ force: true })
+    await this.page.waitForSelector('#category-description', { state: 'visible' })
   }
   async selectProduct() {
     await this.productCard.first().hover()
@@ -51,6 +51,5 @@ export class Product {
     await this.addToCartButton.click()
     await this.page.waitForTimeout(2000)
     await expect(this.page.getByText(productName)).toBeVisible() //validate the product name on cart page
-    
   }
 }

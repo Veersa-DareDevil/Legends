@@ -14,7 +14,7 @@ export class CheckoutPage {
   readonly warningMessage: Locator
 
   constructor(page: Page) {
-    this.page= page
+    this.page = page
     this.nameInput = page.locator('input[name="fullName"]')
     this.emailInput = page.locator('input[name="email"]')
     this.phoneInput = page.locator('input[name="phoneNumber"]')
@@ -48,7 +48,9 @@ export class CheckoutPage {
     const warnMsg = await this.warningMessage.count()
     expect(warnMsg).toBe(7)
     for (let i = 0; i < warnMsg; i++) {
-      expect(await this.warningMessage.nth(i).textContent()).toBe(checkoutData.nonWesternCharacters.warnMsg)
+      expect(await this.warningMessage.nth(i).textContent()).toBe(
+        checkoutData.nonWesternCharacters.warnMsg,
+      )
     }
   }
 

@@ -31,11 +31,11 @@ test.describe('303887 & 745140 -Login to Storefront site of Real Madrid', () => 
     expect(returnPageTitle).toBe(homePageTitle) // Validate that the page title is the same as the homepage title after login to check user is logged in and redirected to the homepage
 
     //Verify that you can login and the profile icon is replaced with a circle containing the user initials
-    const getUsernameInitials =await commonFunction.profileIcon.textContent()
+    const getUsernameInitials = await commonFunction.profileIcon.textContent()
     await commonFunction.profileIcon.click()
     await page.waitForLoadState('load')
     const username = await navigation.getUsername.textContent()
-    const usernameInitials =await commonFunction.getInitials(username ?? '')
+    const usernameInitials = await commonFunction.getInitials(username ?? '')
     expect(usernameInitials).toBe(getUsernameInitials)
   })
 })

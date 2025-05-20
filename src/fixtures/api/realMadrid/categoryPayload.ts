@@ -1,4 +1,4 @@
-const categoryNumber = Math.floor(Math.random() * 1000);
+const categoryNumber = Math.floor(Math.random() * 1000)
 
 export const PAYLOAD = {
   createCategory: {
@@ -17,4 +17,4 @@ export const PAYLOAD = {
     breadcrumbLabel: `Test Category ${categoryNumber}`,
     activeEndDate: '2025-12-18T18:30:00.000Z',
   },
-};
+}

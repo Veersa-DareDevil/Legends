@@ -1,4 +1,4 @@
-const productNumber = Math.floor(Math.random() * 1000);
+const productNumber = Math.floor(Math.random() * 1000)
 
 export const PAYLOAD = {
   createProduct: {
@@ -22,7 +22,20 @@ export const PAYLOAD = {
         orderPrefix: 'RM',
       },
       application: {
-        allowedLocales: ['en-US', 'en', 'en-AU', 'en-GB', 'es', 'fr', 'ja', 'ko', 'pt', 'zh', 'de', 'es-MX'],
+        allowedLocales: [
+          'en-US',
+          'en',
+          'en-AU',
+          'en-GB',
+          'es',
+          'fr',
+          'ja',
+          'ko',
+          'pt',
+          'zh',
+          'de',
+          'es-MX',
+        ],
         allowedCurrencies: ['USD', 'EUR', 'GBP', 'AUD', 'NZD', 'CAD', 'CHF', 'CNY', 'JPY', 'KRW'],
         portraitAsset: {
           tags: [],
@@ -306,4 +319,4 @@ export const PAYLOAD = {
     uri: `/test-product-${productNumber}`,
     sku: `Test Product SKU ${productNumber}`,
   },
-};
+}

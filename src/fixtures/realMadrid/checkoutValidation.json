@@ -1,15 +1,15 @@
 {
-    "nonWesternCharacters": {
-        "userDetails": {
-            "fullName": "अभिनव शर्मा",
-            "email": "abhinav.sharma@example.com",
-            "phone": "९८७६५४३२१०",
-            "country": "भारत",
-            "address1": "१२३ मुख्य मार्ग",
-            "address2": "अपार्टमेंट ४बी",
-            "city": "मुंबई",
-            "state/province/region": "महाराष्ट्र",
-            "postcode": "४००००१"
-        }
+  "nonWesternCharacters": {
+    "userDetails": {
+      "fullName": "अभिनव शर्मा",
+      "email": "abhinav.sharma@example.com",
+      "phone": "९८७६५४३२१०",
+      "country": "भारत",
+      "address1": "१२३ मुख्य मार्ग",
+      "address2": "अपार्टमेंट ४बी",
+      "city": "मुंबई",
+      "state/province/region": "महाराष्ट्र",
+      "postcode": "४००००१"
     }
+  }
 }

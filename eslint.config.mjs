@@ -1,5 +1,5 @@
-import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
-import { configs, parser as _parser } from 'typescript-eslint';
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
+import { configs, parser as _parser } from 'typescript-eslint'
 
 export default [
   {
@@ -38,4 +38,4 @@ export default [
       ],
     },
   },
-];
+]

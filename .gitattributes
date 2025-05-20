@@ -1,0 +1,5 @@
+# enforce LF in Git working copies
+* text=auto eol=lf
+
+# but allow CRLF in Windows-only config files if you really need it
+*.bat text eol=crlf

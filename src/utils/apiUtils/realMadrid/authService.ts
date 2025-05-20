@@ -4,7 +4,7 @@ import { CommonUtils } from '@src/utils/loginUtils/realMadrid/commonUtils'
 import { ApiHeaders } from '@src/utils/apiUtils/realMadrid/apiHeaders'
 import { ADMIN_ENDPOINTS } from '@src/utils/apiUtils/realMadrid/apiEndpoints'
 
-import authData from '@src/fixtures/api/realMadrid/authData.json'
+import authData from '@src/fixtures/api/authData.json'
 
 export class AuthService {
   private clientId: string

@@ -12,6 +12,8 @@ export class CommonUtils {
   readonly storefrontLoginContinueButton: Locator
   readonly storefrontPassword: Locator
   readonly storefrontLoginButton: Locator
+  readonly rejectAllCookiesButton: Locator
+  readonly selectEnglish: Locator
   readonly loader: Locator
   readonly profileIcon: Locator
 
@@ -19,6 +21,7 @@ export class CommonUtils {
     this.page = page
     this.adminUrl = process.env.RM_ADMIN_URL!
     this.storefrontUrl = process.env.RM_STOREFRONT_URL!
+    this.selectEnglish = page.getByRole('button', { name: 'EN', exact: true })
     this.adminUsername = page.getByRole('textbox', { name: 'Username' })
     this.adminPassword = page.getByRole('textbox', { name: 'Password' })
     this.adminSignIn = page.getByRole('button', { name: 'Sign In' })
@@ -27,8 +30,10 @@ export class CommonUtils {
     this.storefrontPassword = page.locator('[id="rm-password-register"]')
     this.storefrontLoginContinueButton = page.locator('[id="rm-register-email-btn"]')
     this.storefrontLoginButton = page.locator('[id="rm-password-register-btn"]')
+    this.rejectAllCookiesButton = page.locator('#onetrust-reject-all-handler') //it is the unique locator
+
     this.loader = page.locator('app-loader path')
-    this.profileIcon = page.locator('[id=":r2:"]')
+    this.profileIcon = page.getByRole('button', { name: 'KL' })
   }
 
   /**
@@ -44,8 +49,6 @@ export class CommonUtils {
     } else {
       throw new Error(`Invalid portal type: ${portalType}`)
     }
-
-    console.log(`Navigating to ${urlToNavigate}`)
     await this.page.goto(urlToNavigate)
     await this.page.waitForLoadState('load')
     await this.page.waitForSelector('text=Loading', { state: 'hidden' })
@@ -82,17 +85,11 @@ export class CommonUtils {
     }
     await this.storefrontLoginIcon.click()
     await this.page.waitForLoadState('load')
-    await this.page.getByRole('button', { name: 'EN', exact: true }).click()
+    await this.selectEnglish.click()
     await this.page.waitForLoadState('load')
     await this.storefrontUsername.fill(username)
     //reject all cookies
-    const cookieBanner = this.page.locator('role=region[name="Cookie banner"]')
-    await cookieBanner.waitFor({ state: 'visible', timeout: 5000 }).catch(() => {})
-    if (await cookieBanner.isVisible()) {
-      const rejectAllButton = this.page.locator('[id="onetrust-reject-all-handler"]')
-      await rejectAllButton.click()
-    }
-
+    await this.rejectAllCookies()
     await this.storefrontLoginContinueButton.click()
     await this.page.waitForLoadState('load')
     await this.waitForLoaderToDisappear()
@@ -108,13 +105,20 @@ export class CommonUtils {
     await this.loader.waitFor({ state: 'hidden' })
   }
 
-  // Add more common utility functions.
-  async selectEnglishLanguage() {
-    const languageButton = this.page.locator('[id=":R1hil26H2:"]')
-    await languageButton.click()
-    await this.page.waitForLoadState('load')
-    const englishLanguageOption = this.page.getByRole('button', { name: 'UK Flag English' })
-    await englishLanguageOption.click()
-    await languageButton.click()
+  async rejectAllCookies() {
+    await this.page.waitForSelector('#onetrust-reject-all-handler', { state: 'visible' })
+    await this.rejectAllCookiesButton.click()
+    await this.page.waitForSelector('#onetrust-reject-all-handler', { state: 'hidden' })
   }
+  
+  async getInitials(name: string, count: number = 2): Promise<string> {
+    return name
+      .split(' ')
+      .filter(Boolean)
+      .slice(0, count)
+      .map(word => word[0])
+      .join('')
+      .toUpperCase()
+  }
+
 }

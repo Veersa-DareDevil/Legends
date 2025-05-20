@@ -1,62 +1,34 @@
 import { Page, Locator } from '@playwright/test'
 
-export class Navigation {
+export class MobileNavigation {
   readonly page: Page
-  //correct locators
   readonly menuButton: Locator
-
-  //need to update the locators
-  readonly fashionIcon: Locator
-  readonly getTrackSuitLink: Locator
-  readonly selectProduct: Locator
-  readonly addToCartButton: Locator
-  readonly checkOutButton: Locator
-  readonly phoneNumberInput: Locator
-  readonly rejectAllCookiesButton: Locator
-  readonly warningMessage: Locator
-  readonly shipAddress: Locator
+  readonly getUsername: Locator
 
   constructor(page: Page) {
     this.page = page
     this.menuButton = page.locator('[data-testid="navigation-bar"] button', {
       hasText: 'Open Menu',
     })
+    this.getUsername = this.page.locator('div.bg-deep-purple-700 p:first-of-type')
 
-    //ned to update the locators
-    this.fashionIcon = page.locator('[data-testid="category"] button a').getByText('Fashion')
-    this.getTrackSuitLink = page
-      .locator('[data-testid="subcategory"]')
-      .getByRole('button', { name: 'Tracksuits' })
-      .first()
-    this.selectProduct = page.locator('[data-testid="productcardlink"]').first()
-    this.addToCartButton = page.locator('[data-testid="addtocartbutton"]')
-    this.checkOutButton = page.locator('[data-testid="checkoutbutton"]')
-    this.phoneNumberInput = page.locator('[name="phoneNumber"]')
-    this.rejectAllCookiesButton = page.getByRole('button', { name: 'Rechazarlas todas' })
-    this.warningMessage = page.getByText('Please only use Western characters.')
-    this.shipAddress = page.getByText('Shipping Address')
   }
 
-  async openMenu() {
+  async selectMenu() {
+    await this.page.waitForTimeout(2000)
     await this.menuButton.click()
+  }
+  async closeMenu() {
     await this.page.waitForTimeout(2000)
+    await this.menuButton.click()
   }
 
-  async handleCookiePopUp() {
-    await this.rejectAllCookiesButton.click()
-  }
-
-  async selectAnyProduct() {
-    await this.fashionIcon.hover()
-    await this.getTrackSuitLink.click()
+  async selectEnglishLanguage() {
+    const languageButton = await this.page.locator('[data-testid="navigation-bar"]').getByRole('button', { name: 'EN | USD' })
+    await languageButton.click()
+    await this.page.waitForLoadState('networkidle')
     await this.page.waitForTimeout(2000)
-    await this.selectProduct.click()
-    await this.page.waitForTimeout(2000)
-  }
-  async addToCart() {
-    await this.addToCartButton.click()
-    await this.page.waitForTimeout(2000)
-    await this.checkOutButton.click()
-    await this.page.waitForTimeout(2000)
+    const englishLanguageOption = this.page.getByRole('button', { name: 'UK Flag English' })
+    await englishLanguageOption.click()
   }
 }

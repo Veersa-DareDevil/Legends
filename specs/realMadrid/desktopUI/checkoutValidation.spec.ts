@@ -32,6 +32,6 @@ test.describe('56825-Checkout Validation', () => {
       testData.nonWesternCharacters.userDetails.city,
       testData.nonWesternCharacters.userDetails.postcode,
     )
-    // checkout.validateWarningMessage();
+    await checkout.validateWesternCharWarningMsg()
   })
 })

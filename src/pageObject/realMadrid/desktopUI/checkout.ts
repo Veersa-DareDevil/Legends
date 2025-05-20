@@ -1,4 +1,5 @@
-import { Locator, Page } from '@playwright/test'
+import { expect, Locator, Page } from '@playwright/test'
+import checkoutData from '@src/fixtures/realMadrid/checkoutValidation.json'
 
 export class CheckoutPage {
   // Example selectors
@@ -9,6 +10,7 @@ export class CheckoutPage {
   readonly address2Input: Locator
   readonly cityInput: Locator
   readonly postalCodeInput: Locator
+  readonly warningMessage: Locator
 
   constructor(page: Page) {
     this.nameInput = page.locator('input[name="fullName"]')
@@ -18,6 +20,7 @@ export class CheckoutPage {
     this.address2Input = page.locator('input[name="addressLine2"]')
     this.cityInput = page.locator('input[name="city"]')
     this.postalCodeInput = page.locator('input[name="postalCode"]')
+    this.warningMessage = page.getByText(checkoutData.nonWesternCharacters.warnMsg)
   }
   async fillYourDetails(
     name: string,
@@ -35,5 +38,14 @@ export class CheckoutPage {
     await this.address2Input.fill(address2)
     await this.cityInput.fill(city)
     await this.postalCodeInput.fill(postalCode)
+    await this.postalCodeInput.press('Enter')
+  }
+
+  async validateWesternCharWarningMsg() {
+    const warnMsg = await this.warningMessage.count()
+    expect(warnMsg).toBe(7)
+    for (let i = 0; i < warnMsg; i++) {
+      expect(await this.warningMessage.nth(i).textContent()).toBe(checkoutData.nonWesternCharacters.warnMsg)
+    }
   }
 }

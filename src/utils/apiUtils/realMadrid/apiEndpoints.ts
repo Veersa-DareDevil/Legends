@@ -9,6 +9,8 @@ export const ADMIN_ENDPOINTS = {
   authToken: `${ADMIN_BASE_URL}/auth/oauth/token`,
   silentCallback: `${ADMIN_BASE_URL}/silent-callback.html`,
   products: `${ADMIN_BASE_URL}/api/catalog/products`,
+  categories: `${ADMIN_BASE_URL}/api/catalog/categories`,
+
   // Add other admin endpoints here as needed
 }
 

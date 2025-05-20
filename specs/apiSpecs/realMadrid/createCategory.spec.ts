@@ -1,17 +1,16 @@
 import { test, expect } from '@playwright/test'
 import { AuthService } from '@src/utils/apiUtils/realMadrid/authService'
-import { ProductService } from '@src/pageObject/api/realMadrid/productService'
-import { PAYLOAD } from '@src/fixtures/api/realMadrid/productPayload'
-
+import { PAYLOAD } from '@src/fixtures/api/realMadrid/categoryPayload'
 import authData from '@src/fixtures/api/authData.json'
+import { CategoryService } from '@src/pageObject/api/realMadrid/categoryService'
 
-test.describe('Admin Portal || Catalog || Products', () => {
+test.describe('Admin Portal || Catalog || Category', () => {
   let accessToken: string
   let tokenResponse: { [key: string]: string }
 
   test.beforeEach(async ({ browser, request }) => {
     // 1) Initialize AuthService
-    const auth = new AuthService(browser, request, authData.productScope)
+    const auth = new AuthService(browser, request, authData.categoryScope)
 
     // 2) Fetch a fresh access token
     tokenResponse = await auth.getAccessTokenResonseBody() // This method should return the token response body
@@ -19,9 +18,9 @@ test.describe('Admin Portal || Catalog || Products', () => {
     expect(accessToken).toBeTruthy()
   })
 
-  test('POST API: Create a New Product via API', async ({ request }) => {
-    // 3) Build ProductService
-    const productService = new ProductService(
+  test('POST API: Create Category', async ({ request }) => {
+    // 3) Category Service
+    const categoryService = new CategoryService(
       request,
       JSON.stringify({
         catalogId: '01HTNGGZ5K87AW0PYCMBBM0DDP', // Need to update to Dynamically fetched from token
@@ -35,15 +34,16 @@ test.describe('Admin Portal || Catalog || Products', () => {
 
     // 4) Compose your payload
 
-    const payload = { ...PAYLOAD.createProduct }
+    const payload = { ...PAYLOAD.createCategory }
 
-    // 5) Create the product
-    const created = await productService.createProduct(accessToken, payload)
-    console.log('Created product ID:', created.id)
+    // 5) Create the category
+    const created = await categoryService.createCategory(accessToken, payload)
+    console.log('Created Category ID:', created.id)
 
     // 6) Assertions
     expect(created).toHaveProperty('id')
     expect(created.name).toBe(payload.name)
-    expect(created.defaultPrice.amount).toBe(payload.defaultPrice.amount)
+    expect(created.url).toBe(payload.url)
+    expect(created.productMembershipType).toBe(payload.productMembershipType)
   })
 })

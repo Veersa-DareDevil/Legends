@@ -15,15 +15,15 @@ test.describe('56825-Checkout Validation', () => {
     login = new CommonUtils(page)
     product = new Product(page)
     checkout = new CheckoutPage(page)
-    //navigation = new MobileNavigation(page)
+    //navigation = new MobileNavigation(page) // future use
     await login.goToPortal('storefront')
-    //await login.loginToStorefront()
+    //await login.loginToStorefront() // future use
     await page.waitForTimeout(2000)
   })
 
   test('Should Validate Checkout Validations', async ({}) => {
-    //await navigation.selectMenu()
-    //await product.selectNavTraining()
+    //await navigation.selectMenu() // future use
+    //await product.selectNavTraining() //  future use
     const productName = await product.selectProduct()
     console.log('Product Name:', productName)
     await product.addToCart()

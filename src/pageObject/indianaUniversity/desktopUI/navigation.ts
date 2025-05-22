@@ -10,10 +10,10 @@ export class DesktopNavigation {
     this.page = page
     this.langButton = this.page.getByText('EN | USD') //no unique locator
     this.engLangOption = this.page.getByRole('button', { name: 'UK Flag English' })
-    this.getUsername = this.page.locator('div.bg-deep-purple-700 p:first-of-type')
+    this.getUsername = this.page.locator('div.bg-deep-purple-700 p:first-of-type') // no unique locator
   }
 
-  // Add more common utility functions.
+  // future use
   // async selectEnglishLanguage() {
   //   await this.page.waitForTimeout(2000)
   //   await this.langButton.click()

@@ -1,5 +1,6 @@
 import { Page, Locator, expect } from '@playwright/test'
 import { CommonUtils } from '@src/utils/loginUtils/realMadrid/commonUtils'
+import checkoutData from '@src/fixtures/indianaUniversity/checkoutValidation.json'
 
 export class Product {
   readonly page
@@ -24,7 +25,7 @@ export class Product {
     this.addToCartButton = page.locator('[data-testid="addtocartbutton"]')
     this.rejectAllCookiesButton = page.locator('#onetrust-reject-all-handler') //it is the unique locator
     this.phoneNumberInput = page.locator('[name="phoneNumber"]')
-    this.warningMessage = page.getByText('Please only use Western characters.')
+    this.warningMessage = page.getByText(checkoutData.nonWesternCharacters.warnMsg)
     this.shipAddress = page.getByText('Shipping Address')
   }
 

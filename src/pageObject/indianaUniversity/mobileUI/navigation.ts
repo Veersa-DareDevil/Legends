@@ -21,7 +21,7 @@ export class MobileNavigation {
     await this.page.waitForTimeout(2000)
     await this.menuButton.click()
   }
-
+  // future use
   // async selectEnglishLanguage() {
   //   const languageButton = await this.page
   //     .locator('[data-testid="navigation-bar"]')

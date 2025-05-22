@@ -10,8 +10,8 @@ export class CheckoutPage {
   readonly address2Input: Locator
   readonly cityInput: Locator
   readonly postalCodeInput: Locator
-  //readonly checkOutButton: Locator
-
+  readonly checkOutButton: Locator
+  readonly cookieCloseBtn: Locator
   readonly warningMessage: Locator
 
   constructor(page: Page) {
@@ -23,8 +23,9 @@ export class CheckoutPage {
     this.address2Input = page.locator('input[name="addressLine2"]')
     this.cityInput = page.locator('input[name="city"]')
     this.postalCodeInput = page.locator('input[name="postalCode"]')
-    //this.checkOutButton = page.locator('[data-testid="checkoutbutton"]')
+    this.checkOutButton = page.locator('[data-testid="checkoutbutton"]')
     this.warningMessage = page.getByText(checkoutData.nonWesternCharacters.warnMsg)
+    this.cookieCloseBtn = page.locator('[id="onetrust-close-btn-container"]')
   }
   async fillYourDetails(
     name: string,
@@ -55,16 +56,14 @@ export class CheckoutPage {
     }
   }
   async handleCookieBanner() {
-    const cookieCloseBtn = this.page.locator('.onetrust-close-btn-handler.banner-close-button')
-    if (await cookieCloseBtn.isVisible()) {
-      await cookieCloseBtn.click()
+    if (await this.cookieCloseBtn.isVisible()) {
+      await this.cookieCloseBtn.click()
     }
   }
 
   async selectCheckout() {
-    //await this.checkOutButton.click()
     await this.handleCookieBanner()
-    await this.page.getByTestId('checkoutbutton').click()
+    await this.checkOutButton.click()
     await this.page.waitForTimeout(2000)
   }
 }

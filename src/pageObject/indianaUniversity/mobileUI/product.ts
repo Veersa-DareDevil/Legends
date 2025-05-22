@@ -1,5 +1,6 @@
 import { Page, Locator } from '@playwright/test'
 import { CommonUtils } from '@src/utils/loginUtils/indianaUniversity/commonUtils'
+import checkoutData from '@src/fixtures/indianaUniversity/checkoutValidation.json'
 
 export class Product {
   readonly page
@@ -24,9 +25,10 @@ export class Product {
     this.addToCartButton = page.locator('[data-testid="addtocartbutton"]')
     this.cookieCloseBtn = page.getByRole('button', { name: 'Close' })
     this.phoneNumberInput = page.locator('[name="phoneNumber"]')
-    this.warningMessage = page.getByText('Please only use Western characters.')
-    this.shipAddress = page.getByText('Shipping Address')
+    this.warningMessage = page.getByText(checkoutData.nonWesternCharacters.warnMsg)
+    this.shipAddress = page.getByText('Shipping Address') //
   }
+  //future use
   //navigation should be enabled when website is completed
   // async selectNavTraining() {
   //   await this.navTaining.click()
@@ -37,23 +39,7 @@ export class Product {
 
   async selectProduct() {
     await this.page.getByTestId('productcardlink').first().click()
-    // const productName = await this.productCard
-    //   .first()
-    //   .locator('[class="grid content-end"]')
-    //   .textContent()
-    // console.log('Product Name:', productName)
-    // await this.productCardLink.first().click()
-    // await this.page.waitForTimeout(4000)
-    // return productName
   }
-
-  // async addToCart(productName: string) {
-  //   await expect(this.page.getByText(productName)).toBeVisible() //validate the product name on product page
-  //   await this.addToCartButton.click()
-  //   await this.page.waitForTimeout(2000)
-  //   await expect(this.page.getByText(productName)).toBeVisible() //validate the product name on cart page
-  // }
-
   async addToCart() {
     await this.page.getByRole('button', { name: 'Add to Cart' }).click()
   }

@@ -19,7 +19,7 @@ export class Product {
     this.addToCartButton = page.locator('[data-testid="addtocartbutton"]')
     this.rejectAllCookiesButton = page.locator('#onetrust-reject-all-handler') //it is the unique locator
   }
-
+  // future use
   // async selectNavTraining() {
   //   await Promise.all([
   //     this.navTraining.click(),
@@ -28,24 +28,9 @@ export class Product {
   // }
   async selectProduct() {
     await this.page.getByTestId('productcardlink').first().click()
-    // const productName = await this.productCard
-    //   .first()
-    //   .locator('[class="grid content-end"]')
-    //   .textContent()
-    // console.log('Product Name:', productName)
-    // await this.productCardLink.first().click()
-    // await this.page.waitForTimeout(4000)
-    // return productName
   }
 
   async addToCart() {
     await this.page.getByRole('button', { name: 'Add to Cart' }).click()
   }
-  // async addToCart(productName: string) {
-  //   await expect(this.page.getByText(productName)).toBeVisible() //validate the product name on product page
-  //   //await this.commonFunction.rejectAllCookies()
-  //   await this.page.getByRole('button', { name: 'Add to Cart' }).click();
-  //   await this.page.waitForTimeout(2000)
-  //   await expect(this.page.getByText(productName)).toBeVisible() //validate the product name on cart page
-  // }
 }

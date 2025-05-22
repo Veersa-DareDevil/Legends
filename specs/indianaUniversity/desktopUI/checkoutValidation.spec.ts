@@ -14,7 +14,7 @@ test.describe('56825-Checkout Validation', () => {
     product = new Product(page)
     checkout = new CheckoutPage(page)
     await login.goToPortal('storefront')
-    //await login.loginToStorefront()
+    //await login.loginToStorefront() // future use
     await page.waitForTimeout(2000)
   })
 

@@ -34,7 +34,7 @@ export class Product {
       .textContent()
     console.log('Product Name:', productName)
     await this.productCardLink.first().click()
-    await this.page.waitForTimeout(4000)
+    await this.page.waitForTimeout(2000)
     return productName
   }
 

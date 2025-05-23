@@ -28,7 +28,7 @@ test.describe('303887 & 745140 -Login to Storefront site of Real Madrid', () => 
     await navigation.openMenu()
 
     const returnPageUrl = await page.url()
-    expect(returnPageUrl).toBe(homePageUrl) // Validate that the page title is the same as the homepage title after login to check user is logged in and redirected to the homepage
+    expect(returnPageUrl).toBe(homePageUrl) // Validate that the page URL is the same as the homepage URL after login to check user is logged in and redirected to the homepage
 
     //Verify that you can login and the profile icon is replaced with a circle containing the user initials
     const getUsernameInitials = await commonFunction.profileIcon.textContent()

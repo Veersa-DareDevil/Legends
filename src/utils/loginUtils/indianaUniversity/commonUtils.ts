@@ -9,9 +9,8 @@ export class CommonUtils {
   readonly adminSignIn: Locator
   readonly storefrontLoginIcon: Locator
   readonly storefrontUsername: Locator
-  readonly storefrontLoginContinueButton: Locator
-  readonly storefrontPassword: Locator
   readonly storefrontLoginButton: Locator
+  readonly storefrontPassword: Locator
   readonly cookieCloseBtn: Locator
   readonly loader: Locator
 
@@ -25,8 +24,7 @@ export class CommonUtils {
     this.storefrontLoginIcon = page.getByTestId('loginbutton')
     this.storefrontUsername = page.getByRole('textbox', { name: 'Email' })
     this.storefrontPassword = page.getByRole('textbox', { name: 'Password' })
-    this.storefrontLoginContinueButton = page.getByRole('button', { name: 'Sign in' })
-    this.storefrontLoginButton = page.locator('[id="rm-password-register-btn"]')
+    this.storefrontLoginButton = page.getByRole('button', { name: 'Sign in' })
     this.cookieCloseBtn = page.locator('[id="onetrust-close-btn-container"]') //it is the unique locator
     this.loader = page.locator('app-loader path')
   }
@@ -90,7 +88,7 @@ export class CommonUtils {
     await this.storefrontUsername.fill(username)
     //fill password
     await this.storefrontPassword.fill(password)
-    await this.storefrontLoginContinueButton.click()
+    await this.storefrontLoginButton.click()
     await this.page.waitForLoadState('load')
     //await this.waitForLoaderToDisappear() // future use when re-directing to homePage
   }

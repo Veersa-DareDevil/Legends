@@ -1,12 +1,14 @@
 import { Page, Locator, expect } from '@playwright/test'
 import { CommonUtils } from '@src/utils/loginUtils/realMadrid/commonUtils'
 import checkoutData from '@src/fixtures/indianaUniversity/checkoutValidation.json'
+import { MobileNavigation } from './navigation'
 
 export class Product {
+
   readonly page
   private commonFunction: CommonUtils
+  private navbar: MobileNavigation
   readonly productCard: Locator
-  readonly navTaining: Locator
   readonly optionMensTraining: Locator
   readonly rejectAllCookiesButton: Locator
   readonly productCardLink: Locator
@@ -18,7 +20,7 @@ export class Product {
   constructor(page: Page) {
     this.page = page
     this.commonFunction = new CommonUtils(page)
-    this.navTaining = page.getByTestId('navigation-bar').getByRole('button', { name: 'Training' })
+    this.navbar = new MobileNavigation(page)
     this.optionMensTraining = page.getByRole('link', { name: 'Mens', exact: true })
     this.productCard = page.locator('[data-testid="productcard"]')
     this.productCardLink = page.locator('[data-testid="productcardlink"]')
@@ -30,7 +32,7 @@ export class Product {
   }
 
   async selectNavTraining() {
-    await this.navTaining.click()
+    await this.navbar.navTraining.click()
     await this.commonFunction.rejectAllCookies()
     await this.optionMensTraining.click({ force: true })
     await this.page.waitForSelector('#category-description', { state: 'visible' })

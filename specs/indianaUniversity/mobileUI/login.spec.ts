@@ -19,6 +19,6 @@ test.describe('303887 & 745140 -Login to Storefront site of IndianUniversity', (
 
     const returnPageURL = page.url() //this will fail because of functionality issue
 
-    expect(returnPageURL).toBe(homePageURL) // Validate that the page title is the same as the homepage title after login to check user is logged in and redirected to the homepage
+    expect(returnPageURL).toBe(homePageURL) // Validate that the page URL is the same as the homepage URL after login to check user is logged in and redirected to the homepage
   })
 })

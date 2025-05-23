@@ -20,6 +20,6 @@ test.describe('303887 & 745140 -Login to Storefront site of IndianaUniversity', 
     //await navigation.selectEnglishLanguage() // future use
 
     const returnPageUrl = page.url() //validation will fail,
-    expect(returnPageUrl).toBe(homePageUrl) // Validate that the page title is the same as the homepage title after login to check user is logged in and redirected to the homepage
+    expect(returnPageUrl).toBe(homePageUrl) // Validate that the page URL is the same as the homepage title after login to check user is logged in and redirected to the homepage
   })
 })

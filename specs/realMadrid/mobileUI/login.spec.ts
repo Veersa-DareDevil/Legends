@@ -14,21 +14,21 @@ test.describe('303887 & 745140 -Login to Storefront site of Real Madrid', () => 
 
   test('Should Login to Storefront', async ({ page }) => {
     //switch to English before login
-    await navigation.selectMenu()
+    await navigation.openMenu()
     await commonFunction.rejectAllCookies()
     await navigation.selectEnglishLanguage()
     await navigation.closeMenu()
 
-    const homePageTitle = await page.title()
+    const homePageUrl = await page.url()
     await commonFunction.loginToStorefront()
     // switch to English after login
-    await navigation.selectMenu()
+    await navigation.openMenu()
     await commonFunction.rejectAllCookies()
     await navigation.selectEnglishLanguage()
-    await navigation.selectMenu()
+    await navigation.openMenu()
 
-    const returnPageTitle = await page.title()
-    expect(returnPageTitle).toBe(homePageTitle) // Validate that the page title is the same as the homepage title after login to check user is logged in and redirected to the homepage
+    const returnPageUrl = await page.url()
+    expect(returnPageUrl).toBe(homePageUrl) // Validate that the page title is the same as the homepage title after login to check user is logged in and redirected to the homepage
 
     //Verify that you can login and the profile icon is replaced with a circle containing the user initials
     const getUsernameInitials = await commonFunction.profileIcon.textContent()

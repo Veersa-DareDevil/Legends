@@ -22,7 +22,7 @@ test.describe('56825-Checkout Validation', () => {
   })
 
   test('Should Validate Checkout Validations', async ({}) => {
-    await navigation.selectMenu()
+    await navigation.openMenu()
     await product.selectNavTraining()
     const productName = await product.selectProduct()
     console.log('Product Name:', productName)

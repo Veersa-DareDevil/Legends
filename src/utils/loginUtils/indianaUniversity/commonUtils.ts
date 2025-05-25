@@ -7,6 +7,12 @@ export class CommonUtils {
   readonly adminUsername: Locator
   readonly adminPassword: Locator
   readonly adminSignIn: Locator
+  readonly storefrontLoginIcon: Locator
+  readonly storefrontUsername: Locator
+  readonly storefrontLoginButton: Locator
+  readonly storefrontPassword: Locator
+  readonly cookieCloseBtn: Locator
+  readonly loader: Locator
 
   constructor(page: Page) {
     this.page = page
@@ -15,6 +21,12 @@ export class CommonUtils {
     this.adminUsername = page.getByRole('textbox', { name: 'Username' })
     this.adminPassword = page.getByRole('textbox', { name: 'Password' })
     this.adminSignIn = page.getByRole('button', { name: 'Sign In' })
+    this.storefrontLoginIcon = page.getByTestId('loginbutton')
+    this.storefrontUsername = page.getByRole('textbox', { name: 'Email' })
+    this.storefrontPassword = page.getByRole('textbox', { name: 'Password' })
+    this.storefrontLoginButton = page.getByRole('button', { name: 'Sign in' })
+    this.cookieCloseBtn = page.locator('[id="onetrust-close-btn-container"]') //it is the unique locator
+    this.loader = page.locator('app-loader path')
   }
 
   /**
@@ -58,5 +70,37 @@ export class CommonUtils {
     console.log('Successfully logged in to admin portal.')
   }
 
-  // Add more common utility functions.
+  /**
+   * Performs login to the storefront portal.
+   */
+  async loginToStorefront(): Promise<void> {
+    const username = process.env.IU_STOREFRONT_USERNAME
+    const password = process.env.IU_STOREFRONT_PASSWORD
+    if (!username || !password) {
+      throw new Error('Username and password must be provided for storefront login.')
+    }
+    await this.storefrontLoginIcon.click()
+    await this.page.waitForLoadState('load')
+    //await this.selectEnglish.click()// future use
+    await this.handleCookieBanner()
+    await this.page.waitForLoadState('load')
+    // fill username
+    await this.storefrontUsername.fill(username)
+    //fill password
+    await this.storefrontPassword.fill(password)
+    await this.storefrontLoginButton.click()
+    await this.page.waitForLoadState('load')
+    //await this.waitForLoaderToDisappear() // future use when re-directing to homePage
+  }
+
+  //future use
+  // async waitForLoaderToDisappear() {
+  //   await this.loader.waitFor({ state: 'visible' })
+  //   await this.loader.waitFor({ state: 'hidden' })
+  // }
+  async handleCookieBanner() {
+    if (await this.cookieCloseBtn.isVisible()) {
+      await this.cookieCloseBtn.click()
+    }
+  }
 }

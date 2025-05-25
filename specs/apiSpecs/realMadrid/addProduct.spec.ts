@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test'
 import { AuthService } from '@src/utils/apiUtils/realMadrid/authService'
 import { ProductService } from '@src/pageObject/api/realMadrid/productService'
-import { PAYLOAD } from '@src/fixtures/api/realMadrid/productPayload'
+import { ProductPayloads } from '@src/fixtures/api/realMadrid/productPayload'
 
 import authData from '@src/fixtures/api/authData.json'
 
@@ -35,7 +35,7 @@ test.describe('Admin Portal || Catalog || Products', () => {
 
     // 4) Compose your payload
 
-    const payload = { ...PAYLOAD.createProduct }
+    const payload = ProductPayloads.getCreateProduct()
 
     // 5) Create the product
     const created = await productService.createProduct(accessToken, payload)

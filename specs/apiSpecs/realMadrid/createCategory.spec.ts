@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
 import { AuthService } from '@src/utils/apiUtils/realMadrid/authService'
-import { PAYLOAD } from '@src/fixtures/api/realMadrid/categoryPayload'
+import { CategoryPayloads } from '@src/fixtures/api/realMadrid/categoryPayload'
 import authData from '@src/fixtures/api/authData.json'
 import { CategoryService } from '@src/pageObject/api/realMadrid/categoryService'
 
@@ -34,7 +34,7 @@ test.describe('Admin Portal || Catalog || Category', () => {
 
     // 4) Compose your payload
 
-    const payload = { ...PAYLOAD.createCategory }
+    const payload = CategoryPayloads.createCategory()
 
     // 5) Create the category
     const created = await categoryService.createCategory(accessToken, payload)

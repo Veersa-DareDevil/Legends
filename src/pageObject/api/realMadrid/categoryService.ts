@@ -25,4 +25,25 @@ export class CategoryService {
     }
     return response.json()
   }
+  
+  async getCategoryDetails(accessToken: string, categoryId: string) {
+  const response = await ApiRequest.getRequest(
+    this.apiRequest,
+    `${ADMIN_ENDPOINTS.categories}/${categoryId}`,
+    ApiHeaders.getAuthJsonHeaders(accessToken, this.contextHeader)
+  )
+
+  expect(response.status()).toBe(200)
+  if (!response.ok()) {
+    const text = await response.text()
+    throw new Error(`Get Category Details API failed (${response.status()}): ${text}`)
+  }
+
+  return response.json()
+}
+
+
+async changeContextHeader(newContextHeader:string){
+    this.contextHeader=newContextHeader
+  }
 }

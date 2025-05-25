@@ -1,3 +1,5 @@
+//This file is under progress , kindly skip this for now
+
 import { test, expect } from '@playwright/test'
 import { AuthService } from '@src/utils/apiUtils/realMadrid/authService'
 import { ProductService } from '@src/pageObject/api/realMadrid/productService'
@@ -71,7 +73,7 @@ test.describe('Admin Portal ||  Products || Variants', () => {
 */
     // 3. Create Variant 
 
-    
+
 
  await productService.changeContextHeader( JSON.stringify({
   catalogId: tokenResponse.catalog_id,             // Dynamically fetched from token

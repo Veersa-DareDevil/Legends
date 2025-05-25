@@ -34,12 +34,12 @@ test.describe('Admin Portal ||  Products || Variants', () => {
         changeContainer: { name: tokenResponse.scope },
       }),
     )
-    // 1. Create Varient Product 
+    // 1. Create Varient Product
 
     //  variant product payload
 
     const createProductPayload = ProductPayloads.getCreateProduct()
-    createProductPayload.productType="VARIANT_BASED"
+    createProductPayload.productType = 'VARIANT_BASED'
 
     // Create the product
     const createdProduct = await productService.createProduct(accessToken, createProductPayload)
@@ -51,7 +51,7 @@ test.describe('Admin Portal ||  Products || Variants', () => {
 
     // 2. update varient product
 
-    const productId=createdProduct.id
+    const productId = createdProduct.id
     console.log('Created product ID:', productId)
 
     /* const updateVarientProductPayload=ProductPayloads.getUpdateVariantProduct()
@@ -71,27 +71,26 @@ test.describe('Admin Portal ||  Products || Variants', () => {
     expect(updatedProduct.uri).toBe(updateVarientProductPayload.uri)
 
 */
-    // 3. Create Variant 
+    // 3. Create Variant
 
-
-
- await productService.changeContextHeader( JSON.stringify({
-  catalogId: tokenResponse.catalog_id,             // Dynamically fetched from token
-  sandboxId: tokenResponse.sandbox_id,             // Dynamically fetched from token
-  tenantId: tokenResponse.tenant_id,
-  applicationId: tokenResponse.application_ids[0],
-  customerContextId: tokenResponse.customer_context_ids[0],
-  changeContainer: {
-    name: tokenResponse.scope,
-    subContainerName: tokenResponse.sub_scope       
-  }
-}))
-    
+    await productService.changeContextHeader(
+      JSON.stringify({
+        catalogId: tokenResponse.catalog_id, // Dynamically fetched from token
+        sandboxId: tokenResponse.sandbox_id, // Dynamically fetched from token
+        tenantId: tokenResponse.tenant_id,
+        applicationId: tokenResponse.application_ids[0],
+        customerContextId: tokenResponse.customer_context_ids[0],
+        changeContainer: {
+          name: tokenResponse.scope,
+          subContainerName: tokenResponse.sub_scope,
+        },
+      }),
+    )
 
     //  variant product payload
 
     const variantPayload = ProductPayloads.getCreateVariant()
-    variantPayload.sku=createProductPayload.sku
+    variantPayload.sku = createProductPayload.sku
 
     // Create the product
     const createdVarient = await productService.createProduct(accessToken, variantPayload)
@@ -101,11 +100,5 @@ test.describe('Admin Portal ||  Products || Variants', () => {
     expect(createdVarient.productId).toBe(productId)
     expect(createdVarient.optionValues.Color).toBe(variantPayload.optionValues.Color)
     expect(createdVarient.optionValues.sku).toBe(variantPayload.sku)
-
-
-
-
-
-
   })
 })

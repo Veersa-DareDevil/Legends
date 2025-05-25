@@ -45,11 +45,12 @@ test.describe('Admin Portal || Catalog || Category', () => {
     expect(created.name).toBe(payload.name)
     expect(created.url).toBe(payload.url)
 
-    // Get Details of Created Category 
+    // Get Details of Created Category
 
-    const categoryId=created.id
+    const categoryId = created.id
 
-    await categoryService.changeContextHeader(JSON.stringify({
+    await categoryService.changeContextHeader(
+      JSON.stringify({
         catalogId: '01HTNGGZ5K87AW0PYCMBBM0DDP',
         sandboxId: '01J54A3Q2R2C7V02337EFP16Z4',
         tenantId: tokenResponse.tenant_id,
@@ -59,12 +60,10 @@ test.describe('Admin Portal || Catalog || Category', () => {
           id: categoryId,
           name: tokenResponse.scope,
         },
-      }))
-
-      const categoryDetails= await categoryService.getCategoryDetails(
-      accessToken,
-      categoryId
+      }),
     )
+
+    const categoryDetails = await categoryService.getCategoryDetails(accessToken, categoryId)
     console.log(categoryDetails)
 
     // Assertions
@@ -72,6 +71,5 @@ test.describe('Admin Portal || Catalog || Category', () => {
     expect(categoryDetails.name).toBe(payload.name)
     expect(categoryDetails.url).toBe(payload.url)
     expect(categoryDetails.productMembershipType).toBe(payload.productMembershipType)
-
   })
 })

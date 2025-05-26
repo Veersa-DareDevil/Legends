@@ -12,7 +12,7 @@ test.describe('Admin Portal || Orders || Fullfillment || Return Flows', () => {
 
   test.beforeEach(async ({ browser, request }) => {
     // Initialize AuthService
-    const auth = new AuthService(browser, request, 'ORDER_FULFILLMENT_VIEW')
+    const auth = new AuthService(browser, request, authData.orderFulfillmentViewScope)
 
     // Fetch a fresh access token
     tokenResponse = await auth.getAccessTokenResonseBody() // This method should return the token response body
@@ -60,7 +60,7 @@ test.describe('Admin Portal || Orders || Fullfillment || Return Flows', () => {
   // 3) Fullfill Order
 
   // Initialize AuthService
-    const auth = new AuthService(browser, request, 'ORDER_FULFILLMENT')
+    const auth = new AuthService(browser, request,authData.orderFulfillmentScope)
 
     // Fetch a fresh access token
     tokenResponse = await auth.getAccessTokenResonseBody() // This method should return the token response body

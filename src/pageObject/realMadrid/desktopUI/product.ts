@@ -4,7 +4,7 @@ import { DesktopNavigation } from './navigation'
 
 export class Product {
   readonly page
-  private navBar:DesktopNavigation
+  private navBar: DesktopNavigation
   private commonFunction: CommonUtils
   readonly productCard: Locator
   readonly rejectAllCookiesButton: Locator

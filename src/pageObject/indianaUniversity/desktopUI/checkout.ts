@@ -1,8 +1,10 @@
 import { expect, Locator, Page } from '@playwright/test'
 import checkoutData from '@src/fixtures/indianaUniversity/checkoutValidation.json'
+import { CommonUtils } from '@src/utils/loginUtils/indianaUniversity/commonUtils'
 
 export class CheckoutPage {
   private page
+  private commonFunctions: CommonUtils
   readonly nameInput: Locator
   readonly emailInput: Locator
   readonly phoneInput: Locator
@@ -16,6 +18,7 @@ export class CheckoutPage {
 
   constructor(page: Page) {
     this.page = page
+    this.commonFunctions = new CommonUtils(page)
     this.nameInput = page.locator('input[name="fullName"]')
     this.emailInput = page.locator('input[name="email"]')
     this.phoneInput = page.locator('input[name="phoneNumber"]')
@@ -55,14 +58,9 @@ export class CheckoutPage {
       )
     }
   }
-  async handleCookieBanner() {
-    if (await this.cookieCloseBtn.isVisible()) {
-      await this.cookieCloseBtn.click()
-    }
-  }
 
   async selectCheckout() {
-    await this.handleCookieBanner()
+    await this.commonFunctions.handleCookieBanner()
     await this.checkOutButton.click()
     await this.page.waitForTimeout(2000)
   }

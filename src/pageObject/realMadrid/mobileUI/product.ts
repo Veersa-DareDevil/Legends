@@ -4,7 +4,6 @@ import checkoutData from '@src/fixtures/indianaUniversity/checkoutValidation.jso
 import { MobileNavigation } from './navigation'
 
 export class Product {
-
   readonly page
   private commonFunction: CommonUtils
   private navbar: MobileNavigation

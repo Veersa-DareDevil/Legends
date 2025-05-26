@@ -39,7 +39,6 @@ test.describe('Admin Portal || Orders || Fullfillment || Return Flows', () => {
       accessToken,
       QueryParams.newFullfillmentOrders,
     )
-    console.log('Order Fulfillment Search Result:', searchResult)
 
     // assertion
     expect(Array.isArray(searchResult.content || searchResult.orders)).toBeTruthy()

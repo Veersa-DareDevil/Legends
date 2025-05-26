@@ -6,6 +6,7 @@ import { Payment } from '@src/pageObject/realMadrid/desktopUI/payment'
 import { SearchPage } from '@src/pageObject/realMadrid/desktopUI/search'
 import testData from '@src/fixtures/realMadrid/checkoutValidation.json'
 import cardDetails from '@src/fixtures/realMadrid/paymentValidations.json'
+import { log } from 'console'
 
 let login: CommonUtils
 let product: Product
@@ -106,6 +107,7 @@ test.describe('Checkout Validation', () => {
     await payment.paymentButton.waitFor({ state: 'visible' })
     await payment.fillPaymentDetails(cardDetails.cardDetails.cardName,cardDetails.cardDetails.cardNumber,cardDetails.cardDetails.expiryDate,cardDetails.cardDetails.cvv)
     await payment.submitPayment()
+    await checkout.waitForShipmentLoader()
 
   })
 })

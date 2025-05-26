@@ -66,6 +66,9 @@ test.describe('Checkout Validation', () => {
   })
 
   test('99734 - Checkout with Split Fulfillment', async ({page}) => {
+
+// need to complete later
+
     await page.goto('https://real-madrid.uat.storefront.legendscommerce.io/en-es/product/mens-home-authentic-shirt-24-25-white-indy')
     await page.waitForLoadState('domcontentloaded')
     await product.addToCart('Mens Home Authentic Shirt 24/25 White (Indy)')

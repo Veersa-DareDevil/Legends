@@ -10,6 +10,9 @@ export const ADMIN_ENDPOINTS = {
   silentCallback: `${ADMIN_BASE_URL}/silent-callback.html`,
   products: `${ADMIN_BASE_URL}/api/catalog/products`,
   categories: `${ADMIN_BASE_URL}/api/catalog/categories`,
+  search:`${ADMIN_BASE_URL}/api/search`,
+  orderFullfillment :`${ADMIN_BASE_URL}/api/order-operations/fulfillment-operations/status-change`,
+  fullfillmentView: `${ADMIN_BASE_URL}/api/order/fulfillment-views`
 
   // Add other admin endpoints here as needed
 }

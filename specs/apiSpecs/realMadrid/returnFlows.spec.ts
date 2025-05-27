@@ -1,6 +1,5 @@
 import { test, expect } from '@playwright/test'
 import { AuthService } from '@src/utils/apiUtils/realMadrid/authService'
-
 import authData from '@src/fixtures/api/authData.json'
 import { OrderService } from '@src/pageObject/api/realMadrid/orderService'
 import { QueryParams } from '@src/fixtures/api/realMadrid/queryParameters'

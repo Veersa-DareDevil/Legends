@@ -27,6 +27,12 @@ export class Product {
       this.page.waitForSelector('#category-description', { state: 'visible' }),
     ])
   }
+async selectNavFashion() {
+    await Promise.all([
+      this.navBar.navFashion.click(),
+      this.page.waitForSelector('#category-description', { state: 'visible' }),
+    ])
+  }
   async selectProduct() {
     await this.productCard.first().hover()
     const productName = await this.productCard
@@ -39,11 +45,15 @@ export class Product {
     return productName
   }
 
-  async addToCart(productName: string) {
-    await expect(this.page.getByText(productName)).toBeVisible() //validate the product name on product page
+  async addToCart(productName?: string) {
+    if (productName) {
+      await expect(this.page.getByText(productName)).toBeVisible() //validate the product name on product page
+    }
     await this.commonFunction.rejectAllCookies()
     await this.addToCartButton.click()
     await this.page.waitForTimeout(2000)
-    await expect(this.page.getByText(productName)).toBeVisible() //validate the product name on cart page
+    if (productName) {
+      await expect(this.page.getByText(productName)).toBeVisible() //validate the product name on cart page
+    }
   }
 }

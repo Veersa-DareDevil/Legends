@@ -8,9 +8,32 @@
       "address1": "१२३ मुख्य मार्ग",
       "address2": "अपार्टमेंट ४बी",
       "city": "मुंबई",
-      "state/province/region": "महाराष्ट्र",
-    "postcode": "𑄝𑄧𑄘𑄮"
+      "state": "महाराष्ट्र",
+      "postcode": "𑄝𑄧𑄘𑄮"
     },
-    "warnMsg":"Please only use Western characters."
+    "warnMsg": "Please only use Western characters."
+  },
+  "validData": {
+    "userDetails": {
+      "fullName": "John Doe",
+      "email": "abhi@example.com",
+      "phone": "9876543210",
+      "country": "United States",
+      "address1": "123 Main St",
+      "address2": "Apt 4B",
+      "city": "New York",
+      "state": "Washington DC",
+      "postcode": "10001"
+    },
+    "address": {
+      "testCountry1": "United States",
+      "testState1": "Washington DC",
+      "testCountry2": "Spain",
+      "testState2": "Madrid"
+    },
+    "currency": {
+      "USD": "$",
+      "EUR": "€"
+    }
   }
 }

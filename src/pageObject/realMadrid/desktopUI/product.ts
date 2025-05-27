@@ -27,7 +27,7 @@ export class Product {
       this.page.waitForSelector('#category-description', { state: 'visible' }),
     ])
   }
-async selectNavFashion() {
+  async selectNavFashion() {
     await Promise.all([
       this.navBar.navFashion.click(),
       this.page.waitForSelector('#category-description', { state: 'visible' }),

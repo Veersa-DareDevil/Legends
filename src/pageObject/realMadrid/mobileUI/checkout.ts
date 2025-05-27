@@ -39,7 +39,6 @@ export class CheckoutPage {
     this.cartPanel = page.locator('div.sticky.top-0.z-50.lg\\:hidden') //no unique locator need to chnage in future
     this.expandBag = page.getByRole('paragraph').filter({ hasText: 'Your bag' })
     this.closeTaxMsg = page.getByRole('button', { name: 'close' })
-
   }
   async fillYourDetails(
     name: string,
@@ -82,7 +81,7 @@ export class CheckoutPage {
   }
 
   async selectState(state: string) {
-    await this.stateDropdown.click({force: true}) 
+    await this.stateDropdown.click({ force: true })
     const option = this.page.getByRole('option', { name: state })
     await option.click()
   }
@@ -94,11 +93,11 @@ export class CheckoutPage {
     await this.addressConfirmButton.click()
     await this.page.waitForSelector('text=Confirm Your Address', { state: 'hidden' })
   }
-  
+
   async verifyCurrency(currency: string) {
-    await this.expandBag.click({ force: true })  // open the bag to see the prices
+    await this.expandBag.click({ force: true }) // open the bag to see the prices
     await this.closeTaxMsg.click({ timeout: 6000 }).catch(() => {
-       // Silently continue if close button is not found
+      // Silently continue if close button is not found
     })
     await this.cartPanel.waitFor({ state: 'visible' })
     await this.page.waitForTimeout(2000) // wait for prices to load dynamically

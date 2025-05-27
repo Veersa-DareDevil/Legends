@@ -107,7 +107,10 @@ export class CommonUtils {
 
   async rejectAllCookies() {
     try {
-      await this.page.waitForSelector('#onetrust-reject-all-handler', { state: 'visible', timeout: 5000 })
+      await this.page.waitForSelector('#onetrust-reject-all-handler', {
+        state: 'visible',
+        timeout: 5000,
+      })
     } catch (error) {
       return
     }

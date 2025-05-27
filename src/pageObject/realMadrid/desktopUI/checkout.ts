@@ -40,7 +40,6 @@ export class CheckoutPage {
     this.continueShoppingButton = page.getByRole('button', { name: 'Continue Shopping' })
     this.shipmentLoader = page.getByRole('img', { name: 'loading spinner' })
     this.continueToPaymentButton = page.getByRole('button', { name: 'Continue to payment' })
-
   }
   async fillYourDetails(
     name: string,
@@ -87,7 +86,6 @@ export class CheckoutPage {
   async continueShopping() {
     await this.checkoutButton.waitFor({ state: 'visible' })
     await this.continueShoppingButton.click()
-
   }
 
   // to go checkout page after adding product to cart
@@ -96,7 +94,7 @@ export class CheckoutPage {
     await this.page.waitForTimeout(2000)
   }
 
-  // to wait for shipment loader to be visible and hidden 
+  // to wait for shipment loader to be visible and hidden
   async waitForShipmentLoader() {
     await this.shipmentLoader.waitFor({ state: 'visible' })
     await this.shipmentLoader.waitFor({ state: 'hidden' })
@@ -105,7 +103,10 @@ export class CheckoutPage {
   async continueToShipping() {
     await this.continueShippingButton.click()
     try {
-      await this.page.waitForSelector('text=Confirm Your Address', { state: 'visible', timeout: 5000 })
+      await this.page.waitForSelector('text=Confirm Your Address', {
+        state: 'visible',
+        timeout: 5000,
+      })
       await this.page.waitForTimeout(2000)
       await this.addressConfirmButton.click()
     } catch (error) {
@@ -127,24 +128,24 @@ export class CheckoutPage {
   }
 
   async validateAndSelectShipments() {
-    const optionLists = this.page.locator('ol.flex.flex-col.gap-4');
-    await expect(optionLists).toHaveCount(2);
+    const optionLists = this.page.locator('ol.flex.flex-col.gap-4')
+    await expect(optionLists).toHaveCount(2)
 
     for (let i = 0; i < 2; ++i) {
-      const list = optionLists.nth(i);
+      const list = optionLists.nth(i)
 
       // Pick the label text we want
-      const label = i === 0 ? 'Express' : 'Standard';
+      const label = i === 0 ? 'Express' : 'Standard'
 
       // 1. Assert the button with that label exists
-      const optionButton = list.getByRole('button', { name: new RegExp(`^${label}\\b`) });
-      await expect(optionButton).toBeVisible();
+      const optionButton = list.getByRole('button', { name: new RegExp(`^${label}\\b`) })
+      await expect(optionButton).toBeVisible()
 
       // 2. Click the button to select that shipping method
-      await optionButton.click();
+      await optionButton.click()
 
       // 3. Verify the radio inside is checked
-      const radio = optionButton.getByRole('radio');
+      const radio = optionButton.getByRole('radio')
       // await expect(radio).toBeChecked();
     }
   }
@@ -153,5 +154,4 @@ export class CheckoutPage {
   async continueToPayment() {
     await this.continueToPaymentButton.click()
   }
-
 }

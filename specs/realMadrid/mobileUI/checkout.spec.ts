@@ -65,15 +65,18 @@ test.describe('Checkout Validation', () => {
     await checkout.verifyCurrency(testData.validData.currency.EUR)
   })
 
-  test('99734 - Checkout with Split Fulfillment', async ({page}) => {
+  test('99734 - Checkout with Split Fulfillment', async ({ page }) => {
+    // need to complete later
 
-// need to complete later
-
-    await page.goto('https://real-madrid.uat.storefront.legendscommerce.io/en-es/product/mens-home-authentic-shirt-24-25-white-indy')
+    await page.goto(
+      'https://real-madrid.uat.storefront.legendscommerce.io/en-es/product/mens-home-authentic-shirt-24-25-white-indy',
+    )
     await page.waitForLoadState('domcontentloaded')
     await product.addToCart('Mens Home Authentic Shirt 24/25 White (Indy)')
 
-    await page.goto('https://real-madrid.uat.storefront.legendscommerce.io/en-es/product/rmcfmf0067-real-madrid-home-socks-23-24-white')
+    await page.goto(
+      'https://real-madrid.uat.storefront.legendscommerce.io/en-es/product/rmcfmf0067-real-madrid-home-socks-23-24-white',
+    )
     await page.waitForLoadState('domcontentloaded')
     await product.addToCart('RMCFMF0067 Real Madrid Home Socks 23/24 White')
   })

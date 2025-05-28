@@ -10,7 +10,7 @@ import {
   ReturnItem,
 } from '@src/fixtures/api/realMadrid/orderPayload'
 
-test.describe('Admin Portal || Orders || Fullfillment || Return Flows', () => {
+test.describe.serial('Admin Portal || Orders || Fullfillment || Return Flows', () => {
   let accessToken: string
   let tokenResponse: { [key: string]: string }
 

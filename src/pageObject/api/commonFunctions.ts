@@ -10,4 +10,17 @@ export class CommonFunctions {
       )
       .join('&')
   }
+
+  static generateCustomId(): string {
+    const length = 26
+    const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+    let result = '01' // fixed prefix, can be modified if needed
+
+    for (let i = 2; i < length; i++) {
+      const randomIndex = Math.floor(Math.random() * charset.length)
+      result += charset[randomIndex]
+    }
+
+    return result
+  }
 }

@@ -3,12 +3,18 @@ import { test } from '@playwright/test'
 import { Product } from '@src/pageObject/realMadrid/mobileUI/product'
 import { CheckoutPage } from '@src/pageObject/realMadrid/mobileUI/checkout'
 import { MobileNavigation } from '@src/pageObject/realMadrid/mobileUI/navigation'
+import { Payment } from '@src/pageObject/realMadrid/mobileUI/payment'
+import { SearchPage } from '@src/pageObject/realMadrid/mobileUI/search'
 import testData from '@src/fixtures/realMadrid/checkoutValidation.json'
+import productData from '@src/fixtures/realMadrid/product.json'
+import cardDetails from '@src/fixtures/realMadrid/paymentValidations.json'
 
 let login: CommonUtils
 let product: Product
 let checkout: CheckoutPage
 let navigation: MobileNavigation
+let payment: Payment
+let search: SearchPage
 
 test.describe('Checkout Validation', () => {
   test.beforeEach('should validate checkout process', async ({ page }) => {
@@ -16,6 +22,8 @@ test.describe('Checkout Validation', () => {
     product = new Product(page)
     checkout = new CheckoutPage(page)
     navigation = new MobileNavigation(page)
+    payment = new Payment(page)
+    search = new SearchPage(page)
     await login.goToPortal('storefront')
   })
 
@@ -66,18 +74,48 @@ test.describe('Checkout Validation', () => {
   })
 
   test('99734 - Checkout with Split Fulfillment', async ({ page }) => {
-    // need to complete later
-
-    await page.goto(
-      'https://real-madrid.uat.storefront.legendscommerce.io/en-es/product/mens-home-authentic-shirt-24-25-white-indy',
-    )
+    // product 1
+    await page.goto(productData.product1Url)
     await page.waitForLoadState('domcontentloaded')
-    await product.addToCart('Mens Home Authentic Shirt 24/25 White (Indy)')
-
-    await page.goto(
-      'https://real-madrid.uat.storefront.legendscommerce.io/en-es/product/rmcfmf0067-real-madrid-home-socks-23-24-white',
-    )
+    await product.addToCart()
+    await checkout.continueShopping()
+    // product 2
+    await page.waitForTimeout(1000)
+    await search.searchProduct(productData.product2Search)
     await page.waitForLoadState('domcontentloaded')
-    await product.addToCart('RMCFMF0067 Real Madrid Home Socks 23/24 White')
+    await product.selectProduct()
+    await product.addToCart()
+    //go to checkout
+    await checkout.selectCheckout()
+    await checkout.fillYourDetails(
+      testData.validData.userDetails.fullName,
+      testData.validData.userDetails.email,
+      testData.validData.userDetails.phone,
+      testData.validData.userDetails.address1,
+      testData.validData.userDetails.address2,
+      testData.validData.userDetails.city,
+      testData.validData.userDetails.postcode,
+    )
+    await checkout.selectCountry(testData.validData.address.testCountry2)
+    await checkout.selectState(testData.validData.address.testState2)
+    await checkout.continueToShipping()
+
+    await page.waitForSelector('text=Continue to payment', { state: 'visible' })
+    await page.waitForTimeout(1000)
+    // Validate the split shipments
+    await checkout.validateAndSelectShipments()
+    await checkout.waitForShipmentLoader()
+
+    await checkout.continueToPayment()
+
+    await payment.paymentButton.waitFor({ state: 'visible' })
+    await payment.fillPaymentDetails(
+      cardDetails.cardDetails.cardName,
+      cardDetails.cardDetails.cardNumber,
+      cardDetails.cardDetails.expiryDate,
+      cardDetails.cardDetails.cvv,
+    )
+    await payment.submitPayment()
+    await checkout.waitForShipmentLoader()
   })
 })

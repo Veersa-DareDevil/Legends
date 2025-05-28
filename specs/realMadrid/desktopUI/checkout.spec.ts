@@ -6,7 +6,7 @@ import { Payment } from '@src/pageObject/realMadrid/desktopUI/payment'
 import { SearchPage } from '@src/pageObject/realMadrid/desktopUI/search'
 import testData from '@src/fixtures/realMadrid/checkoutValidation.json'
 import cardDetails from '@src/fixtures/realMadrid/paymentValidations.json'
-import { log } from 'console'
+import productData from '@src/fixtures/realMadrid/product.json'
 
 let login: CommonUtils
 let product: Product
@@ -71,15 +71,13 @@ test.describe('Checkout Validation', () => {
 
   test('99734 - Checkout with Split Fulfillment', async ({ page }) => {
     // product 1
-    await page.goto(
-      'https://real-madrid.uat.storefront.legendscommerce.io/en-es/product/mens-home-authentic-shirt-24-25-white-indy',
-    )
+    await page.goto(productData.product1Url)
     await page.waitForLoadState('domcontentloaded')
     await product.addToCart()
     await checkout.continueShopping()
     // product 2
     await page.waitForTimeout(1000)
-    await search.searchProduct('Home Socks 23/24 White')
+    await search.searchProduct(productData.product2Search)
     await page.waitForLoadState('domcontentloaded')
     await product.selectProduct()
     await product.addToCart()

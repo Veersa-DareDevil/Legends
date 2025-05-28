@@ -36,6 +36,7 @@ export class Product {
     await this.optionMensTraining.click({ force: true })
     await this.page.waitForSelector('#category-description', { state: 'visible' })
   }
+
   async selectProduct() {
     await this.productCard.first().hover()
     const productName = await this.productCard
@@ -57,6 +58,40 @@ export class Product {
     await this.page.waitForTimeout(2000)
     if (productName) {
       await expect(this.page.getByText(productName)).toBeVisible() //validate the product name on cart page
+    }
+  }
+
+  async getProductCardContent() {
+    await this.productCard.first().hover()
+    const productName = await this.productCard
+      .first()
+      .locator('[class="grid content-end"]')
+      .textContent()
+    console.log('Product Name:', productName)
+    return productName as string
+  }
+
+  async validateMadridistaDiscountedPrice() {
+    const porductCount = await this.productCard.count()
+
+    // 1. to validate the product card content and the discounted price 
+    for (let i = 0; i < porductCount; i++) {
+      const productPrice = await this.getProductCardContent()
+      const prices = productPrice.match(/\$(\d+\.\d+)/g);
+      if (prices && prices.length >= 2) {
+        console.log('Prices:', prices)
+        const discountedPrice = parseFloat(prices[0].substring(1));
+        const originalPrice = parseFloat(prices[1].substring(1));
+        expect(discountedPrice).toBeLessThan(originalPrice);  // expect discounted price to be less than original price
+      }
+
+      // 2. to validate the product card background color to be purple
+      const productElement = this.productCard.nth(i).locator('[class="grid content-end"]');
+      const discountPriceElement = productElement.locator('.bg-deep-purple-300');
+      const computedStyle = await discountPriceElement.evaluate((el) => {
+        return window.getComputedStyle(el).backgroundColor;
+      });
+      expect(computedStyle).toBe('rgb(222, 229, 253)'); // expect purple color
     }
   }
 }

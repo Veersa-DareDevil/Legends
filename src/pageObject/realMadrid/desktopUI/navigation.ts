@@ -10,6 +10,7 @@ export class DesktopNavigation {
   readonly navShopByPlayer: Locator
   readonly navFashion: Locator
   readonly navAccessories: Locator
+  readonly loader: Locator
 
   constructor(page: Page) {
     this.page = page
@@ -25,6 +26,7 @@ export class DesktopNavigation {
     this.navAccessories = page
       .getByTestId('navigation-bar')
       .getByRole('link', { name: 'Accessories' })
+    this.loader = page.getByRole('img', { name: 'loading spinner' })
   }
 
   // Add more common utility functions.
@@ -35,5 +37,14 @@ export class DesktopNavigation {
     await this.engLangOption.click()
     await this.langButton.click()
     await this.page.waitForTimeout(2000)
+  }
+
+  async waitForLoaderToDisappear() {
+    try {
+      await this.loader.waitFor({ state: 'visible' })
+    } catch (error) {
+      console.log('Loader not visible, continuing...')
+    }
+    await this.loader.waitFor({ state: 'hidden' })
   }
 }

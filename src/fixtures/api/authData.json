@@ -3,5 +3,6 @@
   "productScope": "PRODUCT",
   "categoryScope": "CATEGORY",
   "orderFulfillmentViewScope":"ORDER_FULFILLMENT_VIEW",
-  "orderFulfillmentScope":"ORDER_FULFILLMENT"
+  "orderFulfillmentScope":"ORDER_FULFILLMENT",
+  "returnScope":"RETURN_AUTHORIZATION"
 }

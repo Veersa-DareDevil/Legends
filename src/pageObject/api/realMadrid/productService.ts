@@ -25,7 +25,6 @@ export class ProductService {
     }
     return response.json()
   }
-
   async createVariant(accessToken: string, payload: object, productId: string) {
     const response = await ApiRequest.postRequest(
       this.apiRequest,

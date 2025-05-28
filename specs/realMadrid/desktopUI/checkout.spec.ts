@@ -24,7 +24,7 @@ test.describe('Checkout Validation', () => {
     await login.goToPortal('storefront')
   })
 
-  test('56825- Validate Checkout Validations', async ({ }) => {
+  test('56825- Validate Checkout Validations', async ({}) => {
     await product.selectNavTraining()
     const productName = await product.selectProduct()
     // console.log('Product Name:', productName)
@@ -42,7 +42,7 @@ test.describe('Checkout Validation', () => {
     await checkout.validateWesternCharWarningMsg()
   })
 
-  test('98940 - Checkout - Update Locale to Match Shipping Country', async ({ }) => {
+  test('98940 - Checkout - Update Locale to Match Shipping Country', async ({}) => {
     await product.selectNavFashion()
     const productName = await product.selectProduct()
     console.log('Product Name:', productName)
@@ -71,7 +71,9 @@ test.describe('Checkout Validation', () => {
 
   test('99734 - Checkout with Split Fulfillment', async ({ page }) => {
     // product 1
-    await page.goto('https://real-madrid.uat.storefront.legendscommerce.io/en-es/product/mens-home-authentic-shirt-24-25-white-indy')
+    await page.goto(
+      'https://real-madrid.uat.storefront.legendscommerce.io/en-es/product/mens-home-authentic-shirt-24-25-white-indy',
+    )
     await page.waitForLoadState('domcontentloaded')
     await product.addToCart()
     await checkout.continueShopping()
@@ -103,11 +105,15 @@ test.describe('Checkout Validation', () => {
     await checkout.waitForShipmentLoader()
 
     await checkout.continueToPayment()
-    
+
     await payment.paymentButton.waitFor({ state: 'visible' })
-    await payment.fillPaymentDetails(cardDetails.cardDetails.cardName,cardDetails.cardDetails.cardNumber,cardDetails.cardDetails.expiryDate,cardDetails.cardDetails.cvv)
+    await payment.fillPaymentDetails(
+      cardDetails.cardDetails.cardName,
+      cardDetails.cardDetails.cardNumber,
+      cardDetails.cardDetails.expiryDate,
+      cardDetails.cardDetails.cvv,
+    )
     await payment.submitPayment()
     await checkout.waitForShipmentLoader()
-
   })
 })

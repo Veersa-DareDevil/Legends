@@ -2,7 +2,6 @@ import { test, expect } from '@playwright/test'
 import { AuthService } from '@src/utils/apiUtils/realMadrid/authService'
 import { ProductService } from '@src/pageObject/api/realMadrid/productService'
 import { ProductPayloads } from '@src/fixtures/api/realMadrid/productPayload'
-
 import authData from '@src/fixtures/api/authData.json'
 
 test.describe('Admin Portal || Catalog || Products', () => {

@@ -7,10 +7,13 @@ import { CommonFunctions } from '../commonFunctions'
 export class OrderService {
   constructor(
     private apiRequest: APIRequestContext,
-    private contextHeader: string // JSON string for x-context-request
+    private contextHeader: string, // JSON string for x-context-request
   ) {}
 
-  async searchOrderFulfillment(accessToken: string, queryParams: Record<string, string | string[]>) {
+  async searchOrderFulfillment(
+    accessToken: string,
+    queryParams: Record<string, string | string[]>,
+  ) {
     const queryString = CommonFunctions.buildQueryString(queryParams)
 
     const url = `${ADMIN_ENDPOINTS.search}/order-fulfillment-search?${queryString}`
@@ -18,7 +21,7 @@ export class OrderService {
     const response = await ApiRequest.getRequest(
       this.apiRequest,
       url,
-      ApiHeaders.getAuthJsonHeaders(accessToken, this.contextHeader)
+      ApiHeaders.getAuthJsonHeaders(accessToken, this.contextHeader),
     )
 
     expect(response.status()).toBe(200)
@@ -31,31 +34,31 @@ export class OrderService {
   }
 
   async getOrderDetailForFullfillment(accessToken: string, orderId: string) {
-  const url = `${ADMIN_ENDPOINTS.fullfillmentView}/${orderId}`
+    const url = `${ADMIN_ENDPOINTS.fullfillmentView}/${orderId}`
 
-  const response = await ApiRequest.getRequest(
-    this.apiRequest,
-    url,
-    ApiHeaders.getAuthJsonHeaders(accessToken, this.contextHeader)
-  )
+    const response = await ApiRequest.getRequest(
+      this.apiRequest,
+      url,
+      ApiHeaders.getAuthJsonHeaders(accessToken, this.contextHeader),
+    )
 
-  expect(response.status()).toBe(200)
-  if (!response.ok()) {
-    const text = await response.text()
-    throw new Error(`Get Fulfillment View By ID API failed (${response.status()}): ${text}`)
+    expect(response.status()).toBe(200)
+    if (!response.ok()) {
+      const text = await response.text()
+      throw new Error(`Get Fulfillment View By ID API failed (${response.status()}): ${text}`)
+    }
+
+    return response.json()
   }
 
-  return response.json()
-}
-
-async changeFulfillmentStatus(accessToken: string, payload: object) {
+  async changeFulfillmentStatus(accessToken: string, payload: object) {
     const url = `${ADMIN_ENDPOINTS.orderFullfillment}`
 
     const response = await ApiRequest.postRequest(
       this.apiRequest,
       url,
       ApiHeaders.getAuthJsonHeaders(accessToken, this.contextHeader),
-      payload
+      payload,
     )
 
     expect(response.status()).toBe(200)
@@ -66,7 +69,6 @@ async changeFulfillmentStatus(accessToken: string, payload: object) {
 
     return response.json()
   }
-
 
   async changeContextHeader(newContextHeader: string) {
     this.contextHeader = newContextHeader

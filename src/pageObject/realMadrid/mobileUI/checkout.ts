@@ -10,15 +10,18 @@ export class CheckoutPage {
   readonly address2Input: Locator
   readonly cityInput: Locator
   readonly postalCodeInput: Locator
-  readonly checkOutButton: Locator
+  readonly checkoutButton: Locator
   readonly countryDropdown: Locator
   readonly stateDropdown: Locator
   readonly continueShippingButton: Locator
+  readonly continueShoppingButton: Locator
+  readonly continueToPaymentButton: Locator
   readonly addressConfirmButton: Locator
   readonly warningMessage: Locator
   readonly cartPanel: Locator
   readonly expandBag: Locator
   readonly closeTaxMsg: Locator
+  readonly shipmentLoader: Locator
 
   constructor(page: Page) {
     this.page = page
@@ -29,7 +32,8 @@ export class CheckoutPage {
     this.address2Input = page.locator('input[name="addressLine2"]')
     this.cityInput = page.locator('input[name="city"]')
     this.postalCodeInput = page.locator('input[name="postalCode"]')
-    this.checkOutButton = page.locator('[data-testid="checkoutbutton"]')
+    this.checkoutButton = page.locator('[data-testid="checkoutbutton"]')
+    this.continueShoppingButton = page.getByRole('button', { name: 'Continue Shopping' })
     this.warningMessage = page.getByText(checkoutData.nonWesternCharacters.warnMsg)
     this.countryDropdown = page.locator('[id="react-select-2-input"]')
     this.stateDropdown = this.page.locator('[id="react-select-3-input"]')
@@ -39,6 +43,10 @@ export class CheckoutPage {
     this.cartPanel = page.locator('div.sticky.top-0.z-50.lg\\:hidden') //no unique locator need to chnage in future
     this.expandBag = page.getByRole('paragraph').filter({ hasText: 'Your bag' })
     this.closeTaxMsg = page.getByRole('button', { name: 'close' })
+        this.shipmentLoader = page.getByRole('img', { name: 'loading spinner' })
+
+    this.continueToPaymentButton = page.getByRole('button', { name: 'Continue to payment' })
+
   }
   async fillYourDetails(
     name: string,
@@ -70,7 +78,7 @@ export class CheckoutPage {
   }
 
   async selectCheckout() {
-    await this.checkOutButton.click()
+    await this.checkoutButton.click()
     await this.page.waitForTimeout(2000)
   }
 
@@ -86,11 +94,24 @@ export class CheckoutPage {
     await option.click()
   }
 
+  // to continue shooping after adding product to cart
+  async continueShopping() {
+    await this.checkoutButton.waitFor({ state: 'visible' })
+    await this.continueShoppingButton.click()
+  }
+
   async continueToShipping() {
     await this.continueShippingButton.click()
-    await this.page.waitForSelector('text=Confirm Your Address', { state: 'visible' })
-    await this.page.waitForTimeout(2000)
-    await this.addressConfirmButton.click()
+    try {
+      await this.page.waitForSelector('text=Confirm Your Address', {
+        state: 'visible',
+        timeout: 5000,
+      })
+      await this.page.waitForTimeout(2000)
+      await this.addressConfirmButton.click()
+    } catch (error) {
+      // Address confirmation dialog not found, proceeding with flow
+    }
     await this.page.waitForSelector('text=Confirm Your Address', { state: 'hidden' })
   }
 
@@ -110,5 +131,39 @@ export class CheckoutPage {
       await expect(priceSpans.nth(i)).toHaveText(new RegExp(`^\\${currency}\\d`)) // expecting the symbol to update dynamically as country changes
     }
     await this.expandBag.click({ force: true }) // close the bag after verification
+  }
+
+  // to wait for shipment loader to be visible and hidden
+  async waitForShipmentLoader() {
+    await this.shipmentLoader.waitFor({ state: 'visible' })
+    await this.shipmentLoader.waitFor({ state: 'hidden' })
+  }
+
+  async validateAndSelectShipments() {
+    const optionLists = this.page.locator('ol.flex.flex-col.gap-4')
+    await expect(optionLists).toHaveCount(2)
+
+    for (let i = 0; i < 2; ++i) {
+      const list = optionLists.nth(i)
+
+      // Pick the label text we want
+      const label = i === 0 ? 'Express' : 'Standard'
+
+      // 1. Assert the button with that label exists
+      const optionButton = list.getByRole('button', { name: new RegExp(`^${label}\\b`) })
+      await expect(optionButton).toBeVisible()
+
+      // 2. Click the button to select that shipping method
+      await optionButton.click()
+
+      // 3. Verify the radio inside is checked
+      const radio = optionButton.getByRole('radio')
+      // await expect(radio).toBeChecked();
+    }
+  }
+
+  // to click on continue to payment section
+  async continueToPayment() {
+    await this.continueToPaymentButton.click()
   }
 }

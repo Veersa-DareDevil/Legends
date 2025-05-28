@@ -48,10 +48,15 @@ export class Product {
     return productName
   }
 
-  async addToCart(productName: string) {
-    await expect(this.page.getByText(productName)).toBeVisible() //validate the product name on product page
+  async addToCart(productName?: string) {
+    if (productName) {
+      await expect(this.page.getByText(productName)).toBeVisible() //validate the product name on product page
+    }
+    await this.commonFunction.rejectAllCookies()
     await this.addToCartButton.click()
     await this.page.waitForTimeout(2000)
-    await expect(this.page.getByText(productName)).toBeVisible() //validate the product name on cart page
+    if (productName) {
+      await expect(this.page.getByText(productName)).toBeVisible() //validate the product name on cart page
+    }
   }
 }

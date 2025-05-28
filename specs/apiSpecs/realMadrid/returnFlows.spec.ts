@@ -52,7 +52,7 @@ test.describe('Admin Portal || Orders || Fullfillment || Return Flows', () => {
     // 2) Get Order Details for Fullfillment (first order in new)
 
     const orderDetails = await orderService.getOrderDetailForFullfillment(accessToken, firstOrderId)
-    console.log('Fulfillment View Response:', orderDetails)
+    
 
     //assertions
     expect(orderDetails).toHaveProperty('id', firstOrderId)
@@ -91,7 +91,6 @@ test.describe('Admin Portal || Orders || Fullfillment || Return Flows', () => {
       accessToken,
       changeStatusPayload,
     )
-    console.log('Fulfillment Status Change Response:', changeStatusResponse)
 
     // Basic assertion
     expect(changeStatusPayload).toHaveProperty('status', 'FULFILLED')
@@ -126,7 +125,6 @@ test.describe('Admin Portal || Orders || Fullfillment || Return Flows', () => {
     // 2) Get Order Details for Fullfillment (first order in new)
 
     const orderDetails = await orderService.getOrderDetailForFullfillment(accessToken, firstOrderId)
-    console.log('Fulfillment View Response:', orderDetails)
 
     //assertions
     expect(orderDetails).toHaveProperty('id', firstOrderId)
@@ -168,7 +166,6 @@ test.describe('Admin Portal || Orders || Fullfillment || Return Flows', () => {
       accessToken,
       changeStatusPayload,
     )
-    console.log('Fulfillment Status Change Response:', changeStatusResponse)
 
     // Basic assertion
     expect(changeStatusPayload).toHaveProperty('status', 'FULFILLED')
@@ -208,7 +205,6 @@ test.describe('Admin Portal || Orders || Fullfillment || Return Flows', () => {
       returnPayload,
       orderDetails.orderId,
     )
-    console.log('Create Return Response:', createReturnResponse)
 
     // assertion
     expect(createReturnResponse).toHaveProperty('status', 'PENDING')
@@ -244,7 +240,6 @@ test.describe('Admin Portal || Orders || Fullfillment || Return Flows', () => {
     // 2) Get Order Details for Fullfillment (first order in new)
 
     const orderDetails = await orderService.getOrderDetailForFullfillment(accessToken, firstOrderId)
-    console.log('Fulfillment View Response:', orderDetails)
 
     //assertions
     expect(orderDetails).toHaveProperty('id', firstOrderId)
@@ -286,7 +281,6 @@ test.describe('Admin Portal || Orders || Fullfillment || Return Flows', () => {
       accessToken,
       changeStatusPayload,
     )
-    console.log('Fulfillment Status Change Response:', changeStatusResponse)
 
     // Basic assertion
     expect(changeStatusPayload).toHaveProperty('status', 'FULFILLED')
@@ -326,7 +320,6 @@ test.describe('Admin Portal || Orders || Fullfillment || Return Flows', () => {
       returnPayload,
       orderDetails.orderId,
     )
-    console.log('Create Return Response:', createReturnResponse)
 
     // assertion
     expect(createReturnResponse).toHaveProperty('status', 'PENDING')
@@ -351,7 +344,6 @@ test.describe('Admin Portal || Orders || Fullfillment || Return Flows', () => {
       cancelPayload,
       createReturnResponse.orderId,
     )
-    console.log('Cancel Return Response:', cancelReturnResponse)
 
     // assertion
     expect(cancelReturnResponse[0]).toHaveProperty('status', 'CANCELLED')
@@ -387,7 +379,6 @@ test.describe('Admin Portal || Orders || Fullfillment || Return Flows', () => {
     // 2) Get Order Details for Fullfillment (first order in new)
 
     const orderDetails = await orderService.getOrderDetailForFullfillment(accessToken, firstOrderId)
-    console.log('Fulfillment View Response:', orderDetails)
 
     //assertions
     expect(orderDetails).toHaveProperty('id', firstOrderId)
@@ -429,7 +420,6 @@ test.describe('Admin Portal || Orders || Fullfillment || Return Flows', () => {
       accessToken,
       changeStatusPayload,
     )
-    console.log('Fulfillment Status Change Response:', changeStatusResponse)
 
     // Basic assertion
     expect(changeStatusPayload).toHaveProperty('status', 'FULFILLED')
@@ -469,7 +459,6 @@ test.describe('Admin Portal || Orders || Fullfillment || Return Flows', () => {
       returnPayload,
       orderDetails.orderId,
     )
-    console.log('Create Return Response:', createReturnResponse)
 
     // assertion
     expect(createReturnResponse).toHaveProperty('status', 'PENDING')
@@ -504,7 +493,6 @@ test.describe('Admin Portal || Orders || Fullfillment || Return Flows', () => {
       confirmPayload,
       createReturnResponse.orderId,
     )
-    console.log('Confirm Return Response:', confirmReturnResponse)
 
     // assertion
     expect(confirmReturnResponse).toHaveProperty('status', 'CONFIRMED')

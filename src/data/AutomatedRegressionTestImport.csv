@@ -1,0 +1,904 @@
+row_type,Id,Correlation Id,Name,URI,Description,SKU,UPC,Currency,businessType,MSRP,Default Price,Sale Price,Cost,Meta Title,Meta Description,displayTemplate,Active,discountable,inventoryType,availableOnline,Inventory Check Strategy,Inventory Reservation Strategy,eligibleForPickup,Active Start Date,Active End Date,Searchable,Individually Sold,Merchandising Product,Merging Type,Keywords,Tags,reviewsSummary_numberOfReviews,reviewsSummary_rating,reviewsSummary_ratingUnits,External Id,Product Option 1,Product Option 2,Product Option 3,Advanced Product Details 1,Advanced Product Details 2,Advanced Product Details 3,Advanced Product Details 4,Product Option 1: Bundling Enabled,Product Option 2: Bundling Enabled,Product Option 3: Bundling Enabled,Pricing Key,Preorder,Tax Code,Channels,Minimum Threshold,Maximum Threshold,Unit Count,Unit Count Units,Maximum Threshold Per Customer,EAN,Vendor,Option Template,Option Template Type,HS Code,Country of Manufacture,Size Guide Id,Advanced Tags,Color Family,Sub-Theme,fulfillmentFlatRates,Additional Attributes,dimension_width,dimension_height,dimension_depth,dimension_units,Weight,Weight Unit,Brand,Target Demographic,Merchandising Type,Personalization Metadata,Advanced Product Details 2 TN:zh,metaDescription TN:en,Advanced Product Details 2 TN:it,Product Option 1 TN:ar,Product Option 1 TN:ja,Advanced Product Details 2 TN:ar,URI TN:es,metaDescription TN:es,Product Option 1 TN:it,Advanced Product Details 1 TN:de,URI TN:en,Advanced Product Details 3 TN:fr,metaTitle TN:pt,Product Option 3 TN:de,Advanced Product Details 2 TN:ja,Product Option 1 TN:zh,Additional Attributes TN:es,Additional Attributes TN:en,Advanced Product Details 4 TN:ko,Product Option 2 TN:fr,Name TN:it,Name TN:zh,Name TN:ar,metaDescription TN:fr,Advanced Product Details 1 TN:ko,URI TN:fr,description TN:pt,Product Option 3 TN:ko,Advanced Product Details 3 TN:es,Name TN:pt,Product Option 2 TN:pt,Advanced Product Details 3 TN:en,Advanced Product Details 4 TN:de,Additional Attributes TN:de,Advanced Product Details 4 TN:ja,description TN:es,metaTitle TN:fr,Advanced Product Details 4 TN:ar,Advanced Product Details 4 TN:zh,description TN:en,Advanced Product Details 4 TN:it,URI TN:ko,Product Option 3 TN:es,Product Option 1 TN:pt,Product Option 3 TN:en,metaDescription TN:pt,Additional Attributes TN:ko,metaTitle TN:es,Advanced Product Details 2 TN:ko,Advanced Product Details 1 TN:fr,Advanced Product Details 3 TN:de,description TN:fr,Advanced Product Details 1 TN:en,metaTitle TN:en,Product Option 1 TN:fr,Additional Attributes TN:ja,Additional Attributes TN:ar,Product Option 2 TN:en,URI TN:de,Advanced Product Details 3 TN:ko,Name TN:fr,Advanced Product Details 2 TN:de,Product Option 2 TN:es,Advanced Product Details 1 TN:es,metaDescription TN:it,Advanced Product Details 2 TN:es,URI TN:ar,Advanced Product Details 1 TN:pt,URI TN:zh,metaDescription TN:zh,description TN:ko,URI TN:it,Product Option 1 TN:en,Product Option 3 TN:pt,metaDescription TN:ar,metaDescription TN:ja,Product Option 2 TN:ko,Product Option 1 TN:es,metaTitle TN:de,Additional Attributes TN:zh,description TN:de,Additional Attributes TN:it,Name TN:en,Name TN:es,Advanced Product Details 2 TN:en,Advanced Product Details 2 TN:fr,Advanced Product Details 3 TN:ja,Product Option 2 TN:de,Advanced Product Details 3 TN:it,Advanced Product Details 3 TN:zh,metaTitle TN:ko,Name TN:de,Advanced Product Details 3 TN:ar,Product Option 3 TN:fr,Advanced Product Details 4 TN:pt,Additional Attributes TN:pt,metaDescription TN:ko,URI TN:ja,description TN:zh,description TN:ar,Product Option 3 TN:ja,Advanced Product Details 4 TN:es,Name TN:ko,Advanced Product Details 4 TN:en,description TN:it,Product Option 3 TN:zh,metaTitle TN:ja,Product Option 1 TN:de,Advanced Product Details 3 TN:pt,Product Option 3 TN:it,metaDescription TN:de,metaTitle TN:zh,description TN:ja,Product Option 3 TN:ar,metaTitle TN:ar,Name TN:ja,Advanced Product Details 1 TN:it,metaTitle TN:it,Advanced Product Details 4 TN:fr,URI TN:pt,Additional Attributes TN:fr,Product Option 1 TN:ko,Product Option 2 TN:it,Product Option 2 TN:zh,Advanced Product Details 1 TN:ja,Product Option 2 TN:ar,Advanced Product Details 1 TN:ar,Advanced Product Details 2 TN:pt,Advanced Product Details 1 TN:zh,Product Option 2 TN:ja,Price List: Australian Dollar,Price List: Australian Dollar - Sale,Price List: British Pound,Price List: British Pound - Sale,Price List: Canadian Dollar,Price List: Canadian Dollar - Sale,Price List: Chinese Yuan,Price List: Chinese Yuan - Sale,Price List: EUR Contract Pricing,Price List: Example Contract Pricing CNY,Price List: Example Contract Pricing EUR,Price List: Example Contract Pricing GBP,Price List: Example Contract Pricing JPY,Price List: Example Contract Pricing MXN,Price List: Example Contract Pricing SEK,Price List: Example Contract Pricing USD,Price List: Japanese Yen,Price List: Japanese Yen - Sale,Price List: Korean Won,Price List: Korean Won - Sale,Price List: Mexican Peso,Price List: Mexican Peso - Sale,Price List: New Zealand Dollar,Price List: New Zealand Dollar - Sale,Price List: Swedish Krona,Price List: Swedish Krona - Sale,Price List: Swiss Franc,Price List: Swiss Franc - Sale,Price List: US Dollar,Price List: US Dollar - Sale,Price List: US Dollar Contract Price
+PRODUCT,01HX7D5BXGWDEZ0JYJDRKW1GBK,,Algeria Away Jersey - Men's,/adidas-algeria-away-football-shirt-mens,"<div><br></div>
+<ul>
+<li >100% recycled polyester interlock</li>
+<li >Moisture-absorbing AEROREADY</li>
+<li >Droptail hem</li>
+<li >Slim fit</li>
+</ul>",FIFAMZ001402,4065429341291,USD,VARIANT_BASED,,90.00,60.00,39.13,Algeria Away Jersey - Men's,,,TRUE,TRUE,PHYSICAL,TRUE,ADD_TO_CART,SUBMIT_ORDER,FALSE,2023-05-17T20:29:10.249Z,,TRUE,TRUE,FALSE,,Football Shirts|Jerseys|Shirts,CAF|FIFA Federations|Production Upload|Shop All Countries|Gifts For Him|Gifts Under €150|Sale,0,,,adidas-algeria-away-football-shirt-mens,label::Size;type::SIZE;attributeName::Size;,label::Colour;type::COLOR;attributeName::Colour;,,,,,,FALSE,FALSE,,FIFAMZ001402,FALSE,,,,5,,,FALSE,,,,,,,,,,,,"sizeGuide::{""adidas Men's Size Guide"":[{""SIZE"":""XS"",""Chest (in)"":""32.5\"" - 34\"""",""Waist (in)"":""27.5\"" - 29\""""},{""SIZE"":""S"",""Chest (in)"":""34.5\"" - 36\"""",""Waist (in)"":""29.5\"" - 31.5\""""},{""SIZE"":""M"",""Chest (in)"":""36.5\"" - 39\"""",""Waist (in)"":""32\"" - 34.5\""""},{""SIZE"":""L"",""Chest (in)"":""39.5\"" - 42.5\"""",""Waist (in)"":""35\"" - 38\""""},{""SIZE"":""XL"",""Chest (in)"":""43\"" - 46.5\"""",""Waist (in)"":""38.5\"" - 42\""""},{""SIZE"":""2XL"",""Chest (in)"":""47\"" - 51\"""",""Waist (in)"":""42.5\"" - 47\""""},{""SIZE"":""3XL"",""Chest (in)"":""51.5\"" - 56\"""",""Waist (in)"":""47.5\"" - 52\""""}]}|nation::Algeria",,,,,0.22,KILOGRAMS,ADIDAS,MENS,KITS,,,,,المقاس,,,/adidas-algeria-away-football-shirt-mens-es,,Taglia,,/adidas-algeria-away-football-shirt-mens-en,,,,,,,,,Couleur,Maglia da calcio adidas Algeria Away - Uomo,,قميص كرة القدم الجزائر أواي من أديداس - رجالي,,,/adidas-algeria-away-football-shirt-mens-fr,,,,,,,,,,"<ul>
+    <li>100 % poliéster reciclado entrelazado</li>
+    <li>Sistema de absorción de la humedad AEROREADY</li>
+    <li>Dobladillo trasero más largo</li>
+    <li>De corte entallado</li>
+</ul>",,,,,,/adidas-algeria-away-football-shirt-mens-ko,,,,,,,,,,"<ul>
+    <li>Interlock 100% polyester recyclé</li>
+    <li>Technologie absorbante AEROREADY</li>
+    <li>Coupe plus longue à l’arrière</li>
+    <li>Coupe slim</li>
+</ul>",,,Taille,,,,/adidas-algeria-away-football-shirt-mens-de,,adidas Maillot de football Algérie extérieur - Homme,,Color,,,,/adidas-algeria-away-football-shirt-mens-ar,,/adidas-algeria-away-football-shirt-mens-zh,,,/adidas-algeria-away-football-shirt-mens-it,,,,,,Talla,,,"<div><br></div>
+ <ul><li>100% recycled polyester interlock</li>
+ Feuchtigkeitsabsorbierende AEROREADY-Technologie</li>
+ Hinten verlängerter Saum</li>
+ Schmale Passform</li>
+ </ul>",,,adidas Argelia Away Camiseta de fútbol - Hombres,,,,Farbe,,,,adidas Algerien Auswärtstrikot – Herren,,,,,,/adidas-algeria-away-football-shirt-mens-ja,,,,,,,"<div><br></div>
+<ul><li>  100% recycled polyester interlock</li>
+AEROREADY antiumidità</li>
+Drop tail</li>
+Vestibilità slim</li>
+</ul>",,,Grösse,,,,,,,,,,,,/adidas-algeria-away-football-shirt-mens-pt,,,Colore,,,لون,,,,,135,90,80,53.35,125,83.35,,,,,,,,,,,,,,,,,135,90,,,90,60,100,66.65,
+VARIANT,01HX7D5BZDH7SS067XWP7H115A,,,,,FIFAMZ001402,4065429341291,,,,,,,,,,TRUE,TRUE,,,,,,2023-05-17T20:29:10.324Z,,,,,,,,,,,FIFAMZ001402,S,value::Green;valueLabel::Green;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,S,,,,,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HX7D5BZDD3WQ08XKX51P1FP9,,,,,FIFAMZ001403,4065429341345,,,,,,,,,,TRUE,TRUE,,,,,,2023-05-17T20:29:10.324Z,,,,,,,,,,,FIFAMZ001403,M,value::Green;valueLabel::Green;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,متوسط,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HX7D5BZDVMZZ1N8T1MDK1VYS,,,,,FIFAMZ001404,4065429341253,,,,,,,,,,TRUE,TRUE,,,,,,2023-05-17T20:29:10.324Z,,,,,,,,,,,FIFAMZ001404,L,value::Green;valueLabel::Green;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,كبير,,,,,L,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,L,,,,,,,,,,,,,,,,,,,,,,,L,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,L,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HX7D5BZD4AGX0QD74WMY0CBF,,,,,FIFAMZ001405,4065429341338,,,,,,,,,,TRUE,TRUE,,,,,,2023-05-17T20:29:10.324Z,,,,,,,,,,,FIFAMZ001405,XL,value::Green;valueLabel::Green;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,XL,,,,,XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,XL,,,,,,,,,,,,,,,,,,,,,,,XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HX7D5BZDQBTP005KKBES0JWB,,,,,FIFAMZ001406,4065429341321,,,,,,,,,,TRUE,TRUE,,,,,,2023-05-17T20:29:10.324Z,,,,,,,,,,,FIFAMZ001406,2XL,value::Green;valueLabel::Green;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2XL,,,,,2XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2XL,,,,,,,,,,,,,,,,,,,,,,,2XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HX7D5BZDKTWS0J1D6TVK178T,,,,,FIFAMZ001407,4065429341352,,,,,,,,,,TRUE,TRUE,,,,,,2023-05-17T20:29:10.324Z,,,,,,,,,,,FIFAMZ001407,3XL,value::Green;valueLabel::Green;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3XL,,,,,3XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3XL,,,,,,,,,,,,,,,,,,,,,,,3XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01HXAG3GQVET6C1482Q5CY0F4K,,Mens ECO Essentials Real Madrid Color Crest Hoodie White,/rmcfms0279-mens-essentials-color-crest-hoodie-white,"<p>Featuring simplicity and comfort, this item belongs to our <span>Real Madrid ECO Essentials Collection,&nbsp;</span><span>made of 100% sustainable materials</span>. Enjoy variety and different colors for all madridista family members &amp; friends. Real Madrid white basic hoodie.</p>
+<p><strong>Details:</strong></p>
+<ul>
+<li>Regular fit.</li>
+<li>Cozy and warm brushed quality.</li>
+<li>100% ORGANIC cotton fleece.</li>
+<li>Adjustable hoodie with drawstrings.</li>
+<li>Kangaroo pocket.</li>
+</ul>",RMCFMS027901,8445567043589,EUR,VARIANT_BASED,,60.00,,11.51,,,,TRUE,TRUE,PHYSICAL,TRUE,ADD_TO_CART,SUBMIT_ORDER,FALSE,2024-05-07T21:42:09.915Z,,TRUE,TRUE,FALSE,,,Clothing|Essentials|essentials24|FD|hoodies|Men|meta-size-chart-rm-mens-tops|realblanco|Sweatshirts|WHITE,0,,,RMCFMS0279,label::Size;type::SIZE;attributeName::Size;,,,,,,,FALSE,,,01HVMWGRGSEPDW0JG3ENBR079H,FALSE,,,2,5,,,FALSE,,,,,,,,,,,,color::White,,,,,0.56,KILOGRAMS,OSDM_TEXTEIS,MENS,HOODIES,,,,,,サイズ,,/rmcfms0279-mens-essentials-color-crest-hoodie-white-es,,,,/rmcfms0279-mens-essentials-color-crest-hoodie-white-en,,,,,尺寸,,,,,,男士白色连帽运动衫ECO Essentials  Real Madrid  大衣 颜色,,,,/rmcfms0279-mens-essentials-color-crest-hoodie-white-fr,"<p>Caracterizado pela sua simplicidade e conforto, este artigo pertence à nossa coleção. Real Madrid <span>ECO Essentialsfeito de materiais 100% sustentáveis</span>. Aprecie a variedade e as diferentes cores para todos os membros da família e amigos.</p>
+<p><strong>Detalhes:</strong></p>
+<ul>
+<li>Camisola branca básica Real Madrid.</li>
+<li>Corte regular.</li>
+<li>Qualidade agradável e agradável.</li>
+<li>Pelúcia 100% algodão ORGÂNICO.</li>
+<li>Carapuço com cordões ajustáveis</li>
+<li>Bolso canguru.</li>
+</ul>",,,Sweatshirt branca com capuz para Homem ECO Essentials  Real Madrid,,,,,,"<p>Caracterizado por su sencillez y comodidad, este artículo pertenece a nuestra colección Real Madrid <span>ECO Essentials, fabricada 100% con materiales sostenibles</span>. Disfruta de la variedad y los diferentes colores para todos los miembros de la familia y amistades madridistas.</p>
+<p><strong>Detalles:</strong></p>
+<ul>
+<li>Sudadera blanca básica Real Madrid.</li>
+<li>Corte regular.</li>
+<li>Calidad de tacto agradable.</li>
+<li>100% felpa de algodón ORGÁNICO.</li>
+<li>Capucha ajustable con cordones.</li>
+<li>Bolsillo canguro.</li>
+</ul>",,,,,,/rmcfms0279-mens-essentials-color-crest-hoodie-white-ko,,Tamanho,,,,,,,,"<p>Caractérisé par sa simplicité et son confort, cet article fait partie de notre collection. Real Madrid <span>ECO Essentialsfabriqué à partir de matériaux 100 % durables</span>. Profitez de la variété et des différentes couleurs pour tous les membres de la famille et les amis des madridistas.</p>
+<p><strong>Détails :</strong></p>
+<ul>
+<li>Sweat-shirt blanc basique Real Madrid.</li>
+<li>Coupe régulière.</li>
+<li>Une qualité agréable.</li>
+<li>Peluche en coton 100% BIO.</li>
+<li>Capuche ajustable avec cordons de serrage.</li>
+<li>Poche kangourou.</li>
+</ul>",,,Sélectionnez Taille,,,,/rmcfms0279-mens-essentials-color-crest-hoodie-white-de,,Sweatshirt blanc à capuche pour hommes ECO Essentials  Real Madrid  Manteau Couleur,,,,,,/rmcfms0279-mens-essentials-color-crest-hoodie-white-ar,,/rmcfms0279-mens-essentials-color-crest-hoodie-white-zh,,"<p>심플함과 편안함이 특징인 이 제품은 저희 컬렉션에 속합니다. Real Madrid <span>ECO Essentials100% 지속 가능한 재료로 제작</span>. 마드리드의 모든 가족과 친구들을 위해 다양하고 다채로운 색채를 즐겨보세요.</p>
+<p><strong>제품 세부사항:</strong></p>
+<ul>
+<li>기본 흰색 스웨트셔츠 Real Madrid.</li>
+<li>일반 컷.</li>
+<li>기분 좋은 품질.</li>
+<li>100% 오가닉 코튼 플러시.</li>
+<li>드로스트링으로 후드 조절 가능.</li>
+<li>캥거루 주머니.</li>
+</ul>",/rmcfms0279-mens-essentials-color-crest-hoodie-white-it,,,,,,Seleccionar Talla,,,"<p>Dieser Artikel, der sich durch seine Einfachheit und seinen Komfort auszeichnet, gehört zu unserer Kollektion. Real Madrid <span>ECO Essentialshergestellt aus 100% nachhaltigen Materialien</span>. Genießen Sie die Vielfalt und die verschiedenen Farben für alle Mitglieder der Familie und Freunde.</p>
+<p><strong>Details:</strong></p>
+<ul>
+<li>Weißes Basic-Sweatshirt Real Madrid.</li>
+<li>Normaler Schnitt.</li>
+<li>Angenehme Wohlfühlqualität.</li>
+<li>100% BIO-Baumwollplüsch.</li>
+<li>Verstellbare Kapuze mit Kordelzug.</li>
+<li>Kängurutasche.</li>
+</ul>",,,Sudadera Capucha Blanca Hombre ECO Essentials Real Madrid Escudo Color,,,,,,,,Männer Weißes Sweatshirt mit Kapuze ECO Essentials  Real Madrid  Mantel Farbe,,,,,,/rmcfms0279-mens-essentials-color-crest-hoodie-white-ja,"<p>这款产品的特点是简洁舒适，属于我们的系列产品。Real Madrid <span>ECO Essentials由 100% 可持续材料制成</span>.让马德里的所有家庭成员和朋友都能享受到各种不同的色彩。</p>
+<p><strong>商品细节：</strong></p>
+<ul>
+<li>基本款白色运动衫Real Madrid 。</li>
+<li>常规剪裁。</li>
+<li>令人愉悦的品质。</li>
+<li>100% 有机棉长毛绒。</li>
+<li>可调节风帽，带抽绳。</li>
+<li>袋鼠兜</li>
+</ul>",,,,남성용 화이트 후드 스웨트셔츠 ECO Essentials  Real Madrid  코트 색상,,,,,Größe,,,,,"<p>シンプルさと快適さが特徴のこの商品は、私たちのコレクションに属しています。Real Madrid <span>ECO Essentials100％サステイナブル素材</span>.マドリードのご家族やご友人の皆様に、バラエティに富んだ様々なカラーをお楽しみください。</p>
+<p><strong>ディテール：</strong></p>
+<ul>
+<li>ベーシックな白いスウェットシャツReal Madrid.</li>
+<li>レギュラーカット。</li>
+<li>気持ちの良い品質。</li>
+<li>オーガニックコットン100％のぬいぐるみ。</li>
+<li>フードはドローストリングで調節可能。</li>
+<li>カンガルーポケット。</li>
+</ul>",,,Men's White Hooded SweatshirtECO Essentials  Real Madrid  Coat Colour,,,,/rmcfms0279-mens-essentials-color-crest-hoodie-white-pt,,크기,,,,,,,,,100,,60,,,,479,,,,,,,,,,8500,,83000,,60,,,,60,,,,75,,
+VARIANT,01HXAG3GSHRH6909M049001P38,,,,,RMCFMS027901,8445567043589,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:42:09.969400Z,,,,,,,,,,,RMCFMS027901,XS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,XS,,,,,,,,,,,XS,,,,,,,,,,,,,,,,,,,,,,,,,,,,XS,,,,,,,,,,,XS,,,,,,,,,,,,,,,,,,,,,,,XS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,XS,,,,,,,,,,,,,,XS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HXAG3GSH8TM214S3Y59D1F84,,,,,RMCFMS027902,8445567043596,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:42:09.969536Z,,,,,,,,,,,RMCFMS027902,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HXAG3GSH19J80GZMEEY61YYQ,,,,,RMCFMS027903,8445567043602,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:42:09.969629Z,,,,,,,,,,,RMCFMS027903,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HXAG3GSH6WSG1H7BH1JT1D58,,,,,RMCFMS027904,8445567043619,,,,70.00,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:42:09.969Z,,,,,,,,,,,RMCFMS027904,L,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,L,,,,,,,,,,,L,,,,,,,,,,,,,,,,,,,,,,,,,,,,L,,,,,,,,,,,L,,,,,,,,,,,,,,,,,,,,,,,L,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,L,,,,,,,,,,,,,,L,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HXAG3GSHP7S11FKW92041AY4,,,,,RMCFMS027905,8445567043626,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:42:09.969803Z,,,,,,,,,,,RMCFMS027905,XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,XL,,,,,,,,,,,XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,XL,,,,,,,,,,,XL,,,,,,,,,,,,,,,,,,,,,,,XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,XL,,,,,,,,,,,,,,XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HXAG3GSHAWDE04CKQWPY03TW,,,,,RMCFMS027906,8445567043633,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:42:09.969882Z,,,,,,,,,,,RMCFMS027906,2XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2XL,,,,,,,,,,,2XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,2XL,,,,,,,,,,,2XL,,,,,,,,,,,,,,,,,,,,,,,2XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2XL,,,,,,,,,,,,,,2XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HXAG3GSH667M10Y0Y6KC1GPJ,,,,,RMCFMS027907,8445567043640,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:42:09.969963Z,,,,,,,,,,,RMCFMS027907,3XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3XL,,,,,,,,,,,3XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,3XL,,,,,,,,,,,3XL,,,,,,,,,,,,,,,,,,,,,,,3XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3XL,,,,,,,,,,,,,,3XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01HX7D5BZEFNNE0J53J09S145P,,FIFA Classics South Africa '10 Jacket Red – Men's,/fifa-classics-south-africa-10-jacket-red-mens,"<ul>
+<li>Tonal Hem Embroidery</li>
+<li>Gloss rear print</li>
+<li>Full printed lining</li>
+<li>Body: 100% Cotton Lining: 100% Cotton Sleeve Lining: 100% Polyester</li>
+</ul>",FIFAMJ000502,5060322525662,EUR,VARIANT_BASED,,150.00,,53.82,FIFA Classics South Africa '10 Jacket Red – Men's,,,TRUE,TRUE,PHYSICAL,TRUE,ADD_TO_CART,SUBMIT_ORDER,FALSE,2023-05-17T20:45:17.054Z,,TRUE,TRUE,FALSE,,Coats|Outerwear,Classic World Cups|Clothing|FIFA Classics|Go Live|Launch Product|New URL|Production Upload|UAT Testing|upload1|Gifts For Him|Gifts Under â‚¬150,0,,,fifa-classics-south-africa-10-jacket-red-mens,label::Size;type::SIZE;attributeName::Size;,label::Colour;type::COLOR;attributeName::Colour;,,,,,,FALSE,FALSE,,FIFAMJ000502,FALSE,,,,,,,FALSE,,,,,,,,,,,,"sizeGuide::{""Mens T-Shirt Size Guide"":[{""SIZE"":""S"",""Chest (in)"":""36\"" - 38\"""",""Waist (in)"":""30\"" - 32\""""},{""SIZE"":""M"",""Chest (in)"":""39\"" - 41\"""",""Waist (in)"":""33\"" - 35\""""},{""SIZE"":""L"",""Chest (in)"":""42\"" - 44\"""",""Waist (in)"":""36\"" - 38\""""},{""SIZE"":""XL"",""Chest (in)"":""45\"" - 47\"""",""Waist (in)"":""39\"" - 41\""""},{""SIZE"":""2XL"",""Chest (in)"":""48\"" - 50\"""",""Waist (in)"":""42\"" - 44\""""}]}|tournament::2010 World Cup",,,,,0.90,KILOGRAMS,POETIC,MENS,JACKETS,,,,,المقاس,,,/fifa-classics-south-africa-10-jacket-red-mens-es,,Taglia,,/fifa-classics-south-africa-10-jacket-red-mens-en,,,,,,,,,Couleur,Giacca rossa Sudafrica '10 FIFA Classics – Uomo,,سترة حمراء لبطولة جنوب أفريقيا 2010 من تشكيلة FIFA Classics - للرجال,,,/fifa-classics-south-africa-10-jacket-red-mens-fr,,,,Jaqueta vermelha África do Sul 10 FIFA Classics — Masculina,,,,,,"<ul>
+<li>Bordado con dobladillo tonal</li>
+<li>Impresión posterior brillante</li>
+<li>Interior completo impreso</li>
+<li>Cuerpo: 100% algodón Interior: 100% algodón Interior de las mangas: 100% poliéster</li>
+</ul>",,,,,,/fifa-classics-south-africa-10-jacket-red-mens-ko,,,,,,,,,,"<ul>
+<li>Broderie ourlet tonale</li>
+<li>Impression brillante ˆ l'arrière</li>
+<li>Doublure entièrement imprimée</li>
+<li>Corps: 100% Doublure en coton: 100% Doublure manche en coton: 100% Polyester</li>
+</ul>",,,Taille,,,,/fifa-classics-south-africa-10-jacket-red-mens-de,,Veste rouge Afrique du Sud 2010 FIFA Classics – homme,,Color,,,,/fifa-classics-south-africa-10-jacket-red-mens-ar,,/fifa-classics-south-africa-10-jacket-red-mens-zh,,,/fifa-classics-south-africa-10-jacket-red-mens-it,,,,,,Talla,,,"<ul>
+<li>Tonale Saumstickerei</li>
+<li>Glanzdruck auf der Rückseite</li>
+<li>Voll bedrucktes Futter</li>
+<li>Kärper: 100% Baumwolle Futter: 100% Baumwolle €rmelfutter: 100% Polyester</li>
+</ul>",,,"Chaqueta roja de Sudáfrica 2010 FIFA Classics, hombre",,,,Farbe,,,,FIFA Classics – Südafrika 10 – Jacke (rot) – Männer,,,,,,/fifa-classics-south-africa-10-jacket-red-mens-ja,,"<ul>
+<li>تطريز كفف من الدرجة اللونية نفسها</li>
+<li>طبعة خلفية لامعة</li>
+<li>بطانة مطبوعة بالكامل</li>
+<li>النسيج: بطانة 100% من القطن: بطانة للأكمام 100% من القطن: 100% من البوليستر</li>
+</ul>",,,,,"<ul>
+<li>Orli ricamati in tonale</li>
+<li>Stampa lucente sul retro</li>
+<li>Fodera stampata</li>
+<li>Corpo: 100% Cotone foderato: 100% maniche cotone foderato: 100% Poliestere</li>
+</ul>",,,Grösse,,,,,,,,,,,,/fifa-classics-south-africa-10-jacket-red-mens-pt,,,Colore,,,لون,,,,,220,,135,,205,,,,,,,,,,,,,,,,,,220,,,,150,,165,,
+VARIANT,01HX7D5C0KSSBH14JYY7XJ0EY1,,,,,FIFAMJ000502,5060322525662,,,,,,,,,,TRUE,TRUE,,,,,,2023-05-17T20:45:17.081Z,,,,,,,,,,,FIFAMJ000502,S,value::Red;valueLabel::Red;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,S,,,,,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HX7D5C0KMSEH1GAQAT5A0P4S,,,,,FIFAMJ000503,5060322525679,,,,,,,,,,TRUE,TRUE,,,,,,2023-05-17T20:45:17.081Z,,,,,,,,,,,FIFAMJ000503,M,value::Red;valueLabel::Red;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,متوسط,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HX7D5C0KHKG70ZTXBGST0GKC,,,,,FIFAMJ000504,5060322525686,,,,,,,,,,TRUE,TRUE,,,,,,2023-05-17T20:45:17.081Z,,,,,,,,,,,FIFAMJ000504,L,value::Red;valueLabel::Red;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,كبير,,,,,L,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,L,,,,,,,,,,,,,,,,,,,,,,,L,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,L,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HX7D5C0KJPCH0FN690PT04NP,,,,,FIFAMJ000505,5060322525693,,,,,,,,,,TRUE,TRUE,,,,,,2023-05-17T20:45:17.082Z,,,,,,,,,,,FIFAMJ000505,XL,value::Red;valueLabel::Red;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,XL,,,,,XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,XL,,,,,,,,,,,,,,,,,,,,,,,XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01HX7D5BCG0STR1H8SEDKJ1WRC,,Women's World Cup 2023 Australia Can Cooler,/womens-world-cup-2023-australia-can-cooler,"<p>Stay cool, stay refreshed with a FIFA Women's World Cup 2023 can cooler dedicated to Australia, one of the two tournament host nations.</p>
+<ul>
+<li>Officially licensed FIFA Women's World Cup 2023 Australia/New Zealand merchandise</li>
+<li>Neoprene</li>
+</ul>",FIFAHW000400,9314783871117,EUR,VARIANT_BASED,,10.00,5.00,9.20,Women's World Cup 2023 Australia Can Cooler,,,TRUE,TRUE,PHYSICAL,TRUE,ADD_TO_CART,SUBMIT_ORDER,FALSE,2023-05-17T20:24:06.842Z,,TRUE,TRUE,FALSE,,,Accessories|Homeware|World Cups|1882891 |Sale|WWC Sale|BF,0,,,womens-world-cup-2023-australia-can-cooler,label::Size;type::SIZE;attributeName::Size;,label::Colour;type::COLOR;attributeName::Colour;,,,,,,FALSE,FALSE,,FIFAHW000400,FALSE,,,,,,,FALSE,,,,,,,,,,,,nation::Australia|tournament::Womens World Cup 2023,,,,,0.04,KILOGRAMS,LICENSINGESSENTIALS,,WATER_BOTTLES,,,,,,,,/womens-world-cup-2023-australia-can-cooler-es,,,,/womens-world-cup-2023-australia-can-cooler-en,,,,,,,,,,Tasca termica lattine Australia Coppa del Mondo femminile 2023,,Funda aislante para latas de la Copa Mundial Femenina de la FIFA 2023™ (Australia),,,/womens-world-cup-2023-australia-can-cooler-fr,"<p>Refresque-se com o cooler de latas da Copa do Mundo Feminina da FIFA 2023 dedicado à Austrália, um dos dois países anfitriões do torneio.</p>
+<ul>
+<li>Produto oficial licenciado da Copa do Mundo Feminina da FIFA Austrália & Nova Zelândia 2023</li>
+<li>Neoprene</li>
+</ul>",,,Cooler de latas da Austrália da Copa do Mundo Feminina 2023,,,,,,"<p>Mantén fría la bebida con esta funda aislante para latas de la Copa Mundial Femenina de la FIFA 2023™ dedicada a Australia, uno de los dos países anfitriones.</p>
+<ul>
+<li>Productos con licencia oficial de la Copa Mundial Femenina de la FIFA Australia & Nueva Zelanda 2023™</li>
+<li>Neopreno</li>
+</ul>",,,,,,/womens-world-cup-2023-australia-can-cooler-ko,,,,,,,,,,"<p>Maintenez vos boissons au frais avec la glacière Coupe du Monde Féminine de la FIFA 2023™ aux couleurs de l’Australie, l’un des deux pays hôtes de la compétition.</p>
+<ul>
+<li>Produit dérivé sous licence officielle de la Coupe du Monde Féminine de la FIFA, Australie & Nouvelle-Zélande 2023™</li>
+<li>Néoprène</li>
+</ul>",,,,,,,/womens-world-cup-2023-australia-can-cooler-de,,Glacière Australie Coupe du Monde Féminine de la FIFA 2023™,,,,,,/womens-world-cup-2023-australia-can-cooler-ar,,/womens-world-cup-2023-australia-can-cooler-zh,,,/womens-world-cup-2023-australia-can-cooler-it,,,,,,,,,"<p>Der Dosenkühler zur FIFA Frauen-Weltmeisterschaft 2023™ im Look Australiens, einem der beiden Turniergastgeber, sorgt jederzeit für eine erfrischende Abkühlung.</p>
+<ul>
+<li>Offiziell lizenzierter Fanartikel zur FIFA Frauen-Weltmeisterschaft Australien & Neuseeland 2023™</li>
+<li>Neopren</li>
+</ul>",,,Funda aislante para latas de la Copa Mundial Femenina de la FIFA 2023™ (Australia),,,,,,,,Australien-Dosenkühler zur FIFA Frauen-Weltmeisterschaft 2023™,,,,,,/womens-world-cup-2023-australia-can-cooler-ja,,"<p>حافظ على انتعاشك مع حافظة البرودة التي تحمل شعار أستراليا، إحدى الدولتين المضيفتين لبطولة كأس العالم للسيدات 2023.</p>
+<ul>
+<li>منتجات مرخصة رسمياً لبطولة كأس العالم للسيدات FIFA أستراليا ونيوزيلندا 2023</li>
+<li>مطاط اصطناعي</li>
+</ul>",,,,,Tasca termica lattine Australia Coppa del Mondo femminile 2023,,,,,,,,,,,,,,,/womens-world-cup-2023-australia-can-cooler-pt,,,,,,,,,,,10,5,10,5,15,7.5,,,,,,,,,,,,,,,,,15,7.5,,,10,5,12,6,
+VARIANT,01HX7D5BN8C28R00J63KDV10RV,,,,,FIFAHW000400,9314783871117,,,,,,,,,,TRUE,TRUE,,,,,,2023-05-17T20:24:06.935Z,,,,,,,,,,,FIFAHW000400,One Size,value::Multicolour;valueLabel::Multicolour;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01HX7D5BND4FQ21431AQS20W8H,,FIFA Federations Multi-Colour Bracelet,/2022-world-cup-multi-colour-bracelet,"<ul>
+<li>""Life is a journey. Lokai exists to help you find balance between the highs and lows."" - Steven Izen, Lokai Founder &amp; CEO.</li>
+<li>The white bead is infused with water from Mt. Everest, the highest point on Earth.</li>
+<li><span>These extreme elements remind you to find your balance - staying humble during life's highs and hopeful through its lows.</span></li>
+<li>The black bead carries mud from the Dead Sea, the lowest point on earth.</li>
+<li>Officially licensed FIFA Qatar World Cup 2022 merchandise</li>
+<li>100% silicone</li>
+</ul>",FIFACL002800,843549129586,EUR,VARIANT_BASED,,20.00,15.00,9.57,FIFA Federations Multi-Colour Bracelet,,,TRUE,TRUE,PHYSICAL,TRUE,ADD_TO_CART,SUBMIT_ORDER,FALSE,2023-05-17T20:37:49.851Z,,TRUE,TRUE,FALSE,,,Accessories|SeptOct|World Cups|Stocking Fillers|Gifts Under €30|Gifts For Him|Gifts For Her|BF|Sale,0,,,2022-world-cup-multi-colour-bracelet,label::Size;type::SIZE;attributeName::Size;,label::Colour;type::COLOR;attributeName::Colour;,,,,,,FALSE,FALSE,,FIFACL002800,FALSE,,,,,,,FALSE,,,,,,,,,,,,tournament::Womens World Cup 2023,,,,,0.09,KILOGRAMS,LOKAI,,BRACELETS,,,,,المقاس,,,/2022-world-cup-multi-colour-bracelet-es,,Taglia,,/2022-world-cup-multi-colour-bracelet-en,,,,,,,,,Couleur,Braccialetto multicolore Coppa del Mondo 2022,,سوار متعدد الألوان لكأس العالم 2022,,,/2022-world-cup-multi-colour-bracelet-fr,,,,,,,,,,"<ul>
+<li>Productos oficiales con licencia de la Copa Mundial de la FIFA Catar 2022</li>
+<li>Barro del mar Muerto</li>
+<li>Agua del monte Everest</li>
+<li>100 % silicona</li>
+</ul>",,,,,,/2022-world-cup-multi-colour-bracelet-ko,,,,,,,,,,"<ul>
+<li>Produits dérivés sous licence officielle Coupe du Monde de la FIFA, Qatar 2022</li>
+<li>Sable de la mer Morte</li>
+<li>Eau du mont Everest</li>
+<li>100% silicone</li>
+</ul>",,,Taille,,,,/2022-world-cup-multi-colour-bracelet-de,,Bracelet multicolore Coupe du Monde 2022,,Color,,,,/2022-world-cup-multi-colour-bracelet-ar,,/2022-world-cup-multi-colour-bracelet-zh,,,/2022-world-cup-multi-colour-bracelet-it,,,,,,Talla,,,"<ul>
+<li>Offiziell lizenzierte Fan-Artikel zur FIFA Fussball-Weltmeisterschaft Katar 2022</li>
+<li>Schlamm aus dem Toten Meer</li>
+<li>Wasser vom Mount Everest</li>
+<li>100 % Silikon</li>
+</ul>",,,Pulsera de varios colores de la Copa Mundial 2022,,,,Farbe,,,,"WM 2022 – Armband, mehrfarbig",,,,,,/2022-world-cup-multi-colour-bracelet-ja,,"<ul>
+<li>سلع كأس العالم FIFA قطر 2022 مرخّصة رسميًا</li>
+<li>طين البحر الميت</li>
+<li>مياه جبل إفرست</li>
+<li>100% من السيليكون</li>
+</ul>",,,,,"<ul>
+<li>Gadget ufficiali della Coppa del Mondo FIFA Qatar 2022</li>
+<li>Fanghi del Mar Morto</li>
+<li>Acqua del Monte Everest</li>
+<li>100% silicone</li>
+</ul>",,,Grösse,,,,,,,,,,,,/2022-world-cup-multi-colour-bracelet-pt,,,Colore,,,لون,,,,,28,21,18,13.5,25,18.75,,,,,,,,,,,,,,,18,4,30,22.5,18,4,17,12.75,19,14.25,
+VARIANT,01HX7D5BQ40TQ91V7CWD2P0FFX,,,,,FIFACL002800,843549129586,,,,,,,,,,TRUE,TRUE,,,,,,2023-05-17T20:37:49.917Z,,,,,,,,,,,FIFACL002800,One Size,value::Multicolour;valueLabel::Multicolour;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,مقاس واحد,,,,,Taglia unica,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Taille unique,,,,,,,,,,,,,,,,,,,,,,,Talla única,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Einheitsgrösse,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01HX7D5BSKWA8T0G3TFE1G0XTA,,2022 World Cup Iran Red Hat - Mens,/2022-world-cup-iran-red-hat-mens,"<ul>
+<li>Officially licensed FIFA Qatar World Cup 2022 merchandise</li>
+<li>Bobble beanie hat</li>
+<li>Woven patch logo</li>
+<li>Acrylic Knit</li>
+</ul>",FIFAMH005500,196760692354,EUR,VARIANT_BASED,,25.00,12.00,7.34,2022 World Cup Iran Red Hat - Mens,,,TRUE,TRUE,PHYSICAL,TRUE,ADD_TO_CART,SUBMIT_ORDER,FALSE,2023-05-17T20:39:21.110Z,,TRUE,TRUE,FALSE,,Hats,32 Nations|Clothing|Sale|SeptOct|Shop All Countries|World Cups|Stocking Fillers|BF,,,,2022-world-cup-iran-red-hat-mens,label::Size;type::SIZE;attributeName::Size;,label::Colour;type::Colour;attributeName::Colour;,,,,,,FALSE,FALSE,,FIFAMH005500,FALSE,,,,,,,FALSE,,,,,,,,,,,,nation::Iran|tournament::Qatar World Cup 2022,,,,,0.13,KILOGRAMS,OUTERSTUFF,MENS,BEANIES,,,,,المقاس,,,/2022-world-cup-iran-red-hat-mens-es,,Taglia,,/2022-world-cup-iran-red-hat-mens-en,,,,,,,,,Couleur,Cappello da pescatore rosso Coppa del Mondo 2022 Iran - Uomo,,,,,/2022-world-cup-iran-red-hat-mens-fr,,,,,,,,,,"<ul>
+<li>Productos oficiales con licencia de la Copa Mundial de la FIFA Catar 2022</li>
+<li>Gorro con pompón</li>
+<li>Parche con el logotipo tejido</li>
+<li>Punto acrílico</li>
+</ul>",,,,,,/2022-world-cup-iran-red-hat-mens-ko,,,,,,,,,,"<ul>
+<li>Produits dérivés sous licence officielle Coupe du Monde de la FIFA, Qatar 2022</li>
+<li>Bonnet à pompon</li>
+<li>Logo cousu</li>
+<li>Fibre acrylique</li>
+</ul>",,,Taille,,,,/2022-world-cup-iran-red-hat-mens-de,,Bonnet rouge RI Iran Coupe du Monde 2022 - Homme,,Color,,,,/2022-world-cup-iran-red-hat-mens-ar,,/2022-world-cup-iran-red-hat-mens-zh,,,/2022-world-cup-iran-red-hat-mens-it,,,,,,Talla,,,"<ul>
+<li>Offiziell lizenzierte Fan-Artikel zur FIFA Fussball-Weltmeisterschaft Katar 2022</li>
+<li>Pudelmütze</li>
+<li>Gewebter Logoaufnäher</li>
+<li>Acryl-Strickmaterial</li>
+</ul>",,,"Gorro rojo de Irán de la Copa Mundial 2022, hombre",,,,Farbe,,,,Iran-Mütze zur FIFA Fussball-Weltmeisterschaft 2022™ (rot) – Männer,,,,,,/2022-world-cup-iran-red-hat-mens-ja,,"<ul>
+<li>سلع كأس العالم FIFA قطر 2022 مرخّصة رسميًا</li>
+<li>قبعة صوفية مع كرة للزينة</li>
+<li>رمز على رقعة محبوكة</li>
+<li>نسيج الأكريليك</li>
+</ul>",,,,,"<ul>
+<li>Gadget ufficiali della Coppa del Mondo FIFA Qatar 2022</li>
+<li>Berretto con pompon</li>
+<li>Patch con logo in tessuto</li>
+<li>Maglia in acrilico</li>
+</ul>",,,Grösse,,,,,,,,,,,,/2022-world-cup-iran-red-hat-mens-pt,,,Colore,,,لون,,,,,40,19.2,20,9.6,35,16.8,,,,,,,,,,,,,,,,,40,19.2,,,25,12,30,14.4,
+VARIANT,01HX7D5BVJ2PQ10Z5BDBTN16FT,,,,,FIFAMH005500,196760692354,,,,,,,,,,TRUE,TRUE,,,,,,2023-05-17T20:39:21.137Z,,,,,,,,,,,FIFAMH005500,One Size,value::Red;valueLabel::Red;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,مقاس واحد,,,,,Taglia unica,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Taille unique,,,,,,,,,,,,,,,,,,,,,,,Talla única,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Einheitsgrösse,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01HX7D5BRCKRWP1YCRNAAX0C6S,,World Cup 2022 Poland Licensed Ball Size 2,/world-cup-2022-poland-licensed-ball-size-2,"<ul>
+<li>Official FIFA Qatar World Cup emblem</li>
+<li>Anti-puncture bladder</li>
+<li>Machine stitched</li>
+<li>2.7Mm Shiny/Matte Pvc</li>
+</ul>",FIFAEQ004802,5292982030068,EUR,VARIANT_BASED,,18.00,9.00,5.70,World Cup 2022 Poland Licensed Ball Size 2,,,TRUE,TRUE,PHYSICAL,TRUE,ADD_TO_CART,SUBMIT_ORDER,FALSE,2023-05-17T20:47:14.026Z,,TRUE,TRUE,FALSE,,Balls,Accessories|New URL|Sale|upload1|BF,,,,world-cup-2022-poland-licensed-ball-size-2,label::Size;type::SIZE;attributeName::Size;,,,,,,,FALSE,,,FIFAEQ004802,FALSE,,,,,,,FALSE,,,,,,,,,,,,nation::Poland|tournament::Qatar World Cup 2022,,,,,5.00,KILOGRAMS,MARSS,,FOOTBALLS,,,,,,,,/world-cup-2022-poland-licensed-ball-size-2-es,,,,/world-cup-2022-poland-licensed-ball-size-2-en,,,,,,,,,,Pallone ufficiale Polonia Coppa del Mondo 2002 Misura 2,,كرة منتخب بولندا المرخصة لكأس العالم 2022 مقاس 2,,,/world-cup-2022-poland-licensed-ball-size-2-fr,,,,,,,,,,"<ul>
+<li>Emblema oficial de la Copa Mundial de la FIFA Qatar</li>
+<li>Bolsa protectora</li>
+<li>Cosido a máquina</li>
+<li>2,7Mm Pvc brillante/mate</li>
+</ul>",,,,,,/world-cup-2022-poland-licensed-ball-size-2-ko,,,,,,,,,,"<ul>
+<li>Emblème Officielle Coupe du Monde FIFA Qatar</li>
+<li>Vessie Anti-Perforation</li>
+<li>Piqué ˆ la machine</li>
+<li>2.7mm PVC Brillant/Mat</li>
+</ul>",,,,,,,/world-cup-2022-poland-licensed-ball-size-2-de,,Ballon Coupe du Monde 2022 Serbie Licence Taille 5,,,,,,/world-cup-2022-poland-licensed-ball-size-2-ar,,/world-cup-2022-poland-licensed-ball-size-2-zh,,,/world-cup-2022-poland-licensed-ball-size-2-it,,,,,,,,,"<ul>
+<li>Offizielles Emblem der FIFA Fussball-Weltmeisterschaft in Katar</li>
+<li>Schutzblase gegen Einstiche</li>
+<li>Maschinell genäht</li>
+<li>2.7Mm Glänzendes/Mattes Pvc</li>
+</ul>",,,Balón Talla 2 de Polonia con licencia de la Copa del Mundo 2022,,,,,,,,Weltmeisterschaft 2022 Polen Lizenzierter Ball Gräße 2,,,,,,/world-cup-2022-poland-licensed-ball-size-2-ja,,"<ul>
+<li>الشارة الرسمية لكأس العالم FIFA قطر</li>
+<li>غلاف خارجي مضاد للثقوب</li>
+<li>مخيّط آليًا</li>
+<li>2.7 مم من الكلوريد متعدد الفينيل اللامع / غير اللامع</li>
+</ul>",,,,,"<ul>
+<li>Stemma ufficiale FIFA Coppa del Mondo Qatar</li>
+<li>Camera d‚Äôaria anti buchi</li>
+<li>Cucito a macchina</li>
+<li>2.7Mm Shiny/Matte Pvc</li>
+</ul>",,,,,,,,,,,,,,,/world-cup-2022-poland-licensed-ball-size-2-pt,,,,,,,,,,,25,12.5,15,7.5,25,12.5,,,,,,,,,,,,,,,,,25,12.5,,,20,10,20,10,
+VARIANT,01HX7D5BSJSPAC0XJWK96R1K8J,,,,,FIFAEQ004802,5292982030068,,,,,,,,,,TRUE,TRUE,,,,,,2023-05-17T20:47:14.047Z,,,,,,,,,,,FIFAEQ004802,Size 2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01HX7D5BVK5HV30DR3AEK11HNK,,New Zealand Rimu Wooden Boxes,/new-zealand-rimu-wooden-boxes,"<ul>
+<li>Wooden storage box</li>
+<li>Handcrafted using Rimu wood, the native softwood tree of New Zealand</li>
+</ul>",FIFANV005800,9351258024920,EUR,VARIANT_BASED,,126.00,126.00,57.00,New Zealand Rimu Wooden Boxes,,,TRUE,TRUE,PHYSICAL,TRUE,ADD_TO_CART,SUBMIT_ORDER,FALSE,2023-05-17T20:28:48.848Z,,TRUE,TRUE,FALSE,,,|Gifts Under €150|BF,0,,,new-zealand-rimu-wooden-boxes,label::Size;type::SIZE;attributeName::Size;,label::Colour;type::COLOR;attributeName::Colour;,,,,,,FALSE,FALSE,,FIFANV005800,FALSE,,,,,,,FALSE,,,,,,,,,,,,,,,,,0.36,KILOGRAMS,BOOST,,,,,,,,,,/new-zealand-rimu-wooden-boxes-es,,,,/new-zealand-rimu-wooden-boxes-en,,,,,,,,,,,,,,,/new-zealand-rimu-wooden-boxes-fr,,,,,,,,,,"<ul>
+<li>Caja de almacenaje de madera</li>
+<li>Hecha a mano con madera de rimu, conífera endémica de Nueva Zelanda</li>
+</ul>",,,,,,/new-zealand-rimu-wooden-boxes-ko,,,,,,,,,,"<ul>
+<li>Coffret de rangement en bois</li>
+<li>Fabriqué à la main en bois Rimu, une essence de bois tendre typiquement néo-zélandaise</li>
+</ul>",,,,,,,/new-zealand-rimu-wooden-boxes-de,,Coffret en bois néo-zélandais Rimu,,,,,,/new-zealand-rimu-wooden-boxes-ar,,/new-zealand-rimu-wooden-boxes-zh,,,/new-zealand-rimu-wooden-boxes-it,,,,,,,,,,,,Cajas de madera de rimu neozelandés,,,,,,,,,,,,,,/new-zealand-rimu-wooden-boxes-ja,,,,,,,,,,,,,,,,,,,,,,/new-zealand-rimu-wooden-boxes-pt,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HX7D5BWJ9XV10YGKY3SS0T52,,,,,FIFANV005800,9351258024920,,,,,,,,,,TRUE,TRUE,,,,,,2023-05-17T20:28:48.869Z,,,,,,,,,,,FIFANV005800,One Size,value::Brown;valueLabel::Brown;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01HXACPRM2HJDW1NPMGVV91N5A,,Champions League Pack,/champions-league-pack,,RM-BADGE-CLCWC,,EUR,STANDARD,,15.00,,,,,,TRUE,TRUE,PHYSICAL,TRUE,NEVER,NEVER,FALSE,2024-05-07T04:00:00Z,,FALSE,FALSE,FALSE,,,,0,,,,,,,,,,,,,,,FALSE,,,,,,,FALSE,,,,,,,,Personalized Badge,,,,,,,,,0.00,KILOGRAMS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01HXAD1JM0Y6PX1DS4MQAP1AYH,,La Liga,/la-liga-badge,,RM-BADGE-LLCWC,,EUR,STANDARD,,10.00,,,,,,TRUE,TRUE,PHYSICAL,TRUE,NEVER,NEVER,FALSE,2024-05-07T04:00:00Z,,FALSE,FALSE,FALSE,,,,0,,,,,,,,,,,,,,,FALSE,,,,,,,FALSE,,,,,,,,Personalized Badge,,,,,,,,,0.00,KILOGRAMS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01HXAG3GN6408Q1V9JA47N0EBQ,,Womens Away Authentic Jersey 23/24 Navy,/rmcflz0032-womens-away-authentic-shirt-23-24-navy,"<p>Flowing across the front of the Real Madrid 23/24 Away Jersey, repeating infinity symbols speak to the Real Madrid fans and their unwavering dedication to the club. It's also a reminder that match days are as much about the journey as they are the beautiful game.<br> The shirt is designed for ultimate comfort pre-game thanks to lightweight details and mesh inserts. Using advanced materials, adidas HEAT.RDY maximises airflow so players can feel cool as they put in the work. Tricolour 3-Stripes on the shoulders and a heat-applied team badge on the chest show off team pride. This garment is made with a yarn which contains 50% Parley Ocean Plastic — reimagined plastic waste, intercepted on remote islands, beaches, coastal communities and shorelines, preventing it from polluting our ocean.</p>
+<p><strong>Details:</strong></p>
+<ul>
+<li>Slim fit</li>
+<li>Ribbed crewneck</li>
+<li>100% recycled polyester jacquard</li>
+<li>Soft feel</li>
+<li>HEAT.RDY</li>
+<li>Ribbed cuffs</li>
+</ul>
+<p>Customized shirts have a production time of<span>&nbsp;</span><span>4</span><span>&nbsp;</span>to 9 working days in addition to the shipping option chosen. Moreover, these orders are final, they cannot be cancelled, exchanged or returned.</p>
+<p>The player dorsals are subject to change until the closing of the transfer window. For this reason, customized shirt returns are not allowed after such change. See terms and conditions<span>&nbsp;</span><a href=""https://uk.shop.realmadrid.com/pages/terms-and-conditions"">here</a>.&nbsp;</p>",RMCFLZ003200,4066761124948,EUR,VARIANT_BASED,,150.00,,65.25,,,,TRUE,TRUE,PHYSICAL,TRUE,ADD_TO_CART,SUBMIT_ORDER,FALSE,2024-05-07T21:42:09.830193Z,,TRUE,TRUE,FALSE,,,Away|Away24|awaykit24|bestseller|BlankKits|BlankKitsFootball|Blanks|Customize|customize-23-24|Football|gifts for her|Kits|meta-size-chart-adidas-womens-tops-size-chart|NAVY|nofifabadge|arda|arda guler|bellingham|camavinga|guler|kroos|modric|Rodrygo|tchouameni|vini|vini jr|vini junior|vinicius|vinicius jr|vinicius junior|SVM24|training-third24|Women|WomensBlankAway|WomensBlankFootball,,,,RMCFLZ0032,label::Size;type::SIZE;attributeName::Size;,,,,,,,FALSE,,,01HVMWR3BQ6MB11QK6957J19QS,FALSE,,,,,,,FALSE,,,Badge|Personalization,Referenced,,,,,,,,color::Blue|kitId::Away|kit::Away|kitYear::23/24,,,,,0.33,KILOGRAMS,ADIDAS,WOMENS,JERSEYS,,,,,,サイズ,,/rmcflz0032-womens-away-authentic-shirt-23-24-navy-es,,,,/rmcflz0032-womens-away-authentic-shirt-23-24-navy-en,,,,,尺寸,,,,,,T恤Authentic 海军蓝女二队 23/24,,,,/rmcflz0032-womens-away-authentic-shirt-23-24-navy-fr,"<p>A camisola adidas do segundo equipamento da equipa Real Madrid para a época 23/24 apresenta um estampado de símbolos do infinito como testemunho da paixão sem fim dos madridistas. É também uma lembrança de que a viagem até ao estádio pode ser tão emocionante como os 90 minutos de jogo. <br/></p>
+<p>Esta versão apresenta pormenores leves e inserções em malha para um conforto total antes, durante e depois do jogo. A tecnologia HEAT.RDY da adidas maximiza o fluxo de ar para manter as estrelas do clube sempre frescas. As 3 riscas tricolores nos ombros e o brasão do clube transferido a quente no peito mostram a sua fidelidade. Fabricada com 50% de fio Parley Ocean Plastic, um material reciclado a partir de resíduos de plástico recolhidos em ilhas, praias e comunidades costeiras para evitar que poluam os nossos oceanos.</p>
+<p><strong>Detalhes:</strong></p>
+<ul>
+<li>Slim fit</li>
+<li>Gola redonda canelada</li>
+<li>Jacquard em 100% poliéster reciclado</li>
+<li>Toque suave</li>
+<li>HEAT.RDY</li>
+<li>Punhos canelados</li>
+</ul>
+<p>As t-shirts com personalização têm um tempo de produção de<span> </span><span>4</span><span> </span>a 9 dias úteis, para além da opção de envio escolhida. Além disso, estas encomendas são definitivas, não podem ser anuladas, trocadas ou devolvidas.</p>
+<p>O número está sujeito a alterações até ao final do prazo de transferência. Por este motivo, não serão aceites devoluções de camisolas personalizadas após esta alteração. Ver termos e condições<span> </span><a href=""https://shop.realmadrid.com/pages/terms-and-conditions"" target=""_blank"">aqui</a>. </p>",,,Camisola Segundo Equipamento 23/24 Azul-marinho para mulheres,,,,,,"<p>La camiseta adidas de la segunda equipación del Real Madrid para la temporada 23/24 luce un estampado de símbolos del infinito como prueba de la pasión inagotable de los madridistas. También es un recordatorio de que el viaje hacia el estadio puede ser tan ilusionante como los 90 minutos de juego. <br></p>
+<p>Esta versión presenta detalles ligeros e inserciones de malla que te ofrecen una total comodidad antes, durante y después del partido. La tecnología HEAT.RDY de adidas maximiza el flujo de aire para que las estrellas del club se sientan frescas en todo momento. Las 3 bandas tricolores en los hombros y el escudo del club termotransferido en el pecho son una muestra de tu fidelidad. Se ha fabricado con un hilo que contiene un 50% de Parley Ocean Plastic, un material reciclado a partir de residuos plásticos recogidos en islas, playas y comunidades costeras evitando que contaminen nuestros océanos.</p>
+<p><strong>Detalles:</strong></p>
+<ul>
+<li>Corte entallado</li>
+<li>Cuello redondo de canalé</li>
+<li>Jacquard 100% poliéster reciclado</li>
+<li>Tacto suave</li>
+<li>HEAT.RDY</li>
+<li>Puños de canalé</li>
+</ul>
+<p>Las camisetas con personalización tienen un tiempo producción de<span>&nbsp;</span><span>4</span><span>&nbsp;</span>a 9 días laborables adicional a la opción de envío elegida. Además, estos pedidos son definitivos, no pueden ser cancelados, cambiados o devueltos.</p>
+<p>El dorsal está sujeto a cambios hasta el cierre de fichajes. Por este motivo, no se aceptan devoluciones de camisetas personalizadas luego de dicho cambio. Ver términos y condiciones<span>&nbsp;</span><a href=""https://shop.realmadrid.com/pages/terms-and-conditions"" target=""_blank"">aquí</a>.&nbsp;</p>",,,,,,/rmcflz0032-womens-away-authentic-shirt-23-24-navy-ko,,Tamanho,,,,,,,,"<p>Le maillot adidas du deuxième kit Real Madrid pour la saison 23/24 comporte un imprimé de symboles de l'infini, preuve de la passion sans fin des madridistas. Il rappelle également que le voyage vers le stade peut être tout aussi passionnant que les 90 minutes de jeu. <br/></p>
+<p>Cette version présente des détails légers et des empiècements en maille pour un confort total avant, pendant et après le match. La technologie HEAT.RDY de adidas maximise la circulation de l'air pour que les stars du club se sentent toujours fraîches. Les 3 bandes tricolores sur les épaules et l'écusson du club transféré à chaud sur la poitrine témoignent de votre allégeance. Fabriqué avec 50 % de fil Parley Ocean Plastic, un matériau recyclé fabriqué à partir de déchets plastiques collectés sur les îles, les plages et les communautés côtières pour éviter qu'ils ne polluent nos océans.</p>
+<p><strong>Détails :</strong></p>
+<ul>
+<li>Coupe ajustée</li>
+<li>Encolure ras-du-cou côtelée.</li>
+<li>Jacquard 100% polyester recyclé</li>
+<li>Toucher doux</li>
+<li>HEAT.RDY</li>
+<li>Poignets côtelés.</li>
+</ul>
+<p>Les T-shirts personnalisés ont un délai de production de<span> </span><span>4</span><span> </span>à 9 jours ouvrables en plus de l'option d'expédition choisie. En outre, ces commandes sont définitives, elles ne peuvent être annulées, échangées ou retournées.</p>
+<p>Le numéro est susceptible d'être modifié jusqu'à la date limite de transfert. Pour cette raison, aucun retour de maillots personnalisés ne sera accepté après ce changement. Voir les conditions générales<span> </span><a href=""https://shop.realmadrid.com/pages/terms-and-conditions"" target=""_blank"">ici</a>. </p>",,,Sélectionnez Taille,,,,/rmcflz0032-womens-away-authentic-shirt-23-24-navy-de,,Maillot Authentique Femme Extérieur 23/24 Bleu Marine,,,,,,/rmcflz0032-womens-away-authentic-shirt-23-24-navy-ar,,/rmcflz0032-womens-away-authentic-shirt-23-24-navy-zh,,"<p>23/24 시즌 두 번째 키트( Real Madrid )의 adidas 셔츠에는 마드리드 선수들의 끝없는 열정을 상징하는 무한대 문양이 프린트되어 있습니다. 또한 경기장으로 향하는 여정이 90분간의 경기만큼이나 흥미진진할 수 있다는 것을 상기시켜 줍니다. <br/></p>
+<p>이 버전은 가벼운 디테일과 메시 인서트로 경기 전, 경기 중, 경기 후에 완벽한 편안함을 선사합니다. adidas  의 HEAT.RDY 기술이 공기 흐름을 극대화하여 클럽의 스타들이 항상 상쾌한 기분을 유지할 수 있도록 해줍니다. 어깨의 삼색 3-스트라이프와 가슴의 열전사 클럽 크레스트는 충성심을 표현합니다. 섬, 해변 및 해안 지역에서 수거한 플라스틱 폐기물을 재활용한 소재인 팔리 오션 플라스틱 원사 50%로 제작되어 해양 오염을 방지합니다.</p>
+<p><strong>제품 세부사항:</strong></p>
+<ul>
+<li>슬림한 핏</li>
+<li>골조직 크루넥</li>
+<li>재생 폴리에스테르 자카드 100%</li>
+<li>부드러운 터치</li>
+<li>히트레디</li>
+<li>골조직 커프스</li>
+</ul>
+<p>개인화 기능이 있는 티셔츠의 제작 시간은 다음과 같습니다.<span> </span><span>4</span><span> </span>선택한 배송 옵션에 따라 영업일 기준 최대 9일이 소요될 수 있습니다. 또한 이러한 주문은 최종 주문이므로 취소, 교환 또는 반품이 불가능합니다.</p>
+<p>번호는 양도 마감일까지 변경될 수 있습니다. 따라서 이러한 변경 후에는 맞춤 유니폼의 반품이 허용되지 않습니다. 이용약관 보기<span> </span><a href=""https://shop.realmadrid.com/pages/terms-and-conditions"" target=""_blank"">여기</a>. </p>",/rmcflz0032-womens-away-authentic-shirt-23-24-navy-it,,,,,,Seleccionar Talla,,,"<p>Das adidas Trikot des Real Madrid zweiten Trikots für die Saison 23/24 zeigt einen Aufdruck von Unendlichkeitssymbolen als Beweis für die unendliche Leidenschaft der Madridistas. Es ist auch eine Erinnerung daran, dass die Reise zum Stadion genauso aufregend sein kann wie die 90 Minuten Spielzeit. <br/></p>
+<p>Diese Version bietet leichte Details und Mesh-Einsätze für absoluten Komfort vor, während und nach dem Spiel. Die HEAT.RDY-Technologie von adidas maximiert die Luftzirkulation, damit sich die Stars des Vereins immer frisch fühlen. Die dreifarbigen 3-Streifen auf den Schultern und das heat-transferierte Vereinswappen auf der Brust zeigen deine Zugehörigkeit. Hergestellt aus 50 % Parley Ocean Plastic-Garn, einem recycelten Material, das aus Plastikmüll von Inseln, Stränden und Küstengemeinden gewonnen wird, um die Verschmutzung unserer Ozeane zu verhindern.</p>
+<p><strong>Details:</strong></p>
+<ul>
+<li>Slim Fit</li>
+<li>Gerippter Rundhalsausschnitt</li>
+<li>100 % recycelter Polyester-Jacquard</li>
+<li>Sanfte Berührung</li>
+<li>HEAT.RDY</li>
+<li>Gerippte Bündchen</li>
+</ul>
+<p>T-Shirts mit Personalisierung haben eine Produktionszeit von<span> </span><span>4</span><span> </span>bis 9 Arbeitstage zusätzlich zu der gewählten Versandart. Außerdem sind diese Bestellungen endgültig, sie können nicht storniert, umgetauscht oder zurückgegeben werden.</p>
+<p>Die Nummer kann bis zum Ablauf der Transferfrist geändert werden. Aus diesem Grund können personalisierte Trikots nach einer solchen Änderung nicht mehr zurückgegeben werden. Siehe Bedingungen und Konditionen<span> </span><a href=""https://shop.realmadrid.com/pages/terms-and-conditions"" target=""_blank"">hier</a>. </p>",,,Camiseta Authentic Mujer Segunda Equipación Azul Marino 23/24,,,,,,,,Frauen Authentic-Auswärtstrikot 23/24 Marineblau,,,,,,/rmcflz0032-womens-away-authentic-shirt-23-24-navy-ja,"<p>adidas 的球衣上印有无穷符号，证明了马德里竞技队（Madridistas）无尽的激情。这是Real Madrid 23/24 赛季的第二套球衣。这也提醒人们，前往球场的旅程与 90 分钟的比赛同样精彩。 <br/></p>
+<p>此款球衣采用轻质细节和网眼内衬，让您在赛前、赛中和赛后都倍感舒适。adidas 的 HEAT.RDY 技术可最大限度地提高空气流通性，让俱乐部球星始终保持清新的感觉。肩部的三色三条纹和胸前的热转印俱乐部徽章彰显了您的忠诚。采用 50% Parley 海洋塑料纱线制成，这是一种从岛屿、海滩和沿海社区收集的塑料废弃物制成的再生材料，可防止污染海洋。</p>
+<p><strong>商品细节：</strong></p>
+<ul>
+<li>修身版型</li>
+<li>罗纹圆领</li>
+<li>100% 再生涤纶提花</li>
+<li>柔软触感</li>
+<li>HEAT.RDY系列</li>
+<li>罗纹袖口</li>
+</ul>
+<p>印有个性化图案的 T 恤的生产时间为<span> </span><span>4</span><span> </span>除所选择的运输方式外，还需 9 个工作日。此外，这些订单均为最终订单，不得取消、更换或退货。</p>
+<p>在转会截止日期之前，号码可能会有变动。因此，更改后的个性化球衣恕不接受退货。参见条款和条件<span> </span><a href=""https://shop.realmadrid.com/pages/terms-and-conditions"" target=""_blank"">这里</a>. </p>",,,,여성 어웨이 어센틱 셔츠 23/24 네이비,,,,,Größe,,,,,"<p>Real Madrid 23/24シーズン用セカンドキットのadidas シャツには、マドリディスタの限りない情熱を証明するインフィニティ・シンボルがプリントされている。また、スタジアムまでの道のりも90分間のプレーと同じくらいエキサイティングであることを思い出させてくれる。 <br/></p>
+<p>このバージョンは、軽量なディテールとメッシュのインサートを採用し、試合前、試合中、試合後の快適性を追求。adidas 、HEAT.RDYテクノロジーが通気性を最大限に高め、クラブのスター選手が常に爽やかな着心地をキープ。肩にはトリコロールカラーの3ストライプ、胸には熱転写されたクラブの紋章があしらわれ、あなたの忠誠心を示す。海洋汚染を防ぐため、島やビーチ、沿岸地域から回収されたプラスチック廃棄物から作られたリサイクル素材、パーリーオーシャンプラスチック糸を50％使用。</p>
+<p><strong>ディテール：</strong></p>
+<ul>
+<li>スリムフィット</li>
+<li>リブ仕上げのクルーネック</li>
+<li>ポリエステル100%（ジャカード）</li>
+<li>ソフトタッチ</li>
+<li>HEAT.RDY</li>
+<li>リブ仕上げのカフ</li>
+</ul>
+<p>名入れTシャツの製作期間は、以下の通りです。<span> </span><span>4</span><span> </span>に9営業日かかります。さらに、これらの注文は最終的なものであり、キャンセル、交換、返品はできません。</p>
+<p>背番号は移籍期限まで変更される場合があります。そのため、変更後のジャージの返品はお受けできません。規約を見る<span> </span><a href=""https://shop.realmadrid.com/pages/terms-and-conditions"" target=""_blank"">これ</a>. </p>",,,アウェイ用公式Tシャツ、女性用、紺　23/24,,,,/rmcflz0032-womens-away-authentic-shirt-23-24-navy-pt,,크기,,,,,,,,,240,,140,,,,1199,,,,,,,,,,21300,,207000,,,,,,,,,,190,,
+VARIANT,01HXAG3GQTE9VD08X5KJHR023Y,,,,,RMCFLZ003200,4066761124948,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:42:09.914967Z,,,,,,,,,,,RMCFLZ003200,2XS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2XS,,,,,,,,,,,2XS,,,,,,,,,,,,,,,,,,,,,,,,,,,,2XS,,,,,,,,,,,2XS,,,,,,,,,,,,,,,,,,,,,,,2XS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2XS,,,,,,,,,,,,,,2XS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HXAG3GQVV0CR0ZZERNZQ0KF6,,,,,RMCFLZ003201,4066761125037,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:42:09.915094Z,,,,,,,,,,,RMCFLZ003201,XS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,XS,,,,,,,,,,,XS,,,,,,,,,,,,,,,,,,,,,,,,,,,,XS,,,,,,,,,,,XS,,,,,,,,,,,,,,,,,,,,,,,XS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,XS,,,,,,,,,,,,,,XS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HXAG3GQVA2TK0WS0JGDX1VDY,,,,,RMCFLZ003202,4066761124993,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:42:09.915192Z,,,,,,,,,,,RMCFLZ003202,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HXAG3GQVFM890BPQ7D370NPQ,,,,,RMCFLZ003203,4066761125013,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:42:09.915293Z,,,,,,,,,,,RMCFLZ003203,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HXAG3GQVAV4308FMMTDJ1K0A,,,,,RMCFLZ003204,4066761125006,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:42:09.915377Z,,,,,,,,,,,RMCFLZ003204,L,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,L,,,,,,,,,,,L,,,,,,,,,,,,,,,,,,,,,,,,,,,,L,,,,,,,,,,,L,,,,,,,,,,,,,,,,,,,,,,,L,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,L,,,,,,,,,,,,,,L,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HXAG3GQVB9TS16STP14H0F3H,,,,,RMCFLZ003205,4066761125020,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:42:09.915463Z,,,,,,,,,,,RMCFLZ003205,XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,XL,,,,,,,,,,,XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,XL,,,,,,,,,,,XL,,,,,,,,,,,,,,,,,,,,,,,XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,XL,,,,,,,,,,,,,,XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HXAG3GQVGSX518PM12YV05SE,,,,,RMCFLZ003206,4066761124986,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:42:09.915544Z,,,,,,,,,,,RMCFLZ003206,2XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2XL,,,,,,,,,,,2XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,2XL,,,,,,,,,,,2XL,,,,,,,,,,,,,,,,,,,,,,,2XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2XL,,,,,,,,,,,,,,2XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01HXADGH131GKB0Q344M5P1S4C,,Select Player,/select-player,,RM-KIT-SELECT,,EUR,STANDARD,,20.00,,,,,,TRUE,TRUE,PHYSICAL,TRUE,NEVER,NEVER,FALSE,2023-08-10T04:00:00Z,,FALSE,FALSE,FALSE,,,,0,,,,,,,,,,,,,,,FALSE,,,,,,,FALSE,,,,,,,,,,,,,,,,,0.00,KILOGRAMS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01HXAG3GSJTYMM12VBP6TD056T,,adidas UCL Mini Football 23/24,/rmcfeq0073-adidas-ucl-mini-football-23-24,"<p><span>The pride of London. The bold design on this adidas UCL Mini ball borrows from the lion-inspired look of the official match ball. Made for showing your skills on the move, this durable ball features a TPU cover for pinpoint control and a foam core that means you never have to pump it up. You'll feel like football royalty every time you see that iconic UEFA Champions League logo.</span></p>
+<p><strong>Details:</strong></p>
+<ul>
+<li><span>100% TPU cover</span></li>
+<li><span>Solid foam core</span></li>
+<li><span>UEFA Champions League printed logo</span></li>
+</ul>",RMCFEQ007301,4067886885622,EUR,VARIANT_BASED,,15.00,,6.08,,,,TRUE,TRUE,PHYSICAL,TRUE,ADD_TO_CART,SUBMIT_ORDER,FALSE,2024-05-07T21:42:09.970340Z,,TRUE,TRUE,FALSE,,,Accessories|Balls|balonesucl24|Football|ucl-jersey|Unisex|WHITE|Youth,,,,RMCFEQ0073,label::Size;type::SIZE;attributeName::Size;,,,,,,,FALSE,,,01HVMVEAQ3CX261W4B66A21VRD,FALSE,,,,,,,FALSE,,,,,,,,,,,,color::White,,,,,0.12,KILOGRAMS,ADIDAS_ESPANA_SAU,YOUTH,FOOTBALLS,,,,,,サイズ,,/rmcfeq0073-adidas-ucl-mini-football-23-24-es,,,,/rmcfeq0073-adidas-ucl-mini-football-23-24-en,,,,,尺寸,,,,,,球adidas UCL 迷你 23/24,,,,/rmcfeq0073-adidas-ucl-mini-football-23-24-fr,"<p><span>O orgulho de Londres. O design arrojado desta mini bola League UCL da adidas foi inspirado no look felino da bola oficial. Feita para demonstrares as tuas qualidades, esta bola resistente tem uma cobertura em TPU para mais controlo e um interior em espuma para que nunca tenhas de a insuflar. Vais-te sentir como realeza do futebol sempre que vejas o icónico símbolo da Liga dos Campeões UEFA.</span></p>
+<p><strong>Detalhes:</strong></p>
+<ul>
+<li><span>Superfície 100% em TPU</span></li>
+<li><span>Núcleo em espuma sólida</span></li>
+<li><span>Logótipo estampado da Liga dos Campeões UEFA</span></li>
+</ul>",,,Bola adidas UCL Mini 23/24,,,,,,"<p><span>La joya de la corona de Londres. Este minibalón UCL de adidas luce un impresionante diseño inspirado en el estampado del león del esférico oficial de la final de la Liga de Campeones de la UEFA. Presenta una robusta cubierta de TPU que te ofrece un control magistral y un interior de espuma resistente para que no tengas que preocuparte de inflarlo. Siéntete parte de la realeza del fútbol cada vez que veas rodar el icónico logotipo de la UEFA Champions League.</span></p>
+<p><strong>Detalles:</strong></p>
+<ul>
+<li><span>Cubierta 100% TPU</span></li>
+<li><span>Interior de espuma resistente</span></li>
+<li><span>Logotipo estampado de la UEFA Champions League</span></li>
+</ul>",,,,,,/rmcfeq0073-adidas-ucl-mini-football-23-24-ko,,Tamanho,,,,,,,,"<p><span>La fierté de Londres. Le design audacieux de ce mini ballon de football UCL adidas rappelle le look inspiré d'un lion du ballon de match officiel. Conçu pour montrer ton talent en déplacement, ce ballon résistant présente un revêtement en TPU pour un contrôle parfait et un noyau en mousse pour que tu n'aies jamais à le gonfler. Avec le logo iconique de l'UEFA Champions League, tu auras l'impression de faire partie de l'élite du football.</span></p>
+<p><strong>Détails :</strong></p>
+<ul>
+<li><span>Revêtement 100 % TPU.</span></li>
+<li><span>Noyau en mousse solide.</span></li>
+<li><span>Logo UEFA Champions League imprimé.</span></li>
+</ul>",,,Sélectionnez Taille,,,,/rmcfeq0073-adidas-ucl-mini-football-23-24-de,,Boule adidas LDC  Mini 23/24,,,,,,/rmcfeq0073-adidas-ucl-mini-football-23-24-ar,,/rmcfeq0073-adidas-ucl-mini-football-23-24-zh,,"<p><span>런던의 자부심. 이 adidas UCL 미니볼은 사자에서 모티브를 가져온 챔피언스리그 공인구를 떠오르게 하는 대담한 디자인을 차용했습니다. 이동 중에도 기술을 뽐내기 좋게 제작되었으며, 내구성이 강한 이 공은 TPU 커버를 채용하여 컨트롤하기에 좋고, 폼코어로 제작되어 바람을 넣을 필요가 없습니다. 상징적인 UEFA 챔피언스리그 로고를 볼 때마다 축구의 왕족이 된 기분을 느낄 수 있습니다.</span></p>
+<p><strong>제품 세부사항:</strong></p>
+<ul>
+<li><span>100% TPU 커버</span></li>
+<li><span>솔리드 폼코어</span></li>
+<li><span>UEFA 챔피언스리그 로고 프린트</span></li>
+</ul>",/rmcfeq0073-adidas-ucl-mini-football-23-24-it,,,,,,Seleccionar Talla,,,"<p><span>Eine Hommage an London. Das auffällige Design dieses adidas CL Mini-Balls ist vom Löwenmotiv des offiziellen Spielballs inspiriert. Dieser strapazierfähige Ball verfügt über eine TPU-Oberfläche für punktgenaue Ballkontrolle und einen Schaumstoffkern. Dadurch müssen Sie den Ball nie aufpumpen, um Ihr Können unter Beweis zu stellen. Jedes Mal, wenn Sie das ikonische UEFA-Champions-League-Logo sehen, werden Sie sich wie ein königlicher Fußballspieler fühlen.</span></p>
+<p><strong>Details:</strong></p>
+<ul>
+<li><span>100 % TPU (Oberfläche)</span></li>
+<li><span>Fester Schaumstoffkern</span></li>
+<li><span>Aufgedrucktes UEFA Champions League-Logo</span></li>
+</ul>",,,Balón adidas UCL Mini 23/24,,,,,,,,Kugel adidas UCL Mini 23/24,,,,,,/rmcfeq0073-adidas-ucl-mini-football-23-24-ja,"<p><span>会师伦敦，书写荣耀。这款adidas欧冠联赛淘汰赛主题迷你足球，采用醒目设计，灵感源自官方比赛用球的狮子元素。采用TPU球面，伴你“百步穿杨”、犀利出击；搭配泡沫内核，无需充气即可使用，助你秀出傲人球技。缀经典UEFA欧冠联赛徽标，你对足球的热爱一览无遗。</span></p>
+<p><strong>商品细节：</strong></p>
+<ul>
+<li><span>热塑性聚氨酯弹性体（TPU）</span></li>
+<li><span>泡沫内核</span></li>
+<li><span>UEFA欧洲冠军联赛徽标</span></li>
+</ul>",,,,공 adidas UCL 미니 23/24,,,,,Größe,,,,,"<p><span>ロンドンのプライド。このadidas UCLミニボールの大胆なデザインはオフィシャルマッチボールのライオンをイメージした外観を採用。動きの中でスキルを発揮するために作られた、この耐久性のあるボールはピンポイントでコントロールできるTPUカバーと空気を入れずに済むフォームコアを備えている。象徴的なUEFAチャンピオンズリーグのロゴを見るたび、サッカー界の王族の一員になった気分になるはずだ。</span></p>
+<p><strong>ディテール：</strong></p>
+<ul>
+<li><span>100% TPUカバー</span></li>
+<li><span>ソリッドフォームコア</span></li>
+<li><span>UEFAチャンピオンズリーグのロゴプリント</span></li>
+</ul>",,,ボールadidas UCLミニ 23/24,,,,/rmcfeq0073-adidas-ucl-mini-football-23-24-pt,,크기,,,,,,,,,25,,15,,,,119,,,,,,,,,,2200,,21000,,,,,,,,,,20,,
+VARIANT,01HXAG3GTRHTJE1BXRB52K06NZ,,,,,RMCFEQ007301,4067886885622,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:42:10.008259Z,,,,,,,,,,,RMCFEQ007301,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,25,,
+PRODUCT,01HXAG3GTR26H50D659KX21KM9,,Infant Away Kit 23/24 Navy,/rmcfio0004-infant-away-kit-23-24-navy,"<p>Get the young Real Madrid fan to look like a part of the team. This kids' adidas football mini kit is a sized-down version of what the players wear on the road. AEROREADY helps keep them dry and comfortable while they run, tackle or take a shot on goal. The Real Madrid crest shows they're a proud supporter.<br> Made with a series of recycled materials, and at least 70% recycled content, this product represents just one of our solutions to help end plastic waste.</p>
+<p><strong>Details:</strong></p>
+<ul>
+<li>Regular fit</li>
+<li>Ribbed crewneck</li>
+<li>100% recycled polyester interlock</li>
+<li>AEROREADY</li>
+<li>Jersey: Ribbed cuffs and droptail hem</li>
+</ul>
+<p>Customized shirts have a production time of<span>&nbsp;</span><span>4</span><span>&nbsp;</span>to 9 working days in addition to the shipping option chosen. Moreover, these orders are final, they cannot be cancelled, exchanged or returned.</p>
+<p>The player dorsals are subject to change until the closing of the transfer window. For this reason, customized shirt returns are not allowed after such change. See terms and conditions<span>&nbsp;</span><a href=""https://uk.shop.realmadrid.com/pages/terms-and-conditions"">here</a>.&nbsp;</p>",RMCFIO000406,4066761071143,EUR,VARIANT_BASED,,70.00,,30.45,,,,TRUE,TRUE,PHYSICAL,TRUE,ADD_TO_CART,SUBMIT_ORDER,FALSE,2024-05-07T21:42:10.008646Z,,TRUE,TRUE,FALSE,,,Away|Away24|awaykit24|bestseller|BlankKits|BlankKitsFootball|Blanks|Customize|customize-23-24|Football|Infant|InfantBlankAway|InfantBlankFootball|Kits|meta-size-chart-adidas-youth-size-chart|NAVY|nofifabadge|peso|Youthblankaway,,,,RMCFIO0004,label::Size;type::SIZE;attributeName::Size;,,,,,,,FALSE,,,01HVMWR3DW9DYH1FRS4MAB0PR4,FALSE,,,,,,,FALSE,,,Badge|Personalization,Referenced,,,,,,,,color::Blue|kitId::Away|kit::Away|kitYear::23/24,,,,,0.80,KILOGRAMS,ADIDAS,YOUTH,JERSEYS,,,,,,サイズ,,/rmcfio0004-infant-away-kit-23-24-navy-es,,,,/rmcfio0004-infant-away-kit-23-24-navy-en,,,,,尺寸,,,,,,儿童第二队套装 深蓝色 23/24,,,,/rmcfio0004-infant-away-kit-23-24-navy-fr,"<p>Um novo adepto do Real Madrid junta-se ao clube. Este mini kit adidas é uma versão reduzida do kit que os jogadores usam nas suas visitas ao adversário. A tecnologia respirável AEROREADY mantém a sua pele seca enquanto corre e joga com os seus amigos. O brasão Real Madrid mostra o teu empenho desde tenra idade.<br/> Este produto é fabricado com diferentes materiais técnicos e contém, pelo menos, 70% de material reciclado. O seu objetivo é fornecer mais uma solução para ajudar a eliminar os resíduos de plástico.</p>
+<p><strong>Detalhes:</strong></p>
+<ul>
+<li>Corte normal</li>
+<li>Gola redonda canelada</li>
+<li>Interlock, 100% poliéster reciclado</li>
+<li>AEROREADY</li>
+<li>T-shirt: punhos canelados e bainha posterior mais comprida</li>
+</ul>
+<p>As t-shirts com personalização têm um tempo de produção de<span> </span><span>4</span><span> </span>a 9 dias úteis, para além da opção de envio escolhida. Além disso, estas encomendas são definitivas, não podem ser anuladas, trocadas ou devolvidas.</p>
+<p>O número está sujeito a alterações até ao final do prazo de transferência. Por este motivo, não serão aceites devoluções de camisolas personalizadas após esta alteração. Ver termos e condições<span> </span><a href=""https://shop.realmadrid.com/pages/terms-and-conditions"" target=""_blank"">aqui</a>. </p>",,,Segundo Equipamento 23/24 Azul-marinho para crianças,,,,,,"<p>Un nuevo aficionado del Real Madrid se une al club. Este miniconjunto adidas es una versión en tamaño reducido de la equipación que visten los jugadores en sus visitas al rival. La tecnología transpirable AEROREADY mantiene la piel seca mientras corre y juega con sus amigos. El escudo del Real Madrid demuestra su compromiso desde bien pequeño.<br> Este producto se ha fabricado con diferentes materiales técnicos y contiene al menos un 70% de material reciclado. Su objetivo es plantear otra solución más que ayude a acabar con los residuos plásticos.</p>
+<p><strong>Detalles:</strong></p>
+<ul>
+<li>Corte clásico</li>
+<li>Cuello redondo de canalé</li>
+<li>Interlock 100% poliéster reciclado</li>
+<li>AEROREADY</li>
+<li>Camiseta: puños de canalé y dobladillo trasero más largo</li>
+</ul>
+<p>Las camisetas con personalización tienen un tiempo producción de<span>&nbsp;</span><span>4</span><span>&nbsp;</span>a 9 días laborables adicional a la opción de envío elegida. Además, estos pedidos son definitivos, no pueden ser cancelados, cambiados o devueltos.</p>
+<p>El dorsal está sujeto a cambios hasta el cierre de fichajes. Por este motivo, no se aceptan devoluciones de camisetas personalizadas luego de dicho cambio. Ver términos y condiciones<span>&nbsp;</span><a href=""https://shop.realmadrid.com/pages/terms-and-conditions"" target=""_blank"">aquí</a>.&nbsp;</p>",,,,,,/rmcfio0004-infant-away-kit-23-24-navy-ko,,Tamanho,,,,,,,,"<p>Un nouveau fan de Real Madrid rejoint le club. Ce mini kit adidas est une version réduite du kit que les joueurs portent lors de leurs visites chez l'adversaire. La technologie respirante AEROREADY garde ta peau au sec pendant que tu cours et joues avec tes amis. L'écusson Real Madrid témoigne de ton engagement dès ton plus jeune âge.<br/> Ce produit est composé de différents matériaux techniques et contient au moins 70 % de matériaux recyclés. Il vise à apporter une solution supplémentaire pour contribuer à l'élimination des déchets plastiques.</p>
+<p><strong>Détails :</strong></p>
+<ul>
+<li>Coupe standard.</li>
+<li>Encolure ras-du-cou côtelée.</li>
+<li>Interlock 100 % polyester recyclé.</li>
+<li>AEROREADY.</li>
+<li>T-shirt : poignets côtelés et ourlet arrière plus long</li>
+</ul>
+<p>Les T-shirts personnalisés ont un délai de production de<span> </span><span>4</span><span> </span>à 9 jours ouvrables en plus de l'option d'expédition choisie. En outre, ces commandes sont définitives, elles ne peuvent être annulées, échangées ou retournées.</p>
+<p>Le numéro est susceptible d'être modifié jusqu'à la date limite de transfert. Pour cette raison, aucun retour de maillots personnalisés ne sera accepté après ce changement. Voir les conditions générales<span> </span><a href=""https://shop.realmadrid.com/pages/terms-and-conditions"" target=""_blank"">ici</a>. </p>",,,Sélectionnez Taille,,,,/rmcfio0004-infant-away-kit-23-24-navy-de,,Kit Enfant Extérieur 23/24 Bleu Marine,,,,,,/rmcfio0004-infant-away-kit-23-24-navy-ar,,/rmcfio0004-infant-away-kit-23-24-navy-zh,,"<p>Real Madrid 의 새로운 팬이 클럽에 가입했습니다. 이 adidas 미니 키트는 선수들이 상대팀 방문 시 착용하는 키트를 축소한 버전입니다. 통기성이 뛰어난 에어로레이디 기술이 친구들과 함께 뛰고 놀 때 피부를 쾌적하게 유지해줍니다. Real Madrid  문장은 어린 시절부터의 헌신을 보여줍니다.<br/> 이 제품은 다양한 기술 소재로 만들어졌으며 재활용 소재가 70% 이상 포함되어 있습니다. 플라스틱 쓰레기를 없애는 데 도움이 되는 또 다른 솔루션을 제공하는 것을 목표로 합니다.</p>
+<p><strong>제품 세부사항:</strong></p>
+<ul>
+<li>레귤러 핏</li>
+<li>골조직 크루넥</li>
+<li>재활용 폴리에스터 인터록 100%</li>
+<li>에어로레디</li>
+<li>티셔츠: 골지 커프스 및 긴 뒷자락</li>
+</ul>
+<p>개인화 기능이 있는 티셔츠의 제작 시간은 다음과 같습니다.<span> </span><span>4</span><span> </span>선택한 배송 옵션에 따라 영업일 기준 최대 9일이 소요될 수 있습니다. 또한 이러한 주문은 최종 주문이므로 취소, 교환 또는 반품이 불가능합니다.</p>
+<p>번호는 양도 마감일까지 변경될 수 있습니다. 따라서 이러한 변경 후에는 맞춤 유니폼의 반품이 허용되지 않습니다. 이용약관 보기<span> </span><a href=""https://shop.realmadrid.com/pages/terms-and-conditions"" target=""_blank"">여기</a>. </p>",/rmcfio0004-infant-away-kit-23-24-navy-it,,,,,,Seleccionar Talla,,,"<p>Ein neuer Fan von Real Madrid schließt sich dem Verein an. Dieses adidas Mini-Trikot ist eine verkleinerte Version des Trikots, das die Spieler bei ihren Besuchen beim Gegner tragen. Die atmungsaktive AEROREADY-Technologie hält deine Haut trocken, während du mit deinen Freunden läufst und spielst. Das Real Madrid Wappen zeigt dein Engagement von klein auf.<br/> Dieses Produkt wird aus verschiedenen technischen Materialien hergestellt und besteht zu mindestens 70 % aus recyceltem Material. Es soll eine weitere Lösung zur Vermeidung von Kunststoffabfällen bieten.</p>
+<p><strong>Details:</strong></p>
+<ul>
+<li>Regulär geschnitten</li>
+<li>Gerippter Rundhalsausschnitt</li>
+<li>100% recycelter Polyester (Interlock)</li>
+<li>AEROREADY</li>
+<li>T-Shirt: Rippenbündchen und längerer Rückensaum</li>
+</ul>
+<p>T-Shirts mit Personalisierung haben eine Produktionszeit von<span> </span><span>4</span><span> </span>bis 9 Arbeitstage zusätzlich zu der gewählten Versandart. Außerdem sind diese Bestellungen endgültig, sie können nicht storniert, umgetauscht oder zurückgegeben werden.</p>
+<p>Die Nummer kann bis zum Ablauf der Transferfrist geändert werden. Aus diesem Grund können personalisierte Trikots nach einer solchen Änderung nicht mehr zurückgegeben werden. Siehe Bedingungen und Konditionen<span> </span><a href=""https://shop.realmadrid.com/pages/terms-and-conditions"" target=""_blank"">hier</a>. </p>",,,Conjunto Infantil Segunda Equipación Azul Marino 23/24,,,,,,,,Kinder Auswärtstrikot 23/24 Marineblau,,,,,,/rmcfio0004-infant-away-kit-23-24-navy-ja,"<p>Real Madrid 的新球迷加入俱乐部。这款adidas 迷你球衣是球员出访对手时所穿球衣的缩小版。透气的 AEROREADY 技术可在您与朋友奔跑玩耍时保持皮肤干爽。Real Madrid 的队徽显示了您从小到大的承诺。<br/> 该产品由不同的技术材料制成，至少含有 70% 的可回收材料。它旨在为消除塑料垃圾提供另一种解决方案。</p>
+<p><strong>商品细节：</strong></p>
+<ul>
+<li>常规版型</li>
+<li>罗纹圆领</li>
+<li>再生聚酯纤维</li>
+<li>AEROREADY系列</li>
+<li>T恤：罗纹袖口和较长后摆</li>
+</ul>
+<p>印有个性化图案的 T 恤的生产时间为<span> </span><span>4</span><span> </span>除所选择的运输方式外，还需 9 个工作日。此外，这些订单均为最终订单，不得取消、更换或退货。</p>
+<p>在转会截止日期之前，号码可能会有变动。因此，更改后的个性化球衣恕不接受退货。参见条款和条件<span> </span><a href=""https://shop.realmadrid.com/pages/terms-and-conditions"" target=""_blank"">这里</a>. </p>",,,,유아 어웨이 키트 23/24 네이비,,,,,Größe,,,,,"<p>Real Madrid 、新たなファンがクラブに加わった。このadidas ミニキットは、選手たちが敵地訪問時に着用するキットの縮小版。透湿性に優れたAEROREADYテクノロジーが、仲間と一緒に走ったり遊んだりしても、肌をドライに保つ。Real Madrid のクレスト（紋章）は、若い頃からのコミットメントを示す。<br/> この製品はさまざまな技術素材でできており、少なくとも70％はリサイクル素材を使用している。プラスチック廃棄物をなくすための新たな解決策を提供することを目的としている。</p>
+<p><strong>ディテール：</strong></p>
+<ul>
+<li>レギュラーフィット</li>
+<li>リブ仕上げのクルーネック</li>
+<li>ポリエステル100%（インターロック）</li>
+<li>AEROREADY</li>
+<li>Tシャツ：袖口はリブ、後ろ裾は長め</li>
+</ul>
+<p>名入れTシャツの製作期間は、以下の通りです。<span> </span><span>4</span><span> </span>に9営業日かかります。さらに、これらの注文は最終的なものであり、キャンセル、交換、返品はできません。</p>
+<p>背番号は移籍期限まで変更される場合があります。そのため、変更後のジャージの返品はお受けできません。規約を見る<span> </span><a href=""https://shop.realmadrid.com/pages/terms-and-conditions"" target=""_blank"">これ</a>. </p>",,,アウェイ用ユニフォームセット、キッズ用、紺　23/24,,,,/rmcfio0004-infant-away-kit-23-24-navy-pt,,크기,,,,,,,,,115,,65,,,,559,,,,,,,,,,9900,,97000,,,,,,,,,,90,,
+VARIANT,01HXAJ35KM8HKT12EHV6731ZDX,,,,,RMCFIO000409,,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T22:16:55.668755Z,,,,,,,,,,,RMCFIO000409,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HXAJ35KMJCR512H0CSBC1W7T,,,,,RMCFIO000410,,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T22:16:55.668944Z,,,,,,,,,,,RMCFIO000410,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HXAJ35KMTPBY0VS5DYPF0V4N,,,,,RMCFIO000408,,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T22:16:55.667567Z,,,,,,,,,,,RMCFIO000408,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HXAG3GXCX0AB04A98KNE1MB3,,,,,RMCFIO000406,4066761071143,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:42:10.092288Z,,,,,,,,,,,RMCFIO000406,92,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,92,,,,,,,,,,,92,,,,,,,,,,,,,,,,,,,,,,,,,,,,92,,,,,,,,,,,92,,,,,,,,,,,,,,,,,,,,,,,92,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,92,,,,,,,,,,,,,,92,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HXAG3GXCHXSZ08FJ1YSX1HET,,,,,RMCFIO000407,4066761071150,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:42:10.092873Z,,,,,,,,,,,RMCFIO000407,98,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,98,,,,,,,,,,,98,,,,,,,,,,,,,,,,,,,,,,,,,,,,98,,,,,,,,,,,98,,,,,,,,,,,,,,,,,,,,,,,98,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,98,,,,,,,,,,,,,,98,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01J2HCQN8GPJQZ0BMQB8JH076A,,Shorts Personalization,/shorts-personalization,,RM-SHORTS-NUMBER,,EUR,STANDARD,,10.00,,,,,,TRUE,TRUE,PHYSICAL,TRUE,NEVER,NEVER,FALSE,2024-07-11T04:00:00Z,,FALSE,FALSE,FALSE,,,,0,,,,,,,,,,,,,,,FALSE,,,,,,,FALSE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01J2HDG17VHB640BJG4K9W0B4Q,,Select Player Kit,/select-player-kit,,RM-TOTAL-KIT-SELECT,,EUR,STANDARD,,20.00,,,,,,TRUE,TRUE,PHYSICAL,TRUE,NEVER,NEVER,FALSE,2023-08-10T04:00:00Z,,FALSE,FALSE,FALSE,,,,0,,,,,,,,,,,,,,,FALSE,,,,,,,FALSE,,,,,,,,,,,,,,,,,0.00,KILOGRAMS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01J2HDKEVWJNRE0W7F49330EZY,,Personalize Kit,/personalize-kit,,RM-TOTAL-KIT-PERSONALIZE,,EUR,STANDARD,,20.00,,,,,,TRUE,TRUE,PHYSICAL,TRUE,NEVER,NEVER,FALSE,2023-08-10T04:00:00Z,,FALSE,FALSE,FALSE,,,,0,,,,,,,,,,,,,,,FALSE,,,,,,,FALSE,,,,,,,,,,,,,,,,,0.00,KILOGRAMS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01J3FVAXNJ09SK04YD4XJK1VK2,,Youth Home Kit 24/25 White,/rmcfyo0053-youth-home-kit-24-25-white,"<p>Show your football passion in this juniors' Real Madrid home kit from adidas. Sharing the festival-inspired design of the match kit, it also displays a pair of heat-applied badges. Smooth interlock fabric and AEROREADY tech will keep you comfortable, dry and focused whether you're playing or supporting.This product is made with at least 70% recycled materials. By reusing materials that have already been created, we help to reduce waste and our reliance on finite resources and reduce the footprint of the products we make. </p>
+<ul>
+<li>Regular fit;</li>
+<li>V-neck;</li>
+<li>100% polyester (recycled);</li>
+<li>AEROREADY;</li>
+<li>Shorts: Elastic waist with drawcord;</li>
+<li>Real Madrid heat-applied crest;</li>
+<li>Real Madrid heat-applied crest;</li>
+<li>Includes one pair of crew-length socks;</li>
+</ul>
+<p>The player's number is subject to change until the closing of transfers. For this reason, no returns of custom jerseys will be accepted after such change.</p>",RMCFYO005311,4067897349205,EUR,VARIANT_BASED,,110.00,,47.85,,,,TRUE,TRUE,PHYSICAL,TRUE,ADD_TO_CART,SUBMIT_ORDER,FALSE,2024-05-23T10:53:39.221Z,,TRUE,TRUE,FALSE,,RMCFYO0053,BlankKits|BlankKitsFootball|Blanks|Football|Home|Home25|homekit25|Kits|Infant|InfantBlankFootball|InfantBlankHome|WHITE|season25|YouthBlankHome|YouthBlankFootball|Youth|jerseys25,0,,,RMCFYO0053,label::Size;type::SIZE;attributeName::Size;,,,,,,,FALSE,,,RMCFYO0053,FALSE,,,,,,,FALSE,,,Badge|Kit Personalization,Referenced,,,mens-size-guide-legends,,,,,"sizeGuideId::meta-size-chart-adidas-youth-size-chart|kitId::Home|kitYear::24/25|redirectJson::{""redirects"":[{""rule"":[""addOn:personalization:RM-TOTAL-KIT-SELECT:Bellingham, 5""],""productUri"":""fifae-nations-cup-2022-hoodie-purple-mens"",""additionalTargets"":""variant:size:XL""}]}",,,,,0.35,KILOGRAMS,ADIDAS_ESPANA_SAU,YOUTH,KITS,RM_KIT,,,,,,,/rmcfyo0053-youth-home-kit-24-25-white-es,,,,/rmcfyo0053-youth-home-kit-24-25-white-en,,,,,,,,,,,,,,,/rmcfyo0053-youth-home-kit-24-25-white-fr,,,,,,,,,,,,,,,,/rmcfyo0053-youth-home-kit-24-25-white-ko,,,,,,,,,,,,,,,,,/rmcfyo0053-youth-home-kit-24-25-white-de,,,,,,,,/rmcfyo0053-youth-home-kit-24-25-white-ar,,/rmcfyo0053-youth-home-kit-24-25-white-zh,,,/rmcfyo0053-youth-home-kit-24-25-white-it,,,,,,,,,,,,,,,,,,,,,,,,,,/rmcfyo0053-youth-home-kit-24-25-white-ja,,,,,,,,,,,,,,,,,,,,,,/rmcfyo0053-youth-home-kit-24-25-white-pt,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3FVB12JTR8S1EQJC38A04MR,,,,,RMCFYO005311,4067897349205,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-23T10:53:39.348430Z,,,,,,,,,,,RMCFYO005311,128,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3FVB12MGPAR1A2MZMZS0M3F,,,,,RMCFYO005312,4067897349175,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-23T10:53:39.348787Z,,,,,,,,,,,RMCFYO005312,140,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3FVB12M0AEH15YZF1Y013RP,,,,,RMCFYO005313,4067897349168,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-23T10:53:39.349025Z,,,,,,,,,,,RMCFYO005313,152,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3FVB12MGYQS0NQDS0TH05ST,,,,,RMCFYO005314,4067897349182,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-23T10:53:39.349114Z,,,,,,,,,,,RMCFYO005314,164,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01HXADZ7C86DMQ0VTYNB2E0QB1,,Personalize,/personalize,,RM-KIT-PERSONALIZE,,EUR,STANDARD,,20.00,,,,,,TRUE,TRUE,PHYSICAL,TRUE,NEVER,NEVER,FALSE,2023-08-10T04:00:00Z,,FALSE,FALSE,FALSE,,,,0,,,,,,,,,,,,,,,FALSE,,,,,,,FALSE,,,,,,,,Personalized Product Delivery Message,,,,,,,,,0.00,KILOGRAMS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01J2HCEWSAYYYQ0N028NV60TVZ,,Shorts Number Personalization,/shorts-number-personalization,,RM-SHORTS-PERSONALIZATION,,EUR,STANDARD,,15.00,,,,,,TRUE,TRUE,PHYSICAL,TRUE,NEVER,NEVER,FALSE,2024-07-11T04:00:00Z,,FALSE,FALSE,FALSE,,,,0,,,,,,,,,,,,,,,FALSE,,,,,,,FALSE,,,,,,,,,,,,,,,,,0.00,KILOGRAMS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01J2HD8XFRHK4A0H58H13E0KDW,,Training Personalization,/training-personalization,,RM-TRAINING-PERSONALIZATION,,EUR,STANDARD,,10.00,,,,,,TRUE,TRUE,PHYSICAL,TRUE,NEVER,NEVER,FALSE,2024-07-11T04:00:00Z,,FALSE,FALSE,FALSE,,,,0,,,,,,,,,,,,,,,FALSE,,,,,,,FALSE,,,,,,,,,,,,,,,,,0.00,KILOGRAMS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01J3GV5GDE41ED0P0GFV8K0EKP,,MEN'S ULTIMATE365 SOLID POLO,/adidas-men's-ultimate365-solid-polo,"88% RECYCLED POLYESTER, 12% ELASTANE SINGLE JERSEY. REGULAR FIT. THREE-BUTTON POLO COLLAR.  ADIDAS BRANDMARK ON LEFT SLEEVE.",TM1069S24CF,,EUR,VARIANT_BASED,,84.00,,37.75,,,,TRUE,TRUE,PHYSICAL,TRUE,NEVER,NEVER,FALSE,2024-07-23T22:25:06.990Z,,TRUE,TRUE,FALSE,,,,0,,,TM1069S24CF,label::Size;type::SIZE;attributeName::Size;,label::Color;type::COLOR;attributeName::Color;,,,,,,TRUE,FALSE,,TM1069S24CF,FALSE,,,12,,,,FALSE,,ADIDAS,,,,,,,,,,leadTime::6 WEEKS;nameLabel::Lead Time,,,,,0.00,POUNDS,ADIDAS,MEN,POLOS,,,,,,,,/adidas-men's-ultimate365-solid-polo-es,,,,/adidas-men's-ultimate365-solid-polo-en,,,,,,,,,,,,,,,/adidas-men's-ultimate365-solid-polo-fr,,,,,,,,,,,,,,,,/adidas-men's-ultimate365-solid-polo-ko,,,,,,,,,,,,,,,,,/adidas-men's-ultimate365-solid-polo-de,,,,,,,,/adidas-men's-ultimate365-solid-polo-ar,,/adidas-men's-ultimate365-solid-polo-zh,,,/adidas-men's-ultimate365-solid-polo-it,,,,,,,,,,,,,,,,,,,,,,,,,,/adidas-men's-ultimate365-solid-polo-ja,,,,,,,,,,,,,,,,,,,,,,/adidas-men's-ultimate365-solid-polo-pt,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,84,,
+VARIANT,01J3GV5GF8N0EF1W2XJJC90AYQ,,,,,TM1069S24CF-S-IS7344-WHITE,,,,,,,,,,,TRUE,TRUE,,,,,,2024-07-23T22:25:07.048766Z,,,,,,,,,,,,S,value::IS7344-WHITE;valueLabel::IS7344-WHITE;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3GV5GFCZ2YA0P3QVY461FXV,,,,,TM1069S24CF-S-IS7346-COLLEGIATE-NAVY,,,,,,,,,,,TRUE,TRUE,,,,,,2024-07-23T22:25:07.052161Z,,,,,,,,,,,,S,value::IS7346-COLLEGIATE NAVY (Avail. 7/1);valueLabel::IS7346-COLLEGIATE NAVY (Avail. 7/1);,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3GV5GFB1G9T0DT59AXJ0BR3,,,,,TM1069S24CF-M-IS7344-WHITE,,,,,,,,,,,TRUE,TRUE,,,,,,2024-07-23T22:25:07.051769Z,,,,,,,,,,,,M,value::IS7344-WHITE;valueLabel::IS7344-WHITE;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3GV5GFCGPB31VQRN7KE1TBB,,,,,TM1069S24CF-M-IS7346-COLLEGIATE-NAVY,,,,,,,,,,,TRUE,TRUE,,,,,,2024-07-23T22:25:07.052279Z,,,,,,,,,,,,M,value::IS7346-COLLEGIATE NAVY (Avail. 7/1);valueLabel::IS7346-COLLEGIATE NAVY (Avail. 7/1);,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3GV5GFB0BD80M1CQKC00APK,,,,,TM1069S24CF-L-IS7344-WHITE,,,,,,,,,,,TRUE,TRUE,,,,,,2024-07-23T22:25:07.051838Z,,,,,,,,,,,,L,value::IS7344-WHITE;valueLabel::IS7344-WHITE;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3GV5GFC48YY0QNA4J9H00QB,,,,,TM1069S24CF-L-IS7346-COLLEGIATE-NAVY,,,,,,,,,,,TRUE,TRUE,,,,,,2024-07-23T22:25:07.052372Z,,,,,,,,,,,,L,value::IS7346-COLLEGIATE NAVY (Avail. 7/1);valueLabel::IS7346-COLLEGIATE NAVY (Avail. 7/1);,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3GV5GFBM8MR0ZFQ78CD1ZWC,,,,,TM1069S24CF-XL-IS7344-WHITE,,,,,,,,,,,TRUE,TRUE,,,,,,2024-07-23T22:25:07.051900Z,,,,,,,,,,,,XL,value::IS7344-WHITE;valueLabel::IS7344-WHITE;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3GV5GFCYEYN0PWRPVVR140N,,,,,TM1069S24CF-XL-IS7346-COLLEGIATE-NAVY,,,,,,,,,,,TRUE,TRUE,,,,,,2024-07-23T22:25:07.052427Z,,,,,,,,,,,,XL,value::IS7346-COLLEGIATE NAVY (Avail. 7/1);valueLabel::IS7346-COLLEGIATE NAVY (Avail. 7/1);,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3GV5GFBGDCQ1EXNS9D512HP,,,,,TM1069S24CF-2XL-IS7344-WHITE,,,,,,,,,,,TRUE,TRUE,,,,,,2024-07-23T22:25:07.051958Z,,,,,,,,,,,,2XL,value::IS7344-WHITE;valueLabel::IS7344-WHITE;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3GV5GFCMTH80K805BDJ0N9C,,,,,TM1069S24CF-2XL-IS7346-COLLEGIATE-NAVY,,,,,,,,,,,TRUE,TRUE,,,,,,2024-07-23T22:25:07.052473Z,,,,,,,,,,,,2XL,value::IS7346-COLLEGIATE NAVY (Avail. 7/1);valueLabel::IS7346-COLLEGIATE NAVY (Avail. 7/1);,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3GV5GFCPDA51EN0M3Q60KR4,,,,,TM1069S24CF-3XL-IS7344-WHITE,,,,,,,,,,,TRUE,TRUE,,,,,,2024-07-23T22:25:07.052005Z,,,,,,,,,,,,3XL,value::IS7344-WHITE;valueLabel::IS7344-WHITE;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3GV5GFCFVB1124RQABQ17WH,,,,,TM1069S24CF-3XL-IS7346-COLLEGIATE-NAVY,,,,,,,,,,,TRUE,TRUE,,,,,,2024-07-23T22:25:07.052519Z,,,,,,,,,,,,3XL,value::IS7346-COLLEGIATE NAVY (Avail. 7/1);valueLabel::IS7346-COLLEGIATE NAVY (Avail. 7/1);,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01HXAEV3CV3NN71NM7BJ801KZY,,Mens Home Jersey 23/24 White,/rmcfmz0126-real-madrid-mens-home-shirt-23-24-white,"<p>Tradition gets a golden touch in the Real Madrid 23/24 Home Jersey. Keeping a crisp all-white base, the striking kit continues the thread of powerful design, delivering a sleek jersey steeped in legendary football history.&nbsp;<br><br>With a nod to older kits, gold details are re-introduced and emphasized by elegant navy framing. An allover print is a subtle update to the classic white color, complemented by a 'designed-for-fans' approach that keeps the fit and feel ready for stylish everyday wear. Sweat-wicking AEROREADY helps you feel comfortable on the field or in the crowd — while the embroidered crest and ""¡Hala Madrid!"" on the neck brings the club's winning mentality to life.<br></p>
+<p><strong>Details:</strong></p>
+<ul>
+<li>Slim fit</li>
+<li>Ribbed crewneck</li>
+<li>100% recycled polyester tricot</li>
+<li>Ribbed cuffs</li>
+</ul>
+<p>Customized shirts have a production time of <span>4</span> to 9 working days in addition to the shipping option chosen. Moreover, these orders are final, they cannot be cancelled, exchanged or returned.</p>
+<p>The player dorsals are subject to change until the closing of the transfer window. For this reason, customized shirt returns are not allowed after such change. See terms and conditions<span>&nbsp;</span><a href=""https://us.shop.realmadrid.com/pages/terms-and-conditions"">here</a>.&nbsp;</p>",RMCFMZ012601,4066761097983,EUR,VARIANT_BASED,,100.00,,43.50,,,,TRUE,TRUE,PHYSICAL,TRUE,ADD_TO_CART,SUBMIT_ORDER,FALSE,2024-05-07T21:20:05.531606Z,,TRUE,TRUE,FALSE,,,bestseller|BlankKits|BlankKitsFootball|Blanks|Customize|customize-23-24|Football|Home|Home24|homekit24|Kits|Men|MensBlankFootball|MensBlankHome|meta-size-chart-mens-kit-authentic-shirts-size-chart|nofifabadge|realblanco|bellingham|camavinga|kroos|modric|rodrygo|vini|vini jr|vini junior|vinicius|vinicius junior|ucl-jersey|WHITE,,,,RMCFMZ0126,label::Size;type::SIZE;attributeName::Size;,,,,,,,FALSE,,,01HVMWQCENDBA30K0FVAN818E4,FALSE,,,,,,,FALSE,,,Personalization|Badge - All|Badge - Mens|Badge - Womens,Referenced,,,,,,,,color::White|kitId::Home|kit::Home|kitYear::23/24,,,,,0.33,KILOGRAMS,ADIDAS,MENS,JERSEYS,RM_HOME_JERSEY_23_24,,,,,サイズ,,/rmcfmz0126-real-madrid-mens-home-shirt-23-24-white-es,,,,/rmcfmz0126-real-madrid-mens-home-shirt-23-24-white-en,,,,,尺寸,,,,,,男士主场球衣 23/24 赛季 白色,,,,/rmcfmz0126-real-madrid-mens-home-shirt-23-24-white-fr,"<p>A tradição recebe uma dose de dourado com a camisola principal 23/24 do Real Madrid. Com uma elegante base totalmente em branco, o equipamento impressionante mantém a linha de um design poderoso, com uma camisola elegante e mergulhada nas lendas do futebol.</p>
+<p><span>Num tributo aos equipamentos antigos, os apontamentos dourados são relançados e realçados pelo azul-escuro.  O estampado integral é uma atualização subtil ao branco clássico, complementada por uma abordagem destinada aos adeptos para conforto e estilo no dia a dia. O AEROREADY absorvente ajuda a sentir-te confortável em campo ou na multidão, ao passo que o emblema bordado e a inscrição ""¡Hala Madrid!"" na gola evocam a mentalidade vencedora do clube.</span></p>
+<p><strong>Detalhes:</strong></p>
+<ul>
+<li>Slim fit</li>
+<li>Gola redonda canelada</li>
+<li>Jersey simples, 100% poliéster reciclado</li>
+<li>Inserções laterais: malha poliéster 100% reciclado</li>
+<li>AEROREADY</li>
+<li>Punhos canelados</li>
+</ul>
+<p>As t-shirts com personalização têm um tempo de produção de <span>4</span> a 9 dias úteis, para além da opção de envio escolhida. Além disso, estas encomendas são definitivas, não podem ser anuladas, trocadas ou devolvidas.</p>
+<p>O número está sujeito a alterações até ao final do prazo de transferência. Por este motivo, não serão aceites devoluções de camisolas personalizadas após esta alteração. Ver termos e condições<span> </span><a href=""https://shop.realmadrid.com/pages/terms-and-conditions"" target=""_blank"">aqui</a>. </p>",,,Camisola Principal 23/24 Branco para Homens,,,,,,"<p>La tradición más arraigada adquiere tintes dorados en la camiseta de la primera equipación del Real Madrid 23/24. Una prenda de base completamente blanca que perpetúa la saga de poderosos diseños con un acabado elegante, ligero e impregnado de historia futbolística.</p>
+<p><span>Los detalles dorados, que resaltan gracias a las sofisticadas líneas de contorno azul marino, vuelven para rendir homenaje a los conjuntos de temporadas anteriores. El sutil estampado integral confiere un aire contemporáneo al clásico color blanco, mientras que la nueva silueta especialmente diseñada para los fans ofrece un corte perfecto para usar a diario. Por otra parte, el tejido AEROREADY absorbe el sudor para mantener la piel seca y garantizar una gran comodidad tanto si vas a jugar un partido como si lo tuyo es animar desde las gradas, mientras que el escudo y el bordado «¡Hala Madrid!» reflejan a la perfección el espíritu ganador del club.</span></p>
+<p><strong>Detalles:</strong></p>
+<ul>
+<li>Corte entallado</li>
+<li>Cuello redondo de canalé</li>
+<li>Punto 100% poliéster reciclado</li>
+<li>Inserciones laterales: malla 100% poliéster reciclado</li>
+<li>AEROREADY</li>
+<li>Puños de canalé</li>
+</ul>
+<p>Las camisetas con personalización tienen un tiempo producción de <span>4</span> a 9 días laborables adicional a la opción de envío elegida. Además, estos pedidos son definitivos, no pueden ser cancelados, cambiados o devueltos.</p>
+<p>El dorsal está sujeto a cambios hasta el cierre de fichajes. Por este motivo, no se aceptan devoluciones de camisetas personalizadas luego de dicho cambio. Ver términos y condiciones<span>&nbsp;</span><a href=""https://shop.realmadrid.com/pages/terms-and-conditions"" target=""_blank"">aquí</a>.&nbsp;</p>",,,,,,/rmcfmz0126-real-madrid-mens-home-shirt-23-24-white-ko,,Tamanho,,,,,,,,"<p>Le maillot domicile du Real Madrid 23/24 revisite la tradition avec une touche dorée. Conservant une base blanche immaculée, ce maillot unique perpétue un héritage iconique, avec un design élégant inspiré de l'histoire d'un club de football légendaire.</p>
+<p><span>En référence aux tenues plus anciennes, les détails dorés sont réintroduits et mis en valeur par un élégant cadre bleu marine. L'imprimé intégral revisite la couleur blanche classique avec sobriété. Conçu pour les fans, il présente une coupe et un look stylé parfaits au quotidien. La technologie AEROREADY évacue la transpiration pour t'offrir un maximum de confort sur le terrain ou dans la foule. Le blason brodé et l'inscription « ¡Hala Madrid! » sur le col symbolisent la mentalité de gagnant du club.</span></p>
+<p><strong>Détails :</strong></p>
+<ul>
+<li>Coupe ajustée</li>
+<li>Encolure ras-du-cou côtelée.</li>
+<li>Jersey 100 % polyester recyclé</li>
+<li>Inserts latérales : 100% polyester recyclé</li>
+<li>AEROREADY.</li>
+<li>Poignets côtelés.</li>
+</ul>
+<p>Les T-shirts personnalisés ont un délai de production de <span>4</span> à 9 jours ouvrables en plus de l'option d'expédition choisie. En outre, ces commandes sont définitives, elles ne peuvent être annulées, échangées ou retournées.</p>
+<p>Le numéro est susceptible d'être modifié jusqu'à la date limite de transfert. Pour cette raison, aucun retour de maillots personnalisés ne sera accepté après ce changement. Voir les conditions générales<span> </span><a href=""https://shop.realmadrid.com/pages/terms-and-conditions"" target=""_blank"">ici</a>. </p>",,,Sélectionnez Taille,,,,/rmcfmz0126-real-madrid-mens-home-shirt-23-24-white-de,,Maillot Domicile 23/24 Blanc Homme,,,,,,/rmcfmz0126-real-madrid-mens-home-shirt-23-24-white-ar,,/rmcfmz0126-real-madrid-mens-home-shirt-23-24-white-zh,,"<p>Real Madrid 23/24 1군 셔츠는 오랜 전통에 황금빛을 더했습니다. 축구의 역사가 담긴 우아하고 가벼운 마감으로 강렬한 디자인의 신화를 이어가는 올 화이트 베이스 의류입니다.</p>
+<p><span>세련된 네이비 블루 컨투어 라인으로 강조된 골드 디테일은 지난 시즌의 의상에 대한 오마주로 돌아왔습니다. 은은한 올오버 프린트가 클래식한 화이트 컬러웨이에 현대적인 느낌을 더하고, 팬들에게 친숙한 새로운 실루엣은 일상에서 착용하기 좋은 핏으로 재단되었습니다. 또한 땀을 빠르게 배출하는 에어로레이디 원단으로 경기 중이든 관중석에서 응원할 때든 피부를 쾌적하게 유지하며, 클럽의 승리의 기운을 담은 문장과 ""할라 마드리드!"" 자수가 돋보입니다.</span></p>
+<p><strong>제품 세부사항:</strong></p>
+<ul>
+<li>슬림한 핏</li>
+<li>골조직 크루넥</li>
+<li>100% 재생 폴리에스터 싱글 저지</li>
+<li>측면 인서트: 100% 재활용 폴리에스테르 메쉬</li>
+<li>에어로레디</li>
+<li>골조직 커프스</li>
+</ul>
+<p>개인화 기능이 있는 티셔츠의 제작 시간은 다음과 같습니다. <span>4</span> 선택한 배송 옵션에 따라 영업일 기준 최대 9일이 소요될 수 있습니다. 또한 이러한 주문은 최종 주문이므로 취소, 교환 또는 반품이 불가능합니다.</p>
+<p>번호는 양도 마감일까지 변경될 수 있습니다. 따라서 이러한 변경 후에는 맞춤 유니폼의 반품이 허용되지 않습니다. 이용약관 보기<span> </span><a href=""https://shop.realmadrid.com/pages/terms-and-conditions"" target=""_blank"">여기</a>. </p>",/rmcfmz0126-real-madrid-mens-home-shirt-23-24-white-it,,,,,,Seleccionar Talla,,,"<p>Mit diesem Real Madrid 23/24 Heimtrikot bekommt klassischer Style ein goldenes Update. Das minimalistische, komplett in Weiß gehaltene Trikot ist von legendären Fußballdesigns inspiriert und feiert die Erfolgsgeschichte des Clubs.</p>
+<p><span>Die Details in Gold-Optik erinnern an frühere Ausrüstungen und werden durch elegante, marineblaue Einfassungen in Szene gesetzt. Der Allover-Print verpasst dem klassischen Weiß ein dezentes Update, das auch abseits des Platzes für einen angesagten Look sorgt. Die feuchtigkeitsabsorbierende AEROREADY-Technologie garantiert dir ein angenehm trockenes Tragegefühl, während das aufgestickte Vereinslogo und der „Hala Madrid!“-Schriftzug im Nackenbereich deine Fanliebe zum Ausdruck bringen.</span></p>
+<p><strong>Details:</strong></p>
+<ul>
+<li>Slim Fit</li>
+<li>Gerippter Rundhalsausschnitt</li>
+<li>100 % recycelter Polyester</li>
+<li>Seiteneinsätze: 100% recyceltes Polyestergewebe</li>
+<li>AEROREADY</li>
+<li>Gerippte Bündchen</li>
+</ul>
+<p>T-Shirts mit Personalisierung haben eine Produktionszeit von <span>4</span> bis 9 Arbeitstage zusätzlich zu der gewählten Versandart. Außerdem sind diese Bestellungen endgültig, sie können nicht storniert, umgetauscht oder zurückgegeben werden.</p>
+<p>Die Nummer kann bis zum Ablauf der Transferfrist geändert werden. Aus diesem Grund können personalisierte Trikots nach einer solchen Änderung nicht mehr zurückgegeben werden. Siehe Bedingungen und Konditionen<span> </span><a href=""https://shop.realmadrid.com/pages/terms-and-conditions"" target=""_blank"">hier</a>. </p>",,,Camiseta Hombre Primera Equipación Blanca 23/24,,,,,,,,Herren Heim Trikot 23/24 Weiß,,,,,,/rmcfmz0126-real-madrid-mens-home-shirt-23-24-white-ja,"<p>点“金”之笔，演绎传统格调。这款皇马23/24赛季主场球衣，以利落全白铺开底色，造型干练抢眼，展现球队传奇底蕴，再续别样精彩设计。</p>
+<p><span>金色细节与精致的海军蓝轮廓线条相得益彰，是对前几季服装的致敬。微妙的全色印花为经典的白色配色增添了现代感，而新的球迷友好型剪裁则适合日常穿着。同时，AEROREADY 吸汗面料可保持皮肤干爽，确保您无论是在比赛中还是在看台上呐喊助威时都能倍感舒适，而徽章和 ""Hala Madrid!""刺绣则完美体现了俱乐部的胜利精神。</span></p>
+<p><strong>商品细节：</strong></p>
+<ul>
+<li>修身版型</li>
+<li>罗纹圆领</li>
+<li>100%回收聚酯单衣</li>
+<li>侧面衬垫：100% 再生聚酯网布</li>
+<li>AEROREADY系列</li>
+<li>罗纹袖口</li>
+</ul>
+<p>印有个性化图案的 T 恤的生产时间为 <span>4</span> 除所选择的运输方式外，还需 9 个工作日。此外，这些订单均为最终订单，不得取消、更换或退货。</p>
+<p>在转会截止日期之前，号码可能会有变动。因此，更改后的个性化球衣恕不接受退货。参见条款和条件<span> </span><a href=""https://shop.realmadrid.com/pages/terms-and-conditions"" target=""_blank"">这里</a>. </p>",,,,남성 홈 셔츠 23/24 화이트,,,,,Größe,,,,,"<p>金色のディテールがクラブの歴史を想起させる、レアル・マドリード23/24ホームウェア。さわやかな白地がベースのスタイリッシュなユニフォームが、伝説的なクラブの歴史が刻まれ、チームの力強さを際立たせている。</p>
+<p><span>洗練されたネイビーブルーの輪郭線で強調されたゴールドのディテールが、前シーズンの着こなしにオマージュを捧げる。さりげない総柄プリントが、クラシックなホワイトのカラーリングに現代的な感覚を与える。また、AEROREADY素材が汗を吸収して肌をドライに保ち、試合中であろうとスタンドからの応援中であろうと快適な着心地を約束してくれる。</span></p>
+<p><strong>ディテール：</strong></p>
+<ul>
+<li>スリムフィット</li>
+<li>リブ仕上げのクルーネック</li>
+<li>リサイクル100% ポリエステル・シングルジャージー</li>
+<li>サイドインサート：リサイクル・ポリエステル100％メッシュ</li>
+<li>AEROREADY</li>
+<li>リブ仕上げのカフ</li>
+</ul>
+<p>名入れTシャツの製作期間は、以下の通りです。 <span>4</span> に9営業日かかります。さらに、これらの注文は最終的なものであり、キャンセル、交換、返品はできません。</p>
+<p>背番号は移籍期限まで変更される場合があります。そのため、変更後のジャージの返品はお受けできません。規約を見る<span> </span><a href=""https://shop.realmadrid.com/pages/terms-and-conditions"" target=""_blank"">これ</a>. </p>",,,男性、ホームTシャツ、23/24、白,,,,/rmcfmz0126-real-madrid-mens-home-shirt-23-24-white-pt,,크기,,,,,,,,,160,,95,,,,799,,,,,,,,,,14200,,138000,,,,,,,,,,125,,
+VARIANT,01HXAEV4JBXVYG03H5YXM71ETV,,,,,RMCFMZ012601,4066761097983,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:20:06.731810Z,,,,,,,,,,,RMCFMZ012601,XS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,XS,,,,,,,,,,,XS,,,,,,,,,,,,,,,,,,,,,,,,,,,,XS,,,,,,,,,,,XS,,,,,,,,,,,,,,,,,,,,,,,XS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,XS,,,,,,,,,,,,,,XS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HXAEV4JC1ABF02E572QK15M3,,,,,RMCFMZ012602,4066761097921,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:20:06.732521Z,,,,,,,,,,,RMCFMZ012602,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HXAEV4JCXV8N0A32XNVZ0N81,,,,,RMCFMZ012603,4066761097952,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:20:06.732621Z,,,,,,,,,,,RMCFMZ012603,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HXAEV4JCNCDD0AZGGMGM1GFC,,,,,RMCFMZ012604,4066761098010,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:20:06.732680Z,,,,,,,,,,,RMCFMZ012604,L,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,L,,,,,,,,,,,L,,,,,,,,,,,,,,,,,,,,,,,,,,,,L,,,,,,,,,,,L,,,,,,,,,,,,,,,,,,,,,,,L,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,L,,,,,,,,,,,,,,L,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HXAEV4JCZCQS008A4DZB07RH,,,,,RMCFMZ012605,4066761097938,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:20:06.732733Z,,,,,,,,,,,RMCFMZ012605,XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,XL,,,,,,,,,,,XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,XL,,,,,,,,,,,XL,,,,,,,,,,,,,,,,,,,,,,,XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,XL,,,,,,,,,,,,,,XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HXAEV4JC564T1QE5X9YK15QY,,,,,RMCFMZ012606,4066761098027,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:20:06.732780Z,,,,,,,,,,,RMCFMZ012606,2XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2XL,,,,,,,,,,,2XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,2XL,,,,,,,,,,,2XL,,,,,,,,,,,,,,,,,,,,,,,2XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2XL,,,,,,,,,,,,,,2XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HXAEV4JCZNKH02EXNRG20Q79,,,,,RMCFMZ012607,4066761097969,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:20:06.732831Z,,,,,,,,,,,RMCFMZ012607,3XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3XL,,,,,,,,,,,3XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,3XL,,,,,,,,,,,3XL,,,,,,,,,,,,,,,,,,,,,,,3XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3XL,,,,,,,,,,,,,,3XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01HX7D5C0M3C111ZEQ22YF13FX,,FIFAe Nations Cup Hoodie Purple - Men's,/fifae-nations-cup-2022-hoodie-purple-mens,"<ul>
+<li>Limited edition FIFAe apparel</li>
+<li>Developed for the 2022 Copenhagen tournament</li>
+<li>Regular fit</li>
+<li>70% Cotton/30% Polyester</li>
+</ul>",FIFAMS007102,8445567020306,USD,VARIANT_BASED,,60.00,,14.78,FIFAe Nations Cup Hoodie Purple - Men's,,,TRUE,TRUE,PHYSICAL,TRUE,ADD_TO_CART,SUBMIT_ORDER,FALSE,2023-05-17T20:50:18.324Z,,TRUE,TRUE,FALSE,,Jumpers|Tops,Clothing|FIFAe|Nations Cup|New URL|Production Upload|Upload2|Gifts For Him|Gifts Under €80|BF|Sale,0,,,fifae-nations-cup-2022-hoodie-purple-mens,label::Size;type::SIZE;attributeName::Size;,label::Colour;type::COLOR;attributeName::Colour;,,,,,,FALSE,FALSE,,FIFAMS007102,FALSE,,,,,,,FALSE,,,,,,,,,,,,tournament::FIFAe Nations Cup,,,,,0.20,KILOGRAMS,NJ,MENS,HOODIES,,,,,المقاس,,,,,Taglia,,,,,,,,,,,Couleur,Felpa con cappuccio Coppa del Mondo FIFAe 2022 viola - Uomo,,,,,,,,,,,,,,,"<ul>
+<li>Ropa de edición limitada de la FIFAe</li>
+<li>Desarrollado para el torneo de Copenhague de 2022</li>
+<li>Ajuste regular</li>
+<li>70% algodón/30% poliéster</li>
+</ul>",,,,,,,,,,,,,,,,"<ul>
+<li>Article édition limitée FIFAe</li>
+<li>Développé pour le tournoi de Copenhague 2022</li>
+<li>Coupe régulière</li>
+<li>70% coton/30% polyester</li>
+</ul>",,,Taille,,,,,,Sweat ˆ Capuche FIFAe Coupe des Nations 2022 Violet - hommes,,Color,,,,,,,,,,,,,,,Talla,,,"<ul>
+<li>Limitierte Auflage der FIFAe-Bekleidung</li>
+<li>Entwickelt für das Turnier 2022 in Kopenhagen</li>
+<li>Reguläre Passform</li>
+<li>100% Baumwolle</li>
+</ul>",,,Sudadera con Capucha de la Copa de Naciones de la FIFA 2022 Pœrpura - Hombre,,,,Farbe,,,,FIFAe Club World Cup 2022 T-Shirt Blau - Herren,,,,,,,,"<ul>
+<li>إصدار محدود من ملابس FIFAe</li>
+<li>تم تصميمها لبطولة كوبنهاجن 2022</li>
+<li>مقاس عادي</li>
+<li>70% من القطن / 30% من البوليستر</li>
+</ul>",,,,,"<ul>
+<li>Merchandise ufficiale Coppa del Mondo FIFA Qatar 2022</li>
+<li>Marsupio</li>
+<li>Con la mascotte ufficiale del torneo</li>
+<li>70% Cotone filato 30% Polyester</li>
+</ul>",,,Grösse,,,,,,,,,,,,,,,Colore,,,لون,,,,,84,,53,,75,,,,,,,,,,,,,,,,,,90,,,,50,,65,,
+VARIANT,01HX7D5C1V4CDZ01R9371D1DPD,,,,,FIFAMS007102,8445567020306,,,,,,,,,,TRUE,TRUE,,,,,,2023-05-17T20:50:18.349Z,,,,,,,,,,,FIFAMS007102,S,value::Purple;valueLabel::Purple;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,S,,,,,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01JN40T01C93ZM0PDTEB0Q1BMP,,,,,FIFAMS007101,,,,,,,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,FIFAMS007101,S,value::RED;valueLabel::Red;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,S,,,,,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HX7D5C1VVNZM05XGVFWK1BRZ,,,,,FIFAMS007103,8445567020313,,,,,,,,,,TRUE,TRUE,,,,,,2023-05-17T20:50:18.349Z,,,,,,,,,,,FIFAMS007103,M,value::Purple;valueLabel::Purple;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,متوسط,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HX7D5C1VY7FB0K3EF0TP1RN4,,,,,FIFAMS007104,8445567020320,,,,,,,,,,TRUE,TRUE,,,,,,2023-05-17T20:50:18.349Z,,,,,,,,,,,FIFAMS007104,L,value::Purple;valueLabel::Purple;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,كبير,,,,,L,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,L,,,,,,,,,,,,,,,,,,,,,,,L,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,L,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HX7D5C1VNB911QTDSSMY1VZQ,,,,,FIFAMS007105,8445567020337,,,,,,,,,,TRUE,TRUE,,,,,,2023-05-17T20:50:18.349Z,,,,,,,,,,,FIFAMS007105,XL,value::Purple;valueLabel::Purple;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,XL,,,,,XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,XL,,,,,,,,,,,,,,,,,,,,,,,XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HX7D5C1VHDX70B09ET0X0VGT,,,,,FIFAMS007106,8445567020344,,,,,,,,,,TRUE,TRUE,,,,,,2023-05-17T20:50:18.349Z,,,,,,,,,,,FIFAMS007106,2XL,value::Purple;valueLabel::Purple;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2XL,,,,,2XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2XL,,,,,,,,,,,,,,,,,,,,,,,2XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01J3NEDE6S3MP50QD6FCRK1PST,,MEN'S ULTIMATE365 TEXTURED STRIPE POLO,/adidas-men's-ultimate365-textured-stripe-polo,100% RECYCLED POLYESTER. REGULAR FIT. THREE-BUTTON POLO COLLAR. MOISTURE WICKING. ADIDAS BRANDMARK ON LEFT SLEEVE.,TM1098F24,,EUR,VARIANT_BASED,,84.00,,37.75,,,,TRUE,TRUE,PHYSICAL,TRUE,NEVER,NEVER,FALSE,2024-07-25T17:18:27.545Z,,TRUE,TRUE,FALSE,,,,0,,,TM1098F24,label::Size;type::SIZE;attributeName::Size;,label::Color;type::COLOR;attributeName::Color;,,,,,,TRUE,FALSE,,TM1098F24,FALSE,,,12,,,,FALSE,,ADIDAS,,,,,,,,,,leadTime::6 WEEKS;nameLabel::Lead Time,,,,,0.00,POUNDS,ADIDAS,MEN,POLOS,,,,,,,,/adidas-men's-ultimate365-textured-stripe-polo-es,,,,/adidas-men's-ultimate365-textured-stripe-polo-en,,,,,,,,,,,,,,,/adidas-men's-ultimate365-textured-stripe-polo-fr,,,,,,,,,,,,,,,,/adidas-men's-ultimate365-textured-stripe-polo-ko,,,,,,,,,,,,,,,,,/adidas-men's-ultimate365-textured-stripe-polo-de,,,,,,,,/adidas-men's-ultimate365-textured-stripe-polo-ar,,/adidas-men's-ultimate365-textured-stripe-polo-zh,,,/adidas-men's-ultimate365-textured-stripe-polo-it,,,,,,,,,,,,,,,,,,,,,,,,,,/adidas-men's-ultimate365-textured-stripe-polo-ja,,,,,,,,,,,,,,,,,,,,,,/adidas-men's-ultimate365-textured-stripe-polo-pt,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,84,,
+VARIANT,01J3NEDE7HBJ681GTK22KY1GFG,,,,,TM1098F24-S-IW1411-CARBON-BLACK,,,,,,,,,,,TRUE,TRUE,,,,,,2024-07-25T17:18:27.569734Z,,,,,,,,,,,,S,value::IW1411-CARBON/BLACK;valueLabel::IW1411-CARBON/BLACK;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3NEDE7JV2CS1CZKZEWS0FRR,,,,,TM1098F24-S-IW1404-SEMI-PINK-SPARK-SCARLET,,,,,,,,,,,TRUE,TRUE,,,,,,2024-07-25T17:18:27.570216Z,,,,,,,,,,,,S,value::IW1404-SEMI PINK SPARK/SCARLET (Avail. 6/26);valueLabel::IW1404-SEMI PINK SPARK/SCARLET (Avail. 6/26);,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3NEDE7JAY4W15TQXK3A0FQ4,,,,,TM1098F24-S-IW1410-BLUE-SPARK-INK,,,,,,,,,,,TRUE,TRUE,,,,,,2024-07-25T17:18:27.570472Z,,,,,,,,,,,,S,value::IW1410-BLUE SPARK/INK (Avail. 7/15);valueLabel::IW1410-BLUE SPARK/INK (Avail. 7/15);,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3NEDE7HY15M19FX4JXB0FVG,,,,,TM1098F24-M-IW1411-CARBON-BLACK,,,,,,,,,,,TRUE,TRUE,,,,,,2024-07-25T17:18:27.569807Z,,,,,,,,,,,,M,value::IW1411-CARBON/BLACK;valueLabel::IW1411-CARBON/BLACK;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3NEDE7JEQTM0WX9VBYS0GXR,,,,,TM1098F24-M-IW1404-SEMI-PINK-SPARK-SCARLET,,,,,,,,,,,TRUE,TRUE,,,,,,2024-07-25T17:18:27.570268Z,,,,,,,,,,,,M,value::IW1404-SEMI PINK SPARK/SCARLET (Avail. 6/26);valueLabel::IW1404-SEMI PINK SPARK/SCARLET (Avail. 6/26);,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3NEDE7JV5ZZ0AW7RT8D0484,,,,,TM1098F24-M-IW1410-BLUE-SPARK-INK,,,,,,,,,,,TRUE,TRUE,,,,,,2024-07-25T17:18:27.570536Z,,,,,,,,,,,,M,value::IW1410-BLUE SPARK/INK (Avail. 7/15);valueLabel::IW1410-BLUE SPARK/INK (Avail. 7/15);,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3NEDE7H7G7B0EWX2PJM17RV,,,,,TM1098F24-L-IW1411-CARBON-BLACK,,,,,,,,,,,TRUE,TRUE,,,,,,2024-07-25T17:18:27.569862Z,,,,,,,,,,,,L,value::IW1411-CARBON/BLACK;valueLabel::IW1411-CARBON/BLACK;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3NEDE7JEK4V0WQPQXTP1FY7,,,,,TM1098F24-L-IW1404-SEMI-PINK-SPARK-SCARLET,,,,,,,,,,,TRUE,TRUE,,,,,,2024-07-25T17:18:27.570321Z,,,,,,,,,,,,L,value::IW1404-SEMI PINK SPARK/SCARLET (Avail. 6/26);valueLabel::IW1404-SEMI PINK SPARK/SCARLET (Avail. 6/26);,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3NEDE7JQVV00XWXF2SQ1FFE,,,,,TM1098F24-L-IW1410-BLUE-SPARK-INK,,,,,,,,,,,TRUE,TRUE,,,,,,2024-07-25T17:18:27.570611Z,,,,,,,,,,,,L,value::IW1410-BLUE SPARK/INK (Avail. 7/15);valueLabel::IW1410-BLUE SPARK/INK (Avail. 7/15);,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3NEDE7JZESC0YVB9PYM1F6H,,,,,TM1098F24-XL-IW1411-CARBON-BLACK,,,,,,,,,,,TRUE,TRUE,,,,,,2024-07-25T17:18:27.570100Z,,,,,,,,,,,,XL,value::IW1411-CARBON/BLACK;valueLabel::IW1411-CARBON/BLACK;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3NEDE7J7DD402WM79V405VR,,,,,TM1098F24-XL-IW1404-SEMI-PINK-SPARK-SCARLET,,,,,,,,,,,TRUE,TRUE,,,,,,2024-07-25T17:18:27.570371Z,,,,,,,,,,,,XL,value::IW1404-SEMI PINK SPARK/SCARLET (Avail. 6/26);valueLabel::IW1404-SEMI PINK SPARK/SCARLET (Avail. 6/26);,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3NEDE7JY3KW00AP59A11GQV,,,,,TM1098F24-XL-IW1410-BLUE-SPARK-INK,,,,,,,,,,,TRUE,TRUE,,,,,,2024-07-25T17:18:27.570677Z,,,,,,,,,,,,XL,value::IW1410-BLUE SPARK/INK (Avail. 7/15);valueLabel::IW1410-BLUE SPARK/INK (Avail. 7/15);,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3NEDE7J77M80M70QRCH0GQM,,,,,TM1098F24-2XL-IW1411-CARBON-BLACK,,,,,,,,,,,TRUE,TRUE,,,,,,2024-07-25T17:18:27.570165Z,,,,,,,,,,,,2XL,value::IW1411-CARBON/BLACK;valueLabel::IW1411-CARBON/BLACK;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3NEDE7JTDDN0CGW2TGB12Q8,,,,,TM1098F24-2XL-IW1404-SEMI-PINK-SPARK-SCARLET,,,,,,,,,,,TRUE,TRUE,,,,,,2024-07-25T17:18:27.570421Z,,,,,,,,,,,,2XL,value::IW1404-SEMI PINK SPARK/SCARLET (Avail. 6/26);valueLabel::IW1404-SEMI PINK SPARK/SCARLET (Avail. 6/26);,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3NEDE7JRFRK17NF3Q2S15M2,,,,,TM1098F24-2XL-IW1410-BLUE-SPARK-INK,,,,,,,,,,,TRUE,TRUE,,,,,,2024-07-25T17:18:27.570728Z,,,,,,,,,,,,2XL,value::IW1410-BLUE SPARK/INK (Avail. 7/15);valueLabel::IW1410-BLUE SPARK/INK (Avail. 7/15);,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01JT99QGDK3MT101RENQVW1SM7,,BVB T-Shirt Guirassy,/bvb-t-shirt-guirassy,"<ul><li>Schwarzes BVB-Spielershirt</li><li>Aufgedruckter Schriftzug „Borussia“ auf der Vorderseite</li><li>Aufgedruckter Namenszug „Guirassy“ auf der Rückseite</li><li>Mit Spielernummer 9 auf Vorder- und Rückseite</li><li>Oekotex made in green</li><li>Aus 100% Baumwolle</li><li>Hersteller: BVB Merchandising GmbH, Rheinlanddamm 207-209, 44137 Dortmund, Deutschland, service@bvb.de</li></ul> <p>Zeige mit dem Spielershirt Deinen Support für Borussia Dortmunds Nummer 9 – Serhou Guirassy! In klassischem Schwarz gehalten, setzt das gelbe „Borussia“ auf der Brust sowie die markante Nummer 9 auf Vorder- und Rückseite ein klares Statement und zeigt, für wen Dein schwarzgelbes Herz schlägt. Das hochwertige Material sorgt für angenehmen Tragekomfort, während das Design in den Vereinsfarben ideal zu jedem Fan-Look passt. Perfekt für den Alltag oder die Tribüne, unterstreicht dieses Shirt Deine Liebe zum BVB und zu Deinem Lieblingsspieler.
+OEKO-TEX® MADE IN GREEN ist ein Label für alle Textilien und Lederartikel, die umweltfreundlich und sozialverträglich produziert wurden.</p>",25214701,4026649336184,EUR,VARIANT_BASED,,25.00,,,,,,TRUE,TRUE,PHYSICAL,TRUE,ADD_TO_CART,SUBMIT_ORDER,FALSE,2024-02-28T20:50:59.131Z,,TRUE,TRUE,FALSE,,,New,,,,,,,,,,,,,,,25214701,FALSE,PC040100,,,,,,FALSE,,,,,,,,,,,,tarriffNo::61091000|regionPurchasedCode::TR,,,,,0.50,KILOGRAMS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,/bvb-t-shirt-guirassy,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01JT99QJ40A6BV1ETEPN6B0PYG,,,,,25214701/L,4026649336153,,,,25.00,,,,,,TRUE,TRUE,,,,,,2024-12-17T06:39:47.679842Z,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,tarriffNo:61091000;|regionPurchasedCode:TR;,,,,,0.50,KILOGRAMS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01HXAG3GJHJGBT0MB2EBF1072W,,Womens Home Jersey 23/24 White,/rmcflz0031-real-madrid-womens-home-shirt-23-24-white,"<p>This product contains a product option redirect that triggers in USD only, when ""Bellingham"" is selected as the player</p><p>For most football teams, winning is everything. For this one, it's part of a grander design. Like the club it represents, this adidas Real Madrid fan jersey stands for elegance and style. Dressed in their classic white colours and finished in gold details, it displays a ""¡Hala Madrid!"" signoff on the back neck. Moisture-wicking AEROREADY ensures you feel as assured as you look while you shout your support.<br>Made with 100% recycled materials, this product represents just one of our solutions to help end plastic waste.</p>
+<p><strong>Details:</strong></p>
+<ul>
+<li>Regular fit</li>
+<li>Ribbed crewneck</li>
+<li>100% recycled polyester tricot</li>
+<li>Ribbed cuffs</li>
+</ul>
+<p>Customized shirts have a production time of <span>4</span> to 9 working days in addition to the shipping option chosen. Moreover, these orders are final, they cannot be cancelled, exchanged or returned.</p>
+<p>The player dorsals are subject to change until the closing of the transfer window. For this reason, customized shirt returns are not allowed after such change. See terms and conditions<span>&nbsp;</span><a href=""https://us.shop.realmadrid.com/pages/terms-and-conditions"">here</a>.&nbsp;</p>",RMCFLZ003100,4066761055808,EUR,VARIANT_BASED,,100.00,,43.50,,,,TRUE,TRUE,PHYSICAL,TRUE,ADD_TO_CART,SUBMIT_ORDER,FALSE,2024-05-07T21:42:09.745341Z,,TRUE,TRUE,FALSE,,,bestseller|BlankKits|BlankKitsFootball|Blanks|Customize|customize-23-24|Football|Home|Home24|homekit24|Kits|meta-size-chart-adidas-womens-tops-size-chart|nofifabadge|realblanco|bellingham|camavinga|kroos|modric|rodrygo|vini|vini jr|vini junior|vinicius|vinicius junior|SVM24|ucl-jersey|WHITE|Women|WomensBlankFootball|WomensBlankHome,,,,RMCFLZ0031,label::Size;type::SIZE;attributeName::Size;,,,,,,,FALSE,,,01HVMWQCMYNP9J1K8AXNEX1QBW,FALSE,,,,,,,FALSE,,,Badge|Personalization,Referenced,,,,,,,,"color::White|kitId::Home|kit::Home|kitYear::23/24|redirectJson::{""redirects"":[{""rule"":[""addOn:personalization:RM-KIT-SELECT:Bellingham, 5""],""productUri"":""preprinted-bellingham-jersey"",""additionalTargets"":""variant:badge:none"",""currencies"":[""USD""]},{""rule"":[""addOn:personalization:RM-KIT-SELECT:Bellingham, 5"",""addOn:badge:RM-BADGE-LLCWC""],""productUri"":""preprinted-bellingham-jersey"",""additionalTargets"":""variant:badge:la liga pack"",""currencies"":[""USD""]},{""rule"":[""addOn:personalization:RM-KIT-SELECT:Bellingham, 5"",""addOn:badge:RM-BADGE-CLCWC""],""productUri"":""preprinted-bellingham-jersey"",""additionalTargets"":""variant:badge:champions league pack"",""currencies"":[""USD""]}]}",,,,,0.33,KILOGRAMS,ADIDAS,WOMENS,JERSEYS,RM_HOME_JERSEY_23_24,,,,,サイズ,,/rmcflz0031-real-madrid-womens-home-shirt-23-24-white-es,,,,/rmcflz0031-real-madrid-womens-home-shirt-23-24-white-en,,,,,尺寸,,,,,,女士主场球衣 23/24 赛季 白色,,,,/rmcflz0031-real-madrid-womens-home-shirt-23-24-white-fr,"<p>A tradição de longa data adquire uma tonalidade dourada na camisola da Primeira Equipa Feminina Real Madrid 23/24.<br/> Uma peça de vestuário de base totalmente branca que perpetua a saga de designs poderosos com um acabamento elegante impregnado de história do futebol.</p>
+<p>Num tributo aos equipamentos antigos, os apontamentos dourados são relançados e realçados pelo azul-escuro. O estampado integral é uma atualização subtil ao branco clássico, complementada por uma abordagem destinada aos adeptos para conforto e estilo no dia a dia. O AEROREADY absorvente ajuda a sentir-te confortável em campo ou na multidão, ao passo que o emblema bordado e a inscrição ""¡Hala Madrid!"" na gola evocam a mentalidade vencedora do clube.</p>
+<p><strong>Detalhes:</strong></p>
+<ul>
+<li>Corte normal</li>
+<li>Gola redonda canelada</li>
+<li>Jersey simples, 100% poliéster reciclado</li>
+<li>Inserções laterais: malha poliéster 100% reciclado</li>
+<li>AEROREADY</li>
+<li>Punhos canelados</li>
+</ul>
+<p>As t-shirts com personalização têm um tempo de produção de <span>4</span> a 9 dias úteis, para além da opção de envio escolhida. Além disso, estas encomendas são definitivas, não podem ser anuladas, trocadas ou devolvidas.</p>
+<p>O número está sujeito a alterações até ao final do prazo de transferência. Por este motivo, não serão aceites devoluções de camisolas personalizadas após esta alteração. Ver termos e condições<span> </span><a href=""https://shop.realmadrid.com/pages/terms-and-conditions"" target=""_blank"">aqui</a>. </p>",,,Camisola principal 23/24 branco para mulheres,,,,,,"<p>La tradición más arraigada adquiere tintes dorados en la camiseta Mujer Primera Equipación Real Madrid 23/24.<br> Una prenda de base completamente blanca que perpetúa la saga de poderosos diseños con un acabado elegante e impregnado de historia futbolística.</p>
+<p>Los detalles dorados, que resaltan gracias a las sofisticadas líneas de contorno azul marino, vuelven para rendir homenaje a los conjuntos de temporadas anteriores. El sutil estampado integral confiere un aire contemporáneo al clásico color blanco, mientras que la nueva silueta especialmente diseñada para los fans ofrece un corte perfecto para usar a diario. El tejido AEROREADY absorbe el sudor para mantener la piel seca y garantizar una gran comodidad tanto si vas a jugar un partido como si lo tuyo es animar desde las gradas. Por otro lado, el emblema con bordado «¡Hala Madrid!» refleja a la perfección el espíritu ganador del club.</p>
+<p><strong>Detalles:</strong></p>
+<ul>
+<li>Corte clásico</li>
+<li>Cuello redondo de canalé</li>
+<li>Punto 100% poliéster reciclado</li>
+<li>Inserciones laterales: malla 100% poliéster reciclado</li>
+<li>AEROREADY</li>
+<li>Puños de canalé</li>
+</ul>
+<p>Las camisetas con personalización tienen un tiempo producción de <span>4</span> a 9 días laborables adicional a la opción de envío elegida. Además, estos pedidos son definitivos, no pueden ser cancelados, cambiados o devueltos.</p>
+<p>El dorsal está sujeto a cambios hasta el cierre de fichajes. Por este motivo, no se aceptan devoluciones de camisetas personalizadas luego de dicho cambio. Ver términos y condiciones<span>&nbsp;</span><a href=""https://shop.realmadrid.com/pages/terms-and-conditions"" target=""_blank"">aquí</a>.&nbsp;</p>",,,,,,/rmcflz0031-real-madrid-womens-home-shirt-23-24-white-ko,,Tamanho,,,,,,,,"<p>La longue tradition prend une teinte dorée dans le maillot de l'équipe première féminine Real Madrid 23/24.<br/> Un vêtement de base entièrement blanc qui perpétue la saga des designs puissants avec une finition élégante imprégnée de l'histoire du football.</p>
+<p>En référence aux tenues plus anciennes, des détails dorés sont réintroduits avec une structure bleu marine.  L'imprimé intégral obtenu par sublimation revisite la couleur blanche classique, avec une nouvelle silhouette football qui permet d'arborer avec classe et style les couleurs du club en dehors des terrains. Le système de ventilation AEROREADY te permet de te sentir à l'aise sur le terrain ou dans la foule, tandis que l'écusson brodé et la mention « ¡Hala Madrid ! » sur le col donnent vie à la mentalité victorieuse du club.</p>
+<p><strong>Détails :</strong></p>
+<ul>
+<li>Coupe standard.</li>
+<li>Encolure ras-du-cou côtelée.</li>
+<li>Jersey 100 % polyester recyclé</li>
+<li>Inserts latérales : 100% polyester recyclé</li>
+<li>AEROREADY.</li>
+<li>Poignets côtelés.</li>
+</ul>
+<p>Les T-shirts personnalisés ont un délai de production de <span>4</span> à 9 jours ouvrables en plus de l'option d'expédition choisie. En outre, ces commandes sont définitives, elles ne peuvent être annulées, échangées ou retournées.</p>
+<p>Le numéro est susceptible d'être modifié jusqu'à la date limite de transfert. Pour cette raison, aucun retour de maillots personnalisés ne sera accepté après ce changement. Voir les conditions générales<span> </span><a href=""https://shop.realmadrid.com/pages/terms-and-conditions"" target=""_blank"">ici</a>. </p>",,,Sélectionnez Taille,,,,/rmcflz0031-real-madrid-womens-home-shirt-23-24-white-de,,Maillot Domicile 23/24 Blanc Femme,,,,,,/rmcflz0031-real-madrid-womens-home-shirt-23-24-white-ar,,/rmcflz0031-real-madrid-womens-home-shirt-23-24-white-zh,,"<p>가장 뿌리 깊은 전통이 여자 퍼스트팀 셔츠( Real Madrid 23/24)에서 황금빛 색조를 띠고 있습니다.<br/> 축구 역사가 깃든 우아한 마감으로 강렬한 디자인의 역사를 이어가는 올 화이트 베이스 의류입니다.</p>
+<p>세련된 네이비 블루 컨투어 라인으로 강조된 골드 디테일은 지난 시즌의 의상에 대한 오마주로 돌아왔습니다. 은은한 올오버 프린트가 클래식한 화이트 컬러웨이에 현대적인 느낌을 더하며, 팬들에게 친숙한 새로운 실루엣으로 일상복으로도 완벽한 핏을 선사합니다. 에어로레이디 원단은 땀을 빠르게 배출하여 피부를 쾌적하게 유지해주고, 경기장으로 이동하거나 관중석에서 응원할 때에도 편안함을 보장합니다. 또한 ""할라 마드리드!"" 자수 엠블럼은 클럽의 승리 정신을 완벽하게 반영합니다.</p>
+<p><strong>제품 세부사항:</strong></p>
+<ul>
+<li>레귤러 핏</li>
+<li>골조직 크루넥</li>
+<li>100% 재생 폴리에스터 싱글 저지</li>
+<li>측면 인서트: 100% 재활용 폴리에스테르 메쉬</li>
+<li>에어로레디</li>
+<li>골조직 커프스</li>
+</ul>
+<p>개인화 기능이 있는 티셔츠의 제작 시간은 다음과 같습니다. <span>4</span> 선택한 배송 옵션에 따라 영업일 기준 최대 9일이 소요될 수 있습니다. 또한 이러한 주문은 최종 주문이므로 취소, 교환 또는 반품이 불가능합니다.</p>
+<p>번호는 양도 마감일까지 변경될 수 있습니다. 따라서 이러한 변경 후에는 맞춤 유니폼의 반품이 허용되지 않습니다. 이용약관 보기<span> </span><a href=""https://shop.realmadrid.com/pages/terms-and-conditions"" target=""_blank"">여기</a>. </p>",/rmcflz0031-real-madrid-womens-home-shirt-23-24-white-it,,,,,,Seleccionar Talla,,,"<p>Das Trikot der Ersten Mannschaft der Frauen Real Madrid 23/24 lässt die lange Tradition in einem goldenen Farbton erstrahlen.<br/> Ein ganz in Weiß gehaltenes Grundkleidungsstück, das die Saga der kraftvollen Designs mit einem eleganten, fußballgeschichtsträchtigen Finish fortsetzt.</p>
+<p>Die Details in Gold-Optik erinnern an frühere Ausrüstungen und werden durch elegante, marineblaue Einfassungen in Szene gesetzt. Ein Allover-Print ist ein dezentes Update der klassischen weißen Farbe, ergänzt durch ein ‚Designed for Fans‘-Konzept, das die Passform und das Tragegefühl modischer Alltagskleidung bewahrt. Das schweißableitende AEROREADY-Material sorgt dafür, dass du dich auf dem Spielfeld oder in der Menge wohl fühlst — während das aufgestickte Vereinslogo und der „Hala Madrid!“-Schriftzug im Nackenbereich deine Fanliebe zum Ausdruck bringen.</p>
+<p><strong>Details:</strong></p>
+<ul>
+<li>Regulär geschnitten</li>
+<li>Gerippter Rundhalsausschnitt</li>
+<li>100 % recycelter Polyester</li>
+<li>Seiteneinsätze: 100% recyceltes Polyestergewebe</li>
+<li>AEROREADY</li>
+<li>Gerippte Bündchen</li>
+</ul>
+<p>T-Shirts mit Personalisierung haben eine Produktionszeit von <span>4</span> bis 9 Arbeitstage zusätzlich zu der gewählten Versandart. Außerdem sind diese Bestellungen endgültig, sie können nicht storniert, umgetauscht oder zurückgegeben werden.</p>
+<p>Die Nummer kann bis zum Ablauf der Transferfrist geändert werden. Aus diesem Grund können personalisierte Trikots nach einer solchen Änderung nicht mehr zurückgegeben werden. Siehe Bedingungen und Konditionen<span> </span><a href=""https://shop.realmadrid.com/pages/terms-and-conditions"" target=""_blank"">hier</a>. </p>",,,Camiseta Mujer Primera Equipación Blanca 23/24,,,,,,,,Damen Heim Trikot 23/24 Weiß,,,,,,/rmcflz0031-real-madrid-womens-home-shirt-23-24-white-ja,"<p>女足一队球衣Real Madrid 23/24 为这一悠久传统披上了金色的外衣。<br/> 全白色的底衫延续了强大的设计传奇，优雅的外观充满了足球历史的气息。</p>
+<p>金色细节与精致的海军蓝轮廓线条相得益彰，是对前几季服装的致敬。微妙的全色印花为经典的白色配色增添了现代感，而新的粉丝友好型剪裁则为日常穿着提供了完美的契合度。AEROREADY 吸汗面料可保持皮肤干爽，无论您是在前往比赛场地的途中，还是在看台上呐喊助威，都能确保穿着的舒适性。绣有 ""Hala Madrid！""的徽章完美体现了俱乐部的胜利精神。</p>
+<p><strong>商品细节：</strong></p>
+<ul>
+<li>常规版型</li>
+<li>罗纹圆领</li>
+<li>100%回收聚酯单衣</li>
+<li>侧面衬垫：100% 再生聚酯网布</li>
+<li>AEROREADY系列</li>
+<li>罗纹袖口</li>
+</ul>
+<p>印有个性化图案的 T 恤的生产时间为 <span>4</span> 除所选择的运输方式外，还需 9 个工作日。此外，这些订单均为最终订单，不得取消、更换或退货。</p>
+<p>在转会截止日期之前，号码可能会有变动。因此，更改后的个性化球衣恕不接受退货。参见条款和条件<span> </span><a href=""https://shop.realmadrid.com/pages/terms-and-conditions"" target=""_blank"">这里</a>. </p>",,,,여성 홈 셔츠 23/24 화이트,,,,,Größe,,,,,"<p>最も根強い伝統が、ウィメンズ・ファーストチーム・シャツReal Madrid 23/24で黄金色に輝く。<br/> フットボールの歴史に彩られたエレガントな仕上がりで、パワフルなデザインの武勇伝を永続させるオールホワイトのベースウェア。</p>
+<p>洗練されたネイビーブルーの輪郭線で強調されたゴールドのディテールが、前シーズンの装いにオマージュを捧げる。さりげない総柄プリントは、クラシックなホワイトカラーに現代的な感覚を与え、ファンフレンドリーな新シルエットは日常着として完璧なフィット感を提供する。AEROREADY素材は汗を吸収して肌をドライに保ち、試合会場へ向かうときもスタンドで応援するときも、快適な着心地を約束する。また、刺繍された「ハラ・マドリード！」のエンブレムは、クラブの勝利のスピリットを完璧に反映している。</p>
+<p><strong>ディテール：</strong></p>
+<ul>
+<li>レギュラーフィット</li>
+<li>リブ仕上げのクルーネック</li>
+<li>リサイクル100% ポリエステル・シングルジャージー</li>
+<li>サイドインサート：リサイクル・ポリエステル100％メッシュ</li>
+<li>AEROREADY</li>
+<li>リブ仕上げのカフ</li>
+</ul>
+<p>名入れTシャツの製作期間は、以下の通りです。 <span>4</span> に9営業日かかります。さらに、これらの注文は最終的なものであり、キャンセル、交換、返品はできません。</p>
+<p>背番号は移籍期限まで変更される場合があります。そのため、変更後のジャージの返品はお受けできません。規約を見る<span> </span><a href=""https://shop.realmadrid.com/pages/terms-and-conditions"" target=""_blank"">これ</a>. </p>",,,女性、ホームTシャツ、23/24、白,,,,/rmcflz0031-real-madrid-womens-home-shirt-23-24-white-pt,,크기,,,,,,,,,160,,95,,,,799,,,,,,,,,,14200,,138000,,,,,,,,,,125,,
+VARIANT,01HXAG3GN5HQEZ01PE60WT1WEA,,,,,RMCFLZ003100,4066761055808,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:42:09.829008Z,,,,,,,,,,,RMCFLZ003100,2XS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2XS,,,,,,,,,,,2XS,,,,,,,,,,,,,,,,,,,,,,,,,,,,2XS,,,,,,,,,,,2XS,,,,,,,,,,,,,,,,,,,,,,,2XS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2XS,,,,,,,,,,,,,,2XS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HXAG3GN5PK3D1W71XRAK0VXZ,,,,,RMCFLZ003101,4066761055846,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:42:09.829205Z,,,,,,,,,,,RMCFLZ003101,XS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,XS,,,,,,,,,,,XS,,,,,,,,,,,,,,,,,,,,,,,,,,,,XS,,,,,,,,,,,XS,,,,,,,,,,,,,,,,,,,,,,,XS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,XS,,,,,,,,,,,,,,XS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HXAG3GN54WYZ05D3FA160D3X,,,,,RMCFLZ003102,4066761055815,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:42:09.829281Z,,,,,,,,,,,RMCFLZ003102,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HXAG3GN5P5SJ0FAVWJC20TV2,,,,,RMCFLZ003103,4066761055822,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:42:09.829526Z,,,,,,,,,,,RMCFLZ003103,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HXAG3GN5N0KX0D6ABVH71W94,,,,,RMCFLZ003104,4066761055877,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:42:09.829643Z,,,,,,,,,,,RMCFLZ003104,L,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,L,,,,,,,,,,,L,,,,,,,,,,,,,,,,,,,,,,,,,,,,L,,,,,,,,,,,L,,,,,,,,,,,,,,,,,,,,,,,L,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,L,,,,,,,,,,,,,,L,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HXAG3GN5P3XZ1X4WGV6X1THC,,,,,RMCFLZ003105,4066761055884,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:42:09.829708Z,,,,,,,,,,,RMCFLZ003105,XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,XL,,,,,,,,,,,XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,XL,,,,,,,,,,,XL,,,,,,,,,,,,,,,,,,,,,,,XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,XL,,,,,,,,,,,,,,XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01HXAG3GN5668F0FX2GW7V16EJ,,,,,RMCFLZ003106,4066761055853,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-07T21:42:09.829764Z,,,,,,,,,,,RMCFLZ003106,2XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2XL,,,,,,,,,,,2XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,2XL,,,,,,,,,,,2XL,,,,,,,,,,,,,,,,,,,,,,,2XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2XL,,,,,,,,,,,,,,2XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01JFJPMYCGFWWT0Z425GED18XY,,Preprinted Bellingham Jersey,/preprinted-bellingham-jersey,,RM-PREPRINT-BELL-01,,EUR,VARIANT_BASED,,100.00,,,,,,TRUE,TRUE,PHYSICAL,TRUE,ADD_TO_CART,SUBMIT_ORDER,FALSE,2024-12-20T07:00:00Z,,FALSE,TRUE,FALSE,,,,0,,,,label::Size;type::SIZE;attributeName::size;,label::Badge;type::SELECT;attributeName::badge;,,,,,,FALSE,FALSE,,14717acd-b965-48fb-b663-cc2289f7e2d5,FALSE,,,,,,,FALSE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01JFJPZXZ4ZH5A0RSYYYVG0QJ6,,,,,RM-PREPRINT-BELL-01,,,,,,,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,XS,None,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01JFJQ08WB298D17E6W65P1ZDJ,,,,,RM-PREPRINT-BELL-02,,,,,,,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,XS,La Liga Pack,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01JFJR7YMA13Q815E0H1XC0DVQ,,,,,RM-PREPRINT-BELL-03,,,,,,,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,XS,Champions League Pack,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01JFJR8DMVFHKX0BPY9JQG09AJ,,,,,RM-PREPRINT-BELL-04,,,,,,,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,S,None,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01JFJR8PAC0MXK0JK2739C1ZWW,,,,,RM-PREPRINT-BELL-05,,,,,,,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,S,La Liga Pack,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01JFJR9A911ZTR0P1T3AMX17Y5,,,,,RM-PREPRINT-BELL-06,,,,,,,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,S,Champions League Pack,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01JFJRGYP43K5M1SJN0F3Z09HR,,,,,RM-PREPRINT-BELL-07,,,,,,,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,M,None,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01JFJRH6W8VE2E0MTVV39Q116N,,,,,RM-PREPRINT-BELL-08,,,,,,,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,M,La Liga Pack,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01JFJRHFR62TCQ0BCXQAAS1RAH,,,,,RM-PREPRINT-BELL-09,,,,,,,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,M,Champions League Pack,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01JFJRHT2193MN19CEG1FM1MVW,,,,,RM-PREPRINT-BELL-10,,,,,,,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,L,None,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01JFJRJ8KVF3GS0SWT3HC00ACZ,,,,,RM-PREPRINT-BELL-11,,,,,,,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,L,La Liga Pack,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01JFJRJJQ4XT340D9SCXSG0C21,,,,,RM-PREPRINT-BELL-12,,,,,,,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,L,Champions League Pack,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01JFJRP8RZ5PN30FHHC4JA1JVY,,,,,RM-PREPRINT-BELL-13,,,,,,,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,XL,None,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01JFJRPJJF0FRX0V537FR60RMC,,,,,RM-PREPRINT-BELL-14,,,,,,,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,XL,La Liga Pack,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01JFJRPX2AW9SF1WSXG56508PK,,,,,RM-PREPRINT-BELL-15,,,,,,,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,XL,Champions League Pack,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01JFJRQ76T4N0Z0HKXDR100SDB,,,,,RM-PREPRINT-BELL-16,,,,,,,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,2XL,None,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01JFJRQFHQC8S21MY7JKP80F1F,,,,,RM-PREPRINT-BELL-17,,,,,,,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,2XL,La Liga Pack,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01JFJRQT6F3CWX1QZ4NR9K1YBH,,,,,RM-PREPRINT-BELL-18,,,,,,,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,2XL,Champions League Pack,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01JFJRRSZXKYFR1ZQSHHRJ05V7,,,,,RM-PREPRINT-BELL-19,,,,,,,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,3XL,None,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01JFJRSJDV90DH0P8MMA7R0MZP,,,,,RM-PREPRINT-BELL-20,,,,,,,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,3XL,La Liga Pack,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01JFJRSWCHA9KB0VFG610X10NC,,,,,RM-PREPRINT-BELL-21,,,,,,,,,,,TRUE,TRUE,,,,,,,,,,,,,,,,,,3XL,Champions League Pack,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01J7CCKPXJGQGV0FS9252N0C4N,,BVB Evonik Fußballakademie Ballspielkurs Donnerstag,/bvb-evonik-fussballakademe-ballspielkurs-donnerstag,,BSK2414,,EUR,STANDARD,,149.00,,,,,,TRUE,TRUE,PHYSICAL,TRUE,ADD_TO_CART,SUBMIT_ORDER,FALSE,2024-09-09T04:00:00Z,,FALSE,FALSE,FALSE,,,,0,,,,,,,,,,,,,,,FALSE,,,,,,,FALSE,,,Academy Form - First Name|Academy Form - Last Name|Academy Form - Birthday|Academy Form - Gender|Academy Form - Street|Academy Form - Land|Academy Form - Emergency Contact Number|Academy Form - Allergies / Illnesses|Academy Form - Legal Consent,Referenced,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01J3FW4C9A8R301R258KEF1A25,,Mens Training Sleeveless Shirt 24/25 Yellow,/rmcfmt0287-mens-training-sleeveless-shirt-24-25-yellow,"<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>",RMCFMT028701,4067896086101,EUR,VARIANT_BASED,,45.00,,19.60,,,,TRUE,TRUE,PHYSICAL,TRUE,ADD_TO_CART,SUBMIT_ORDER,FALSE,2024-05-22T14:02:48.816Z,,TRUE,TRUE,FALSE,,RMCFMT0287,Home25|season25|training25|Training|all-training-home25|trainingfw25|Men|Tops|BLUE|tank top,0,,,RMCFMT0287,label::Size;type::SIZE;attributeName::Size;,,,"<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>",,,,FALSE,,,RMCFMT0287,FALSE,,,3,5,,,FALSE,,,Personalize - Training,Referenced,,,mens-size-guide-legends,,,,,sizeGuideId::meta-size-chart-adidas-mens-kits-size-chart,,,,,0.25,KILOGRAMS,ADIDAS_ESPANA_SAU,MENS,T_SHIRTS,RM_TRAINING_SHIRT,,,,,,,/rmcfmt0287-mens-training-sleeveless-shirt-24-25-yellow-es,,,,/rmcfmt0287-mens-training-sleeveless-shirt-24-25-yellow-en,,,,,,,,,,,,,,,/rmcfmt0287-mens-training-sleeveless-shirt-24-25-yellow-fr,,,,,,,,,,"<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>",,,,,,/rmcfmt0287-mens-training-sleeveless-shirt-24-25-yellow-ko,,,,,,,,,,,,,,,,,/rmcfmt0287-mens-training-sleeveless-shirt-24-25-yellow-de,,,,,"<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>",,,/rmcfmt0287-mens-training-sleeveless-shirt-24-25-yellow-ar,,/rmcfmt0287-mens-training-sleeveless-shirt-24-25-yellow-zh,,,/rmcfmt0287-mens-training-sleeveless-shirt-24-25-yellow-it,,,,,,Size,,,,,,Dialect Mens Training Sleeveless Shirt 24/25 Yellow,,,,,,,,,,,,,,/rmcfmt0287-mens-training-sleeveless-shirt-24-25-yellow-ja,,,,,,,,,,,,,,,,,,,,,,/rmcfmt0287-mens-training-sleeveless-shirt-24-25-yellow-pt,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3FW4CAADZ690BSZ4GCH1JTF,,,,,RMCFMT028701,4067896086101,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-22T14:02:48.880120Z,,,,,,,,,,,RMCFMT028701,XS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,XS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3FW4CAASEPF1HHB68EA09KF,,,,,RMCFMT028702,4067896081618,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-22T14:02:48.880409Z,,,,,,,,,,,RMCFMT028702,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3FW4CAAVAK61F8MDE3G1TVY,,,,,RMCFMT028703,4067896081588,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-22T14:02:48.880542Z,,,,,,,,,,,RMCFMT028703,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3FW4CAABHFN0W3MDY2N0M5F,,,,,RMCFMT028704,4067896081649,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-22T14:02:48.880638Z,,,,,,,,,,,RMCFMT028704,L,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,L,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3FW4CAAH1BC1BWZZW2M1PT2,,,,,RMCFMT028705,4067896081557,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-22T14:02:48.880741Z,,,,,,,,,,,RMCFMT028705,XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3FW4CAAKHYW1FP4NE5B0WCG,,,,,RMCFMT028706,4067896086118,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-22T14:02:48.880882Z,,,,,,,,,,,RMCFMT028706,2XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3FW4CAAC20Z0YM9M9K104X7,,,,,RMCFMT028707,4067896081656,,,,,,,,,,TRUE,TRUE,,,,,,2024-05-22T14:02:48.881100Z,,,,,,,,,,,RMCFMT028707,3XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01HXCX7A1924RQ0Z1XA1HW0EEF,,Tenant product,/tenant-product,,234234,,EUR,STANDARD,,111.00,,,,,,TRUE,TRUE,PHYSICAL,TRUE,NEVER,NEVER,FALSE,2024-05-08T04:00:00Z,,TRUE,TRUE,FALSE,,,,0,,,,,,,,,,,,,,,FALSE,,,3,5,,,FALSE,,,,,,,,,,,,,,,,,,,ADIDAS,,,,,,,,,,/tenant-product-es,,,,/tenant-product-en,,,,,,,,,,,,,,,/tenant-product-fr,,,,,,,,,,,,,,,,/tenant-product-ko,,,,,,,,,,,,,,,,,/tenant-product-de,,,,,,,,/tenant-product-ar,,/tenant-product-zh,,,/tenant-product-it,,,,,,,,,,,,,,,,,,,,,,,,,,/tenant-product-ja,,,,,,,,,,,,,,,,,,,,,,/tenant-product-pt,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01J7CD30CXVDFB1YBQW22Q1EW1,,Ballspielkurs Donnerstag,/ballspielkurs-donnerstag,,,,EUR,MERCHANDISING_PRODUCT,,0.00,,,,,,TRUE,TRUE,NONE,TRUE,NEVER,NEVER,FALSE,2024-09-09T04:00:00Z,,TRUE,TRUE,FALSE,,,,0,,,,,,,,,,,,,,,FALSE,,,,,,,FALSE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PRODUCT,01J3FWDM6WYDEF1HWFR17P01Y9,,adidas Mens Training TTW Shorts Black,/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black,"<p>Created for top-level football, these adidas Condivo 22 training shorts are designed to keep you comfortable while you move. Moisture-wicking AEROREADY and mesh 3-Stripes team up so you stay focused through every session. Zip pockets give you somewhere to store your valuables while you concentrate on hitting your goals.</p>
+<p><strong>Details:</strong></p><ul>
+<li>Regular fit</li>
+<li>Elastic waist with drawcord</li>
+<li>100% recycled polyester interlock</li>
+</ul>",RMCFMP013201,4065424492585,EUR,VARIANT_BASED,,45.00,35.00,13.55,Real Madrid Pantalón Corto Hombre Entrenamiento TTW Negro adidas,,,TRUE,TRUE,PHYSICAL,TRUE,ADD_TO_CART,SUBMIT_ORDER,FALSE,2024-04-05T22:43:07.767Z,,TRUE,TRUE,FALSE,,,adidasnov22|Black|Clothing|Men|Pants|Training|TTW 23,0,,,RMCFMP0132,label::Size;type::SIZE;attributeName::Size;,,,,,,,FALSE,,,01HTR6W4VQ211H11WDFVQT1TF9,FALSE,,,,,,,FALSE,,,Personalize - Shorts,Referenced,,,,,,,,,,,,,0.22,KILOGRAMS,ADIDAS,,,RM_SHORTS,,,,,,,/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black-es,,,,/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black-en,,,,,,,,,,,黑色 TTW 男式训练短裤adidas,,,,/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black-fr,"<p>Construídos para jogos de futebol de alto nível, estes calções adidas Condivo 22 foram concebidos para o deixar mover-se livremente em campo. O tecido respirável AEROREADY e o tecido de malha de 3 bandas proporcionam ventilação para que se possa concentrar no seu jogo. Os bolsos com fecho de correr permitem-lhe transportar os seus bens essenciais com segurança e segurança.</p>
+<p><strong>Detalhes:</strong></p>
+<ul>
+<li>Corte normal</li>
+<li>Cintura elástica com cordão</li>
+<li>Interlock, 100% poliéster reciclado</li>
+</ul>",,,Shorts de Formação Masculina TTW Preto adidas,,,,,,"<p>Creado para disputar partidos de fútbol de alto nivel, este pantalón corto adidas Condivo 22 se ha diseñado para que puedas moverte con total libertad en el terreno de juego. El tejido transpirable AEROREADY y las 3 bandas de malla favorecen la ventilación para que solo te concentres en jugar. Los bolsillos con cremallera te permiten llevar tus objetos imprescindibles de forma segura.</p>
+<p><strong>Detalles:</strong></p>
+<ul>
+<li>Corte clásico</li>
+<li>Cintura elástica con cordón</li>
+<li>Interlock 100% poliéster reciclado</li>
+</ul>",,,,,,/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black-ko,,,,,,,,,,"<p>Conçu pour les matchs de football de haut niveau, ce short adidas Condivo 22 est conçu pour vous permettre de bouger librement sur le terrain. Le tissu respirant AEROREADY et le tissu en maille 3-Stripes assurent la ventilation pour que vous puissiez vous concentrer sur votre jeu. Les poches à fermeture éclair vous permettent de transporter vos objets essentiels en toute sécurité.</p>
+<p><strong>Détails :</strong></p>
+<ul>
+<li>Coupe standard.</li>
+<li>Taille élastique à cordon de serrage.</li>
+<li>Interlock 100 % polyester recyclé.</li>
+</ul>",,,,,,,/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black-de,,Short pour homme Entraînement TTW Noir adidas,,,,,,/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black-ar,,/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black-zh,,"<p>수준 높은 축구 경기를 위해 디자인된 이 반바지 adidas 콘디보 22는 경기장에서 자유롭게 움직일 수 있도록 설계되었습니다. 통기성이 뛰어난 에어로레이디 원단과 3-스트라이프 메시 원단이 통기성을 제공하여 경기에 집중할 수 있도록 도와줍니다. 지퍼 포켓이 있어 필수품을 안전하고 안전하게 휴대할 수 있습니다.</p>
+<p><strong>제품 세부사항:</strong></p>
+<ul>
+<li>레귤러 핏</li>
+<li>신축성 있는 허리에 조임끈</li>
+<li>재활용 폴리에스터 인터록 100%</li>
+</ul>",/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black-it,,,,,,,,,"<p>Diese Shorts adidas Condivo 22 wurden für Fußballspiele auf hohem Niveau entwickelt, damit du dich auf dem Spielfeld frei bewegen kannst. Atmungsaktives AEROREADY-Material und 3-Streifen-Mesh-Gewebe sorgen für Belüftung, damit Sie sich auf Ihr Spiel konzentrieren können. In den Reißverschlusstaschen können Sie Ihre wichtigsten Utensilien sicher und geschützt unterbringen.</p>
+<p><strong>Details:</strong></p>
+<ul>
+<li>Regulär geschnitten</li>
+<li>Kordelzug am elastischen Bund</li>
+<li>100% recycelter Polyester (Interlock)</li>
+</ul>",,,Pantalón Corto Hombre Entrenamiento TTW Negro adidas,,,,,,,,Herren-Trainingsshorts TTW Schwarz adidas,,,,,,/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black-ja,"<p>adidas Condivo 22 短裤专为高水平足球比赛而设计，让您在球场上活动自如。透气的 AEROREADY 面料和 3 条纹网眼面料可提供透气性，让您专注于比赛。拉链口袋可让您安全稳妥地携带必需品。</p>
+<p><strong>商品细节：</strong></p>
+<ul>
+<li>常规版型</li>
+<li>松紧腰部有抽绳</li>
+<li>再生聚酯纤维</li>
+</ul>",,,,남성 트레이닝 쇼츠 TTW 블랙 adidas,,,,,,,,,,"<p>ハイレベルなサッカーの試合のために作られたこのショーツadidas コンディボ22は、ピッチ上で自由に動けるようにデザインされている。通気性に優れたAEROREADY素材と3ストライプのメッシュ素材が通気性を確保し、プレーに集中できる。ジッパー付きポケットで必需品を安全かつ確実に持ち運べる。</p>
+<p><strong>ディテール：</strong></p>
+<ul>
+<li>レギュラーフィット</li>
+<li>ドローコード付きの伸縮性ウエスト</li>
+<li>ポリエステル100%（インターロック）</li>
+</ul>",,,メンズ・トレーニングショーツ TTW ブラックadidas,,,,/rmcfmp0132-real-madrid-mens-adidas-training-ttw-shorts-black-pt,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3FWDM8A1DND1FBS7RNE1BR6,,,,,RMCFMP013201,4065424492585,,,,,,,,,,TRUE,TRUE,,,,,,2024-04-05T22:43:07.909504Z,,,,,,,,,,,RMCFMP013201,XS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3FWDM8AWG0X1KS3GVTE0M2E,,,,,RMCFMP013202,4065424492578,,,,,,,,,,TRUE,TRUE,,,,,,2024-04-05T22:43:07.909629Z,,,,,,,,,,,RMCFMP013202,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3FWDM8A23SM0T79AEWN0X2Z,,,,,RMCFMP013203,4065424493179,,,,,,,,,,TRUE,TRUE,,,,,,2024-04-05T22:43:07.909687Z,,,,,,,,,,,RMCFMP013203,M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3FWDM8ACXCC022GMBVK13RK,,,,,RMCFMP013204,4065424493353,,,,,,,,,,TRUE,TRUE,,,,,,2024-04-05T22:43:07.909733Z,,,,,,,,,,,RMCFMP013204,L,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+VARIANT,01J3FWDM8A3QGS0R2FFKB61YP4,,,,,RMCFMP013205,4065424494091,,,,,,,,,,TRUE,TRUE,,,,,,2024-04-05T22:43:07.909771Z,,,,,,,,,,,RMCFMP013205,XL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

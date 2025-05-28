@@ -14,7 +14,7 @@ export class MobileNavigation {
   readonly submenuOption: Locator
   readonly langButton: Locator
   readonly langEnglishOption: Locator
-  readonly loader :Locator
+  readonly loader: Locator
 
   constructor(page: Page) {
     this.page = page
@@ -91,7 +91,7 @@ export class MobileNavigation {
     try {
       await this.loader.waitFor({ state: 'visible' })
     } catch (error) {
-      console.log('Loader not visible, continuing...')
+      console.log('Loader not visible, continuing...',error)
     }
     await this.loader.waitFor({ state: 'hidden' })
   }

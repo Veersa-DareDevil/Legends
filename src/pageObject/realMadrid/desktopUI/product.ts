@@ -72,25 +72,22 @@ export class Product {
     const porductCount = await this.productCard.count()
 
     for (let i = 0; i < porductCount; i++) {
-
-      // 1. to validate the product card content and the discounted price 
+      // 1. to validate the product card content and the discounted price
       const productPrice = await this.getProductCardContent()
-      const prices = productPrice.match(/\$(\d+\.\d+)/g);
+      const prices = productPrice.match(/\$(\d+\.\d+)/g)
       if (prices && prices.length >= 2) {
         console.log('Prices:', prices)
-        const discountedPrice = parseFloat(prices[0].substring(1));
-        const originalPrice = parseFloat(prices[1].substring(1));
-        expect(discountedPrice).toBeLessThan(originalPrice);                 // expect discounted price to be less than original price
+        const discountedPrice = parseFloat(prices[0].substring(1))
+        const originalPrice = parseFloat(prices[1].substring(1))
+        expect(discountedPrice).toBeLessThan(originalPrice) // expect discounted price to be less than original price
       }
       // 2. to vaildate the background color of the discount price tag
-      const productElement = this.productCard.nth(i).locator('[class="grid content-end"]');
-      const discountPriceElement = productElement.locator('.bg-deep-purple-300');
+      const productElement = this.productCard.nth(i).locator('[class="grid content-end"]')
+      const discountPriceElement = productElement.locator('.bg-deep-purple-300')
       const computedStyle = await discountPriceElement.evaluate((el) => {
-        return window.getComputedStyle(el).backgroundColor;
-      });
-      expect(computedStyle).toBe(productData.madristaUser.newPriceTagColor); // Deep purple color
-      
+        return window.getComputedStyle(el).backgroundColor
+      })
+      expect(computedStyle).toBe(productData.madristaUser.newPriceTagColor) // Deep purple color
     }
-
   }
 }

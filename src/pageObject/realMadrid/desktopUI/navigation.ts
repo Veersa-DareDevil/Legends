@@ -43,7 +43,7 @@ export class DesktopNavigation {
     try {
       await this.loader.waitFor({ state: 'visible' })
     } catch (error) {
-      console.log('Loader not visible, continuing...')
+      console.log('Loader not visible, continuing...',error)
     }
     await this.loader.waitFor({ state: 'hidden' })
   }

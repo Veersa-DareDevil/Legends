@@ -52,7 +52,6 @@ test.describe('Admin Portal || Orders || Fullfillment || Return Flows', () => {
     // 2) Get Order Details for Fullfillment (first order in new)
 
     const orderDetails = await orderService.getOrderDetailForFullfillment(accessToken, firstOrderId)
-    
 
     //assertions
     expect(orderDetails).toHaveProperty('id', firstOrderId)

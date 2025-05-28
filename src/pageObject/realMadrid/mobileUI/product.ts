@@ -74,24 +74,24 @@ export class Product {
   async validateMadridistaDiscountedPrice() {
     const porductCount = await this.productCard.count()
 
-    // 1. to validate the product card content and the discounted price 
+    // 1. to validate the product card content and the discounted price
     for (let i = 0; i < porductCount; i++) {
       const productPrice = await this.getProductCardContent()
-      const prices = productPrice.match(/\$(\d+\.\d+)/g);
+      const prices = productPrice.match(/\$(\d+\.\d+)/g)
       if (prices && prices.length >= 2) {
         console.log('Prices:', prices)
-        const discountedPrice = parseFloat(prices[0].substring(1));
-        const originalPrice = parseFloat(prices[1].substring(1));
-        expect(discountedPrice).toBeLessThan(originalPrice);  // expect discounted price to be less than original price
+        const discountedPrice = parseFloat(prices[0].substring(1))
+        const originalPrice = parseFloat(prices[1].substring(1))
+        expect(discountedPrice).toBeLessThan(originalPrice) // expect discounted price to be less than original price
       }
 
       // 2. to validate the product card background color to be purple
-      const productElement = this.productCard.nth(i).locator('[class="grid content-end"]');
-      const discountPriceElement = productElement.locator('.bg-deep-purple-300');
+      const productElement = this.productCard.nth(i).locator('[class="grid content-end"]')
+      const discountPriceElement = productElement.locator('.bg-deep-purple-300')
       const computedStyle = await discountPriceElement.evaluate((el) => {
-        return window.getComputedStyle(el).backgroundColor;
-      });
-      expect(computedStyle).toBe('rgb(222, 229, 253)'); // expect purple color
+        return window.getComputedStyle(el).backgroundColor
+      })
+      expect(computedStyle).toBe('rgb(222, 229, 253)') // expect purple color
     }
   }
 }

@@ -91,7 +91,7 @@ export class MobileNavigation {
     try {
       await this.loader.waitFor({ state: 'visible' })
     } catch (error) {
-      console.log('Loader not visible, continuing...',error)
+      console.log('Loader not visible, continuing...', error)
     }
     await this.loader.waitFor({ state: 'hidden' })
   }

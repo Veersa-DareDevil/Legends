@@ -8,10 +8,23 @@
       "address1": "१२३ मुख्य मार्ग",
       "address2": "अपार्टमेंट ४बी",
       "city": "मुंबई",
-      "state/province/region": "महाराष्ट्र",
+      "state": "महाराष्ट्र",
     "postcode": "𑄝𑄧𑄘𑄮"
     },
     "warnMsg":"Please only use Western characters."
 
+  },
+  "validData": {
+    "userDetails": {
+      "fullName": "Sandeep Shah",
+      "email": "Sandeep@example.com",
+      "phone": "9876543210",
+      "country": "United States",
+      "address1": "123 Main St",
+      "address2": "Apt 4B",
+      "city": "New",
+      "state": "California",
+      "postcode": "90001"
+    } 
   }
 }

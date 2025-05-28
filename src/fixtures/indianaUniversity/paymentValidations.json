@@ -1,0 +1,8 @@
+{
+    "cardDetails":{
+        "cardName":"Test Card",
+        "cardNumber":"4242 4242 4242 4242",
+        "expiryDate":"12/34",
+        "cvv":"123" 
+    }
+}

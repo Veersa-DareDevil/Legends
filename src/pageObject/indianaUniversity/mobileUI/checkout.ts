@@ -13,8 +13,16 @@ export class CheckoutPage {
   readonly cityInput: Locator
   readonly postalCodeInput: Locator
   readonly checkOutButton: Locator
+  readonly countryDropdown: Locator
+  readonly stateDropdown: Locator
   readonly cookieCloseBtn: Locator
   readonly warningMessage: Locator
+  readonly continueShippingButton: Locator
+  readonly addressConfirmButton: Locator
+  readonly cartPanel: Locator
+  //readonly continueShoppingButton: Locator
+  readonly shipmentLoader: Locator
+  readonly continueToPaymentButton: Locator
 
   constructor(page: Page) {
     this.page = page
@@ -25,10 +33,20 @@ export class CheckoutPage {
     this.address1Input = page.locator('input[name="addressLine1"]')
     this.address2Input = page.locator('input[name="addressLine2"]')
     this.cityInput = page.locator('input[name="city"]')
+    this.countryDropdown = page.locator('[id="react-select-2-input"]')
+    this.stateDropdown = this.page.getByText('State/Province/Region', { exact: true })
     this.postalCodeInput = page.locator('input[name="postalCode"]')
     this.checkOutButton = page.locator('[data-testid="checkoutbutton"]')
     this.warningMessage = page.getByText(checkoutData.nonWesternCharacters.warnMsg)
     this.cookieCloseBtn = page.locator('[id="onetrust-close-btn-container"]')
+    this.continueShippingButton = page.getByRole('button', { name: 'Continue to shipping' })
+    this.addressConfirmButton = page.getByRole('button', { name: 'Confirm' })
+    this.cartPanel = page.locator('div.sticky.top-0.z-50.lg\\:hidden') //no unique locator need to chnage in future
+    //this.expandBag = page.getByRole('paragraph').filter({ hasText: 'Your bag' })
+    //this.closeTaxMsg = page.getByRole('button', { name: 'close' })
+    this.shipmentLoader = page.getByRole('img', { name: 'loading spinner' })
+
+    this.continueToPaymentButton = page.getByRole('button', { name: 'Continue to payment' })
   }
   async fillYourDetails(
     name: string,
@@ -47,6 +65,18 @@ export class CheckoutPage {
     await this.cityInput.fill(city)
     await this.postalCodeInput.fill(postalCode)
     await this.postalCodeInput.press('Enter')
+  }
+
+  async selectCountry(country: string) {
+    await this.countryDropdown.click()
+    const option = this.page.getByRole('option', { name: country })
+    await option.click()
+  }
+
+  async selectState(state: string) {
+    await this.stateDropdown.click({ force: true })
+    const option = this.page.getByRole('option', { name: state })
+    await option.click()
   }
 
   async validateWesternCharWarningMsg() {
@@ -68,5 +98,54 @@ export class CheckoutPage {
     await this.commonFunctions.handleCookieBanner()
     await this.checkOutButton.click()
     await this.page.waitForTimeout(2000)
+  }
+
+  // to wait for shipment loader to be visible and hidden
+  // async waitForShipmentLoader() {
+  //   await this.shipmentLoader.waitFor({ state: 'visible' })
+  //   await this.shipmentLoader.waitFor({ state: 'hidden' })
+  // }
+
+  async continueToShipping() {
+    await this.continueShippingButton.click()
+    try {
+      await this.page.waitForSelector('text=Confirm Your Address', {
+        state: 'visible',
+        timeout: 5000,
+      })
+      await this.page.waitForTimeout(2000)
+      await this.addressConfirmButton.click()
+    } catch (error) {
+      console.log(error)
+    }
+    await this.page.waitForSelector('text=Confirm Your Address', { state: 'hidden' })
+  }
+
+  // async validateAndSelectShipments() {
+  //   const optionLists = this.page.locator('ol.flex.flex-col.gap-4')
+  //   await expect(optionLists).toHaveCount(2)
+
+  //   for (let i = 0; i < 2; ++i) {
+  //     const list = optionLists.nth(i)
+
+  //     // Pick the label text we want
+  //     const label = i === 0 ? 'Express' : 'Standard'
+
+  //     // 1. Assert the button with that label exists
+  //     const optionButton = list.getByRole('button', { name: new RegExp(`^${label}\\b`) })
+  //     await expect(optionButton).toBeVisible()
+
+  //     // 2. Click the button to select that shipping method
+  //     await optionButton.click()
+
+  //     // 3. Verify the radio inside is checked
+  //     const radio = optionButton.getByRole('radio')
+  //     // await expect(radio).toBeChecked();
+  //   }
+  // }
+
+  // to click on continue to payment section
+  async continueToPayment() {
+    await this.continueToPaymentButton.click()
   }
 }

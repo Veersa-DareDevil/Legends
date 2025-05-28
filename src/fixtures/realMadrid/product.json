@@ -1,4 +1,7 @@
 {
     "product1Url": "https://real-madrid.uat.storefront.legendscommerce.io/en-es/product/mens-home-authentic-shirt-24-25-white-indy",
-    "product2Search":"Home Socks 23/24 White"
+    "product2Search":"Home Socks 23/24 White",
+    "madristaUser":{
+        "newPriceTagColor":"rgb(222, 229, 253)"
+    }
 }

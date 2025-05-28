@@ -14,6 +14,7 @@ export class MobileNavigation {
   readonly submenuOption: Locator
   readonly langButton: Locator
   readonly langEnglishOption: Locator
+  readonly loader: Locator
 
   constructor(page: Page) {
     this.page = page
@@ -36,6 +37,7 @@ export class MobileNavigation {
       .locator('[data-testid="navigation-bar"]')
       .getByRole('button', { name: 'EN | USD' })
     this.langEnglishOption = this.page.getByRole('button', { name: 'UK Flag English' })
+    this.loader = page.getByRole('img', { name: 'loading spinner' })
   }
 
   async openMenu() {
@@ -83,5 +85,14 @@ export class MobileNavigation {
     await this.page.waitForLoadState('networkidle')
     await this.page.waitForTimeout(1000)
     await this.langEnglishOption.click()
+  }
+
+  async waitForLoaderToDisappear() {
+    try {
+      await this.loader.waitFor({ state: 'visible' })
+    } catch (error) {
+      console.log('Loader not visible, continuing...',error)
+    }
+    await this.loader.waitFor({ state: 'hidden' })
   }
 }

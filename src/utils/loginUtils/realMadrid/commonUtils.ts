@@ -112,6 +112,7 @@ export class CommonUtils {
         timeout: 5000,
       })
     } catch (error) {
+      console.log(error)
       return
     }
     await this.rejectAllCookiesButton.click()

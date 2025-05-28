@@ -43,10 +43,9 @@ export class CheckoutPage {
     this.cartPanel = page.locator('div.sticky.top-0.z-50.lg\\:hidden') //no unique locator need to chnage in future
     this.expandBag = page.getByRole('paragraph').filter({ hasText: 'Your bag' })
     this.closeTaxMsg = page.getByRole('button', { name: 'close' })
-        this.shipmentLoader = page.getByRole('img', { name: 'loading spinner' })
+    this.shipmentLoader = page.getByRole('img', { name: 'loading spinner' })
 
     this.continueToPaymentButton = page.getByRole('button', { name: 'Continue to payment' })
-
   }
   async fillYourDetails(
     name: string,
@@ -110,6 +109,7 @@ export class CheckoutPage {
       await this.page.waitForTimeout(2000)
       await this.addressConfirmButton.click()
     } catch (error) {
+      console.log(error)
       // Address confirmation dialog not found, proceeding with flow
     }
     await this.page.waitForSelector('text=Confirm Your Address', { state: 'hidden' })
@@ -155,10 +155,6 @@ export class CheckoutPage {
 
       // 2. Click the button to select that shipping method
       await optionButton.click()
-
-      // 3. Verify the radio inside is checked
-      const radio = optionButton.getByRole('radio')
-      // await expect(radio).toBeChecked();
     }
   }
 

@@ -70,6 +70,63 @@ export class OrderService {
     return response.json()
   }
 
+  async createReturn(accessToken: string, payload: object, orderId: string) {
+    const url = `${ADMIN_ENDPOINTS.returnOperations}/${orderId}/create-return`
+
+    const response = await ApiRequest.postRequest(
+      this.apiRequest,
+      url,
+      ApiHeaders.getAuthJsonHeaders(accessToken, this.contextHeader),
+      payload,
+    )
+
+    expect(response.status()).toBe(200)
+    if (!response.ok()) {
+      const text = await response.text()
+      throw new Error(`Create return failed (${response.status()}): ${text}`)
+    }
+
+    return response.json()
+  }
+
+  async cancelReturn(accessToken: string, payload: object, orderId: string) {
+    const url = `${ADMIN_ENDPOINTS.returnOperations}/${orderId}/cancel-return`
+
+    const response = await ApiRequest.postRequest(
+      this.apiRequest,
+      url,
+      ApiHeaders.getAuthJsonHeaders(accessToken, this.contextHeader),
+      payload,
+    )
+
+    expect(response.status()).toBe(200)
+    if (!response.ok()) {
+      const text = await response.text()
+      throw new Error(`Cancel return failed (${response.status()}): ${text}`)
+    }
+
+    return response.json()
+  }
+
+  async confirmReturn(accessToken: string, payload: object, orderId: string) {
+    const url = `${ADMIN_ENDPOINTS.returnOperations}/${orderId}/confirm-return`
+
+    const response = await ApiRequest.postRequest(
+      this.apiRequest,
+      url,
+      ApiHeaders.getAuthJsonHeaders(accessToken, this.contextHeader),
+      payload,
+    )
+
+    expect(response.status()).toBe(200)
+    if (!response.ok()) {
+      const text = await response.text()
+      throw new Error(`Confirm return failed (${response.status()}): ${text}`)
+    }
+
+    return response.json()
+  }
+
   async changeContextHeader(newContextHeader: string) {
     this.contextHeader = newContextHeader
   }

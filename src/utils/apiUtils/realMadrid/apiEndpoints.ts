@@ -13,6 +13,7 @@ export const ADMIN_ENDPOINTS = {
   search: `${ADMIN_BASE_URL}/api/search`,
   orderFullfillment: `${ADMIN_BASE_URL}/api/order-operations/fulfillment-operations/status-change`,
   fullfillmentView: `${ADMIN_BASE_URL}/api/order/fulfillment-views`,
+  returnOperations: `${ADMIN_BASE_URL}/api/order/return-operations`,
 
   // Add other admin endpoints here as needed
 }

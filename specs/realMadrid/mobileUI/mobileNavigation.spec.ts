@@ -1,4 +1,4 @@
-import { test, expect, Page } from '@playwright/test'
+import { test } from '@playwright/test'
 import { CommonUtils } from '@src/utils/loginUtils/realMadrid/commonUtils'
 import { MobileNavigation } from '@src/pageObject/realMadrid/mobileUI/navigation'
 
@@ -12,7 +12,7 @@ test.describe('488177 - Mobile Navigation', () => {
     await commonFunction.goToPortal('storefront')
   })
 
-  test('should valiadte all navigation options', async ({ page }) => {
+  test('should valiadte all navigation options', async ({}) => {
     await navigation.openMenu()
     await navigation.verifyAllNavOptions()
   })

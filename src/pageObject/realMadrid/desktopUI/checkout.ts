@@ -110,6 +110,7 @@ export class CheckoutPage {
       await this.page.waitForTimeout(2000)
       await this.addressConfirmButton.click()
     } catch (error) {
+      console.log(error)
       // Address confirmation dialog not found, proceeding with flow
     }
     await this.page.waitForSelector('text=Confirm Your Address', { state: 'hidden' })
@@ -145,7 +146,7 @@ export class CheckoutPage {
       await optionButton.click()
 
       // 3. Verify the radio inside is checked
-      const radio = optionButton.getByRole('radio')
+      // const radio = optionButton.getByRole('radio')
       // await expect(radio).toBeChecked();
     }
   }

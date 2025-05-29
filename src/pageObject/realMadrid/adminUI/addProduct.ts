@@ -70,7 +70,7 @@ export class AddProduct {
 
   async generateProductName() {
     const randomNumber = Math.floor(Math.random() * 10000)
-    const productName = `Test Product ${randomNumber}`
+    const productName = `Test Product Number ${randomNumber}`
     return productName
   }
 }

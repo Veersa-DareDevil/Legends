@@ -1,36 +1,48 @@
-import { Page, Locator } from '@playwright/test'
+import { Page, Locator, expect } from '@playwright/test'
 import { CommonUtils } from '@src/utils/loginUtils/indianaUniversity/commonUtils'
 
 export class Product {
-  readonly page
+  readonly page: Page
   private commonFunction: CommonUtils
   readonly productCard: Locator
-  //readonly navTraining: Locator
-  readonly rejectAllCookiesButton: Locator
+  readonly cookieCloseBtn: Locator
   readonly productCardLink: Locator
   readonly addToCartButton: Locator
+  readonly personalisedName: Locator
+  readonly personalisedNumber: Locator
 
   constructor(page: Page) {
     this.page = page
     this.commonFunction = new CommonUtils(page)
-    //this.navTraining = page.getByTestId('navigation-bar').getByRole('link', { name: 'Training' })
     this.productCard = page.locator('[data-testid="productcard"]')
     this.productCardLink = page.locator('[data-testid="productcardlink"]')
     this.addToCartButton = page.locator('[data-testid="addtocartbutton"]')
-    this.rejectAllCookiesButton = page.locator('#onetrust-reject-all-handler') //it is the unique locator
+    this.cookieCloseBtn = page.locator('[id="onetrust-close-btn-container"]')
+    this.personalisedName = page.locator(
+      'input[name="\\30 1J91Q84W4DH241G7BS50D0M32__addOn\\:01J91QR60F97E50TMSDYR51QYC__product\\:01J91QN00XMKFF03E81M7R04H5__productOption\\:name"]',
+    )
+    this.personalisedNumber = page.locator(
+      'input[name="\\30 1J91Q84W4DH241G7BS50D0M32__addOn\\:01J91QR60F97E50TMSDYR51QYC__product\\:01J91QN00XMKFF03E81M7R04H5__productOption\\:number"]',
+    )
   }
-  // future use
-  // async selectNavTraining() {
-  //   await Promise.all([
-  //     this.navTraining.click(),
-  //     this.page.waitForSelector('#category-description', { state: 'visible' }),
-  //   ])
-  // }
+
   async selectProduct() {
-    await this.page.getByTestId('productcardlink').first().click()
+    await this.productCardLink.first().click()
   }
 
   async addToCart() {
-    await this.page.getByRole('button', { name: 'Add to Cart' }).click()
+    await this.addToCartButton.click()
+  }
+
+  async personalisedProduct(name: string, number: string) {
+    await this.commonFunction.handleCookieBanner()
+    await this.personalisedName.fill(name)
+    await this.personalisedNumber.fill(number)
+
+    const namePreview = this.page.locator('svg textPath').filter({ hasText: name.toUpperCase() })
+    await expect(namePreview).toHaveText(name.toUpperCase())
+
+    const numberPreview = this.page.locator('svg textPath').filter({ hasText: number })
+    await expect(numberPreview).toHaveText(number)
   }
 }

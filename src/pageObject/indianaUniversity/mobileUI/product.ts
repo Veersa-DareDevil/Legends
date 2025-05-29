@@ -1,4 +1,4 @@
-import { Page, Locator } from '@playwright/test'
+import { Page, Locator, expect } from '@playwright/test'
 import { CommonUtils } from '@src/utils/loginUtils/indianaUniversity/commonUtils'
 import checkoutData from '@src/fixtures/indianaUniversity/checkoutValidation.json'
 
@@ -14,11 +14,12 @@ export class Product {
   readonly phoneNumberInput: Locator
   readonly warningMessage: Locator
   readonly shipAddress: Locator
+  readonly personalisedName: Locator
+  readonly personalisedNumber: Locator
 
   constructor(page: Page) {
     this.page = page
     this.commonFunction = new CommonUtils(page)
-    //this.navTaining = page.getByTestId('navigation-bar').getByRole('button', { name: 'Training' })
     this.optionMensTraining = page.getByRole('link', { name: 'Mens', exact: true })
     this.productCard = page.locator('[data-testid="productcard"]')
     this.productCardLink = page.locator('[data-testid="productcardlink"]')
@@ -27,20 +28,31 @@ export class Product {
     this.phoneNumberInput = page.locator('[name="phoneNumber"]')
     this.warningMessage = page.getByText(checkoutData.nonWesternCharacters.warnMsg)
     this.shipAddress = page.getByText('Shipping Address') //
+    this.personalisedName = page.locator(
+      'input[name="\\30 1J91Q84W4DH241G7BS50D0M32__addOn\\:01J91QR60F97E50TMSDYR51QYC__product\\:01J91QN00XMKFF03E81M7R04H5__productOption\\:name"]',
+    ) //no unique locator
+    this.personalisedNumber = page.locator(
+      'input[name="\\30 1J91Q84W4DH241G7BS50D0M32__addOn\\:01J91QR60F97E50TMSDYR51QYC__product\\:01J91QN00XMKFF03E81M7R04H5__productOption\\:number"]',
+    ) // no unique locator
   }
-  //future use
-  //navigation should be enabled when website is completed
-  // async selectNavTraining() {
-  //   await this.navTaining.click()
-  //   //await this.commonFunction.rejectAllCookies()
-  //   await this.optionMensTraining.click({ force: true })
-  //   await this.page.waitForSelector('#category-description', { state: 'visible' })
-  // }
 
   async selectProduct() {
     await this.page.getByTestId('productcardlink').first().click()
   }
   async addToCart() {
     await this.page.getByRole('button', { name: 'Add to Cart' }).click()
+  }
+
+  async personalisedProduct(name: string, number: string) {
+    await this.commonFunction.handleCookieBanner()
+    await this.personalisedName.fill(name)
+    await this.personalisedNumber.fill(number)
+
+    const previewGroup = this.page.getByRole('group', { name: '3 / 3' })
+    const namePreview = previewGroup.locator('textPath').filter({ hasText: name.toUpperCase() })
+    await expect(namePreview).toHaveText(name.toUpperCase())
+
+    const numberPreview = previewGroup.locator('textPath').filter({ hasText: number })
+    await expect(numberPreview).toHaveText(number)
   }
 }

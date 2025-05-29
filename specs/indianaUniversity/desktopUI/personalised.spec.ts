@@ -16,7 +16,6 @@ test.describe('Personalised Product Scenario', () => {
 
   test('518685 - Personalizing a Basketball Jersey', async ({ page }) => {
     const { personaliseProduct, Name, Number } = productData.personalisedProduct
-
     await page.goto(personaliseProduct)
     await product.personalisedProduct(Name, Number)
   })

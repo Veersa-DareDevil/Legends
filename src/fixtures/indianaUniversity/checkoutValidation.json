@@ -26,5 +26,6 @@
       "state": "California",
       "postcode": "90001"
     } 
-  }
+  },
+  "emailNotify": "Sandeep@example.com"
 }

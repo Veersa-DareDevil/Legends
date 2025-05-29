@@ -23,6 +23,7 @@ export class CheckoutPage {
   //readonly continueShoppingButton: Locator
   readonly shipmentLoader: Locator
   readonly continueToPaymentButton: Locator
+  readonly outOfStockButtonSmall: Locator
 
   constructor(page: Page) {
     this.page = page
@@ -45,8 +46,8 @@ export class CheckoutPage {
     //this.expandBag = page.getByRole('paragraph').filter({ hasText: 'Your bag' })
     //this.closeTaxMsg = page.getByRole('button', { name: 'close' })
     this.shipmentLoader = page.getByRole('img', { name: 'loading spinner' })
-
     this.continueToPaymentButton = page.getByRole('button', { name: 'Continue to payment' })
+    this.outOfStockButtonSmall = page.locator('button').filter({ hasText: 'Small' })
   }
   async fillYourDetails(
     name: string,
@@ -147,5 +148,17 @@ export class CheckoutPage {
   // to click on continue to payment section
   async continueToPayment() {
     await this.continueToPaymentButton.click()
+  }
+
+  // select out of stock product
+  async getOutOfStockProduct() {
+    await this.commonFunctions.handleCookieBanner()
+    await this.outOfStockButtonSmall.click()
+  }
+
+  //send email to get notified
+  async getEmailNotification(email: string) {
+    await this.page.getByRole('textbox', { name: 'Email' }).fill(email)
+    await this.page.getByRole('button', { name: 'Submit' }).click()
   }
 }

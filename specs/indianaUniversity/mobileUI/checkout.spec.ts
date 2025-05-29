@@ -1,10 +1,11 @@
 import { CommonUtils } from '@src/utils/loginUtils/indianaUniversity/commonUtils'
-import { test } from '@playwright/test'
+import { test, expect } from '@playwright/test'
 import { Product } from '@src/pageObject/indianaUniversity/mobileUI/product'
 import { Payment } from '@src/pageObject/indianaUniversity/mobileUI/payment'
 import { CheckoutPage } from '@src/pageObject/indianaUniversity/mobileUI/checkout'
 import testData from '@src/fixtures/indianaUniversity/checkoutValidation.json'
 import cardDetails from '@src/fixtures/indianaUniversity/paymentValidations.json'
+import productData from '@src/fixtures/indianaUniversity/product.json'
 
 let login: CommonUtils
 let product: Product
@@ -69,5 +70,12 @@ test.describe('Checkout Scenarios', () => {
       cardDetails.cardDetails.cvv,
     )
     await payment.submitPayment()
+  })
+
+  test('872885 - Add to Cart Validation on Out of Stock Product', async ({ page }) => {
+    await page.goto(productData.outOfStockProduct)
+    await page.locator('button').filter({ hasText: 'Small' }).click()
+    await expect(page.getByText('Item out of stock')).toBeVisible()
+    await checkout.getEmailNotification(testData.emailNotify)
   })
 })

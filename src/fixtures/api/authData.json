@@ -4,5 +4,7 @@
   "categoryScope": "CATEGORY",
   "orderFulfillmentViewScope":"ORDER_FULFILLMENT_VIEW",
   "orderFulfillmentScope":"ORDER_FULFILLMENT",
-  "returnScope":"RETURN_AUTHORIZATION"
+  "returnScope":"RETURN_AUTHORIZATION",
+  "catalogId": "01HTNGGZ5K87AW0PYCMBBM0DDP", 
+        "sandboxId": "01J54A3Q2R2C7V02337EFP16Z4"
 }

@@ -23,8 +23,8 @@ test.describe('Admin Portal || Catalog || Products', () => {
     const productService = new ProductService(
       request,
       JSON.stringify({
-        catalogId: '01HTNGGZ5K87AW0PYCMBBM0DDP', // Need to update to Dynamically fetched from token
-        sandboxId: '01J54A3Q2R2C7V02337EFP16Z4', // Need to Update to Dynamically fetched from token
+        catalogId: authData.catalogId, // Need to update to Dynamically fetched from token
+        sandboxId: authData.sandboxId, // Need to Update to Dynamically fetched from token
         tenantId: tokenResponse.tenant_id,
         applicationId: tokenResponse.application_ids[0],
         customerContextId: tokenResponse.customer_context_ids[0],
@@ -38,7 +38,6 @@ test.describe('Admin Portal || Catalog || Products', () => {
 
     // 5) Create the product
     const created = await productService.createProduct(accessToken, payload)
-    console.log('Created product ID:', created.id)
 
     // 6) Assertions
     expect(created).toHaveProperty('id')

@@ -1084,12 +1084,33 @@ export class ProductPayloads {
     }
   }
 
-  static getCreateVariant() {
+  static getCreateVariant(optionValue: string) {
+    const varientNumber = Math.floor(Math.random() * 1000)
     return {
-      optionValues: { Color: 'Blue' },
+      optionValues: { size: optionValue },
       salePrice: { amount: 5000 },
       discountable: true,
-      sku: 'test222',
+      sku: `Varient SKU ${varientNumber}`,
+    }
+  }
+
+  static getOptionsPayload() {
+    const varientOptionNumber = Math.floor(Math.random() * 1000)
+    return {
+      attributeChoice: {
+        allowedValues: [
+          { value: 'S', label: 'Small', displayOrder: 0 },
+          { value: 'M', label: 'Medium', displayOrder: 1 },
+          { value: 'L', label: 'Large', displayOrder: 2 },
+        ],
+        attributeName: 'size',
+        type: 'SIZE',
+      },
+      bundlingEnabled: false,
+      type: 'VARIANT_DISTINGUISHING',
+      label: `Varient Option ${varientOptionNumber}`,
+      id: '01JWARNKBQVD7V94BWENWTSDA3',
+      displayOrder: 0,
     }
   }
 }

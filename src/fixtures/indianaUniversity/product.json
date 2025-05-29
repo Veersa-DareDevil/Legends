@@ -1,7 +1,7 @@
 {
-  "outOfStockProduct": "https://iuhoosiers.uat.storefront.legendscommerce.io/product/iuiums0104-indiana-hoosiers-adidas-script-indiana-grey-sweatshirt",
+  "outOfStockProduct": "product/iuiums0104-indiana-hoosiers-adidas-script-indiana-grey-sweatshirt",
   "personalisedProduct": {
-    "personaliseProduct": "https://iuhoosiers.uat.storefront.legendscommerce.io/product/iuipmz0003-indiana-hoosiers-adidas-personalized-crimson-basketball-jersey",
+    "personaliseProduct": "product/iuipmz0003-indiana-hoosiers-adidas-personalized-crimson-basketball-jersey",
     "Name": "testProduct",
     "Number": "10"
   }

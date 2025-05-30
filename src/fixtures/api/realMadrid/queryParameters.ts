@@ -13,4 +13,12 @@ export const QueryParams = {
     localeOverrideForFacetAndSortLabels: 'en-US',
     size: '50',
   }),
+
+  searchProductStorefront:{
+      page: '0',
+      primaryAndSecondaryOnly: 'true',
+      query: 'jersey',
+      size: '12',
+      type: 'PRODUCT',
+    }
 }

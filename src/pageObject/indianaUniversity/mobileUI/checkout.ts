@@ -101,13 +101,7 @@ export class CheckoutPage {
     await this.page.waitForTimeout(2000)
   }
 
-  // to wait for shipment loader to be visible and hidden
-  // async waitForShipmentLoader() {
-  //   await this.shipmentLoader.waitFor({ state: 'visible' })
-  //   await this.shipmentLoader.waitFor({ state: 'hidden' })
-  // }
-
-  async continueToShipping() {
+   async continueToShipping() {
     await this.continueShippingButton.click()
     try {
       await this.page.waitForSelector('text=Confirm Your Address', {
@@ -122,29 +116,6 @@ export class CheckoutPage {
     await this.page.waitForSelector('text=Confirm Your Address', { state: 'hidden' })
   }
 
-  // async validateAndSelectShipments() {
-  //   const optionLists = this.page.locator('ol.flex.flex-col.gap-4')
-  //   await expect(optionLists).toHaveCount(2)
-
-  //   for (let i = 0; i < 2; ++i) {
-  //     const list = optionLists.nth(i)
-
-  //     // Pick the label text we want
-  //     const label = i === 0 ? 'Express' : 'Standard'
-
-  //     // 1. Assert the button with that label exists
-  //     const optionButton = list.getByRole('button', { name: new RegExp(`^${label}\\b`) })
-  //     await expect(optionButton).toBeVisible()
-
-  //     // 2. Click the button to select that shipping method
-  //     await optionButton.click()
-
-  //     // 3. Verify the radio inside is checked
-  //     const radio = optionButton.getByRole('radio')
-  //     // await expect(radio).toBeChecked();
-  //   }
-  // }
-
   // to click on continue to payment section
   async continueToPayment() {
     await this.continueToPaymentButton.click()
@@ -155,10 +126,17 @@ export class CheckoutPage {
     await this.commonFunctions.handleCookieBanner()
     await this.outOfStockButtonSmall.click()
   }
-
+  
   //send email to get notified
   async getEmailNotification(email: string) {
-    await this.page.getByRole('textbox', { name: 'Email' }).fill(email)
-    await this.page.getByRole('button', { name: 'Submit' }).click()
-  }
+  const emailInput = this.page.getByRole('textbox', { name: 'Email' })
+  const submitButton = this.page.getByRole('button', { name: 'Submit' })
+
+  // Wait until the email input appears and is visible
+  await emailInput.waitFor({ state: 'visible' })
+  await emailInput.fill(email)
+
+  await submitButton.waitFor({ state: 'visible' })
+  await submitButton.click()
+}
 }

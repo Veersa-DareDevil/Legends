@@ -64,9 +64,11 @@ export class MobileNavigation {
     // Check each nav option is visible and clickable
     for (const nav of navOptions) {
       await nav.waitFor({ state: 'visible' })
+      await this.page.waitForTimeout(200) // Wait for any animations to complete
       await nav.click()
       // Wait for the submenu/dialog to appear and click on 'Mens' or 'Fashion'
       await this.submenuOption.first().waitFor({ state: 'visible' })
+      await this.page.waitForTimeout(200) // Wait for any animations to complete
       await this.submenuOption.first().click()
       // Wait for the page to load and check for 404
       await this.page.waitForLoadState('networkidle')
@@ -75,7 +77,6 @@ export class MobileNavigation {
         throw new Error('404 page displayed after navigation')
       }
       // Reopen the menu for the next iteration
-      await this.closeMenu()
       await this.openMenu()
     }
   }

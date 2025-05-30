@@ -57,11 +57,9 @@ test.describe('Checkout Scenarios', () => {
     await page.waitForTimeout(1000)
     await checkout.selectState(testData.validData.userDetails.state)
     await checkout.continueToShipping()
-
     await page.waitForSelector('text=Continue to payment', { state: 'visible' })
     await page.waitForTimeout(1000)
     await checkout.continueToPayment()
-
     await payment.paymentButton.waitFor({ state: 'visible' })
     await payment.fillPaymentDetails(
       cardDetails.cardDetails.cardName,
@@ -73,8 +71,10 @@ test.describe('Checkout Scenarios', () => {
   })
 
   test('872885 - Add to Cart Validation on Out of Stock Product', async ({ page }) => {
-    await page.goto(productData.outOfStockProduct)
-    await page.locator('button').filter({ hasText: 'Small' }).click()
+    const homePageUrl = await page.url()
+    const fullUrl=`${homePageUrl}${productData.outOfStockProduct}`
+    await page.goto(fullUrl)
+    await checkout.getOutOfStockProduct()
     await expect(page.getByText('Item out of stock')).toBeVisible()
     await checkout.getEmailNotification(testData.emailNotify)
   })

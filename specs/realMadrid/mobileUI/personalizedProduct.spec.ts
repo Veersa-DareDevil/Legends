@@ -1,6 +1,6 @@
 import { test } from '@playwright/test'
 import { CommonUtils } from '@src/utils/loginUtils/realMadrid/commonUtils'
-import { PersonalizeProduct } from '@src/pageObject/realMadrid/desktopUI/personalizeProduct'
+import { PersonalizeProduct } from '@src/pageObject/realMadrid/mobileUI/personalizeProduct'
 
 import testData from '@src/fixtures/realMadrid/personalizeProduct.json'
 

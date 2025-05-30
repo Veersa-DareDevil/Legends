@@ -3,8 +3,8 @@ export class CartPayloads {
     const timestamp = Date.now()
     return [
       {
-        productId: '01J3ZJDH5EWG3X1EYBDY170PCQ',
-        variantId: '01J3ZJDH6XVDG50AW3CNR50D1A',
+        productId: '01HTR6W3XDV22E059S7EEN1FGZ',
+        variantId: '01HTR6W3Y8W7N70RAD0GEE0WGR',
         quantity: 1,
         itemAttributeChoices: {},
         dependentCartItems: [],
@@ -12,7 +12,7 @@ export class CartPayloads {
           purchaseItemMetadata: {
             options: [
               {
-                id: '01JD9R4AX9818415W9X6WQ05FD',
+                id: '01HTR6W3XD5V8W00GMTWZ1008X',
                 type: 'VARIANT_DISTINGUISHING',
                 bundlingEnabled: false,
                 label: 'Size',

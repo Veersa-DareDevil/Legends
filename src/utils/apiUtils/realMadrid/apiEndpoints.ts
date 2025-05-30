@@ -5,8 +5,6 @@ export const STOREFRONT_BASE_URL = 'https://uat-real-madrid.legendscommerce.io'
 
 export const STOREFRONT_API_BASE_URL = 'https://uat-storefront-api.legendscommerce.io'
 
-export const CART_OPERATIONS_BASE_URL = 'https://storefront-api.legendscommerce.io'
-
 // Admin Portal Endpoints
 export const ADMIN_ENDPOINTS = {
   authAuthorize: `${ADMIN_BASE_URL}/auth/oauth/authorize`,
@@ -28,13 +26,13 @@ export const STOREFRONT_ENDPOINTS = {
 
   // Cart Operations endpoints
   cartBulkItems: (cartId: string) =>
-    `${CART_OPERATIONS_BASE_URL}/api/cart-operations/cart/${cartId}/bulk-items`,
+    `${STOREFRONT_API_BASE_URL}/api/cart-operations/cart/${cartId}/bulk-items`,
   cartItem: (cartId: string, cartItemId: string) =>
-    `${CART_OPERATIONS_BASE_URL}/api/cart-operations/cart/${cartId}/items/${cartItemId}`,
+    `${STOREFRONT_API_BASE_URL}/api/cart-operations/cart/${cartId}/items/${cartItemId}`,
   cartItemsBulkDelete: (cartId: string) =>
-    `${CART_OPERATIONS_BASE_URL}/api/cart-operations/cart/${cartId}/bulk-items`,
+    `${STOREFRONT_API_BASE_URL}/api/cart-operations/cart/${cartId}/bulk-items`,
   guestToken: (cartId: string) =>
-    `${CART_OPERATIONS_BASE_URL}/api/cart-operations/checkout/${cartId}/guest-token`,
+    `${STOREFRONT_API_BASE_URL}/api/cart-operations/checkout/${cartId}/guest-token`,
 
   // Add other storefront endpoints here as needed
 }

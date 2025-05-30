@@ -31,7 +31,7 @@ export class CartService {
   /** Add item to cart */
   async addItemToCart(cartVersion: number, guestToken: string) {
     const payload = CartPayloads.generateCartPayload()
-    
+
     const response = await ApiRequest.postRequest(
       this.apiRequest,
       STOREFRONT_ENDPOINTS.cartBulkItems(authData.storefront.cartId),

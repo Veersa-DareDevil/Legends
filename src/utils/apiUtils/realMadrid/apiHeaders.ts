@@ -1,4 +1,5 @@
 import authData from '@src/fixtures/api/authData.json'
+
 /**
  * Generates common headers for API requests.
  */
@@ -82,9 +83,9 @@ export class ApiHeaders {
         'CACHE_use-backend-pricing-normalization': true,
       }),
     }
-}
+  }
 
-static getGuestTokenHeaders(cartVersion: number) {
+  static getGuestTokenHeaders(cartVersion: number) {
     return {
       accept: 'application/json',
       'content-type': 'application/json',

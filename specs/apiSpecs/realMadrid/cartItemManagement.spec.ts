@@ -3,7 +3,6 @@ import { CartService } from '@src/pageObject/api/realMadrid/cartService'
 import authData from '@src/fixtures/api/authData.json'
 import { CartItem, CartResponse, SearchResponse } from '@src/fixtures/api/realMadrid/cartPayload'
 
-
 test.describe('Storefront || Cart Operations', () => {
   let cartService: CartService
 

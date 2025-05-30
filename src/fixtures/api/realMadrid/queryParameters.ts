@@ -14,11 +14,11 @@ export const QueryParams = {
     size: '50',
   }),
 
-  searchProductStorefront:{
-      page: '0',
-      primaryAndSecondaryOnly: 'true',
-      query: 'jersey',
-      size: '12',
-      type: 'PRODUCT',
-    }
+  searchProductStorefront: {
+    page: '0',
+    primaryAndSecondaryOnly: 'true',
+    query: 'jersey',
+    size: '12',
+    type: 'PRODUCT',
+  },
 }

@@ -44,6 +44,13 @@ export class CartPayloads {
       quantity,
     }
   }
+
+  static generateAddressPayloadOne(){
+
+  }
+  static generateAddressPayloadTwo(){
+    
+  }
 }
 
 // Interfaces

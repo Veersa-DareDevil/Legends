@@ -2,9 +2,16 @@
   "clientId": "real-madridAdmin",
   "productScope": "PRODUCT",
   "categoryScope": "CATEGORY",
-  "orderFulfillmentViewScope":"ORDER_FULFILLMENT_VIEW",
-  "orderFulfillmentScope":"ORDER_FULFILLMENT",
-  "returnScope":"RETURN_AUTHORIZATION",
-  "catalogId": "01HTNGGZ5K87AW0PYCMBBM0DDP", 
-        "sandboxId": "01J54A3Q2R2C7V02337EFP16Z4"
+  "orderFulfillmentViewScope": "ORDER_FULFILLMENT_VIEW",
+  "orderFulfillmentScope": "ORDER_FULFILLMENT",
+  "returnScope": "RETURN_AUTHORIZATION",
+  "catalogId": "01HTNGGZ5K87AW0PYCMBBM0DDP",
+  "sandboxId": "01J54A3Q2R2C7V02337EFP16Z4",
+  "storefront": {
+    "cartId": "01JWEXMV6YH2AKFNSS24DHMFNC",
+    "applicationToken": "real_madrid",
+    "defaultVersion": 2,
+    "defaultGuestToken": "01JTFEGHRVV4651PWBG1Y61C8T"
+  }
+
 }

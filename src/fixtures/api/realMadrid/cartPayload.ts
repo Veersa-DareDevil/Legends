@@ -78,6 +78,24 @@ export class CartPayloads {
     }
   }
 
+  static generateAddressPayloadThree() {
+  return {
+    companyName: '',
+    fullName: 'snehil',
+    addressLine1: 'No. 100 Nanjing Road',
+    addressLine2: '',
+    city: 'Shanghai',
+    postalCode: '200001',
+    stateProvinceRegion: 'Shanghai',
+    phonePrimary: {
+      phoneNumber: '+86 13800138000',
+    },
+    country: 'CN',
+    id: 'address-china',
+  }
+}
+
+
   static getSelectFulfillmentPayload() {
     return {
       serviceLevel: 'EXPRESS',

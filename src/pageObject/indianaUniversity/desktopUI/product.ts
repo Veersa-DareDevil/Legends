@@ -20,10 +20,10 @@ export class Product {
     this.cookieCloseBtn = page.locator('[id="onetrust-close-btn-container"]')
     this.personalisedName = page.locator(
       'input[name="\\30 1J91Q84W4DH241G7BS50D0M32__addOn\\:01J91QR60F97E50TMSDYR51QYC__product\\:01J91QN00XMKFF03E81M7R04H5__productOption\\:name"]',
-    )
+    ) //no unique locator
     this.personalisedNumber = page.locator(
       'input[name="\\30 1J91Q84W4DH241G7BS50D0M32__addOn\\:01J91QR60F97E50TMSDYR51QYC__product\\:01J91QN00XMKFF03E81M7R04H5__productOption\\:number"]',
-    )
+    ) //no unique locator
   }
 
   async selectProduct() {

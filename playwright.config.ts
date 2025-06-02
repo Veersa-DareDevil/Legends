@@ -10,7 +10,7 @@ export default defineConfig({
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
-  workers: 2,
+  workers: process.env.CI ? 4 : 0,
   reporter: [['html'], ['./custom-reporter.ts']],
 
   use: {

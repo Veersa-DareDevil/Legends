@@ -97,7 +97,6 @@ export class CheckoutPage {
 
   async selectCheckout() {
     await this.commonFunctions.handleCookieBanner()
-    await this.checkOutButton.waitFor({ state: 'visible' })
     await this.checkOutButton.click()
     await this.page.waitForTimeout(2000)
   }

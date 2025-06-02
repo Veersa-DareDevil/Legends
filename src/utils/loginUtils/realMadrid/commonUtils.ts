@@ -109,7 +109,7 @@ export class CommonUtils {
     try {
       await this.page.waitForSelector('#onetrust-reject-all-handler', {
         state: 'visible',
-        timeout: 5000,
+        timeout: 2000,
       })
     } catch (error) {
       console.log(error)

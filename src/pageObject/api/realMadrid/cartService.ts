@@ -110,4 +110,42 @@ export class CartService {
 
     return token
   }
+
+  async updateShippingAddress(
+  cartId: string,
+  guestToken: string,
+  cartVersion: number,
+  payload: any,
+) {
+  const queryParams = new URLSearchParams({ unifyFulfillmentGroups: 'false' })
+
+  const response = await ApiRequest.patchRequest(
+    this.apiRequest,
+    `${STOREFRONT_ENDPOINTS.updateShippingAddress(cartId)}?${queryParams}`,
+    ApiHeaders.getCartOperationHeaders(guestToken, cartVersion),
+    payload,
+  )
+
+  if (!response.ok()) {
+    const text = await response.text()
+    throw new Error(`Update Shipping Address failed (${response.status()}): ${text}`)
+  }
+
+  return response.json()
+}
+
+async getFulfillmentOptions(cartId: string) {
+  const response = await ApiRequest.getRequest(
+    this.apiRequest,
+    STOREFRONT_ENDPOINTS.fulfillmentOptions(cartId),
+    ApiHeaders.getStorefrontHeaders(),
+  )
+
+  if (!response.ok()) {
+    const text = await response.text()
+    throw new Error(`Fulfillment Options API failed (${response.status()}): ${text}`)
+  }
+
+  return response.json()
+}
 }

@@ -45,69 +45,64 @@ export class CartPayloads {
     }
   }
 
-  static generateAddressPayloadOne(){
+  static generateAddressPayloadOne() {
     return {
-  "companyName": "",
-  "fullName": "snehil",
-  "addressLine1": "123 Market Street",
-  "addressLine2": "Apt 5B",
-  "city": "San Francisco",
-  "postalCode": "94103",
-  "stateProvinceRegion": "CA",
-  "phonePrimary": {
-    "phoneNumber": "+1 415 555 1234"
-  },
-  "country": "US",
-  "id": "address-usa"
-}
-  }
-  static generateAddressPayloadTwo(){
-    return {
-  "companyName": "",
-  "fullName": "snehil",
-  "addressLine1": "Berliner Straße 21",
-  "addressLine2": "",
-  "city": "Frankfurt",
-  "postalCode": "60311",
-  "stateProvinceRegion": "Hesse",
-  "phonePrimary": {
-    "phoneNumber": "+49 160 1234567"
-  },
-  "country": "DE",
-  "id": "address-germany"
-}
- }
-
- static getSelectFulfillmentPayload(){
-  return {
-    "serviceLevel": "EXPRESS",
-    "fulfillmentType": "SHIP",
-    "description": "EXPRESS",
-    "calculatorIds": [
-        "01HPFCT3GC5J170BNW70ZQ1WSA"
-    ],
-    "bandFields": [
-        "WEIGHT"
-    ],
-    "fulfillmentReference": "01JWFWGQ3HAHFX9WFRSBN3EZ4T",
-    "estimatedMinDaysToFulfill": 6,
-    "estimatedMaxDaysToFulfill": 8,
-    "price": {
-        "amount": 34,
-        "currency": "EUR"
-    },
-    "taxable": true,
-    "taxCode": null,
-    "additionalAttributes": {},
-    "fulfillmentEstimate": {
-        "estimatedAt": "2025-05-30T06:01:55.780693227Z",
-        "orderByRequirement": "2025-05-30T09:00:00Z",
-        "arrivesByEstimate": "2025-06-07T09:00:00Z"
+      companyName: '',
+      fullName: 'snehil',
+      addressLine1: '123 Market Street',
+      addressLine2: 'Apt 5B',
+      city: 'San Francisco',
+      postalCode: '94103',
+      stateProvinceRegion: 'CA',
+      phonePrimary: {
+        phoneNumber: '+1 415 555 1234',
+      },
+      country: 'US',
+      id: 'address-usa',
     }
-}
- }
-}
+  }
+  static generateAddressPayloadTwo() {
+    return {
+      companyName: '',
+      fullName: 'snehil',
+      addressLine1: 'Berliner Straße 21',
+      addressLine2: '',
+      city: 'Frankfurt',
+      postalCode: '60311',
+      stateProvinceRegion: 'Hesse',
+      phonePrimary: {
+        phoneNumber: '+49 160 1234567',
+      },
+      country: 'DE',
+      id: 'address-germany',
+    }
+  }
 
+  static getSelectFulfillmentPayload() {
+    return {
+      serviceLevel: 'EXPRESS',
+      fulfillmentType: 'SHIP',
+      description: 'EXPRESS',
+      calculatorIds: ['01HPFCT3GC5J170BNW70ZQ1WSA'],
+      bandFields: ['WEIGHT'],
+      fulfillmentReference: '01JWFWGQ3HAHFX9WFRSBN3EZ4T',
+      estimatedMinDaysToFulfill: 6,
+      estimatedMaxDaysToFulfill: 8,
+      price: {
+        amount: 34,
+        currency: 'EUR',
+      },
+      taxable: true,
+      taxCode: null,
+      additionalAttributes: {},
+      fulfillmentEstimate: {
+        estimatedAt: '2025-05-30T06:01:55.780693227Z',
+        orderByRequirement: '2025-05-30T09:00:00Z',
+        arrivesByEstimate: '2025-06-07T09:00:00Z',
+      },
+    }
+  }
+}
 
 // Interfaces
 export interface CartItem {

@@ -45,8 +45,8 @@ export class ApiHeaders {
     const headers: Record<string, string> = {
       accept: 'application/json',
       'accept-language': 'en-US',
-      origin: process.env.RM_STOREFRONT_URL!!,
-      referer: `${process.env.RM_STOREFRONT_URL!!}`,
+      origin: process.env.RM_STOREFRONT_URL!,
+      referer: `${process.env.RM_STOREFRONT_URL!}`,
       'x-application-token': authData.storefront.applicationToken,
       'x-context-request': JSON.stringify({ customerSegmentIds: [] }),
       'x-feature-flags': JSON.stringify({

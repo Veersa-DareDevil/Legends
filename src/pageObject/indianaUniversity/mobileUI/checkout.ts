@@ -101,7 +101,7 @@ export class CheckoutPage {
     await this.page.waitForTimeout(2000)
   }
 
-   async continueToShipping() {
+  async continueToShipping() {
     await this.continueShippingButton.click()
     try {
       await this.page.waitForSelector('text=Confirm Your Address', {
@@ -126,17 +126,17 @@ export class CheckoutPage {
     await this.commonFunctions.handleCookieBanner()
     await this.outOfStockButtonSmall.click()
   }
-  
+
   //send email to get notified
   async getEmailNotification(email: string) {
-  const emailInput = this.page.getByRole('textbox', { name: 'Email' })
-  const submitButton = this.page.getByRole('button', { name: 'Submit' })
+    const emailInput = this.page.getByRole('textbox', { name: 'Email' })
+    const submitButton = this.page.getByRole('button', { name: 'Submit' })
 
-  // Wait until the email input appears and is visible
-  await emailInput.waitFor({ state: 'visible' })
-  await emailInput.fill(email)
+    // Wait until the email input appears and is visible
+    await emailInput.waitFor({ state: 'visible' })
+    await emailInput.fill(email)
 
-  await submitButton.waitFor({ state: 'visible' })
-  await submitButton.click()
-}
+    await submitButton.waitFor({ state: 'visible' })
+    await submitButton.click()
+  }
 }

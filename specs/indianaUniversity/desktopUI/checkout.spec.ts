@@ -75,7 +75,7 @@ test.describe('Checkout Scenario', () => {
 
   test('872885 - Add to Cart Validation on Out of Stock Product', async ({ page }) => {
     const homePageUrl = await page.url()
-    const fullUrl=`${homePageUrl}${productData.outOfStockProduct}`
+    const fullUrl = `${homePageUrl}${productData.outOfStockProduct}`
     await page.goto(fullUrl)
     await checkout.getOutOfStockProduct()
     await expect(page.getByText('Item out of stock')).toBeVisible()

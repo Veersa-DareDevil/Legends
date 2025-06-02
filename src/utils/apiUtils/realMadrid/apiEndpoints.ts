@@ -36,8 +36,9 @@ export const STOREFRONT_ENDPOINTS = {
   updateShippingAddress: (cartId: string) =>
     `${STOREFRONT_API_BASE_URL}/api/cart-operations/checkout/${cartId}/update-shipping-address`,
   fulfillmentOptions: (cartId: string) =>
-  `${STOREFRONT_API_BASE_URL}/api/cart-operations/checkout/${cartId}/fulfillment-options`
-
+    `${STOREFRONT_API_BASE_URL}/api/cart-operations/checkout/${cartId}/fulfillment-options`,
+  selectFulfillmentOption: (cartId: string) =>
+    `${STOREFRONT_API_BASE_URL}/api/cart-operations/fulfillment-options/${cartId}/select`,
 
   // Add other storefront endpoints here as needed
 }

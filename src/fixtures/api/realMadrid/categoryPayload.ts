@@ -1,6 +1,6 @@
 export class CategoryPayloads {
   static createCategory() {
-    const categoryNumber = Math.floor(Math.random() * 1000)
+    const categoryNumber = Math.floor(Math.random() * 10000000)
     return {
       attributes: { promotedProductView: { value: true } },
       optionTargeters: ['Product 1', 'Product 2', 'Product 3'],
@@ -13,8 +13,8 @@ export class CategoryPayloads {
       url: `/test-category-${categoryNumber}`,
       legendsCategoryId: categoryNumber,
       subTheme: 'New Theme',
-      directoryNameOverride: `Test Category ${categoryNumber}`,
-      breadcrumbLabel: `Test Category ${categoryNumber}`,
+      directoryNameOverride: `Test Category N ${categoryNumber}`,
+      breadcrumbLabel: `Test Category N ${categoryNumber}`,
       activeEndDate: '2025-12-18T18:30:00.000Z',
     }
   }

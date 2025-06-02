@@ -1,6 +1,6 @@
 export class ProductPayloads {
   static getCreateProduct() {
-    const productNumber = Math.floor(Math.random() * 1000)
+    const productNumber = Math.floor(Math.random() * 10000000)
     return {
       reviewsSummary: {
         numberOfReviews: 0,
@@ -315,9 +315,9 @@ export class ProductPayloads {
       inventoryCheckStrategy: 'NEVER',
       inventoryReservationStrategy: 'NEVER',
       individuallySold: true,
-      name: `Test Product ${productNumber}`,
-      uri: `/test-product-${productNumber}`,
-      sku: `Test Product SKU ${productNumber}`,
+      name: `Test Product N ${productNumber}`,
+      uri: `/test-product-n-${productNumber}`,
+      sku: `Test Product SKU N ${productNumber}`,
     }
   }
 
@@ -1085,17 +1085,17 @@ export class ProductPayloads {
   }
 
   static getCreateVariant(optionValue: string) {
-    const varientNumber = Math.floor(Math.random() * 1000)
+    const varientNumber = Math.floor(Math.random() * 10000000)
     return {
       optionValues: { size: optionValue },
       salePrice: { amount: 5000 },
       discountable: true,
-      sku: `Varient SKU ${varientNumber}`,
+      sku: `Varient SKU N ${varientNumber}`,
     }
   }
 
   static getOptionsPayload() {
-    const varientOptionNumber = Math.floor(Math.random() * 1000)
+    const varientOptionNumber = Math.floor(Math.random() * 10000000)
     return {
       attributeChoice: {
         allowedValues: [
@@ -1108,7 +1108,7 @@ export class ProductPayloads {
       },
       bundlingEnabled: false,
       type: 'VARIANT_DISTINGUISHING',
-      label: `Varient Option ${varientOptionNumber}`,
+      label: `Varient Option N ${varientOptionNumber}`,
       id: '01JWARNKBQVD7V94BWENWTSDA3',
       displayOrder: 0,
     }

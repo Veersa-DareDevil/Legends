@@ -182,7 +182,7 @@ test.describe('Storefront || Cart Operations', () => {
 
     const firstOptionPriceTwo = fulfillmentDataTwo[0].price.amount
 
-    // check the price changes with change in fulfillment options
+    // check that fulfillment details change with changes in shipping address 
 
     expect(firstOptionPrice).not.toBe(firstOptionPriceTwo)
 

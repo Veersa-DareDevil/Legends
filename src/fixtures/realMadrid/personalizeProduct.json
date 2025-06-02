@@ -1,3 +1,16 @@
 {
-    "productName":"rmcfmz0128-real-madrid-mens-home-authentic-long-sleeve-shirt-23-24-white"
+    "productName":"rmcfmz0128-real-madrid-mens-home-authentic-long-sleeve-shirt-23-24-white",
+    "errorMessage":{
+        "selectPlayerOption":"Select a player is required.",
+        "personalizeOption": "Name or Number are required"
+    },
+    "personalizeOptions":{
+        "option1":{
+            "name": "Abhinav",
+            "number": "04"
+        },
+        "option2":{
+            "playerName": "Carvajal"
+        }
+    }
 }

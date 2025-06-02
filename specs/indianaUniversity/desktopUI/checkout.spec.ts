@@ -78,7 +78,45 @@ test.describe('Checkout Scenario', () => {
     const fullUrl=`${homePageUrl}${productData.outOfStockProduct}`
     await page.goto(fullUrl)
     await checkout.getOutOfStockProduct()
-    await expect(page.getByText('Item out of stock')).toBeVisible()
+    const outOfStockMessage = page.getByText('Item out of stock', { exact: true })
+    await expect(outOfStockMessage).toBeVisible({ timeout: 10000 }) 
     await checkout.getEmailNotification(testData.emailNotify)
+  })
+
+  test('new - Purchasing a Personalized Product', async ({ page }) => {
+    const { personaliseProduct, Name, Number } = productData.personalisedProduct
+    const homePageUrl = await page.url()
+    const fullUrl=`${homePageUrl}${personaliseProduct}`
+    await page.goto(fullUrl)
+    await product.personalisedProduct(Name, Number)
+    const productName = await product.selectProduct()
+    console.log('Product Name:', productName)
+    await product.addToCart()
+    await checkout.selectCheckout()
+    await checkout.fillYourDetails(
+      testData.validData.userDetails.fullName,
+      testData.validData.userDetails.email,
+      testData.validData.userDetails.phone,
+      testData.validData.userDetails.address1,
+      testData.validData.userDetails.address2,
+      testData.validData.userDetails.city,
+      testData.validData.userDetails.postcode,
+    )
+    await checkout.selectCountry(testData.validData.userDetails.country)
+    await page.waitForTimeout(1000)
+    await checkout.selectState(testData.validData.userDetails.state)
+    await checkout.continueToShipping()
+    await page.waitForSelector('text=Continue to payment', { state: 'visible' })
+    await page.waitForTimeout(1000)
+    await checkout.continueToPayment()
+    await payment.paymentButton.waitFor({ state: 'visible' })
+    await payment.fillPaymentDetails(
+      cardDetails.cardDetails.cardName,
+      cardDetails.cardDetails.cardNumber,
+      cardDetails.cardDetails.expiryDate,
+      cardDetails.cardDetails.cvv,
+    )
+    await payment.submitPayment()
+    //await checkout.waitForShipmentLoader()
   })
 })

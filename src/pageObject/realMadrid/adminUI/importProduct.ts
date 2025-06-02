@@ -10,6 +10,7 @@ export class ImportProduct {
   readonly fileInput: Locator
   readonly importFormSubmit: Locator
   readonly importSendBoxdrpdown: Locator
+  readonly getOption:Locator
 
   constructor(page: Page) {
     this.page = page
@@ -20,6 +21,7 @@ export class ImportProduct {
     this.importTypeoption = page.locator('#react-select-3-option-0')
     this.importFormSubmit = page.getByRole('button', { name: 'Button' })
     this.importSendBoxdrpdown = page.locator('.Select__input-container')
+    this.getOption = page.locator('.Select__option')
   }
 
   async importProduct(fileName?: string) {
@@ -28,7 +30,7 @@ export class ImportProduct {
     await this.importTypeDropdown.click()
     await this.importTypeoption.click()
     await this.importSendBoxdrpdown.nth(3).click()
-    await this.selectOption(importData.importCatalogOption)
+    await this.getOption.first().click()  // need to update
     await this.importSendBoxdrpdown.nth(5).click()
     await this.selectOption(importData.importSandboxOption)
     await this.importFileName.fill(fileName as string)

@@ -101,6 +101,7 @@ test.describe('Storefront || Cart Operations', () => {
     // Step 4 : fetch payment options
 
     
+    
 
     // Update cart version
     cartVersion = shippingResponse?.cartItems[0]?.cartVersion || cartVersion

@@ -41,11 +41,11 @@ export class PersonalizeProduct {
         expect(await this.personalizeOption.isVisible()).toBeTruthy()
     }
 
-    async verfyPersonalizeOptionPreviewPrice(locator: Locator, shouldHavePrice: boolean) {
-        const priceRegex = /\$\d+(\.\d{1,2})?/
-        const label = await locator.innerText();
-        const hasPrice = priceRegex.test(label);
-        console.log(label)
+  async verfyPersonalizeOptionPreviewPrice(locator: Locator, shouldHavePrice: boolean) {
+    const priceRegex = /\$\d+(\.\d{1,2})?/
+    const label = await locator.innerText()
+    const hasPrice = priceRegex.test(label)
+    console.log(label)
 
         if (shouldHavePrice) {
             expect(hasPrice).toBeTruthy()

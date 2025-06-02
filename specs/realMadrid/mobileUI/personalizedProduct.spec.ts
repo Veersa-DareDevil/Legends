@@ -17,7 +17,7 @@ test.describe('Personalization Product', () => {
     await commonFunction.goToPortal('storefront')
   })
 
-  test('640373 - Personalization Pricing', async ({page}) => {
+  test('640373 - Personalization Pricing', async ({ page }) => {
     const productUrl = `${process.env.RM_STOREFRONT_URL}product/${testData.productName}`
     await page.goto(productUrl)
     await page.waitForLoadState('load')

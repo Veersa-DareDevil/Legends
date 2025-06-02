@@ -17,7 +17,7 @@ test.describe('Personalised Product Scenario', () => {
   test('518685 - Personalizing a Basketball Jersey', async ({ page }) => {
     const { personaliseProduct, Name, Number } = productData.personalisedProduct
     const homePageUrl = await page.url()
-    const fullUrl=`${homePageUrl}${personaliseProduct}`
+    const fullUrl = `${homePageUrl}${personaliseProduct}`
     await page.goto(fullUrl)
     await product.personalisedProduct(Name, Number)
   })

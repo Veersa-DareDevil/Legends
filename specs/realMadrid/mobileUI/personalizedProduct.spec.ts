@@ -23,8 +23,14 @@ test.describe('Personalization Product', () => {
     await page.waitForLoadState('load')
     await commonFunction.rejectAllCookies()
     await personalizeProduct.verifyPersonalizationOptions()
-    await personalizeProduct.verfyPersonalizeOptionPreviewPrice(personalizeProduct.selectPlayerOption, true)
-    await personalizeProduct.verfyPersonalizeOptionPreviewPrice(personalizeProduct.personalizeOption, true)
+    await personalizeProduct.verfyPersonalizeOptionPreviewPrice(
+      personalizeProduct.selectPlayerOption,
+      true,
+    )
+    await personalizeProduct.verfyPersonalizeOptionPreviewPrice(
+      personalizeProduct.personalizeOption,
+      true,
+    )
   })
 
   test('518685 - Personalizing a Jersey', async ({ page }) => {
@@ -35,16 +41,17 @@ test.describe('Personalization Product', () => {
     // Verify the personalization options are available
     await personalizeProduct.verifyPersonalizationOptions()
 
-   // 1. verify the select player option for Personalization
+    // 1. verify the select player option for Personalization
     await personalizeProduct.verifySelectPlayerPersonalizeOption()
     await checkout.continueShoppingButton.click()
     await personalizeProduct.validateSelectPlayerPreviewMatchesInput()
-    
-   // 2. verify the personalize option for Personalization
+
+    // 2. verify the personalize option for Personalization
     await personalizeProduct.verifyPersonalizeOption()
     await checkout.continueShoppingButton.click()
-    await personalizeProduct.validatePersonalizePreviewMatchesInput(testData.personalizeOptions.option1.name, testData.personalizeOptions.option1.number)
-
-      
+    await personalizeProduct.validatePersonalizePreviewMatchesInput(
+      testData.personalizeOptions.option1.name,
+      testData.personalizeOptions.option1.number,
+    )
   })
 })

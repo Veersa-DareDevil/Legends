@@ -20,10 +20,10 @@ export class Product {
     this.cookieCloseBtn = page.locator('[id="onetrust-close-btn-container"]')
     this.personalisedName = page.locator(
       'input[name="\\30 1J91Q84W4DH241G7BS50D0M32__addOn\\:01J91QR60F97E50TMSDYR51QYC__product\\:01J91QN00XMKFF03E81M7R04H5__productOption\\:name"]',
-    )
+    ) //no unique locator
     this.personalisedNumber = page.locator(
       'input[name="\\30 1J91Q84W4DH241G7BS50D0M32__addOn\\:01J91QR60F97E50TMSDYR51QYC__product\\:01J91QN00XMKFF03E81M7R04H5__productOption\\:number"]',
-    )
+    ) //no unique locator
   }
 
   async selectProduct() {
@@ -35,16 +35,16 @@ export class Product {
   }
 
   async personalisedProduct(name: string, number: string) {
-  await this.commonFunction.handleCookieBanner()
-  await this.personalisedName.fill(name)
-  await this.personalisedNumber.fill(number)
-  const namePreview = this.page.locator('svg textPath').filter({
-    hasText: name.toUpperCase()
-  })
-  await expect(namePreview.first()).toHaveText(name.toUpperCase(), { timeout: 10000 })
-  const numberPreview = this.page.locator('svg textPath').filter({
-    hasText: number
-  })
-  await expect(numberPreview.first()).toHaveText(number, { timeout: 10000 })
-}
+    await this.commonFunction.handleCookieBanner()
+    await this.personalisedName.fill(name)
+    await this.personalisedNumber.fill(number)
+    const namePreview = this.page.locator('svg textPath').filter({
+      hasText: name.toUpperCase(),
+    })
+    await expect(namePreview.first()).toHaveText(name.toUpperCase(), { timeout: 10000 })
+    const numberPreview = this.page.locator('svg textPath').filter({
+      hasText: number,
+    })
+    await expect(numberPreview.first()).toHaveText(number, { timeout: 10000 })
+  }
 }

@@ -44,16 +44,16 @@ export class Product {
   }
 
   async personalisedProduct(name: string, number: string) {
-  await this.commonFunction.handleCookieBanner()
-  await this.personalisedName.fill(name)
-  await this.personalisedNumber.fill(number)
-  const namePreview = this.page.locator('svg textPath').filter({
-    hasText: name.toUpperCase()
-  })
-  await expect(namePreview.first()).toHaveText(name.toUpperCase(), { timeout: 10000 })
-  const numberPreview = this.page.locator('svg textPath').filter({
-    hasText: number
-  })
-  await expect(numberPreview.first()).toHaveText(number, { timeout: 10000 })
-}
+    await this.commonFunction.handleCookieBanner()
+    await this.personalisedName.fill(name)
+    await this.personalisedNumber.fill(number)
+    const namePreview = this.page.locator('svg textPath').filter({
+      hasText: name.toUpperCase(),
+    })
+    await expect(namePreview.first()).toHaveText(name.toUpperCase(), { timeout: 10000 })
+    const numberPreview = this.page.locator('svg textPath').filter({
+      hasText: number,
+    })
+    await expect(numberPreview.first()).toHaveText(number, { timeout: 10000 })
+  }
 }

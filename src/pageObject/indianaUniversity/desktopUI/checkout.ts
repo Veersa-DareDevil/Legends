@@ -131,9 +131,9 @@ export class CheckoutPage {
 
   // send email to get notified
   async getEmailNotification(email: string) {
-  const emailInput = this.page.getByRole('textbox', { name: 'Email' })
-  await emailInput.waitFor({ state: 'attached' }) // ensures element is attached
-  await emailInput.fill(email)
-  await this.page.getByRole('button', { name: 'Submit' }).click()
-}
+    const emailInput = this.page.getByRole('textbox', { name: 'Email' })
+    await emailInput.waitFor({ state: 'attached' }) // ensures element is attached
+    await emailInput.fill(email)
+    await this.page.getByRole('button', { name: 'Submit' }).click()
+  }
 }

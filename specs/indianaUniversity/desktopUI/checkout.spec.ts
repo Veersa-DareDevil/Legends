@@ -75,18 +75,18 @@ test.describe('Checkout Scenario', () => {
 
   test('872885 - Add to Cart Validation on Out of Stock Product', async ({ page }) => {
     const homePageUrl = await page.url()
-    const fullUrl=`${homePageUrl}${productData.outOfStockProduct}`
+    const fullUrl = `${homePageUrl}${productData.outOfStockProduct}`
     await page.goto(fullUrl)
     await checkout.getOutOfStockProduct()
     const outOfStockMessage = page.getByText('Item out of stock', { exact: true })
-    await expect(outOfStockMessage).toBeVisible({ timeout: 10000 }) 
+    await expect(outOfStockMessage).toBeVisible({ timeout: 10000 })
     await checkout.getEmailNotification(testData.emailNotify)
   })
 
   test('new - Purchasing a Personalized Product', async ({ page }) => {
     const { personaliseProduct, Name, Number } = productData.personalisedProduct
     const homePageUrl = await page.url()
-    const fullUrl=`${homePageUrl}${personaliseProduct}`
+    const fullUrl = `${homePageUrl}${personaliseProduct}`
     await page.goto(fullUrl)
     await product.personalisedProduct(Name, Number)
     const productName = await product.selectProduct()

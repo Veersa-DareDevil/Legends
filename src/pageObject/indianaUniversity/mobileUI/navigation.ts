@@ -22,15 +22,19 @@ export class MobileNavigation {
     })
     this.getUsername = this.page.locator('div.bg-deep-purple-700 p:first-of-type')
     this.navAddidas = page.getByTestId('navigation-bar').getByRole('button', { name: 'Addidas' })
-    this.navAthletics = page.getByTestId('navigation-bar').getByRole('button', { name: 'Atheletics' })
+    this.navAthletics = page
+      .getByTestId('navigation-bar')
+      .getByRole('button', { name: 'Atheletics' })
     this.navApparel = page.getByTestId('navigation-bar').getByRole('button', { name: 'Apparel' })
     this.sale = page.getByTestId('navigation-bar').getByRole('button', { name: 'Sale' })
 
-    this.navTraining = page.getByTestId('navigation-bar').getByRole('button', { name: 'Training' })
-    //this.navShopByPlayer = page
+    this.navTraining = page
+      .getByTestId('navigation-bar')
+      .getByRole('button', { name: 'Training' })
+      //this.navShopByPlayer = page
       .getByTestId('navigation-bar')
       .getByRole('button', { name: 'Shop By Player' })
-    //this.navAccessories = page
+      //this.navAccessories = page
       .getByTestId('navigation-bar')
       .getByRole('button', { name: 'Accessories' })
     this.submenuOption = this.page.getByRole('link', { name: /Mens|Fashion/i })
@@ -56,7 +60,7 @@ export class MobileNavigation {
       this.navAddidas,
       this.navAthletics,
       this.navApparel,
-      this.sale
+      this.sale,
     ]
     // Check each nav option is visible and clickable
     for (const nav of navOptions) {
@@ -77,7 +81,6 @@ export class MobileNavigation {
       await this.openMenu()
     }
   }
-
 
   async waitForLoaderToDisappear() {
     try {

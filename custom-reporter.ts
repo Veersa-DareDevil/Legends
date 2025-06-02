@@ -49,20 +49,20 @@ class CustomReporter implements Reporter {
   }
   private startTime = Date.now()
 
-  constructor(private config: FullConfig) { }
+  constructor(private config: FullConfig) {}
 
   private getDisplayName(name: string): string {
     const nameMap: { [key: string]: string } = {
-      'realMadrid': 'Real Madrid',
-      'indianaUniversity': 'Indiana University',
-      'desktopUI': 'Desktop UI',
-      'mobileUI': 'Mobile UI',
-      'apiSpecs': 'API',
-      'adminUI': 'Admin UI',
-      'Unknown': 'Unknown Website',
-      'Other': 'Other Category',
-    };
-    return nameMap[name] || name; // Return mapped name or original if not found
+      realMadrid: 'Real Madrid',
+      indianaUniversity: 'Indiana University',
+      desktopUI: 'Desktop UI',
+      mobileUI: 'Mobile UI',
+      apiSpecs: 'API',
+      adminUI: 'Admin UI',
+      Unknown: 'Unknown Website',
+      Other: 'Other Category',
+    }
+    return nameMap[name] || name // Return mapped name or original if not found
   }
 
   onBegin(config: FullConfig, suite: Suite): void {
@@ -72,7 +72,7 @@ class CustomReporter implements Reporter {
   onTestEnd(testCase: TestCase, result: TestResult): void {
     const filePath = testCase.location.file
     const pathParts = filePath.split(path.sep) // Use path.sep for OS compatibility
-    const specsIndex = pathParts.findIndex(part => part === 'specs')
+    const specsIndex = pathParts.findIndex((part) => part === 'specs')
     let website = 'Unknown'
     let category = 'Other'
 
@@ -104,21 +104,21 @@ class CustomReporter implements Reporter {
     // Update overall stats
     this.reportData.stats.total++
     if (result.status in this.reportData.stats) {
-      ; (this.reportData.stats as any)[result.status]++
+      ;(this.reportData.stats as any)[result.status]++
     }
 
     // Update website stats
     const websiteStats = this.reportData.websiteStats[website].stats
     websiteStats.total++
     if (result.status in websiteStats) {
-      ; (websiteStats as any)[result.status]++
+      ;(websiteStats as any)[result.status]++
     }
 
     // Update category stats for the website
     const categoryStats = this.reportData.websiteStats[website].categoryStats[category]
     categoryStats.total++
     if (result.status in categoryStats) {
-      ; (categoryStats as any)[result.status]++
+      ;(categoryStats as any)[result.status]++
     }
 
     this.reportData.testResults.push({
@@ -185,8 +185,8 @@ class CustomReporter implements Reporter {
     fs.writeFileSync(reportFile, this.renderHtml())
     console.log(`Report generated at ${reportFile}`)
 
-    const jsonReportPath = path.join(reportsDir, 'custom-report.json');
-    fs.writeFileSync(jsonReportPath, JSON.stringify(this.reportData, null, 2));
+    const jsonReportPath = path.join(reportsDir, 'custom-report.json')
+    fs.writeFileSync(jsonReportPath, JSON.stringify(this.reportData, null, 2))
   }
 
   private formatTime(ms: number): string {
@@ -278,18 +278,18 @@ class CustomReporter implements Reporter {
     </div>
 
     ${websites
-      .map(
-        (website, websiteIndex) => {
-          const websiteTotal = websiteStats[website].stats.total;
-          // Only render the website section if there are tests for this website
-          if (websiteTotal === 0) {
-            return ''; // Don't render anything for this website
-          }
+      .map((website, websiteIndex) => {
+        const websiteTotal = websiteStats[website].stats.total
+        // Only render the website section if there are tests for this website
+        if (websiteTotal === 0) {
+          return '' // Don't render anything for this website
+        }
 
-          const categoriesWithTests = Object.keys(websiteStats[website].categoryStats)
-            .filter(category => websiteStats[website].categoryStats[category].total > 0);
+        const categoriesWithTests = Object.keys(websiteStats[website].categoryStats).filter(
+          (category) => websiteStats[website].categoryStats[category].total > 0,
+        )
 
-          return `
+        return `
     <div class="${websiteIndex > 0 ? 'website-separator' : ''}">
       <h2 class="text-center mb-4">${this.getDisplayName(website)}</h2>
 
@@ -321,7 +321,7 @@ class CustomReporter implements Reporter {
           <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 justify-content-center">
             ${Object.keys(websiteStats[website].categoryStats)
               .map((category) => {
-                const catStats = websiteStats[website].categoryStats[category];
+                const catStats = websiteStats[website].categoryStats[category]
                 return `
                   <div class="col">
                     <div class="card h-100 shadow">
@@ -331,16 +331,15 @@ class CustomReporter implements Reporter {
                       </div>
                     </div>
                   </div>
-                  `;
+                  `
               })
               .join('')}
           </div>
         </div>
       </div>
     </div>
-    `;
-        }
-      )
+    `
+      })
       .join('')}
 
 
@@ -383,11 +382,10 @@ class CustomReporter implements Reporter {
                   if (r.website !== previousWebsite && previousWebsite !== '') {
                     rowClass += ' website-separator'
                   } else if (r.category !== previousCategory && previousCategory !== '') {
-                     rowClass += ' category-separator'
+                    rowClass += ' category-separator'
                   }
                   previousWebsite = r.website
                   previousCategory = r.category
-
 
                   tableRowsHtml += `
                     <tr class="${rowClass}">
@@ -399,8 +397,9 @@ class CustomReporter implements Reporter {
                       <td>${r.startTime}</td>
                       <td>
                         ${r.error ? `<pre>${this.stripAnsiCodes(r.error)}</pre>` : '-'}
-                        ${r.attachments && r.attachments.length > 0
-                          ? `
+                        ${
+                          r.attachments && r.attachments.length > 0
+                            ? `
                             <div>
                               <strong>Attachments:</strong>
                               ${r.attachments
@@ -414,7 +413,7 @@ class CustomReporter implements Reporter {
                                 .join(' | ')}
                             </div>
                           `
-                          : ''
+                            : ''
                         }
                       </td>
                     </tr>
@@ -438,13 +437,12 @@ class CustomReporter implements Reporter {
     });
     // Website and Category charts
     ${websites
-      .map(
-        (website) =>
-          Object.keys(websiteStats[website].categoryStats)
-            .map((category) => {
-              const catStats = websiteStats[website].categoryStats[category];
-              if (catStats.total > 0) {
-                return `
+      .map((website) =>
+        Object.keys(websiteStats[website].categoryStats)
+          .map((category) => {
+            const catStats = websiteStats[website].categoryStats[category]
+            if (catStats.total > 0) {
+              return `
                 new Chart(document.getElementById('chart-${website}-${category}').getContext('2d'), {
                   type:'pie',
                   data:{
@@ -457,11 +455,11 @@ class CustomReporter implements Reporter {
                   },
                   options:{ responsive:true, maintainAspectRatio:false, plugins:{ legend:{position:'bottom'}, datalabels:{color:'#fff'} }}
                 });
-                `;
-              }
-              return ''; // Don't generate chart script if total is 0
-            })
-            .join('\n')
+                `
+            }
+            return '' // Don't generate chart script if total is 0
+          })
+          .join('\n'),
       )
       .join('\n')}
   </script>

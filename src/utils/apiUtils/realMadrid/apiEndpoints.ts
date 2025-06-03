@@ -41,6 +41,11 @@ export const STOREFRONT_ENDPOINTS = {
     `${STOREFRONT_API_BASE_URL}/api/cart-operations/fulfillment-options/${cartId}/select`,
   getPaymentMethodOptions: (cartId: string) =>
     `${STOREFRONT_API_BASE_URL}/api/cart-operations/checkout/${cartId}/payment-method-options`,
+  changeCurrencyLocale: `${STOREFRONT_API_BASE_URL}/api/cart-operations/cart`,
+  getCartDetails: (cartId: string) =>
+    `${STOREFRONT_API_BASE_URL}/api/cart-operations/cart/${cartId}`,
+  cartOfferCodes: (cartId: string) =>
+    `${STOREFRONT_API_BASE_URL}/api/cart-operations/cart/${cartId}/offer-codes`,
 
   // Add other storefront endpoints here as needed
 }

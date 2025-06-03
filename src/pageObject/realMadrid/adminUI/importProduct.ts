@@ -10,7 +10,7 @@ export class ImportProduct {
   readonly fileInput: Locator
   readonly importFormSubmit: Locator
   readonly importSendBoxdrpdown: Locator
-  readonly dropdownOption:Locator
+  readonly dropdownOption: Locator
 
   constructor(page: Page) {
     this.page = page
@@ -31,7 +31,7 @@ export class ImportProduct {
     await this.page.waitForTimeout(4000)
     await this.importTypeoption.click()
     await this.importSendBoxdrpdown.nth(3).click()
-    await this.dropdownOption.first().click()  // selecting first option
+    await this.dropdownOption.first().click() // selecting first option
     await this.importSendBoxdrpdown.nth(5).click()
     await this.selectOption(importData.importSandboxOption)
     await this.importFileName.fill(fileName as string)

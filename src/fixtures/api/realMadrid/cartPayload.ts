@@ -119,6 +119,15 @@ export class CartPayloads {
       },
     }
   }
+
+  static getCurrencyLocalePayload() {
+    return {
+      priceCartRequest: {
+        locale: 'en-US',
+        currency: 'USD',
+      },
+    }
+  }
 }
 
 // Interfaces

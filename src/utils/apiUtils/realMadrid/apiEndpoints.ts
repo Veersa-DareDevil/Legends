@@ -40,7 +40,7 @@ export const STOREFRONT_ENDPOINTS = {
   selectFulfillmentOption: (cartId: string) =>
     `${STOREFRONT_API_BASE_URL}/api/cart-operations/fulfillment-options/${cartId}/select`,
   getPaymentMethodOptions: (cartId: string) =>
-  `${STOREFRONT_API_BASE_URL}/api/cart-operations/checkout/${cartId}/payment-method-options`
+    `${STOREFRONT_API_BASE_URL}/api/cart-operations/checkout/${cartId}/payment-method-options`,
 
   // Add other storefront endpoints here as needed
 }

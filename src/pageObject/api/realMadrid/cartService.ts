@@ -165,17 +165,17 @@ export class CartService {
   }
 
   async getPaymentMethodOptions(cartId: string, cartVersion: number) {
-  const response = await ApiRequest.getRequest(
-    this.apiRequest,
-    STOREFRONT_ENDPOINTS.getPaymentMethodOptions(cartId),
-    ApiHeaders.getCartOperationHeaders(authData.storefront.defaultGuestToken, cartVersion)
-  )
+    const response = await ApiRequest.getRequest(
+      this.apiRequest,
+      STOREFRONT_ENDPOINTS.getPaymentMethodOptions(cartId),
+      ApiHeaders.getCartOperationHeaders(authData.storefront.defaultGuestToken, cartVersion),
+    )
 
-  if (!response.ok()) {
-    const text = await response.text()
-    throw new Error(`Fetching payment methods failed (${response.status()}): ${text}`)
+    if (!response.ok()) {
+      const text = await response.text()
+      throw new Error(`Fetching payment methods failed (${response.status()}): ${text}`)
+    }
+
+    return response.json()
   }
-
-  return response.json()
-}
 }

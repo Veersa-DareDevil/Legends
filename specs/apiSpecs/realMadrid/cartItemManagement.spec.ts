@@ -434,18 +434,16 @@ test.describe.serial('Storefront || Cart Operations', () => {
       shippingAddressPayloadOne.postalCode,
     )
 
-    
-
-    
-    
-
     // Update cart version
     cartVersion = shippingResponse?.cartItems[0]?.cartVersion || cartVersion
 
     // Step 4 : fetch payment options
-     const paymentOptionsResponse1 = await cartService.getPaymentMethodOptions(authData.storefront.cartId, cartVersion)
-      expect(paymentOptionsResponse1.length).toBeGreaterThan(0)
-  
+    const paymentOptionsResponse1 = await cartService.getPaymentMethodOptions(
+      authData.storefront.cartId,
+      cartVersion,
+    )
+    expect(paymentOptionsResponse1.length).toBeGreaterThan(0)
+
     // Step 5 : update shipping address Again
 
     const shippingAddressPayloadTwo = CartPayloads.generateAddressPayloadThree()
@@ -502,10 +500,10 @@ test.describe.serial('Storefront || Cart Operations', () => {
     cartVersion = shippingResponseTwo?.cartItems[0]?.cartVersion || cartVersion
 
     // Step 6 : fetch payment options Again
-    const paymentOptionsResponse2 = await cartService.getPaymentMethodOptions(authData.storefront.cartId, cartVersion)
-      expect(paymentOptionsResponse2.length).toBeGreaterThan(0)
-
-
-    
+    const paymentOptionsResponse2 = await cartService.getPaymentMethodOptions(
+      authData.storefront.cartId,
+      cartVersion,
+    )
+    expect(paymentOptionsResponse2.length).toBeGreaterThan(0)
   })
 })

@@ -101,11 +101,11 @@ export class CheckoutPage {
   }
   async handleCookieBanner() {
     try {
-      await this.cookieCloseBtn.waitFor({ state: 'visible', timeout: 5000 });
-      await this.cookieCloseBtn.click();
+      await this.cookieCloseBtn.waitFor({ state: 'visible', timeout: 5000 })
+      await this.cookieCloseBtn.click()
     } catch (error) {
       // Cookie banner not found or not visible, proceeding with flow
-      console.log('Cookie banner not found:', error);
+      console.log('Cookie banner not found:', error)
     }
   }
 

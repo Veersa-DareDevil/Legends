@@ -94,4 +94,31 @@ export class ApiHeaders {
       'x-context-request': JSON.stringify({ customerSegmentIds: [] }),
     }
   }
+
+  static getStorefrontHeadersWithoutGuestCart(guestToken?: string, cartVersion?: number) {
+    const headers: Record<string, string> = {
+      accept: 'application/json',
+      'accept-language': 'en-US',
+      'content-type': 'application/json',
+      origin: process.env.RM_STOREFRONT_URL!,
+      referer: `${process.env.RM_STOREFRONT_URL!}`,
+      'x-application-token': authData.storefront.applicationToken,
+      'x-context-request': JSON.stringify({ customerSegmentIds: [] }),
+      'x-feature-flags': JSON.stringify({
+        'split-fulfillment': true,
+        'arrive-by-estimates': true,
+        'CACHE_use-backend-pricing-normalization': true,
+        'smarty-verification': true,
+      }),
+    }
+    if (guestToken) {
+      headers['x-guest-token'] = guestToken
+    }
+
+    if (cartVersion) {
+      headers['x-cart-version'] = String(cartVersion)
+    }
+
+    return headers
+  }
 }

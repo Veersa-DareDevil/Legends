@@ -2,7 +2,7 @@ import { test } from '@playwright/test'
 import { CommonUtils } from '@src/utils/loginUtils/indianaUniversity/commonUtils'
 import { MobileNavigation } from '@src/pageObject/indianaUniversity/mobileUI/navigation'
 
-test.describe('488177 - Mobile Navigation', () => {
+test.describe('Mobile Navigation', () => {
   let commonFunction: CommonUtils
   let navigation: MobileNavigation
 
@@ -12,7 +12,7 @@ test.describe('488177 - Mobile Navigation', () => {
     await commonFunction.goToPortal('storefront')
   })
 
-  test('should valiadte all navigation options', async ({}) => {
+  test('488177 - Mobile Navigation', async ({}) => {
     await navigation.openMenu()
     await navigation.verifyAllNavOptions()
   })

@@ -40,6 +40,7 @@ export class Product {
     await this.page.getByTestId('productcardlink').first().click()
   }
   async addToCart() {
+    await this.page.getByRole('button', { name: 'Add to Cart' }).waitFor({ state: 'visible' })
     await this.page.getByRole('button', { name: 'Add to Cart' }).click()
   }
 
@@ -54,6 +55,7 @@ export class Product {
     const numberPreview = this.page.locator('svg textPath').filter({
       hasText: number,
     })
+    await numberPreview.first().waitFor({ state: 'attached', timeout: 5000 })
     await expect(numberPreview.first()).toHaveText(number, { timeout: 10000 })
   }
 }

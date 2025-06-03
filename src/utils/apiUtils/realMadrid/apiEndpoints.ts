@@ -33,6 +33,14 @@ export const STOREFRONT_ENDPOINTS = {
     `${STOREFRONT_API_BASE_URL}/api/cart-operations/cart/${cartId}/bulk-items`,
   guestToken: (cartId: string) =>
     `${STOREFRONT_API_BASE_URL}/api/cart-operations/checkout/${cartId}/guest-token`,
+  updateShippingAddress: (cartId: string) =>
+    `${STOREFRONT_API_BASE_URL}/api/cart-operations/checkout/${cartId}/update-shipping-address`,
+  fulfillmentOptions: (cartId: string) =>
+    `${STOREFRONT_API_BASE_URL}/api/cart-operations/checkout/${cartId}/fulfillment-options`,
+  selectFulfillmentOption: (cartId: string) =>
+    `${STOREFRONT_API_BASE_URL}/api/cart-operations/fulfillment-options/${cartId}/select`,
+  getPaymentMethodOptions: (cartId: string) =>
+    `${STOREFRONT_API_BASE_URL}/api/cart-operations/checkout/${cartId}/payment-method-options`,
 
   // Add other storefront endpoints here as needed
 }

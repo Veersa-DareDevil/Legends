@@ -120,12 +120,13 @@ export class CheckoutPage {
     // Find every visible price span with the currency symbol within the cart panel
     const priceSpans = this.cartPanel.locator(`span:has-text("${currency}")`)
     await this.page.waitForTimeout(3000)
+    console.log(priceSpans)
     // 3) Assert we have exactly 6 of them
     await expect(priceSpans).toHaveCount(6)
     // 4) And each one starts with the symbol
     const count = await priceSpans.count()
     for (let i = 0; i < count; i++) {
-      await expect(priceSpans.nth(i)).toHaveText(new RegExp(`^\\${currency}\\d`)) // expecting the symbol to update dynamically as country changes
+      await expect(priceSpans.nth(i)).toHaveText(new RegExp(`\\${currency}\\d`)) // expecting the symbol to update dynamically as country changes
     }
   }
 

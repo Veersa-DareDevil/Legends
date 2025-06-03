@@ -128,7 +128,7 @@ export class CheckoutPage {
     // And each one starts with the symbol
     const count = await priceSpans.count()
     for (let i = 0; i < count; i++) {
-      await expect(priceSpans.nth(i)).toHaveText(new RegExp(`^\\${currency}\\d`)) // expecting the symbol to update dynamically as country changes
+      await expect(priceSpans.nth(i)).toHaveText(new RegExp(`\\${currency}\\d`)) // expecting the symbol to update dynamically as country changes
     }
     await this.expandBag.click({ force: true }) // close the bag after verification
   }

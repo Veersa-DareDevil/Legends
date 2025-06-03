@@ -96,8 +96,11 @@ export class CommonUtils {
   }
 
   async handleCookieBanner() {
-    if (await this.cookieCloseBtn.isVisible()) {
+    try {
+      await this.cookieCloseBtn.waitFor({ state: 'visible', timeout: 5000 })
       await this.cookieCloseBtn.click()
+    } catch (error) {
+      console.log('Cookie banner not visible, continuing with flow')
     }
   }
 }

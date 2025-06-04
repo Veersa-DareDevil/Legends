@@ -8,10 +8,14 @@
   "catalogId": "01HTNGGZ5K87AW0PYCMBBM0DDP",
   "sandboxId": "01J54A3Q2R2C7V02337EFP16Z4",
   "storefront": {
-    "cartId": "01JWEXMV6YH2AKFNSS24DHMFNC",
+    "cartId": "01JWTXE0MEMRCR1WTF08JCDEPJ",
     "applicationToken": "real_madrid",
     "defaultVersion": 2,
-    "defaultGuestToken": "01JTFEGHRVV4651PWBG1Y61C8T"
+    "defaultGuestToken": "01JTFEGHRVV4651PWBG1Y61C8T",
+    "currency1":"USD",
+    "currency2":"EUR",
+    "language1":"en-US",
+    "promoCode":"FIFTEEN_OFF"
   }
 
 }

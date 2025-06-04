@@ -35,7 +35,7 @@ export class CartService {
     const response = await ApiRequest.postRequest(
       this.apiRequest,
       STOREFRONT_ENDPOINTS.cartBulkItems(authData.storefront.cartId),
-      ApiHeaders.getCartOperationHeaders(guestToken, cartVersion),
+      ApiHeaders.getStorefrontHeadersWithoutGuestCart(guestToken, cartVersion),
       payload,
     )
 
@@ -122,7 +122,7 @@ export class CartService {
     const response = await ApiRequest.patchRequest(
       this.apiRequest,
       `${STOREFRONT_ENDPOINTS.updateShippingAddress(cartId)}?${queryParams}`,
-      ApiHeaders.getCartOperationHeaders(guestToken, cartVersion),
+      ApiHeaders.getStorefrontHeadersWithoutGuestCart(guestToken, cartVersion),
       payload,
     )
 
@@ -148,17 +148,97 @@ export class CartService {
 
     return response.json()
   }
-  async selectFulfillmentOption(cartId: string, cartVersion: number, payload: object) {
+  async selectFulfillmentOption(
+    cartId: string,
+    cartVersion: number,
+    payload: object,
+    guestToken: string,
+  ) {
     const response = await ApiRequest.postRequest(
       this.apiRequest,
       STOREFRONT_ENDPOINTS.selectFulfillmentOption(cartId),
-      ApiHeaders.getCartOperationHeaders(authData.storefront.defaultGuestToken, cartVersion),
+      ApiHeaders.getStorefrontHeadersWithoutGuestCart(guestToken, cartVersion),
       payload,
     )
 
     if (!response.ok()) {
       const text = await response.text()
       throw new Error(`Select Fulfillment Option failed (${response.status()}): ${text}`)
+    }
+
+    return response.json()
+  }
+
+  async getPaymentMethodOptions(cartId: string, cartVersion: number, guestToken: string) {
+    const response = await ApiRequest.getRequest(
+      this.apiRequest,
+      STOREFRONT_ENDPOINTS.getPaymentMethodOptions(cartId),
+      ApiHeaders.getStorefrontHeadersWithoutGuestCart(guestToken, cartVersion),
+    )
+
+    if (!response.ok()) {
+      const text = await response.text()
+      throw new Error(`Fetching payment methods failed (${response.status()}): ${text}`)
+    }
+
+    return response.json()
+  }
+
+  async changeCurrencyLocale(locale: string, currency: string) {
+    const payload = CartPayloads.getCurrencyLocalePayload()
+    payload.priceCartRequest.currency = currency
+    payload.priceCartRequest.locale = locale
+
+    const response = await ApiRequest.postRequest(
+      this.apiRequest,
+      STOREFRONT_ENDPOINTS.changeCurrencyLocale,
+      ApiHeaders.getStorefrontHeadersWithoutGuestCart(),
+      payload,
+    )
+
+    if (!response.ok()) {
+      const text = await response.text()
+      throw new Error(`Creating cart failed (${response.status()}): ${text}`)
+    }
+
+    return response.json()
+  }
+
+  async applyOfferCode(cartId: string, cartVersion: number, guestToken: string, offerCode: string) {
+    const payload = {
+      code: offerCode,
+    }
+
+    const headers = ApiHeaders.getStorefrontHeadersWithoutGuestCart(guestToken, cartVersion)
+    const url = STOREFRONT_ENDPOINTS.cartOfferCodes(cartId)
+
+    const response = await ApiRequest.postRequest(this.apiRequest, url, headers, payload)
+
+    expect(response.status()).toBe(200)
+    if (!response.ok()) {
+      const text = await response.text()
+      throw new Error(`Apply Offer Code API failed (${response.status()}): ${text}`)
+    }
+
+    return response.json()
+  }
+
+  async removeOfferCode(
+    cartId: string,
+    offerCode: string,
+    cartVersion: number,
+    guestToken: string,
+  ) {
+    const headers = ApiHeaders.getStorefrontHeadersWithoutGuestCart(guestToken, cartVersion)
+
+    const url = STOREFRONT_ENDPOINTS.cartOfferCodes(cartId) + `/${offerCode}`
+
+    const response = await ApiRequest.deleteRequest(this.apiRequest, url, headers)
+
+    expect(response.status()).toBe(200)
+    if (!response.ok()) {
+      const text = await response.text()
+      throw new Error(`Remove Offer Code API failed (${response.status()}): ${text}`)
     }
 
     return response.json()

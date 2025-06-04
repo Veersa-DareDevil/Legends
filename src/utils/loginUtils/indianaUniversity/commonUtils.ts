@@ -1,4 +1,4 @@
-import { Locator, Page } from '@playwright/test'
+import { Locator, Page, expect } from '@playwright/test'
 
 export class CommonUtils {
   private page: Page
@@ -81,23 +81,20 @@ export class CommonUtils {
     }
     await this.storefrontLoginIcon.click()
     await this.page.waitForLoadState('load')
-    //await this.selectEnglish.click()// future use
     await this.handleCookieBanner()
     await this.page.waitForLoadState('load')
     // fill username
     await this.storefrontUsername.fill(username)
     //fill password
     await this.storefrontPassword.fill(password)
+    await this.storefrontLoginButton.waitFor({ state: 'visible' })
+    await expect(this.storefrontLoginButton).toBeEnabled()
+
     await this.storefrontLoginButton.click()
     await this.page.waitForLoadState('load')
     //await this.waitForLoaderToDisappear() // future use when re-directing to homePage
   }
 
-  //future use
-  // async waitForLoaderToDisappear() {
-  //   await this.loader.waitFor({ state: 'visible' })
-  //   await this.loader.waitFor({ state: 'hidden' })
-  // }
   async handleCookieBanner() {
     try {
       await this.cookieCloseBtn.waitFor({ state: 'visible', timeout: 5000 })

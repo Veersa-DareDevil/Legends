@@ -78,6 +78,23 @@ export class CartPayloads {
     }
   }
 
+  static generateAddressPayloadThree() {
+    return {
+      companyName: '',
+      fullName: 'snehil',
+      addressLine1: 'No. 100 Nanjing Road',
+      addressLine2: '',
+      city: 'Shanghai',
+      postalCode: '200001',
+      stateProvinceRegion: 'Shanghai',
+      phonePrimary: {
+        phoneNumber: '+86 13800138000',
+      },
+      country: 'CN',
+      id: 'address-china',
+    }
+  }
+
   static getSelectFulfillmentPayload() {
     return {
       serviceLevel: 'EXPRESS',
@@ -99,6 +116,15 @@ export class CartPayloads {
         estimatedAt: '2025-05-30T06:01:55.780693227Z',
         orderByRequirement: '2025-05-30T09:00:00Z',
         arrivesByEstimate: '2025-06-07T09:00:00Z',
+      },
+    }
+  }
+
+  static getCurrencyLocalePayload() {
+    return {
+      priceCartRequest: {
+        locale: 'en-US',
+        currency: 'USD',
       },
     }
   }

@@ -23,7 +23,6 @@ test.describe('Checkout Scenario', () => {
   })
 
   test('56825-Checkout Validation', async ({}) => {
-    //await product.selectNavTraining()
     const productName = await product.selectProduct()
     console.log('Product Name:', productName)
     await product.addToCart()
@@ -78,8 +77,7 @@ test.describe('Checkout Scenario', () => {
     const fullUrl = `${homePageUrl}${productData.outOfStockProduct}`
     await page.goto(fullUrl)
     await checkout.getOutOfStockProduct()
-    const outOfStockMessage = page.getByText('Item out of stock', { exact: true })
-    await expect(outOfStockMessage).toBeVisible({ timeout: 10000 })
+    await expect(page.getByText('Item out of stock')).toBeVisible()
     await checkout.getEmailNotification(testData.emailNotify)
   })
 

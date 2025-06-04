@@ -311,6 +311,7 @@ test.describe.serial('Storefront || Cart Operations', () => {
       authData.storefront.cartId,
       cartVersion,
       selectFulfillmentPayload,
+      guestToken,
     )
 
     // Handle 409 conflict
@@ -325,6 +326,7 @@ test.describe.serial('Storefront || Cart Operations', () => {
           authData.storefront.cartId,
           cartVersion,
           selectFulfillmentPayload,
+          guestToken,
         )
       }
     }
@@ -336,6 +338,7 @@ test.describe.serial('Storefront || Cart Operations', () => {
         authData.storefront.cartId,
         cartVersion,
         selectFulfillmentPayload,
+        guestToken,
       )
     }
 
@@ -348,5 +351,247 @@ test.describe.serial('Storefront || Cart Operations', () => {
     expect(checkFulfillment.fulfillmentReference).toBe(
       selectFulfillmentPayload.fulfillmentReference,
     )
+  })
+
+  test('Cart Payment', async () => {
+    // Step 1: Search for products
+    const searchBody = await cartService.searchProducts()
+    const products = (searchBody as SearchResponse)?.content ?? []
+    expect(products.length).toBeGreaterThan(0)
+
+    // Step 2: Add product to cart with retry logic
+    let cartVersion = authData.storefront.defaultVersion
+    let guestToken = authData.storefront.defaultGuestToken
+    let addResponse = await cartService.addItemToCart(cartVersion, guestToken)
+
+    // Handle 409 conflict
+    if (addResponse.statusCode === 409) {
+      const addResponseBody = addResponse as CartResponse
+      const newVersion =
+        addResponseBody?.newCart?.cartItems?.[0]?.cartVersion || addResponseBody?.newCart?.version
+      if (typeof newVersion === 'number') {
+        cartVersion = newVersion
+        addResponse = await cartService.addItemToCart(cartVersion, guestToken)
+      }
+    }
+
+    // Handle 401 unauthorized
+    if (addResponse.statusCode === 401) {
+      guestToken = await cartService.refreshGuestToken(cartVersion)
+      addResponse = await cartService.addItemToCart(cartVersion, guestToken)
+    }
+
+    const addResponseBody = addResponse as CartResponse
+    expect(addResponseBody.cart?.id).toBe(authData.storefront.cartId)
+
+    // Update cart version
+    cartVersion = addResponseBody?.cart?.version || cartVersion
+
+    // Step 3 : update shipping address
+
+    const shippingAddressPayloadOne = CartPayloads.generateAddressPayloadOne()
+
+    let shippingResponse = await cartService.updateShippingAddress(
+      authData.storefront.cartId,
+      guestToken,
+      cartVersion,
+      shippingAddressPayloadOne,
+    )
+
+    // Handle 409 conflict
+    if (shippingResponse.statusCode === 409) {
+      const shippingResponseBody = shippingResponse
+      const newVersion =
+        shippingResponseBody?.newCart?.cartItems?.[0]?.cartVersion ||
+        shippingResponseBody?.newCart?.version
+      if (typeof newVersion === 'number') {
+        cartVersion = newVersion
+        shippingResponse = await cartService.updateShippingAddress(
+          authData.storefront.cartId,
+          guestToken,
+          cartVersion,
+          shippingAddressPayloadOne,
+        )
+      }
+    }
+
+    // Handle 401 unauthorized
+    if (shippingResponse.statusCode === 401) {
+      guestToken = await cartService.refreshGuestToken(cartVersion)
+      shippingResponse = await cartService.updateShippingAddress(
+        authData.storefront.cartId,
+        guestToken,
+        cartVersion,
+        shippingAddressPayloadOne,
+      )
+    }
+
+    expect(shippingResponse.fulfillmentGroups[0].address.country).toBe(
+      shippingAddressPayloadOne.country,
+    )
+    expect(shippingResponse.fulfillmentGroups[0].address.city).toBe(shippingAddressPayloadOne.city)
+    expect(shippingResponse.fulfillmentGroups[0].address.stateProvinceRegion).toBe(
+      shippingAddressPayloadOne.stateProvinceRegion,
+    )
+    expect(shippingResponse.fulfillmentGroups[0].address.postalCode).toBe(
+      shippingAddressPayloadOne.postalCode,
+    )
+
+    // Update cart version
+    cartVersion = shippingResponse?.cartItems[0]?.cartVersion || cartVersion
+
+    // Step 4 : fetch payment options
+    const paymentOptionsResponse1 = await cartService.getPaymentMethodOptions(
+      authData.storefront.cartId,
+      cartVersion,
+      guestToken,
+    )
+    expect(paymentOptionsResponse1.length).toBeGreaterThan(0)
+
+    // Step 5 : update shipping address Again
+
+    const shippingAddressPayloadTwo = CartPayloads.generateAddressPayloadThree()
+
+    let shippingResponseTwo = await cartService.updateShippingAddress(
+      authData.storefront.cartId,
+      guestToken,
+      cartVersion,
+      shippingAddressPayloadTwo,
+    )
+
+    // Handle 409 conflict
+    if (shippingResponseTwo.statusCode === 409) {
+      const shippingResponseBodyTwo = shippingResponseTwo
+      const newVersion =
+        shippingResponseBodyTwo?.newCart?.cartItems?.[0]?.cartVersion ||
+        shippingResponseBodyTwo?.newCart?.version
+      if (typeof newVersion === 'number') {
+        cartVersion = newVersion
+        shippingResponseTwo = await cartService.updateShippingAddress(
+          authData.storefront.cartId,
+          guestToken,
+          cartVersion,
+          shippingAddressPayloadTwo,
+        )
+      }
+    }
+
+    // Handle 401 unauthorized
+    if (shippingResponseTwo.statusCode === 401) {
+      guestToken = await cartService.refreshGuestToken(cartVersion)
+      shippingResponseTwo = await cartService.updateShippingAddress(
+        authData.storefront.cartId,
+        guestToken,
+        cartVersion,
+        shippingAddressPayloadTwo,
+      )
+    }
+
+    expect(shippingResponseTwo.fulfillmentGroups[0].address.country).toBe(
+      shippingAddressPayloadTwo.country,
+    )
+    expect(shippingResponseTwo.fulfillmentGroups[0].address.city).toBe(
+      shippingAddressPayloadTwo.city,
+    )
+    expect(shippingResponseTwo.fulfillmentGroups[0].address.stateProvinceRegion).toBe(
+      shippingAddressPayloadTwo.stateProvinceRegion,
+    )
+    expect(shippingResponseTwo.fulfillmentGroups[0].address.postalCode).toBe(
+      shippingAddressPayloadTwo.postalCode,
+    )
+
+    // Update cart version
+    cartVersion = shippingResponseTwo?.cartItems[0]?.cartVersion || cartVersion
+
+    // Step 6 : fetch payment options Again
+    const paymentOptionsResponse2 = await cartService.getPaymentMethodOptions(
+      authData.storefront.cartId,
+      cartVersion,
+      guestToken,
+    )
+    expect(paymentOptionsResponse2.length).toBeGreaterThan(0)
+  })
+
+  test('Cart Pricing', async () => {
+    // Step 1: Search for products
+    const searchBody = await cartService.searchProducts()
+    const products = (searchBody as SearchResponse)?.content ?? []
+    expect(products.length).toBeGreaterThan(0)
+
+    // Step 2: Add product to cart with retry logic
+    let cartVersion = authData.storefront.defaultVersion
+    let guestToken = authData.storefront.defaultGuestToken
+    let addResponse = await cartService.addItemToCart(cartVersion, guestToken)
+
+    // Handle 409 conflict
+    if (addResponse.statusCode === 409) {
+      const addResponseBody = addResponse as CartResponse
+      const newVersion =
+        addResponseBody?.newCart?.cartItems?.[0]?.cartVersion || addResponseBody?.newCart?.version
+      if (typeof newVersion === 'number') {
+        cartVersion = newVersion
+        addResponse = await cartService.addItemToCart(cartVersion, guestToken)
+      }
+    }
+
+    // Handle 401 unauthorized
+    if (addResponse.statusCode === 401) {
+      guestToken = await cartService.refreshGuestToken(cartVersion)
+      addResponse = await cartService.addItemToCart(cartVersion, guestToken)
+    }
+
+    const addResponseBody = addResponse as CartResponse
+    expect(addResponseBody.cart?.id).toBe(authData.storefront.cartId)
+
+    // Update cart version
+    cartVersion = addResponseBody?.cart?.version || cartVersion
+
+    const priceWithoutOffer = addResponse.cart.cartPricing.total.amount
+
+    // Step 3 : update currency
+
+    const currencyResponse = await cartService.changeCurrencyLocale(
+      authData.storefront.language1,
+      authData.storefront.currency2,
+    )
+
+    expect(currencyResponse.cartPricing.currency).toBe(authData.storefront.currency2)
+
+    //Step 4 : Add offer
+
+    const applyOfferResponse = await cartService.applyOfferCode(
+      authData.storefront.cartId,
+      cartVersion,
+      guestToken,
+      authData.storefront.promoCode,
+    )
+
+    console.log('Apply Offer Code response:', applyOfferResponse)
+
+    expect(applyOfferResponse.cart.id).toBe(authData.storefront.cartId)
+
+    const priceAfterOffer = applyOfferResponse.cart.cartPricing.total.amount
+
+    expect(priceWithoutOffer).toBeGreaterThan(priceAfterOffer)
+
+    // Update cart version
+    cartVersion = applyOfferResponse?.cart?.version || cartVersion
+
+    //Step 5 : remove offer
+    const removeResponse = await cartService.removeOfferCode(
+      authData.storefront.cartId,
+      authData.storefront.promoCode,
+      cartVersion,
+      guestToken,
+    )
+
+    console.log('Remove Offer Code response:', removeResponse)
+
+    expect(removeResponse.id).toBe(authData.storefront.cartId)
+
+    const priceAfterRemoval = removeResponse.cartPricing.total.amount
+
+    expect(priceWithoutOffer).toBe(priceAfterRemoval)
+    expect(priceAfterOffer).toBeLessThan(priceAfterRemoval)
   })
 })

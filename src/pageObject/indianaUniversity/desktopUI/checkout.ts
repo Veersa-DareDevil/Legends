@@ -94,18 +94,18 @@ export class CheckoutPage {
   }
 
   async selectCheckout() {
-    await this.commonFunctions.handleCookieBanner()
+    //await this.commonFunctions.handleCookieBanner()
     await this.checkOutButton.waitFor({ state: 'visible' })
     await this.checkOutButton.click()
     await this.page.waitForTimeout(2000)
   }
   async handleCookieBanner() {
     try {
-      await this.cookieCloseBtn.waitFor({ state: 'visible', timeout: 5000 });
-      await this.cookieCloseBtn.click();
+      await this.cookieCloseBtn.waitFor({ state: 'visible', timeout: 5000 })
+      await this.cookieCloseBtn.click()
     } catch (error) {
       // Cookie banner not found or not visible, proceeding with flow
-      console.log('Cookie banner not found:', error);
+      console.log('Cookie banner not found:', error)
     }
   }
 
@@ -137,8 +137,13 @@ export class CheckoutPage {
   // send email to get notified
   async getEmailNotification(email: string) {
     const emailInput = this.page.getByRole('textbox', { name: 'Email' })
-    await emailInput.waitFor({ state: 'attached' }) // ensures element is attached
+
+    // Ensure the element is visible and ready for interaction
+    await expect(emailInput).toBeVisible({ timeout: 5000 })
+
+    // Fill after visibility is confirmed
     await emailInput.fill(email)
+
     await this.page.getByRole('button', { name: 'Submit' }).click()
   }
 }

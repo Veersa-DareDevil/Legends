@@ -11,6 +11,7 @@ export class Product {
   readonly rejectAllCookiesButton: Locator
   readonly productCardLink: Locator
   readonly addToCartButton: Locator
+  readonly miniCartProductPrice: Locator
 
   constructor(page: Page) {
     this.page = page
@@ -19,7 +20,8 @@ export class Product {
     this.productCard = page.locator('[data-testid="productcard"]')
     this.productCardLink = page.locator('[data-testid="productcardlink"]')
     this.addToCartButton = page.locator('[data-testid="addtocartbutton"]')
-    this.rejectAllCookiesButton = page.locator('#onetrust-reject-all-handler') //it is the unique locator
+    this.rejectAllCookiesButton = page.locator('#onetrust-reject-all-handler')
+    this.miniCartProductPrice = page.getByTestId('minicart').getByText('Current Price:$').first()
   }
 
   async selectNavTraining() {
@@ -89,5 +91,9 @@ export class Product {
       })
       expect(computedStyle).toBe(productData.madristaUser.newPriceTagColor) // Deep purple color
     }
+  }
+
+  async miniCartProductRemove(productName: string) {
+    await this.page.locator(`//button[@aria-label="Remove ${productName}"]`).click()
   }
 }

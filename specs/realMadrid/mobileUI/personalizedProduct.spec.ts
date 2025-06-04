@@ -7,7 +7,6 @@ import testDataCheckout from '@src/fixtures/realMadrid/checkoutValidation.json'
 import cardDetails from '@src/fixtures/realMadrid/paymentValidations.json'
 import { Product } from '@src/pageObject/realMadrid/mobileUI/product'
 
-
 import testData from '@src/fixtures/realMadrid/personalizeProduct.json'
 
 test.describe('Personalization Product', () => {

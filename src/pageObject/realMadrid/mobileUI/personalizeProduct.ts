@@ -160,5 +160,5 @@ export class PersonalizeProduct {
     await this.product.miniCartProductRemove(productData.pName)
     await this.checkout.continueShopping()
     return Number(priceElement)
-}
+  }
 }

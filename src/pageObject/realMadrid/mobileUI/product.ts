@@ -30,7 +30,6 @@ export class Product {
     this.warningMessage = page.getByText(checkoutData.nonWesternCharacters.warnMsg)
     this.shipAddress = page.getByText('Shipping Address')
     this.miniCartProductPrice = page.getByTestId('minicart').getByText('Current Price:$').first()
-
   }
 
   async selectNavTraining() {

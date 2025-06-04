@@ -21,7 +21,7 @@ export class Product {
     this.productCardLink = page.locator('[data-testid="productcardlink"]')
     this.addToCartButton = page.locator('[data-testid="addtocartbutton"]')
     this.rejectAllCookiesButton = page.locator('#onetrust-reject-all-handler')
-    this.miniCartProductPrice= page.getByTestId('minicart').getByText('Current Price:$').first()
+    this.miniCartProductPrice = page.getByTestId('minicart').getByText('Current Price:$').first()
   }
 
   async selectNavTraining() {
@@ -96,6 +96,4 @@ export class Product {
   async miniCartProductRemove(productName: string) {
     await this.page.locator(`//button[@aria-label="Remove ${productName}"]`).click()
   }
-
-  
 }

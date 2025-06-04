@@ -100,7 +100,7 @@ export class CommonUtils {
       await this.cookieCloseBtn.waitFor({ state: 'visible', timeout: 5000 })
       await this.cookieCloseBtn.click()
     } catch (error) {
-      console.log('Cookie banner not visible, continuing with flow')
+      console.log(error)
     }
   }
 }

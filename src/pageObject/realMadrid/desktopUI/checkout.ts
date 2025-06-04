@@ -155,6 +155,7 @@ export class CheckoutPage {
 
   // to click on continue to payment section
   async continueToPayment() {
+    await this.continueToPaymentButton.waitFor({ state: 'visible' })
     await this.continueToPaymentButton.click()
   }
 }

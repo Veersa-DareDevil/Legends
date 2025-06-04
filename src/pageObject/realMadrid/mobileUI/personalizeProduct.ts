@@ -147,4 +147,18 @@ export class PersonalizeProduct {
     expect(renderedName).toBe(name.toUpperCase())
     expect(renderedNumber).toBe(number)
   }
+
+  async extractPriceFromText(priceText: string): Promise<string> {
+    return priceText.replace(/[^0-9.]/g, '')
+  }
+
+  async getDefaultProductPrice() {
+    await this.product.addToCart()
+    await this.checkout.checkoutButton.waitFor({ state: 'visible' })
+    const priceText = await this.product.miniCartProductPrice.innerText()
+    const priceElement = await this.extractPriceFromText(priceText)
+    await this.product.miniCartProductRemove(productData.pName)
+    await this.checkout.continueShopping()
+    return Number(priceElement)
+}
 }

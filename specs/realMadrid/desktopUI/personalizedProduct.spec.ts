@@ -1,9 +1,11 @@
-import { test } from '@playwright/test'
+import { expect, test } from '@playwright/test'
 import { CommonUtils } from '@src/utils/loginUtils/realMadrid/commonUtils'
 import { PersonalizeProduct } from '@src/pageObject/realMadrid/desktopUI/personalizeProduct'
 import { CheckoutPage } from '@src/pageObject/realMadrid/desktopUI/checkout'
 import { Product } from '@src/pageObject/realMadrid/desktopUI/product'
-
+import { Payment } from '@src/pageObject/realMadrid/desktopUI/payment'
+import testDataCheckout from '@src/fixtures/realMadrid/checkoutValidation.json'
+import cardDetails from '@src/fixtures/realMadrid/paymentValidations.json'
 import testData from '@src/fixtures/realMadrid/personalizeProduct.json'
 
 test.describe('Personalization Product', () => {
@@ -11,12 +13,14 @@ test.describe('Personalization Product', () => {
   let personalizeProduct: PersonalizeProduct
   let checkout: CheckoutPage
   let product: Product
+  let payment: Payment
 
   test.beforeEach(async ({ page }) => {
     commonFunction = new CommonUtils(page)
     personalizeProduct = new PersonalizeProduct(page)
     checkout = new CheckoutPage(page)
     product = new Product(page)
+    payment = new Payment(page)
     await commonFunction.goToPortal('storefront')
   })
 
@@ -56,5 +60,58 @@ test.describe('Personalization Product', () => {
       testData.personalizeOptions.option1.name,
       testData.personalizeOptions.option1.number,
     )
+  })
+
+  test('new - Purchasing a Personalized Product', async ({ page }) => {
+    const productUrl = `${process.env.RM_STOREFRONT_URL}product/${testData.productName}`
+    await page.goto(productUrl)
+    await page.waitForLoadState('load')
+    await commonFunction.rejectAllCookies()
+
+    //get Default product price
+    const defaultPrice = await personalizeProduct.getDefaultProductPrice()
+    await personalizeProduct.personalizeOption.click()
+    await personalizeProduct.fillPersonalizeOptionDetails(
+      testData.personalizeOptions.option1.name,
+      testData.personalizeOptions.option1.number,
+    )
+    await personalizeProduct.validatePersonalizePreviewMatchesInput(
+      testData.personalizeOptions.option1.name,
+      testData.personalizeOptions.option1.number,
+    )
+    await product.addToCart()
+    await page.waitForTimeout(2000)
+    const personalizedPriceText = await product.miniCartProductPrice.innerText()
+    const personalizedPrice = await personalizeProduct.extractPriceFromText(personalizedPriceText)
+    // Validate that the personalized price is greater than or equal to the None personalised price
+    expect(Number(personalizedPrice)).toBeGreaterThanOrEqual(Number(defaultPrice))
+
+    //go to checkout page
+    await checkout.selectCheckout()
+    await checkout.fillYourDetails(
+      testDataCheckout.validData.userDetails.fullName,
+      testDataCheckout.validData.userDetails.email,
+      testDataCheckout.validData.userDetails.phone,
+      testDataCheckout.validData.userDetails.address1,
+      testDataCheckout.validData.userDetails.address2,
+      testDataCheckout.validData.userDetails.city,
+      testDataCheckout.validData.userDetails.postcode,
+    )
+
+    await checkout.selectCountry(testDataCheckout.validData.address.testCountry2)
+    await checkout.selectState(testDataCheckout.validData.address.testState2)
+    await checkout.continueToShipping()
+    await checkout.continueToPayment()
+
+    //Go to payment page and fill payment details
+    await payment.paymentButton.waitFor({ state: 'visible' })
+    await payment.fillPaymentDetails(
+      cardDetails.cardDetails.cardName,
+      cardDetails.cardDetails.cardNumber,
+      cardDetails.cardDetails.expiryDate,
+      cardDetails.cardDetails.cvv,
+    )
+    await payment.submitPayment()
+    await checkout.waitForShipmentLoader()
   })
 })

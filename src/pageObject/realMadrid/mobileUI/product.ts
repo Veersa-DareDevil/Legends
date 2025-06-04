@@ -15,6 +15,7 @@ export class Product {
   readonly phoneNumberInput: Locator
   readonly warningMessage: Locator
   readonly shipAddress: Locator
+  readonly miniCartProductPrice: Locator
 
   constructor(page: Page) {
     this.page = page
@@ -28,6 +29,8 @@ export class Product {
     this.phoneNumberInput = page.locator('[name="phoneNumber"]')
     this.warningMessage = page.getByText(checkoutData.nonWesternCharacters.warnMsg)
     this.shipAddress = page.getByText('Shipping Address')
+    this.miniCartProductPrice = page.getByTestId('minicart').getByText('Current Price:$').first()
+
   }
 
   async selectNavTraining() {
@@ -93,5 +96,9 @@ export class Product {
       })
       expect(computedStyle).toBe('rgb(222, 229, 253)') // expect purple color
     }
+  }
+
+  async miniCartProductRemove(productName: string) {
+    await this.page.locator(`//button[@aria-label="Remove ${productName}"]`).click()
   }
 }

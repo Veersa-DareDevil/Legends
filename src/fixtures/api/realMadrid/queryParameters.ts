@@ -21,4 +21,8 @@ export const QueryParams = {
     size: '12',
     type: 'PRODUCT',
   },
+  comprehensiveLists: {
+    forward: 'true',
+    size: '50',
+  },
 }

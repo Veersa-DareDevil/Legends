@@ -23,4 +23,13 @@ export class CommonFunctions {
 
     return result
   }
+
+  static findInList(list: Array<Record<string, object | string>>, key: string) {
+    for (const obj of list) {
+      if (obj!.type === key) {
+        return obj
+      }
+    }
+    return undefined
+  }
 }

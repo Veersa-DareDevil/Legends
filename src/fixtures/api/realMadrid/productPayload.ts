@@ -1113,4 +1113,20 @@ export class ProductPayloads {
       displayOrder: 0,
     }
   }
+
+  static createPriceData() {
+    return {
+      target: {
+        targetType: 'SKU',
+        targetId: '',
+      },
+      price: {
+        amount: Math.floor(Math.random() * 10000) + 1000, // Random price between 1000-11000
+      },
+      activeStartDate: new Date().toISOString(),
+      priceListName: 'US Dollar - Sale',
+      priceListCurrency: 'USD',
+      priceListId: '',
+    }
+  }
 }

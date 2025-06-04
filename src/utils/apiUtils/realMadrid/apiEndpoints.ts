@@ -16,6 +16,11 @@ export const ADMIN_ENDPOINTS = {
   orderFullfillment: `${ADMIN_BASE_URL}/api/order-operations/fulfillment-operations/status-change`,
   fullfillmentView: `${ADMIN_BASE_URL}/api/order/fulfillment-views`,
   returnOperations: `${ADMIN_BASE_URL}/api/order/return-operations`,
+  priceList: `${ADMIN_BASE_URL}/api/pricing/price-lists`,
+  DDE: `${ADMIN_BASE_URL}/api/catalog/data-driven-enums`,
+  inventoryLocations: `${ADMIN_BASE_URL}/api/inventory/inventory-location`,
+  advancedTags: `${ADMIN_BASE_URL}/api/catalog/tags`,
+  addPriceList: `${ADMIN_BASE_URL}/api/pricing/price-data`,
   // Add other admin endpoints here as needed
 }
 

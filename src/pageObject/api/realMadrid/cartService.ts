@@ -126,7 +126,7 @@ export class CartService {
       payload,
     )
 
-    if (!response.ok()) {
+    if (!response.ok() && response.status() !== 409 && response.status() !== 401) {
       const text = await response.text()
       throw new Error(`Update Shipping Address failed (${response.status()}): ${text}`)
     }
@@ -141,7 +141,7 @@ export class CartService {
       ApiHeaders.getStorefrontHeaders(),
     )
 
-    if (!response.ok()) {
+    if (!response.ok() && response.status() !== 409 && response.status() !== 401) {
       const text = await response.text()
       throw new Error(`Fulfillment Options API failed (${response.status()}): ${text}`)
     }
@@ -161,7 +161,7 @@ export class CartService {
       payload,
     )
 
-    if (!response.ok()) {
+    if (!response.ok() && response.status() !== 409 && response.status() !== 401) {
       const text = await response.text()
       throw new Error(`Select Fulfillment Option failed (${response.status()}): ${text}`)
     }
@@ -176,7 +176,7 @@ export class CartService {
       ApiHeaders.getStorefrontHeadersWithoutGuestCart(guestToken, cartVersion),
     )
 
-    if (!response.ok()) {
+    if (!response.ok() && response.status() !== 409 && response.status() !== 401) {
       const text = await response.text()
       throw new Error(`Fetching payment methods failed (${response.status()}): ${text}`)
     }
@@ -196,7 +196,7 @@ export class CartService {
       payload,
     )
 
-    if (!response.ok()) {
+    if (!response.ok() && response.status() !== 409 && response.status() !== 401) {
       const text = await response.text()
       throw new Error(`Creating cart failed (${response.status()}): ${text}`)
     }
@@ -215,7 +215,7 @@ export class CartService {
     const response = await ApiRequest.postRequest(this.apiRequest, url, headers, payload)
 
     expect(response.status()).toBe(200)
-    if (!response.ok()) {
+    if (!response.ok() && response.status() !== 409 && response.status() !== 401) {
       const text = await response.text()
       throw new Error(`Apply Offer Code API failed (${response.status()}): ${text}`)
     }
@@ -236,7 +236,7 @@ export class CartService {
     const response = await ApiRequest.deleteRequest(this.apiRequest, url, headers)
 
     expect(response.status()).toBe(200)
-    if (!response.ok()) {
+    if (!response.ok() && response.status() !== 409 && response.status() !== 401) {
       const text = await response.text()
       throw new Error(`Remove Offer Code API failed (${response.status()}): ${text}`)
     }

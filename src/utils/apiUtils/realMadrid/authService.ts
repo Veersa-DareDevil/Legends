@@ -76,4 +76,8 @@ export class AuthService {
     const { code, codeVerifier } = await this.getAuthorizationCode()
     return this.fetchAccessToken(code, codeVerifier)
   }
+
+  async changeScope(scope: string) {
+    this.scope = scope
+  }
 }

@@ -78,4 +78,125 @@ export class ProductService {
 
     return response.json()
   }
+
+  async getPriceList(accessToken: string, queryParams: Record<string, string>) {
+    const queryString = CommonFunctions.buildQueryString(queryParams)
+    const url = `${ADMIN_ENDPOINTS.priceList}?${queryString}`
+
+    const response = await ApiRequest.getRequest(
+      this.apiRequest,
+      url,
+      ApiHeaders.getAuthJsonHeaders(accessToken, this.contextHeader),
+    )
+
+    expect(response.status()).toBe(200)
+    if (!response.ok()) {
+      const text = await response.text()
+      throw new Error(`Price List API failed (${response.status()}): ${text}`)
+    }
+
+    return response.json()
+  }
+
+  async getDDE(accessToken: string, queryParams: Record<string, string>) {
+    const queryString = CommonFunctions.buildQueryString(queryParams)
+    const url = `${ADMIN_ENDPOINTS.DDE}?${queryString}`
+
+    const response = await ApiRequest.getRequest(
+      this.apiRequest,
+      url,
+      ApiHeaders.getAuthJsonHeaders(accessToken, this.contextHeader),
+    )
+
+    expect(response.status()).toBe(200)
+    if (!response.ok()) {
+      const text = await response.text()
+      throw new Error(`DDE API failed (${response.status()}): ${text}`)
+    }
+
+    return response.json()
+  }
+
+  async getInventoryLocations(accessToken: string, queryParams: Record<string, string>) {
+    const queryString = CommonFunctions.buildQueryString(queryParams)
+    const url = `${ADMIN_ENDPOINTS.inventoryLocations}?${queryString}`
+
+    const response = await ApiRequest.getRequest(
+      this.apiRequest,
+      url,
+      ApiHeaders.getAuthJsonHeaders(accessToken, this.contextHeader),
+    )
+
+    expect(response.status()).toBe(200)
+    if (!response.ok()) {
+      const text = await response.text()
+      throw new Error(`Inventory Locations API failed (${response.status()}): ${text}`)
+    }
+
+    return response.json()
+  }
+
+  async getAdvancedTags(accessToken: string, queryParams: Record<string, string>) {
+    const queryString = CommonFunctions.buildQueryString(queryParams)
+    const url = `${ADMIN_ENDPOINTS.advancedTags}?${queryString}`
+
+    const response = await ApiRequest.getRequest(
+      this.apiRequest,
+      url,
+      ApiHeaders.getAuthJsonHeaders(accessToken, this.contextHeader),
+    )
+
+    expect(response.status()).toBe(200)
+    if (!response.ok()) {
+      const text = await response.text()
+      throw new Error(`Advanced Tags API failed (${response.status()}): ${text}`)
+    }
+
+    return response.json()
+  }
+
+  async addPriceList(accessToken: string, payload: object) {
+    const response = await ApiRequest.postRequest(
+      this.apiRequest,
+      ADMIN_ENDPOINTS.addPriceList,
+      ApiHeaders.getAuthJsonHeaders(accessToken, this.contextHeader),
+      payload,
+    )
+    expect(response.status()).toBe(200)
+    if (!response.ok()) {
+      const text = await response.text()
+      throw new Error(`Price Data API failed (${response.status()}): ${text}`)
+    }
+    return response.json()
+  }
+
+  async addAdvancedTag(accessToken: string, productId: string, payload: object) {
+    const response = await ApiRequest.postRequest(
+      this.apiRequest,
+      `${ADMIN_ENDPOINTS.products}/${productId}/tags`,
+      ApiHeaders.getAuthJsonHeaders(accessToken, this.contextHeader),
+      payload,
+    )
+    expect(response.status()).toBe(200)
+    if (!response.ok()) {
+      const text = await response.text()
+      throw new Error(`Add Advanced Tag API failed (${response.status()}): ${text}`)
+    }
+    return response.json()
+  }
+
+  async updateProduct(accessToken: string, productId: string, payload: object) {
+    const response = await ApiRequest.putRequest(
+      this.apiRequest,
+      `${ADMIN_ENDPOINTS.products}/${productId}`,
+      ApiHeaders.getAuthJsonHeaders(accessToken, this.contextHeader),
+      payload,
+    )
+    expect(response.status()).toBe(200)
+    if (!response.ok()) {
+      const text = await response.text()
+      throw new Error(`Update Product with Brand/Type API failed (${response.status()}): ${text}`)
+    }
+    return response.json()
+  }
 }

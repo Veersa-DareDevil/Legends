@@ -7,6 +7,13 @@
   "returnScope": "RETURN_AUTHORIZATION",
   "catalogId": "01HTNGGZ5K87AW0PYCMBBM0DDP",
   "sandboxId": "01J54A3Q2R2C7V02337EFP16Z4",
+  "priceListScope":"PRICE_LIST",
+  "priceListContractScope":"PRICELIST_CONTRACT",
+  "ddeScope":"DATA_DRIVEN_ENUM",
+  "inventoryLocationScope":"INVENTORY_LOCATION",
+  "tagScope":"ADVANCED_TAG",
+  "priceData":"PRICE_DATA",
+  "productTag":"PRODUCT_TAG",
   "storefront": {
     "cartId": "01JWTXE0MEMRCR1WTF08JCDEPJ",
     "applicationToken": "real_madrid",

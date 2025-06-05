@@ -1,115 +1,111 @@
-import { Locator, Page } from '@playwright/test'
+import { Page, Locator, expect } from '@playwright/test'
+import { CommonUtils } from '@src/utils/loginUtils/indianaUniversity/commonUtils'
 
 export class ProductSearchPage {
-  private page: Page
+  readonly page: Page
+  readonly commonFunctions: CommonUtils
 
   readonly searchBox: Locator
-  readonly filterSortButton: Locator
-  readonly filterPanel: Locator
-  readonly closeButton: Locator
+  readonly filterAndSortButton: Locator
+  readonly closeFilterPanelButton: Locator
+
+  readonly sizeSectionButton: Locator
+  readonly productTypeSectionButton: Locator
+  readonly sportSectionButton: Locator
+  readonly brandSectionButton: Locator
+  readonly sortBySectionTray: Locator
+
+  readonly xSmallSizeFacet: Locator
+  readonly smallSizeFacet: Locator
+  readonly selectedXSmallTag: Locator
+  readonly pageTop: Locator
 
   constructor(page: Page) {
     this.page = page
+    this.commonFunctions = new CommonUtils(page)
+
+    // Search and panel
     this.searchBox = page.getByRole('combobox', { name: 'Search' })
-    this.filterSortButton = page.getByRole('button', { name: 'Filter and Sort' })
-    this.filterPanel = page.locator('[id^="headlessui-dialog-panel"]', {
-      hasText: 'Filter and Sort',
-    })
-    this.closeButton = page.getByRole('button').filter({ hasText: /^$/ })
+    this.filterAndSortButton = page.getByRole('button', { name: 'Filter and Sort' })
+    this.closeFilterPanelButton = page.locator('div:has-text("Filter and Sort") button')
+
+    // Filter section buttons
+    this.sizeSectionButton = page.getByRole('button', { name: 'Size' })
+    this.productTypeSectionButton = page.getByRole('button', { name: 'Product Type' })
+    this.sportSectionButton = page.getByRole('button', { name: 'Sport' })
+    this.brandSectionButton = page.getByRole('button', { name: 'Brand' })
+    this.sortBySectionTray = page.getByText('Relevancy', { exact: true })
+
+    // Filter option checkboxes
+    this.xSmallSizeFacet = page.locator(
+      '[id="headlessui-dialog-panel-\\:rp\\:"] #optionsSize_X-Small',
+    )
+    this.smallSizeFacet = page.locator('[id="headlessui-dialog-panel-\\:rp\\:"] #optionsSize_Small')
+
+    // Tags & sections after selection
+    this.selectedXSmallTag = page
+      .locator('div')
+      .filter({ hasText: /^X-Small$/ })
+      .nth(1)
+    this.pageTop = page.locator('#page-top')
   }
 
-  async performSearch(query: string = ' ') {
+  async triggerBlankSearch() {
     await this.searchBox.click()
-    await this.searchBox.fill(query)
     await this.searchBox.press('Enter')
   }
 
-  async closePrivacyDialogIfVisible() {
-    const privacyDialog = this.page.getByRole('dialog', { name: 'Privacy' })
-    try {
-      await privacyDialog.waitFor({ state: 'visible', timeout: 3000 })
-      await privacyDialog.getByLabel('Close').click()
-    } catch {
-      // Dialog not visible
-    }
+  //opening filter and sort tray
+  async openFilterAndSortPanel() {
+    await this.filterAndSortButton.click()
   }
 
-  async openFilterTray() {
-    await this.filterSortButton.click()
-  }
-
-  async expandFacet(facetName: string) {
-    await this.openFilterTray()
-    await this.page.getByRole('button', { name: facetName }).click()
-  }
-
-  async applySizeFilter(size: string = 'X-Small', autoApply = true) {
-    await this.expandFacet('Size')
-
-    const checkbox = this.filterPanel.locator(`#optionsSize_${size}`)
-    await checkbox.scrollIntoViewIfNeeded()
-    await checkbox.check()
-
-    if (autoApply) {
-      const applyButton = this.getSizeFacetApplyButton()
-      await applyButton.waitFor({ state: 'visible' })
-      await applyButton.click()
-    }
-  }
-
-  async applySort(sortOption: string) {
-    await this.openFilterTray()
+  // clossing filter and sort tray
+  async closeFilterAndSortPanel() {
     await this.page
       .locator('div')
-      .filter({ hasText: /^Sort By/ })
-      .locator('svg')
+      .filter({ hasText: /^Filter and Sort48 Products$/ })
+      .getByRole('button')
       .click()
-    await this.page.getByRole('option', { name: sortOption }).click()
-    await this.getMainApplyButton().click()
   }
 
-  getSizeFilterButton() {
-    return this.page.getByRole('button', { name: 'Size' })
+  //check filter and sort tray is opening
+  async toggleFilterSection() {
+    await this.commonFunctions.handleCookieBanner()
+
+    const filterOptions = [
+      this.sizeSectionButton,
+      this.productTypeSectionButton,
+      this.sportSectionButton,
+      this.brandSectionButton,
+      this.sortBySectionTray,
+    ]
+
+    for (const filter of filterOptions) {
+      await this.openFilterAndSortPanel()
+      await filter.waitFor({ state: 'visible' })
+      await filter.click()
+      await this.closeFilterAndSortPanel()
+    }
   }
 
-  getSortByDropdown() {
-    return this.page.getByRole('combobox')
+  //add filter
+  async addFilterFacetOnSize() {
+    await this.commonFunctions.handleCookieBanner()
+    await this.openFilterAndSortPanel()
+    await this.sizeSectionButton.waitFor({ state: 'visible' })
+    await this.sizeSectionButton.click()
+    await this.xSmallSizeFacet.check()
+    await this.smallSizeFacet.check()
+    await this.closeFilterAndSortPanel()
+
+    await expect(this.pageTop).toContainText('X-Small')
+    await expect(this.pageTop).toContainText('Small')
   }
 
-  getFacetOption(facetText: string) {
-    return this.filterPanel.getByText(facetText)
-  }
-
-  getSizeOptions() {
-    return this.filterPanel.locator('label:has-text("(")')
-  }
-
-  getRemoveFacetButton(facet: string) {
-    return this.page.getByRole('button', { name: `Remove ${facet}` })
-  }
-
-  /** Returns the main Filter & Sort tray "Apply" button */
-  getMainApplyButton() {
-    return this.page
-      .locator('[id^="headlessui-dialog-panel"] dl')
-      .getByRole('button', { name: 'Apply' })
-      .first()
-  }
-
-  /** Returns the Size facet-specific "Apply" button */
-  getSizeFacetApplyButton() {
-    return this.page
-      .locator('[id^="headlessui-dialog-panel"] dl')
-      .getByRole('button', { name: 'Apply' })
-      .filter({ has: this.page.locator('input[type="checkbox"]:checked') }) // optional heuristic
-      .first() // fallback to first visible
-  }
-
-  getFacetLabel(facet: string) {
-    return this.page.getByText(facet)
-  }
-
-  getFacetCheckbox(label: string) {
-    return this.page.getByLabel(new RegExp(`^${label}`))
+  //remove selected filter
+  async removeSizeFilter() {
+    await this.selectedXSmallTag.click()
+    await expect(this.selectedXSmallTag).toHaveCount(0)
   }
 }

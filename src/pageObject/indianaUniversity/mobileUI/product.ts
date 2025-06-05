@@ -28,12 +28,8 @@ export class Product {
     this.phoneNumberInput = page.locator('[name="phoneNumber"]')
     this.warningMessage = page.getByText(checkoutData.nonWesternCharacters.warnMsg)
     this.shipAddress = page.getByText('Shipping Address') //
-    this.personalisedName = page.locator(
-      'input[name="\\30 1J91Q84W4DH241G7BS50D0M32__addOn\\:01J91QR60F97E50TMSDYR51QYC__product\\:01J91QN00XMKFF03E81M7R04H5__productOption\\:name"]',
-    ) //no unique locator
-    this.personalisedNumber = page.locator(
-      'input[name="\\30 1J91Q84W4DH241G7BS50D0M32__addOn\\:01J91QR60F97E50TMSDYR51QYC__product\\:01J91QN00XMKFF03E81M7R04H5__productOption\\:number"]',
-    ) // no unique locator
+    this.personalisedName = page.locator('input[name*="productOption:name"]') //no unique locator
+    this.personalisedNumber = page.locator('input[name*="productOption:number"]') // no unique locator
   }
 
   async selectProduct() {

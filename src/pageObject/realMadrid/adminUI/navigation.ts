@@ -6,6 +6,7 @@ export class Navigation {
   readonly processes: Locator
   readonly navImports: Locator
   readonly navProducts: Locator
+  readonly navCategories: Locator
 
   constructor(page: Page) {
     this.page = page
@@ -13,6 +14,7 @@ export class Navigation {
     this.processes = page.getByText('Processes')
     this.navImports = page.getByRole('link', { name: 'Imports' })
     this.navProducts = page.locator('.tw-text-sm', { hasText: 'Products' })
+    this.navCategories = page.locator('.tw-text-sm', { hasText: 'Categories' })
   }
 
   async clickCatalog() {
@@ -32,5 +34,10 @@ export class Navigation {
   async clickProducts() {
     await this.navProducts.click()
     await this.page.waitForSelector('[id="createEntityButton"]', { state: 'visible' })
+  }
+
+  async clickCategories() {
+    await this.navCategories.click()
+    await this.page.locator('button', { hasText: 'Add Category' }).waitFor({ state: 'visible' })
   }
 }

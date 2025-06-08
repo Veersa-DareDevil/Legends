@@ -1,0 +1,33 @@
+{
+    "Offers": {
+        "basicInfo": {
+            "offerName": "Automated Test Offer",
+            "discountAmount": "20",
+            "minCartValue": "150",
+            "offerCode": "AUTO"
+        },
+        "userRestrictions": {
+            "maximumTotalUses": "1",
+            "maximumUsesPerOrder": "1",
+            "maximumUsesPerUser": "1"
+        },
+        "combinability": {
+            "combinabilityStrategy": "Exclusive",
+            "stackable": true,
+            "qualifiersCanBeQualifiers": true,
+            "qualifiersCanBeTargets": false
+        },
+        "advancedOptions": {
+            "currencyCode": "EUR",
+            "maxSavingsPerOrder": "50",
+            "excludeDiscountedItems": true,
+            "limitToTimes": false,
+            "maxUsesPerUserFrequency": "1"
+        },
+        "codeRestrictions": {
+            "maxUses": "1",
+            "maxUsesPerUser": "1",
+            "maxCumulativeSavings": "250.00"
+        }
+    }
+}

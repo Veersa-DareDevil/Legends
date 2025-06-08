@@ -158,4 +158,6 @@ export class CheckoutPage {
     await this.continueToPaymentButton.waitFor({ state: 'visible' })
     await this.continueToPaymentButton.click()
   }
+
+  // verify discount
 }

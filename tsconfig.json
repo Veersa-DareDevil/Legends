@@ -8,14 +8,29 @@
     "outDir": "./dist",
     "rootDir": "./",
     "skipLibCheck": true,
-    "lib": ["es2020", "dom"],
-    "types": ["node", "playwright/test"],
+    "lib": [
+      "es2020",
+      "dom"
+    ],
+    "types": [
+      "node",
+      "playwright/test"
+    ],
     "resolveJsonModule": true,
+    "moduleResolution": "node",
     "baseUrl": "./",
     "paths": {
-      "@src/*": ["src/*"],
-      "@pageObjects/*": ["src/pageObjects/*"]
+      "@src/*": [
+        "src/*"
+      ],
+      "@pageObjects/*": [
+        "src/pageObjects/*"
+      ]
     }
   },
-  "include": ["specs/**/*.spec.ts", "src/**/*.ts", "src/**/*.json"]
+  "include": [
+    "specs/**/*.spec.ts",
+    "src/**/*.ts",
+    "src/**/*.json"
+  ]
 }

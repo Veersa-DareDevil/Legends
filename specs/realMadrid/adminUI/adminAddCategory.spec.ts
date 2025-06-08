@@ -29,7 +29,7 @@ test.describe('Catalog Management', () => {
 
     //can be used in future
     //await category.previewCategoryOnStoreFront()
-    
+
     await category.promoteProductToSandbox()
     await page.waitForTimeout(30000)
 

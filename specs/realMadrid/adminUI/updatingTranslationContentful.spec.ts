@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test'
 import { ContentfulService } from '@src/pageObject/realMadrid/adminUI/contentfulService'
 import { Product } from '@src/pageObject/realMadrid/desktopUI/product'
 import { CommonUtils } from '@src/utils/loginUtils/realMadrid/commonUtils'
-import { contentfulAuthData, localEnglish } from '@src/fixtures/realMadrid/contentfulData'
+import { contentfulAuthData, localEnglish } from '@src/fixtures/api/realMadrid/contentfulData'
 
 // This test case has large timeouts due to propagation delay of data from contentful
 test.describe.serial('Contentful Translation Updates - Real Madrid', () => {

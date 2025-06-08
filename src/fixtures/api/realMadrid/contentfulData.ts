@@ -10,3 +10,5 @@ export const contentfulAuthData = {
   testEntryID: '01kYgkMSiHgAUUi40AfjCx',
   fieldName: 'value',
 }
+
+export const privacyPolicyEntryId = '57X80Q5rjy3vOi2YrMO9bF'

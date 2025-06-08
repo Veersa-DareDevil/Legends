@@ -19,7 +19,7 @@ export class ContentfulService {
   constructor(page: Page) {
     this.client = createClient(
       {
-        accessToken: process.env.CONTENTFUL_MANAGEMENT_TOKEN!,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN!,
       },
       {
         type: 'plain',

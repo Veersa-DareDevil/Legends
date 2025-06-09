@@ -69,12 +69,6 @@ test.describe('Pricing Management', () => {
       adminData.Offers.advancedOptions.currencyCode,
     )
 
-    // --- [Future fields validation - Uncomment if implemented] ---
-    // await expect(pricing.maxSavingsPerOrderInput).toHaveValue(adminData.Offers.advancedOptions.maxSavingsPerOrder);
-    // await expect(pricing.excludeDiscountedItemsToggle).toBeChecked();
-    // await expect(pricing.limitToTimesToggle).toBeChecked();
-    // await expect(pricing.maxUsesPerUserFrequencyInput).toHaveValue(adminData.Offers.advancedOptions.maxUsesPerUserFrequency);
-
     // click on create offer button
     await pricing.clickOfferButton()
 

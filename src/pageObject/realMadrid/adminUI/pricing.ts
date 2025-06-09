@@ -141,14 +141,6 @@ export class pricingFeature {
     ) {
       await this.stackableToggle.click()
     }
-
-    // Future-use (optional)
-    // const { combinabilityStrategy, qualifiersCanBeQualifiers, qualifiersCanBeTargets } = adminData.Offers.combinability;
-    // await this.strategyDropdown.click();
-    // await this.page.locator(`.Select__option >> text=${combinabilityStrategy}`).click();
-    // if (qualifiersCanBeQualifiers) await this.qualifiersAsQualifiersToggle.click();
-    // if (qualifiersCanBeTargets) await this.qualifiersAsTargetsToggle.click();
-    // await this.addOverrideBtn.click();
   }
 
   async setAdvancedOptions(): Promise<void> {

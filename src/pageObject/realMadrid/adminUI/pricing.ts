@@ -163,7 +163,7 @@ export class pricingFeature {
 
   async clickOfferButton() {
     await this.createOfferBtn.click()
-    await this.page.waitForTimeout(2000)
+    await this.page.waitForTimeout(1000)
   }
 
   async clickCreateOfferCode(): Promise<string> {
@@ -171,7 +171,7 @@ export class pricingFeature {
 
     await this.createOfferCodeBtn.waitFor({ state: 'visible' })
     await this.createOfferCodeBtn.click()
-    await this.page.waitForTimeout(2000)
+    await this.page.waitForTimeout(1000)
 
     const code = await this.generateOfferCode()
     await this.inputofferCode.fill(code)
@@ -180,7 +180,7 @@ export class pricingFeature {
     await this.maxUsesCodeInput.fill(maximumTotalUses)
     await this.maxUsesPerUserCodeInput.fill(maximumUsesPerUser)
     await this.submitCreateOfferCodeButton.click()
-    await this.page.waitForTimeout(2000)
+    await this.page.waitForTimeout(1000)
     return code
   }
 }

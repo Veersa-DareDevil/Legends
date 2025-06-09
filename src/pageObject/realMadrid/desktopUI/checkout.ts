@@ -1,7 +1,5 @@
 import { expect, Locator, Page } from '@playwright/test'
 import checkoutData from '@src/fixtures/realMadrid/checkoutValidation.json'
-import { pricingFeature } from '../adminUI/pricing'
-
 
 export class CheckoutPage {
   private page
@@ -49,9 +47,11 @@ export class CheckoutPage {
     this.continueToPaymentButton = page.getByRole('button', { name: 'Continue to payment' })
 
     // add discount button locator on storefront
-    this.addDisountButton = page.locator('#discount').getByRole('button', { name: 'Got a discount code?' })
-    this.inputDiscountCode= page.locator('#discount input[name="code"]');
-    this.applyDiscountButton= page.locator('#discount button[type="submit"]');
+    this.addDisountButton = page
+      .locator('#discount')
+      .getByRole('button', { name: 'Got a discount code?' })
+    this.inputDiscountCode = page.locator('#discount input[name="code"]')
+    this.applyDiscountButton = page.locator('#discount button[type="submit"]')
   }
 
   async fillYourDetails(
@@ -172,13 +172,13 @@ export class CheckoutPage {
     await this.continueToPaymentButton.click()
   }
   // verify discount on checkout
-  async addDiscountCode(discountCode:string) {
-    await this.addDisountButton.waitFor({ state: 'visible' });
-    await this.addDisountButton.click();
-    await this.inputDiscountCode.waitFor({state:'visible'});
-    await this.inputDiscountCode.fill(discountCode);
-    await this.applyDiscountButton.waitFor({state:'visible'});
-    await this.applyDiscountButton.click();
-    await this.page.waitForTimeout(2000);
+  async addDiscountCode(discountCode: string) {
+    await this.addDisountButton.waitFor({ state: 'visible' })
+    await this.addDisountButton.click()
+    await this.inputDiscountCode.waitFor({ state: 'visible' })
+    await this.inputDiscountCode.fill(discountCode)
+    await this.applyDiscountButton.waitFor({ state: 'visible' })
+    await this.applyDiscountButton.click()
+    await this.page.waitForTimeout(2000)
   }
 }

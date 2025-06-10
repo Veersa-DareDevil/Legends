@@ -53,19 +53,17 @@ test.describe.serial('Contentful Translation Updates - Real Madrid', () => {
 
     // Step 7: Revert to original
 
-    if (originalValue && originalValue !== locale.value) {
-      const revertResult = await contentful.updateTranslation(
-        TEST_ENTRY_ID,
-        FIELD_NAME,
-        locale.code,
-        originalValue,
-      )
-      expect(revertResult.success).toBe(true)
+    const revertResult = await contentful.updateTranslation(
+      TEST_ENTRY_ID,
+      FIELD_NAME,
+      locale.code,
+      locale.original,
+    )
+    expect(revertResult.success).toBe(true)
 
-      const reverted = await contentful.getEntryField(TEST_ENTRY_ID, FIELD_NAME, locale.code)
-      expect(reverted).toBe(originalValue)
-      // Wait for propagation
-      await page.waitForTimeout(240000)
-    }
+    const reverted = await contentful.getEntryField(TEST_ENTRY_ID, FIELD_NAME, locale.code)
+    expect(reverted).toBe(originalValue)
+    // Wait for propagation
+    await page.waitForTimeout(240000)
   })
 })

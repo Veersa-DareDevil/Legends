@@ -1,7 +1,7 @@
 export const localEnglish = {
   code: 'en',
   fullCode: 'en-US',
-  value: 'Add to Cart - Test RM',
+  value: 'Add to Cart',
   description: 'English',
   original: 'Add to Cart',
 }

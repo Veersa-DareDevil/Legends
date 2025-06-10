@@ -1,4 +1,6 @@
 import { Page, Locator } from 'playwright'
+import fs from 'fs'
+import path from 'path'
 
 export class AddCategory {
   readonly page: Page
@@ -76,20 +78,25 @@ export class AddCategory {
     const categoryName = this.generateCategoryName()
     await this.addCategoryName.fill(categoryName)
 
-    // select product membership type
+    // Store to JSON
+    const filePath = path.resolve('src/fixtures/realMadrid/adminDetails.json')
+    const jsonData = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
+    jsonData.category = { categoryName }
+    fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2))
+
+    // Select product membership type
     await this.productMembershipType.waitFor({ state: 'visible' })
     await this.productMembershipType.click()
     await this.choseProductMemberShipOption.click()
 
-    //Submit add Category
+    // Submit add Category
     await this.submitAddCategoryButton.waitFor({ state: 'visible' })
     await this.submitAddCategoryButton.click()
 
-    // Validate category is visible
+    // Validate and open newly created category
     const categoryLocator = this.page.getByTitle(categoryName)
-
-    // Click the newly created category to open it
     await categoryLocator.click()
+
     return categoryName
   }
 
@@ -131,17 +138,6 @@ export class AddCategory {
     await this.filterApplyButton.waitFor({ state: 'visible' })
     await this.filterApplyButton.click()
   }
-
-  // preview the changes on storefront // can be used in future
-  // async previewCategoryOnStoreFront() {
-  //     await this.previewChangesButton.waitFor({ state: 'visible' })
-  //     await this.previewChangesButton.click()
-  //     await this.page.waitForTimeout(5000)
-  //     const title = await this.page.title();
-  //     console.log('Page Title:', title);
-  //     await this.page.waitForTimeout(5000)
-
-  // }
 
   async promoteProductToSandbox() {
     await this.promoteButtonHeader.waitFor({ state: 'visible' })

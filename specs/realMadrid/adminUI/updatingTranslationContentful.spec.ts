@@ -36,7 +36,7 @@ test.describe.serial('Contentful Translation Updates - Real Madrid', () => {
     expect(updatedValue).toBe(locale.value)
 
     // Step 4: Wait for propagation
-    await page.waitForTimeout(240000)
+    await page.waitForTimeout(2000)
 
     // Step 5: Navigate to PDP with correct locale
     const pdpUrl = `${process.env.STOREFRONT_BASE_URL}/${locale.fullCode}`
@@ -53,12 +53,12 @@ test.describe.serial('Contentful Translation Updates - Real Madrid', () => {
 
     // Step 7: Revert to original
 
-    if (originalValue && originalValue !== locale.value) {
+    
       const revertResult = await contentful.updateTranslation(
         TEST_ENTRY_ID,
         FIELD_NAME,
         locale.code,
-        originalValue,
+        originalValue!,
       )
       expect(revertResult.success).toBe(true)
 
@@ -66,6 +66,6 @@ test.describe.serial('Contentful Translation Updates - Real Madrid', () => {
       expect(reverted).toBe(originalValue)
       // Wait for propagation
       await page.waitForTimeout(240000)
-    }
+    
   })
 })

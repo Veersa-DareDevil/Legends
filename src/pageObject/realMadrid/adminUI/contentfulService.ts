@@ -1,3 +1,4 @@
+import { CommonUtils } from '@src/utils/loginUtils/realMadrid/commonUtils'
 import { createClient, type PlainClientAPI } from 'contentful-management'
 import 'dotenv/config'
 import { Locator, Page } from 'playwright'
@@ -15,6 +16,7 @@ export class ContentfulService {
   private defaultEnvironmentId: string
   readonly addToCartButton: Locator
   private page: Page
+  private commonFunction: CommonUtils
 
   constructor(page: Page) {
     this.client = createClient(
@@ -32,6 +34,7 @@ export class ContentfulService {
     this.defaultSpaceId = process.env.CONTENTFUL_SPACE_ID!
     this.defaultEnvironmentId = process.env.CONTENTFUL_ENVIRONMENT! || 'uat'
     this.addToCartButton = page.locator('[data-testid="addtocartbutton"]')
+    this.commonFunction = new CommonUtils(page)
 
     this.page = page
   }
@@ -92,6 +95,24 @@ export class ContentfulService {
   }
 
   async verifyAddToCartButtonValue(value: string) {
+    const maxWait=600000
+    const interval=15000
+    const startTime = Date.now()
+    let elapsedTime = 0
+
+    while (elapsedTime < maxWait) {
+    await this.page.reload()
+    await this.page.waitForLoadState('domcontentloaded')
+    await this.commonFunction.rejectAllCookies()
+    const currentValue = await this.addToCartButton.textContent()
+
+    if (currentValue === value) {
+      break
+    }
+
+    await this.page.waitForTimeout(interval)
+    elapsedTime = Date.now() - startTime
+  }
     await expect(this.addToCartButton).toBeVisible()
     await expect(this.addToCartButton).toHaveText(value, { timeout: 10000 })
   }

@@ -155,7 +155,7 @@ export class PersonalizeProduct {
   async getDefaultProductPrice() {
     await this.product.addToCart()
     await this.checkout.checkoutButton.waitFor({ state: 'visible' })
-    const priceText = await this.product.miniCartProductPrice.innerText()
+    const priceText = await this.product.miniCartProductPrice('$').innerText()
     const priceElement = await this.extractPriceFromText(priceText)
     await this.product.miniCartProductRemove(productData.pName)
     await this.checkout.continueShopping()

@@ -15,7 +15,7 @@ export class Product {
   readonly phoneNumberInput: Locator
   readonly warningMessage: Locator
   readonly shipAddress: Locator
-  readonly miniCartProductPrice: Locator
+  readonly miniCartProductPrice: (priceSymbol: string) => Locator
 
   constructor(page: Page) {
     this.page = page
@@ -29,7 +29,7 @@ export class Product {
     this.phoneNumberInput = page.locator('[name="phoneNumber"]')
     this.warningMessage = page.getByText(checkoutData.nonWesternCharacters.warnMsg)
     this.shipAddress = page.getByText('Shipping Address')
-    this.miniCartProductPrice = page.getByTestId('minicart').getByText('Current Price:$').first()
+    this.miniCartProductPrice = (priceSymbol: string) => page.getByTestId('minicart').getByText(priceSymbol).first()
   }
 
   async selectNavTraining() {

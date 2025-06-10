@@ -81,7 +81,7 @@ test.describe('Personalization Product', () => {
     )
     await product.addToCart()
     await page.waitForTimeout(2000)
-    const personalizedPriceText = await product.miniCartProductPrice.innerText()
+    const personalizedPriceText = await product.miniCartProductPrice('$').innerText()
     const personalizedPrice = await personalizeProduct.extractPriceFromText(personalizedPriceText)
     // Validate that the personalized price is greater than or equal to the None personalised price
     expect(Number(personalizedPrice)).toBeGreaterThanOrEqual(Number(defaultPrice))

@@ -11,8 +11,8 @@ export class Product {
   readonly rejectAllCookiesButton: Locator
   readonly productCardLink: Locator
   readonly addToCartButton: Locator
-  readonly miniCartProductPrice: Locator
-
+  readonly miniCartProductPrice: (priceSymbol: string) => Locator
+  
   constructor(page: Page) {
     this.page = page
     this.commonFunction = new CommonUtils(page)
@@ -21,7 +21,7 @@ export class Product {
     this.productCardLink = page.locator('[data-testid="productcardlink"]')
     this.addToCartButton = page.locator('[data-testid="addtocartbutton"]')
     this.rejectAllCookiesButton = page.locator('#onetrust-reject-all-handler')
-    this.miniCartProductPrice = page.getByTestId('minicart').getByText('Current Price:$').first()
+    this.miniCartProductPrice = (priceSymbol: string) => page.getByTestId('minicart').getByText(priceSymbol).first()
   }
 
   async selectNavTraining() {

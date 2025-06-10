@@ -17,7 +17,6 @@ export class AddCategory {
   readonly firstFilter: Locator
   readonly secondFilter: Locator
   readonly filterApplyButton: Locator // apply filter button on product under category
-  //readonly previewChangesButton: Locator // It previews the added category on storefront // can be used in future
   readonly promoteButton: Locator
   readonly deployProductImmediately: Locator
   readonly promoteButtonHeader: Locator

@@ -103,6 +103,7 @@ export class CheckoutPage {
   }
 
   async continueToShipping() {
+    await this.continueShippingButton.waitFor({state:'visible'})
     await this.continueShippingButton.click()
     try {
       await this.page.waitForSelector('text=Confirm Your Address', {

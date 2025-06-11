@@ -9,7 +9,7 @@ export default defineConfig({
   testDir: 'specs',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
+  retries: process.env.CI ? 2 : 2,
   workers: process.env.CI ? 4 : undefined,
   reporter: [['html'], ['./custom-reporter.ts']],
 

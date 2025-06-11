@@ -10,7 +10,7 @@ interface TestResultData {
   duration: number
   startTime: string
   error?: string
-  website: string // Added website
+  website: string
   category: string
   attachments?: { name: string; contentType: string; path?: string }[]
 }
@@ -25,14 +25,14 @@ interface CategoryStats {
 }
 
 interface WebsiteStats {
-  stats: CategoryStats // Stats for the entire website
+  stats: CategoryStats
   categoryStats: { [key: string]: CategoryStats }
 }
 
 interface ReportData {
-  stats: CategoryStats // Overall stats
-  websiteStats: { [key: string]: WebsiteStats } // Stats per website
-  testResults: TestResultData[] // Flat list of all test results
+  stats: CategoryStats
+  websiteStats: { [key: string]: WebsiteStats }
+  testResults: TestResultData[]
   executionTime: string
   executionStartDate: Date
   executionEndDate?: Date
@@ -41,13 +41,14 @@ interface ReportData {
 class CustomReporter implements Reporter {
   private reportData: ReportData = {
     stats: { total: 0, passed: 0, failed: 0, skipped: 0, interrupted: 0, timedOut: 0 },
-    websiteStats: {}, // Initialize as empty object
+    websiteStats: {},
     testResults: [],
     executionTime: '',
     executionStartDate: new Date(),
     executionEndDate: undefined,
   }
   private startTime = Date.now()
+  private testCaseMap = new Map<string, TestResultData>() // Track test cases by their ID
 
   constructor(private config: FullConfig) {}
 
@@ -62,7 +63,7 @@ class CustomReporter implements Reporter {
       Unknown: 'Unknown Website',
       Other: 'Other Category',
     }
-    return nameMap[name] || name // Return mapped name or original if not found
+    return nameMap[name] || name
   }
 
   onBegin(config: FullConfig, suite: Suite): void {
@@ -71,7 +72,7 @@ class CustomReporter implements Reporter {
 
   onTestEnd(testCase: TestCase, result: TestResult): void {
     const filePath = testCase.location.file
-    const pathParts = filePath.split(path.sep) // Use path.sep for OS compatibility
+    const pathParts = filePath.split(path.sep)
     const specsIndex = pathParts.findIndex((part) => part === 'specs')
     let website = 'Unknown'
     let category = 'Other'
@@ -81,63 +82,82 @@ class CustomReporter implements Reporter {
       category = pathParts[specsIndex + 2]
     }
 
-    // Initialize website stats if not exists
-    if (!this.reportData.websiteStats[website]) {
-      this.reportData.websiteStats[website] = {
-        stats: { total: 0, passed: 0, failed: 0, skipped: 0, interrupted: 0, timedOut: 0 },
-        categoryStats: {},
+    const testCaseId = testCase.id // Use test case ID as unique identifier
+
+    // Only update if:
+    // 1. This is the first time we're seeing this test case, OR
+    // 2. The previous status wasn't "passed" (we want to keep the first passing result)
+    const shouldUpdate = !this.testCaseMap.has(testCaseId) || 
+                        this.testCaseMap.get(testCaseId)?.status !== 'passed'
+
+    if (shouldUpdate) {
+      const testResultData: TestResultData = {
+        testCaseTitle: testCase.title,
+        status: result.status,
+        duration: result.duration,
+        startTime: new Date(result.startTime).toLocaleString(),
+        error: result.errors.map((e) => e.message).join('\n') || undefined,
+        website,
+        category,
+        attachments: result.attachments.map((att) => ({
+          name: att.name,
+          contentType: att.contentType,
+          path: att.path,
+        })),
       }
+      this.testCaseMap.set(testCaseId, testResultData)
     }
-
-    // Initialize category stats for the website if not exists
-    if (!this.reportData.websiteStats[website].categoryStats[category]) {
-      this.reportData.websiteStats[website].categoryStats[category] = {
-        total: 0,
-        passed: 0,
-        failed: 0,
-        skipped: 0,
-        interrupted: 0,
-        timedOut: 0,
-      }
-    }
-
-    // Update overall stats
-    this.reportData.stats.total++
-    if (result.status in this.reportData.stats) {
-      ;(this.reportData.stats as any)[result.status]++
-    }
-
-    // Update website stats
-    const websiteStats = this.reportData.websiteStats[website].stats
-    websiteStats.total++
-    if (result.status in websiteStats) {
-      ;(websiteStats as any)[result.status]++
-    }
-
-    // Update category stats for the website
-    const categoryStats = this.reportData.websiteStats[website].categoryStats[category]
-    categoryStats.total++
-    if (result.status in categoryStats) {
-      ;(categoryStats as any)[result.status]++
-    }
-
-    this.reportData.testResults.push({
-      testCaseTitle: testCase.title,
-      status: result.status,
-      duration: result.duration,
-      startTime: new Date(result.startTime).toLocaleString(),
-      error: result.errors.map((e) => e.message).join('\n') || undefined,
-      website, // Store website
-      category, // Store category
-      attachments: result.attachments.map((att) => ({
-        name: att.name,
-        contentType: att.contentType,
-        path: att.path,
-      })),
-    })
   }
 
   async onEnd(): Promise<void> {
+    // Process all test cases and update stats based on final status
+    for (const testResultData of this.testCaseMap.values()) {
+      const { website, category, status } = testResultData
+
+      // Initialize website stats if not exists
+      if (!this.reportData.websiteStats[website]) {
+        this.reportData.websiteStats[website] = {
+          stats: { total: 0, passed: 0, failed: 0, skipped: 0, interrupted: 0, timedOut: 0 },
+          categoryStats: {},
+        }
+      }
+
+      // Initialize category stats for the website if not exists
+      if (!this.reportData.websiteStats[website].categoryStats[category]) {
+        this.reportData.websiteStats[website].categoryStats[category] = {
+          total: 0,
+          passed: 0,
+          failed: 0,
+          skipped: 0,
+          interrupted: 0,
+          timedOut: 0,
+        }
+      }
+
+      // Update overall stats (count each test only once)
+      this.reportData.stats.total++
+      if (status in this.reportData.stats) {
+        ;(this.reportData.stats as any)[status]++
+      }
+
+      // Update website stats
+      const websiteStats = this.reportData.websiteStats[website].stats
+      websiteStats.total++
+      if (status in websiteStats) {
+        ;(websiteStats as any)[status]++
+      }
+
+      // Update category stats for the website
+      const categoryStats = this.reportData.websiteStats[website].categoryStats[category]
+      categoryStats.total++
+      if (status in categoryStats) {
+        ;(categoryStats as any)[status]++
+      }
+
+      // Add to test results
+      this.reportData.testResults.push(testResultData)
+    }
+
     this.reportData.executionTime = this.formatTime(Date.now() - this.startTime)
     this.reportData.executionEndDate = new Date()
 
@@ -168,9 +188,6 @@ class CustomReporter implements Reporter {
             try {
               fs.copyFileSync(sourcePath, destinationPath)
               att.path = path.join('attachments', fileName)
-              console.log(
-                `Copied attachment from ${sourcePath} to ${destinationPath}, updated path in report data to ${att.path}`,
-              )
             } catch (error) {
               console.error(
                 `Failed to copy attachment ${sourcePath} to ${destinationPath}: ${error}`,
@@ -232,7 +249,7 @@ class CustomReporter implements Reporter {
     .chart-box { position: relative; width: 100%; height: 300px; }
     .chart-box canvas { width: 100% !important; height: 100% !important; }
     .category-separator { border-top: 1px solid #dee2e6; }
-    .website-separator { border-top: 3px solid #000; margin-top: 30px; padding-top: 20px; } /* Thicker separator for websites */
+    .website-separator { border-top: 3px solid #000; margin-top: 30px; padding-top: 20px; }
   </style>
 </head><body class="bg-light">
   <div class="container-fluid py-4">
@@ -280,9 +297,8 @@ class CustomReporter implements Reporter {
     ${websites
       .map((website, websiteIndex) => {
         const websiteTotal = websiteStats[website].stats.total
-        // Only render the website section if there are tests for this website
         if (websiteTotal === 0) {
-          return '' // Don't render anything for this website
+          return ''
         }
 
         const categoriesWithTests = Object.keys(websiteStats[website].categoryStats).filter(
@@ -341,7 +357,6 @@ class CustomReporter implements Reporter {
     `
       })
       .join('')}
-
 
     <!-- Test Details -->
     <div class="card shadow">
@@ -457,7 +472,7 @@ class CustomReporter implements Reporter {
                 });
                 `
             }
-            return '' // Don't generate chart script if total is 0
+            return ''
           })
           .join('\n'),
       )

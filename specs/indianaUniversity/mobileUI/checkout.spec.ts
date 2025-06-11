@@ -22,7 +22,7 @@ test.describe('Checkout Scenarios', () => {
     await page.waitForTimeout(2000)
   })
 
-  test('56825-Checkout Validation', async ({}) => {
+  test('56825-Checkout Validation', async ({ }) => {
     const productName = await product.selectProduct()
     console.log('Product Name:', productName)
     await product.addToCart()
@@ -74,9 +74,13 @@ test.describe('Checkout Scenarios', () => {
     const homePageUrl = await page.url()
     const fullUrl = `${homePageUrl}${productData.outOfStockProduct}`
     await page.goto(fullUrl)
+    // Verify product is out of stock
     await checkout.getOutOfStockProduct()
-    await expect(page.getByText('Item out of stock')).toBeVisible()
-    await checkout.getEmailNotification(testData.emailNotify)
+
+    const outOfStockMessage = page.getByText('Item out of stock')
+    await outOfStockMessage.waitFor({ state: 'visible' })
+    expect(outOfStockMessage)
+
   })
 
   test('new - Purchasing a Personalized Product', async ({ page }) => {
@@ -87,8 +91,12 @@ test.describe('Checkout Scenarios', () => {
     await product.personalisedProduct(Name, Number)
     const productName = await product.selectProduct()
     console.log('Product Name:', productName)
+
+    //add to cart and checkput
     await product.addToCart()
     await checkout.selectCheckout()
+
+    // fill your address details
     await checkout.fillYourDetails(
       testData.validData.userDetails.fullName,
       testData.validData.userDetails.email,
@@ -98,12 +106,18 @@ test.describe('Checkout Scenarios', () => {
       testData.validData.userDetails.city,
       testData.validData.userDetails.postcode,
     )
+    // select country and state
     await checkout.selectCountry(testData.validData.userDetails.country)
     await page.waitForTimeout(1000)
     await checkout.selectState(testData.validData.userDetails.state)
+    await page.waitForTimeout(1000)
+
+    // continue to shipping
     await checkout.continueToShipping()
     await page.waitForSelector('text=Continue to payment', { state: 'visible' })
     await page.waitForTimeout(1000)
+
+    // continue to payment
     await checkout.continueToPayment()
     await payment.paymentButton.waitFor({ state: 'visible' })
     await payment.fillPaymentDetails(

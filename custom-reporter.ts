@@ -10,7 +10,7 @@ interface TestResultData {
   duration: number
   startTime: string
   error?: string
-  website: string
+  website: string // Added website
   category: string
   attachments?: { name: string; contentType: string; path?: string }[]
 }
@@ -25,17 +25,18 @@ interface CategoryStats {
 }
 
 interface WebsiteStats {
-  stats: CategoryStats
+  stats: CategoryStats // Stats for the entire website
   categoryStats: { [key: string]: CategoryStats }
 }
 
 interface ReportData {
-  stats: CategoryStats
-  websiteStats: { [key: string]: WebsiteStats }
-  testResults: TestResultData[]
-  executionTime: string
+  stats: CategoryStats // Overall stats - calculated in onEnd
+  websiteStats: { [key: string]: WebsiteStats } // Stats per website - calculated in onEnd
+  testResults: TestResultData[] // Flat list of final test results - populated in onEnd
+  allTestResults: Map<string, TestResultData[]> // Store all results per test case ID
+  executionTime: string // Calculated in onEnd
   executionStartDate: Date
-  executionEndDate?: Date
+  executionEndDate?: Date // Calculated in onEnd
 }
 
 class CustomReporter implements Reporter {
@@ -43,12 +44,12 @@ class CustomReporter implements Reporter {
     stats: { total: 0, passed: 0, failed: 0, skipped: 0, interrupted: 0, timedOut: 0 },
     websiteStats: {},
     testResults: [],
+    allTestResults: new Map(), // Initialize the map to store all results including retries
     executionTime: '',
     executionStartDate: new Date(),
     executionEndDate: undefined,
   }
   private startTime = Date.now()
-  private testCaseMap = new Map<string, TestResultData>() // Track test cases by their ID
 
   constructor(private config: FullConfig) {}
 
@@ -63,7 +64,7 @@ class CustomReporter implements Reporter {
       Unknown: 'Unknown Website',
       Other: 'Other Category',
     }
-    return nameMap[name] || name
+    return nameMap[name] || name // Return mapped name or original if not found
   }
 
   onBegin(config: FullConfig, suite: Suite): void {
@@ -72,7 +73,7 @@ class CustomReporter implements Reporter {
 
   onTestEnd(testCase: TestCase, result: TestResult): void {
     const filePath = testCase.location.file
-    const pathParts = filePath.split(path.sep)
+    const pathParts = filePath.split(path.sep) // Use path.sep for OS compatibility
     const specsIndex = pathParts.findIndex((part) => part === 'specs')
     let website = 'Unknown'
     let category = 'Other'
@@ -82,37 +83,48 @@ class CustomReporter implements Reporter {
       category = pathParts[specsIndex + 2]
     }
 
-    const testCaseId = testCase.id // Use test case ID as unique identifier
-
-    // Only update if:
-    // 1. This is the first time we're seeing this test case, OR
-    // 2. The previous status wasn't "passed" (we want to keep the first passing result)
-    const shouldUpdate = !this.testCaseMap.has(testCaseId) || 
-                        this.testCaseMap.get(testCaseId)?.status !== 'passed'
-
-    if (shouldUpdate) {
-      const testResultData: TestResultData = {
-        testCaseTitle: testCase.title,
-        status: result.status,
-        duration: result.duration,
-        startTime: new Date(result.startTime).toLocaleString(),
-        error: result.errors.map((e) => e.message).join('\n') || undefined,
-        website,
-        category,
-        attachments: result.attachments.map((att) => ({
-          name: att.name,
-          contentType: att.contentType,
-          path: att.path,
-        })),
-      }
-      this.testCaseMap.set(testCaseId, testResultData)
+    const resultData: TestResultData = {
+      testCaseTitle: testCase.title,
+      status: result.status,
+      duration: result.duration,
+      startTime: new Date(result.startTime).toLocaleString(),
+      error: result.errors.map((e) => e.message).join('\n') || undefined,
+      website,
+      category,
+      attachments: result.attachments.map((att) => ({
+        name: att.name,
+        contentType: att.contentType,
+        path: att.path,
+      })),
     }
+
+    // Store the result for this test case ID. Do not update stats or final results here.
+    if (!this.reportData.allTestResults.has(testCase.id)) {
+      this.reportData.allTestResults.set(testCase.id, [])
+    }
+    this.reportData.allTestResults.get(testCase.id)!.push(resultData)
   }
 
   async onEnd(): Promise<void> {
-    // Process all test cases and update stats based on final status
-    for (const testResultData of this.testCaseMap.values()) {
-      const { website, category, status } = testResultData
+    this.reportData.executionTime = this.formatTime(Date.now() - this.startTime)
+    this.reportData.executionEndDate = new Date()
+
+    // Clear previous stats and final results before recalculating
+    this.reportData.stats = { total: 0, passed: 0, failed: 0, skipped: 0, interrupted: 0, timedOut: 0 };
+    this.reportData.websiteStats = {};
+    this.reportData.testResults = []; // This will now store ONLY the final result for each test case
+
+    // Process all results to get final results and calculate stats
+    this.reportData.allTestResults.forEach((results, testCaseId) => {
+      // Find the final result for this test case (the last attempt)
+      const finalResult = results[results.length - 1]
+
+      // Determine the final status: 'passed' if any attempt passed, otherwise the status of the last attempt
+      const finalStatus = results.some(r => r.status === 'passed') ? 'passed' : finalResult.status;
+
+      // Update stats based on the final status of the test case
+      const website = finalResult.website;
+      const category = finalResult.category;
 
       // Initialize website stats if not exists
       if (!this.reportData.websiteStats[website]) {
@@ -134,34 +146,32 @@ class CustomReporter implements Reporter {
         }
       }
 
-      // Update overall stats (count each test only once)
-      this.reportData.stats.total++
-      if (status in this.reportData.stats) {
-        ;(this.reportData.stats as any)[status]++
+      // Update overall stats
+      this.reportData.stats.total++;
+      if (finalStatus in this.reportData.stats) {
+        (this.reportData.stats as any)[finalStatus]++;
       }
 
       // Update website stats
-      const websiteStats = this.reportData.websiteStats[website].stats
-      websiteStats.total++
-      if (status in websiteStats) {
-        ;(websiteStats as any)[status]++
+      const websiteStats = this.reportData.websiteStats[website].stats;
+      websiteStats.total++;
+      if (finalStatus in websiteStats) {
+        (websiteStats as any)[finalStatus]++;
       }
 
       // Update category stats for the website
-      const categoryStats = this.reportData.websiteStats[website].categoryStats[category]
-      categoryStats.total++
-      if (status in categoryStats) {
-        ;(categoryStats as any)[status]++
+      const categoryStats = this.reportData.websiteStats[website].categoryStats[category];
+      categoryStats.total++;
+      if (finalStatus in categoryStats) {
+        (categoryStats as any)[finalStatus]++;
       }
 
-      // Add to test results
-      this.reportData.testResults.push(testResultData)
-    }
+      // Add ONLY the final result for this test case to the testResults array for the table
+      this.reportData.testResults.push(finalResult);
+    });
 
-    this.reportData.executionTime = this.formatTime(Date.now() - this.startTime)
-    this.reportData.executionEndDate = new Date()
 
-    // Sort test results by website, then category, then test case title
+    // Sort the final test results by website, then category, then test case title
     this.reportData.testResults.sort((a, b) => {
       if (a.website !== b.website) {
         return a.website.localeCompare(b.website)
@@ -177,7 +187,7 @@ class CustomReporter implements Reporter {
     fs.mkdirSync(reportsDir, { recursive: true })
     fs.mkdirSync(attachmentsDir, { recursive: true })
 
-    // Copy attachments to the reports directory
+    // Copy attachments to the reports directory (from all attempts now)
     for (const result of this.reportData.testResults) {
       if (result.attachments) {
         for (const att of result.attachments) {
@@ -188,6 +198,9 @@ class CustomReporter implements Reporter {
             try {
               fs.copyFileSync(sourcePath, destinationPath)
               att.path = path.join('attachments', fileName)
+              console.log(
+                `Copied attachment from ${sourcePath} to ${destinationPath}, updated path in report data to ${att.path}`,
+              )
             } catch (error) {
               console.error(
                 `Failed to copy attachment ${sourcePath} to ${destinationPath}: ${error}`,
@@ -203,7 +216,14 @@ class CustomReporter implements Reporter {
     console.log(`Report generated at ${reportFile}`)
 
     const jsonReportPath = path.join(reportsDir, 'custom-report.json')
-    fs.writeFileSync(jsonReportPath, JSON.stringify(this.reportData, null, 2))
+    // Save the full data including all attempts to the JSON report
+    const jsonReportData = {
+        ...this.reportData,
+        // Convert Map to a plain object for JSON serialization
+        allTestResults: Object.fromEntries(this.reportData.allTestResults),
+        // testResults now contains ALL results for the table
+    };
+    fs.writeFileSync(jsonReportPath, JSON.stringify(jsonReportData, null, 2))
   }
 
   private formatTime(ms: number): string {
@@ -231,12 +251,15 @@ class CustomReporter implements Reporter {
     const {
       stats,
       websiteStats,
-      testResults,
+      testResults, // This now contains ALL results for the table
       executionTime,
       executionStartDate,
       executionEndDate,
     } = this.reportData
     const websites = Object.keys(websiteStats)
+
+    // Create a map to track attempt numbers for each test case title
+    const attemptMap = new Map<string, number>();
 
     return `<!DOCTYPE html>
 <html><head>
@@ -249,7 +272,7 @@ class CustomReporter implements Reporter {
     .chart-box { position: relative; width: 100%; height: 300px; }
     .chart-box canvas { width: 100% !important; height: 100% !important; }
     .category-separator { border-top: 1px solid #dee2e6; }
-    .website-separator { border-top: 3px solid #000; margin-top: 30px; padding-top: 20px; }
+    .website-separator { border-top: 3px solid #000; margin-top: 30px; padding-top: 20px; } /* Thicker separator for websites */
   </style>
 </head><body class="bg-light">
   <div class="container-fluid py-4">
@@ -297,8 +320,9 @@ class CustomReporter implements Reporter {
     ${websites
       .map((website, websiteIndex) => {
         const websiteTotal = websiteStats[website].stats.total
+        // Only render the website section if there are tests for this website
         if (websiteTotal === 0) {
-          return ''
+          return '' // Don't render anything for this website
         }
 
         const categoriesWithTests = Object.keys(websiteStats[website].categoryStats).filter(
@@ -358,6 +382,7 @@ class CustomReporter implements Reporter {
       })
       .join('')}
 
+
     <!-- Test Details -->
     <div class="card shadow">
       <div class="card-body">
@@ -369,6 +394,7 @@ class CustomReporter implements Reporter {
                 <th>Website</th>
                 <th>Category</th>
                 <th>Test Case</th>
+                <th>Attempt</th> <!-- Added Attempt column -->
                 <th>Status</th>
                 <th>Duration(s)</th>
                 <th>Start Time</th>
@@ -381,43 +407,63 @@ class CustomReporter implements Reporter {
                 let previousWebsite = ''
                 let previousCategory = ''
 
-                testResults.forEach((r, index) => {
+                // Iterate through allTestResults to get the last result and attempt count for each test case ID
+                const sortedTestCases = Array.from(this.reportData.allTestResults.entries()).sort(([idA, resultsA], [idB, resultsB]) => {
+                    const lastResultA = resultsA[resultsA.length - 1];
+                    const lastResultB = resultsB[resultsB.length - 1];
+                    if (lastResultA.website !== lastResultB.website) {
+                        return lastResultA.website.localeCompare(lastResultB.website);
+                    }
+                    if (lastResultA.category !== lastResultB.category) {
+                        return lastResultA.category.localeCompare(lastResultB.category);
+                    }
+                    return lastResultA.testCaseTitle.localeCompare(lastResultB.testCaseTitle);
+                });
+
+
+                sortedTestCases.forEach(([testCaseId, results]) => {
+                  const lastResult = results[results.length - 1];
+                  const attempts = results.length;
+
                   const statusClass =
-                    r.status === 'passed'
+                    lastResult.status === 'passed'
                       ? 'bg-success'
-                      : r.status === 'failed'
+                      : lastResult.status === 'failed'
                         ? 'bg-danger'
-                        : r.status === 'skipped'
+                        : lastResult.status === 'skipped'
                           ? 'bg-warning'
                           : 'bg-secondary'
-                  const capitalizedStatus = r.status.charAt(0).toUpperCase() + r.status.slice(1)
-                  const durationInSeconds = (r.duration / 1000).toFixed(2)
+                  const capitalizedStatus = lastResult.status.charAt(0).toUpperCase() + lastResult.status.slice(1)
+                  const durationInSeconds = (lastResult.duration / 1000).toFixed(2)
 
                   let rowClass = ''
-                  if (r.website !== previousWebsite && previousWebsite !== '') {
+                  if (lastResult.website !== previousWebsite && previousWebsite !== '') {
                     rowClass += ' website-separator'
-                  } else if (r.category !== previousCategory && previousCategory !== '') {
+                  } else if (lastResult.category !== previousCategory && previousCategory !== '') {
                     rowClass += ' category-separator'
                   }
-                  previousWebsite = r.website
-                  previousCategory = r.category
+
+                  previousWebsite = lastResult.website
+                  previousCategory = lastResult.category
+
 
                   tableRowsHtml += `
                     <tr class="${rowClass}">
-                      <td>${this.getDisplayName(r.website)}</td>
-                      <td>${this.getDisplayName(r.category)}</td>
-                      <td>${r.testCaseTitle}</td>
+                      <td>${this.getDisplayName(lastResult.website)}</td>
+                      <td>${this.getDisplayName(lastResult.category)}</td>
+                      <td>${lastResult.testCaseTitle}</td>
+                      <td>${attempts}</td> <!-- Display number of attempts -->
                       <td><span class="badge ${statusClass}">${capitalizedStatus}</span></td>
                       <td>${durationInSeconds}</td>
-                      <td>${r.startTime}</td>
+                      <td>${lastResult.startTime}</td>
                       <td>
-                        ${r.error ? `<pre>${this.stripAnsiCodes(r.error)}</pre>` : '-'}
+                        ${lastResult.error ? `<pre>${this.stripAnsiCodes(lastResult.error)}</pre>` : '-'}
                         ${
-                          r.attachments && r.attachments.length > 0
+                          lastResult.attachments && lastResult.attachments.length > 0
                             ? `
                             <div>
                               <strong>Attachments:</strong>
-                              ${r.attachments
+                              ${lastResult.attachments
                                 .map((att) => {
                                   if (att.path) {
                                     const fileName = path.basename(att.path)
@@ -472,7 +518,7 @@ class CustomReporter implements Reporter {
                 });
                 `
             }
-            return ''
+            return '' // Don't generate chart script if total is 0
           })
           .join('\n'),
       )

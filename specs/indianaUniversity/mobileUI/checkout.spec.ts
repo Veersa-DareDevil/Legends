@@ -22,7 +22,7 @@ test.describe('Checkout Scenarios', () => {
     await page.waitForTimeout(2000)
   })
 
-  test('56825-Checkout Validation', async ({ }) => {
+  test('56825-Checkout Validation', async ({}) => {
     const productName = await product.selectProduct()
     console.log('Product Name:', productName)
     await product.addToCart()
@@ -80,7 +80,6 @@ test.describe('Checkout Scenarios', () => {
     const outOfStockMessage = page.getByText('Item out of stock')
     await outOfStockMessage.waitFor({ state: 'visible' })
     expect(outOfStockMessage)
-
   })
 
   test('new - Purchasing a Personalized Product', async ({ page }) => {

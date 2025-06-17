@@ -110,9 +110,16 @@ class CustomReporter implements Reporter {
     this.reportData.executionEndDate = new Date()
 
     // Clear previous stats and final results before recalculating
-    this.reportData.stats = { total: 0, passed: 0, failed: 0, skipped: 0, interrupted: 0, timedOut: 0 };
-    this.reportData.websiteStats = {};
-    this.reportData.testResults = []; // This will now store ONLY the final result for each test case
+    this.reportData.stats = {
+      total: 0,
+      passed: 0,
+      failed: 0,
+      skipped: 0,
+      interrupted: 0,
+      timedOut: 0,
+    }
+    this.reportData.websiteStats = {}
+    this.reportData.testResults = [] // This will now store ONLY the final result for each test case
 
     // Process all results to get final results and calculate stats
     this.reportData.allTestResults.forEach((results, testCaseId) => {
@@ -120,11 +127,11 @@ class CustomReporter implements Reporter {
       const finalResult = results[results.length - 1]
 
       // Determine the final status: 'passed' if any attempt passed, otherwise the status of the last attempt
-      const finalStatus = results.some(r => r.status === 'passed') ? 'passed' : finalResult.status;
+      const finalStatus = results.some((r) => r.status === 'passed') ? 'passed' : finalResult.status
 
       // Update stats based on the final status of the test case
-      const website = finalResult.website;
-      const category = finalResult.category;
+      const website = finalResult.website
+      const category = finalResult.category
 
       // Initialize website stats if not exists
       if (!this.reportData.websiteStats[website]) {
@@ -147,29 +154,28 @@ class CustomReporter implements Reporter {
       }
 
       // Update overall stats
-      this.reportData.stats.total++;
+      this.reportData.stats.total++
       if (finalStatus in this.reportData.stats) {
-        (this.reportData.stats as any)[finalStatus]++;
+        ;(this.reportData.stats as any)[finalStatus]++
       }
 
       // Update website stats
-      const websiteStats = this.reportData.websiteStats[website].stats;
-      websiteStats.total++;
+      const websiteStats = this.reportData.websiteStats[website].stats
+      websiteStats.total++
       if (finalStatus in websiteStats) {
-        (websiteStats as any)[finalStatus]++;
+        ;(websiteStats as any)[finalStatus]++
       }
 
       // Update category stats for the website
-      const categoryStats = this.reportData.websiteStats[website].categoryStats[category];
-      categoryStats.total++;
+      const categoryStats = this.reportData.websiteStats[website].categoryStats[category]
+      categoryStats.total++
       if (finalStatus in categoryStats) {
-        (categoryStats as any)[finalStatus]++;
+        ;(categoryStats as any)[finalStatus]++
       }
 
       // Add ONLY the final result for this test case to the testResults array for the table
-      this.reportData.testResults.push(finalResult);
-    });
-
+      this.reportData.testResults.push(finalResult)
+    })
 
     // Sort the final test results by website, then category, then test case title
     this.reportData.testResults.sort((a, b) => {
@@ -218,11 +224,11 @@ class CustomReporter implements Reporter {
     const jsonReportPath = path.join(reportsDir, 'custom-report.json')
     // Save the full data including all attempts to the JSON report
     const jsonReportData = {
-        ...this.reportData,
-        // Convert Map to a plain object for JSON serialization
-        allTestResults: Object.fromEntries(this.reportData.allTestResults),
-        // testResults now contains ALL results for the table
-    };
+      ...this.reportData,
+      // Convert Map to a plain object for JSON serialization
+      allTestResults: Object.fromEntries(this.reportData.allTestResults),
+      // testResults now contains ALL results for the table
+    }
     fs.writeFileSync(jsonReportPath, JSON.stringify(jsonReportData, null, 2))
   }
 
@@ -259,7 +265,7 @@ class CustomReporter implements Reporter {
     const websites = Object.keys(websiteStats)
 
     // Create a map to track attempt numbers for each test case title
-    const attemptMap = new Map<string, number>();
+    const attemptMap = new Map<string, number>()
 
     return `<!DOCTYPE html>
 <html><head>
@@ -408,22 +414,23 @@ class CustomReporter implements Reporter {
                 let previousCategory = ''
 
                 // Iterate through allTestResults to get the last result and attempt count for each test case ID
-                const sortedTestCases = Array.from(this.reportData.allTestResults.entries()).sort(([idA, resultsA], [idB, resultsB]) => {
-                    const lastResultA = resultsA[resultsA.length - 1];
-                    const lastResultB = resultsB[resultsB.length - 1];
+                const sortedTestCases = Array.from(this.reportData.allTestResults.entries()).sort(
+                  ([idA, resultsA], [idB, resultsB]) => {
+                    const lastResultA = resultsA[resultsA.length - 1]
+                    const lastResultB = resultsB[resultsB.length - 1]
                     if (lastResultA.website !== lastResultB.website) {
-                        return lastResultA.website.localeCompare(lastResultB.website);
+                      return lastResultA.website.localeCompare(lastResultB.website)
                     }
                     if (lastResultA.category !== lastResultB.category) {
-                        return lastResultA.category.localeCompare(lastResultB.category);
+                      return lastResultA.category.localeCompare(lastResultB.category)
                     }
-                    return lastResultA.testCaseTitle.localeCompare(lastResultB.testCaseTitle);
-                });
-
+                    return lastResultA.testCaseTitle.localeCompare(lastResultB.testCaseTitle)
+                  },
+                )
 
                 sortedTestCases.forEach(([testCaseId, results]) => {
-                  const lastResult = results[results.length - 1];
-                  const attempts = results.length;
+                  const lastResult = results[results.length - 1]
+                  const attempts = results.length
 
                   const statusClass =
                     lastResult.status === 'passed'
@@ -433,7 +440,8 @@ class CustomReporter implements Reporter {
                         : lastResult.status === 'skipped'
                           ? 'bg-warning'
                           : 'bg-secondary'
-                  const capitalizedStatus = lastResult.status.charAt(0).toUpperCase() + lastResult.status.slice(1)
+                  const capitalizedStatus =
+                    lastResult.status.charAt(0).toUpperCase() + lastResult.status.slice(1)
                   const durationInSeconds = (lastResult.duration / 1000).toFixed(2)
 
                   let rowClass = ''
@@ -445,7 +453,6 @@ class CustomReporter implements Reporter {
 
                   previousWebsite = lastResult.website
                   previousCategory = lastResult.category
-
 
                   tableRowsHtml += `
                     <tr class="${rowClass}">

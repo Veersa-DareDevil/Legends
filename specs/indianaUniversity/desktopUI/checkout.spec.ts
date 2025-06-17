@@ -20,6 +20,7 @@ test.describe('Checkout Scenario', () => {
     payment = new Payment(page)
     await login.goToPortal('storefront')
     await page.waitForTimeout(2000)
+    await checkout.handleCookieBanner()
   })
 
   test('56825-Checkout Validation', async ({}) => {
@@ -116,5 +117,33 @@ test.describe('Checkout Scenario', () => {
     )
     await payment.submitPayment()
     //await checkout.waitForShipmentLoader()
+  })
+
+  test('19249- Verifying Cart', async ({ page }) => {
+    //await product.selectNavTraining()
+    const productName = await product.selectProduct()
+    console.log('Product Name:', productName)
+    await product.addToCart()
+    await checkout.selectCheckout()
+    await checkout.fillYourDetails(
+      testData.validData.userDetails.fullName,
+      testData.validData.userDetails.email,
+      testData.validData.userDetails.phone,
+      testData.validData.userDetails.address1,
+      testData.validData.userDetails.address2,
+      testData.validData.userDetails.city,
+      testData.validData.userDetails.postcode,
+    )
+    await checkout.selectCountry(testData.validData.userDetails.country)
+    await page.waitForTimeout(1000)
+    await checkout.selectState(testData.validData.userDetails.state)
+    await checkout.continueToShipping()
+    await page.waitForSelector('text=Continue to payment', { state: 'visible' })
+    await page.waitForTimeout(1000)
+    await login.goToPortal('storefront')
+    await page.waitForTimeout(2000)
+    await checkout.handleCookieBanner()
+    await checkout.cartValidation()
+    await checkout.verifyCartSummaryDetails()
   })
 })

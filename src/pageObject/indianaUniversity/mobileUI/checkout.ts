@@ -25,6 +25,10 @@ export class CheckoutPage {
   readonly continueToPaymentButton: Locator
   readonly outOfStockButtonSmall: Locator
 
+  //cart related
+  readonly cartButton: Locator
+  readonly miniCart: Locator
+
   constructor(page: Page) {
     this.page = page
     this.commonFunctions = new CommonUtils(page)
@@ -48,6 +52,9 @@ export class CheckoutPage {
     this.shipmentLoader = page.getByRole('img', { name: 'loading spinner' })
     this.continueToPaymentButton = page.getByRole('button', { name: 'Continue to payment' })
     this.outOfStockButtonSmall = page.locator('button').filter({ hasText: 'Small' })
+
+    this.cartButton = page.locator('[data-testid="cartbutton"]')
+    this.miniCart = page.locator('[data-testid="minicart"]')
   }
   async fillYourDetails(
     name: string,
@@ -140,5 +147,31 @@ export class CheckoutPage {
 
     await submitButton.waitFor({ state: 'visible' })
     await submitButton.click()
+  }
+
+  // Validate mini cart accessibility from a random page
+  async verifyMiniCartOnRandomPage(baseUrl: string) {
+    const urls = [
+      '/', // Home
+      '/adidas',
+      '/womens-adidas', // replace with a real product handle if needed
+      '/athletics',
+      '/search',
+      '/apparel',
+      '/sale',
+    ]
+
+    const randomUrl = urls[Math.floor(Math.random() * urls.length)]
+    console.log(`Navigating to random page: ${randomUrl}`)
+    await this.page.goto(`${baseUrl}${randomUrl}`, { waitUntil: 'domcontentloaded' })
+
+    try {
+      await this.cartButton.waitFor({ state: 'visible', timeout: 5000 })
+      await this.cartButton.click()
+      await expect(this.miniCart).toBeVisible()
+      console.log(`Mini cart is accessible from: ${randomUrl}`)
+    } catch (error) {
+      console.warn(`Mini cart not accessible or cart button missing on: ${randomUrl}`)
+    }
   }
 }

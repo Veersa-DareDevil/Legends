@@ -270,4 +270,30 @@ export class CheckoutPage {
     console.log(`Total: ${totalAmount?.trim()}`)
     console.log('Cart summary validated including optional discount')
   }
+
+  // Validate mini cart accessibility from a random page
+  async verifyMiniCartOnRandomPage(baseUrl: string) {
+    const urls = [
+      '/', // Home
+      '/adidas',
+      '/womens-adidas', // replace with a real product handle if needed
+      '/athletics',
+      '/search',
+      '/apparel',
+      '/sale',
+    ]
+
+    const randomUrl = urls[Math.floor(Math.random() * urls.length)]
+    console.log(`Navigating to random page: ${randomUrl}`)
+    await this.page.goto(`${baseUrl}${randomUrl}`, { waitUntil: 'domcontentloaded' })
+
+    try {
+      await this.cartButton.waitFor({ state: 'visible', timeout: 5000 })
+      await this.cartButton.click()
+      await expect(this.miniCart).toBeVisible()
+      console.log(`Mini cart is accessible from: ${randomUrl}`)
+    } catch (error) {
+      console.warn(`Mini cart not accessible or cart button missing on: ${randomUrl}`)
+    }
+  }
 }

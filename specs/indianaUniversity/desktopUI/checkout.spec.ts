@@ -146,4 +146,9 @@ test.describe('Checkout Scenario', () => {
     await checkout.cartValidation()
     await checkout.verifyCartSummaryDetails()
   })
+
+  test('43854-access cart from any page', async ({}) => {
+    const baseUrl = process.env.IU_STOREFRONT_URL!
+    await checkout.verifyMiniCartOnRandomPage(baseUrl)
+  })
 })
